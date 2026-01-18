@@ -21,7 +21,7 @@
     /* LOGO */
     .logo-wrap {
       width: 100%;
-      padding: 18px 16px 0; /* ⬅ reduced */
+      padding: 18px 16px 0;
     }
 
     .logo-wrap img {
@@ -36,7 +36,7 @@
     .divider {
       width: 150px;
       height: 2px;
-      margin: 6px auto 6px; /* ⬅ tightened */
+      margin: 6px auto;
       background: linear-gradient(
         to right,
         #f6c177,
@@ -46,19 +46,14 @@
       border-radius: 2px;
     }
 
-    /* OPENING DATES */
+    /* OPENING */
     .opening {
-      margin-top: 0;              /* ⬅ removed gap */
-      margin-bottom: 22px;
+      margin: 0 0 22px;
       font-size: 1.05rem;
       line-height: 1.45;
     }
 
-    .opening strong {
-      font-weight: 700;
-    }
-
-    /* MAIN CONTENT */
+    /* CONTENT */
     .content {
       max-width: 900px;
       margin: 0 auto;
@@ -82,45 +77,41 @@
       text-decoration: underline;
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 12px 18px;
-      background: #e36f47;
-      color: #fff;
-      border-radius: 6px;
-      font-weight: bold;
+    /* MAP */
+    .map-wrap {
+      margin: 14px auto 6px;
+      width: 100%;
+      max-width: 900px;
+      border-radius: 12px;
+      overflow: hidden;
     }
 
-    .btn:hover {
-      background: #cc5f3c;
-      text-decoration: none;
+    .map-wrap iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
     }
 
     /* MOBILE */
     @media (max-width: 600px) {
-      .logo-wrap {
-        padding-top: 14px;
-      }
-
-      .divider {
-        margin: 6px auto 4px;
-      }
-
       .opening {
         font-size: 1rem;
         margin-bottom: 18px;
       }
+
+      .map-wrap iframe {
+        height: 240px;
+      }
     }
 
-    /* PRINT / QR POSTER */
+    /* PRINT / QR */
     @media print {
       body {
         background: #ffffff;
       }
 
-      .btn {
-        display: none;
+      .map-wrap iframe {
+        height: 260px;
       }
     }
   </style>
@@ -133,7 +124,6 @@
     <img src="logo.png" alt="Arizona Sunrise Cafecito & Catering logo">
   </div>
 
-  <!-- DIVIDER -->
   <div class="divider"></div>
 
   <!-- OPENING INFO -->
@@ -154,9 +144,19 @@
 
     <h2>Location</h2>
     <p>
+      <strong>151 Sabine Creek Road</strong><br>
       Royse City, Texas<br>
       Serving Rockwall, Heath, Fate & surrounding areas
     </p>
+
+    <!-- MAP -->
+    <div class="map-wrap">
+      <iframe
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=151+Sabine+Creek+Road,+Royse+City,+TX&output=embed">
+      </iframe>
+    </div>
 
     <h2>About Us</h2>
     <p>
