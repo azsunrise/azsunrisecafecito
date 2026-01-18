@@ -6,9 +6,7 @@
   <title>Arizona Sunrise Cafecito & Catering</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -20,23 +18,21 @@
 
     /* LOGO */
     .logo-wrap {
-      width: 100%;
       padding: 18px 16px 0;
     }
 
     .logo-wrap img {
       width: 100%;
       max-width: 900px;
-      height: auto;
       display: block;
       margin: 0 auto;
     }
 
-    /* DIVIDER */
+    /* DIVIDER — pulled UP */
     .divider {
-      width: 150px;
+      width: 140px;
       height: 2px;
-      margin: 6px auto;
+      margin: -22px auto 8px; /* 👈 KEY FIX */
       background: linear-gradient(
         to right,
         #f6c177,
@@ -46,7 +42,7 @@
       border-radius: 2px;
     }
 
-    /* OPENING */
+    /* OPENING — also pulled UP */
     .opening {
       margin: 0 0 22px;
       font-size: 1.05rem;
@@ -60,27 +56,17 @@
       padding: 0 20px 40px;
     }
 
-    h2 {
-      margin-top: 26px;
-    }
-
-    p {
-      margin: 8px 0;
-    }
+    h2 { margin-top: 26px; }
+    p { margin: 8px 0; }
 
     a {
       color: #0066cc;
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
-
     /* MAP */
     .map-wrap {
       margin: 14px auto 6px;
-      width: 100%;
       max-width: 900px;
       border-radius: 12px;
       overflow: hidden;
@@ -94,46 +80,27 @@
 
     /* MOBILE */
     @media (max-width: 600px) {
-      .opening {
-        font-size: 1rem;
-        margin-bottom: 18px;
-      }
-
-      .map-wrap iframe {
-        height: 240px;
-      }
-    }
-
-    /* PRINT / QR */
-    @media print {
-      body {
-        background: #ffffff;
-      }
-
-      .map-wrap iframe {
-        height: 260px;
-      }
+      .divider { margin-top: -26px; }
+      .opening { font-size: 1rem; }
+      .map-wrap iframe { height: 240px; }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- LOGO -->
   <div class="logo-wrap">
     <img src="logo.png" alt="Arizona Sunrise Cafecito & Catering logo">
   </div>
 
   <div class="divider"></div>
 
-  <!-- OPENING INFO -->
   <div class="opening">
     <strong>Soft Opening • February 28, 2026</strong><br>
     Free tastings while supplies last<br><br>
     <strong>Grand Opening • March 1, 2026</strong>
   </div>
 
-  <!-- CONTENT -->
   <div class="content">
 
     <h2>Hours</h2>
@@ -149,11 +116,9 @@
       Serving Rockwall, Heath, Fate & surrounding areas
     </p>
 
-    <!-- MAP -->
     <div class="map-wrap">
       <iframe
         loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
         src="https://www.google.com/maps?q=151+Sabine+Creek+Road,+Royse+City,+TX&output=embed">
       </iframe>
     </div>
