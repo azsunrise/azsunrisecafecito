@@ -13,11 +13,7 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(
-        to bottom,
-        #fff7f0 0%,
-        #ffffff 45%
-      );
+      background: linear-gradient(to bottom, #fff7f0 0%, #ffffff 45%);
       color: #333;
       text-align: center;
     }
@@ -36,18 +32,26 @@
       margin: 0 auto;
     }
 
-    /* SUBTLE DIVIDER */
+    /* ANIMATED DIVIDER */
     .divider {
-      width: 140px;
+      width: 160px;
       height: 2px;
-      margin: 12px auto 10px;
+      margin: 14px auto 10px;
       background: linear-gradient(
-        to right,
+        90deg,
         #f6c177,
         #e36f47,
         #f6c177
       );
+      background-size: 200% 100%;
+      animation: shimmer 4s ease-in-out infinite;
       border-radius: 2px;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     /* OPENING DATES */
@@ -62,7 +66,7 @@
       font-weight: 700;
     }
 
-    /* MAIN CONTENT */
+    /* CONTENT */
     .content {
       max-width: 900px;
       margin: 0 auto;
@@ -70,7 +74,7 @@
     }
 
     h2 {
-      margin-top: 26px;
+      margin-top: 28px;
     }
 
     p {
@@ -86,43 +90,55 @@
       text-decoration: underline;
     }
 
-    /* MOBILE TWEAKS */
+    /* BUTTON */
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 18px;
+      background: #e36f47;
+      color: #fff;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #cc5f3c;
+      text-decoration: none;
+    }
+
+    /* MAP */
+    .map {
+      margin-top: 16px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    iframe {
+      width: 100%;
+      height: 320px;
+      border: 0;
+    }
+
+    /* MOBILE */
     @media (max-width: 600px) {
-      .logo-wrap {
-        padding-top: 16px;
-      }
-
-      .divider {
-        margin: 10px auto 8px;
-      }
-
       .opening {
         font-size: 1rem;
-        margin-bottom: 20px;
       }
 
-      h2 {
-        margin-top: 22px;
+      iframe {
+        height: 260px;
       }
     }
 
-    /* PRINT / QR POSTER MODE */
+    /* PRINT / QR POSTER */
     @media print {
       body {
         background: #ffffff;
       }
 
-      .content {
-        font-size: 18px;
-      }
-
-      h2 {
-        margin-top: 18px;
-      }
-
-      a {
-        color: #000;
-        text-decoration: none;
+      iframe,
+      .btn {
+        display: none;
       }
     }
   </style>
@@ -148,6 +164,12 @@
   <!-- CONTENT -->
   <div class="content">
 
+    <h2>Menu Preview</h2>
+    <p>
+      Brunch favorites with Arizona flair and Texas comfort —
+      crafted fresh for early mornings and laid-back weekends.
+    </p>
+
     <h2>Hours</h2>
     <p>
       Wednesday – Sunday<br>
@@ -159,6 +181,14 @@
       Royse City, Texas<br>
       Serving Rockwall, Heath, Fate & surrounding areas
     </p>
+
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps?q=Royse+City+Texas&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
 
     <h2>About Us</h2>
     <p>
@@ -172,6 +202,10 @@
       📞 <a href="tel:19455460808">945-546-0808</a><br>
       📧 <a href="mailto:azsunrisecafe@gmail.com">azsunrisecafe@gmail.com</a>
     </p>
+
+    <a class="btn" href="contact.vcf" download>
+      Add Us to Your Contacts
+    </a>
 
   </div>
 
