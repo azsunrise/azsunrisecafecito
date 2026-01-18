@@ -21,7 +21,7 @@
     /* LOGO */
     .logo-wrap {
       width: 100%;
-      padding: 24px 16px 0;
+      padding: 18px 16px 0; /* ⬅ reduced */
     }
 
     .logo-wrap img {
@@ -32,32 +32,24 @@
       margin: 0 auto;
     }
 
-    /* ANIMATED DIVIDER */
+    /* DIVIDER */
     .divider {
-      width: 160px;
+      width: 150px;
       height: 2px;
-      margin: 14px auto 10px;
+      margin: 6px auto 6px; /* ⬅ tightened */
       background: linear-gradient(
-        90deg,
+        to right,
         #f6c177,
         #e36f47,
         #f6c177
       );
-      background-size: 200% 100%;
-      animation: shimmer 4s ease-in-out infinite;
       border-radius: 2px;
-    }
-
-    @keyframes shimmer {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
     }
 
     /* OPENING DATES */
     .opening {
-      margin-top: 6px;
-      margin-bottom: 26px;
+      margin-top: 0;              /* ⬅ removed gap */
+      margin-bottom: 22px;
       font-size: 1.05rem;
       line-height: 1.45;
     }
@@ -66,7 +58,7 @@
       font-weight: 700;
     }
 
-    /* CONTENT */
+    /* MAIN CONTENT */
     .content {
       max-width: 900px;
       margin: 0 auto;
@@ -74,7 +66,7 @@
     }
 
     h2 {
-      margin-top: 28px;
+      margin-top: 26px;
     }
 
     p {
@@ -90,7 +82,6 @@
       text-decoration: underline;
     }
 
-    /* BUTTON */
     .btn {
       display: inline-block;
       margin-top: 10px;
@@ -106,27 +97,19 @@
       text-decoration: none;
     }
 
-    /* MAP */
-    .map {
-      margin-top: 16px;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    iframe {
-      width: 100%;
-      height: 320px;
-      border: 0;
-    }
-
     /* MOBILE */
     @media (max-width: 600px) {
-      .opening {
-        font-size: 1rem;
+      .logo-wrap {
+        padding-top: 14px;
       }
 
-      iframe {
-        height: 260px;
+      .divider {
+        margin: 6px auto 4px;
+      }
+
+      .opening {
+        font-size: 1rem;
+        margin-bottom: 18px;
       }
     }
 
@@ -136,7 +119,6 @@
         background: #ffffff;
       }
 
-      iframe,
       .btn {
         display: none;
       }
@@ -164,12 +146,6 @@
   <!-- CONTENT -->
   <div class="content">
 
-    <h2>Menu Preview</h2>
-    <p>
-      Brunch favorites with Arizona flair and Texas comfort —
-      crafted fresh for early mornings and laid-back weekends.
-    </p>
-
     <h2>Hours</h2>
     <p>
       Wednesday – Sunday<br>
@@ -182,19 +158,10 @@
       Serving Rockwall, Heath, Fate & surrounding areas
     </p>
 
-    <div class="map">
-      <iframe
-        src="https://www.google.com/maps?q=Royse+City+Texas&output=embed"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-
     <h2>About Us</h2>
     <p>
       A family-owned food trailer serving elevated American brunch inspired by
-      Arizona flavors and Texas comfort.<br>
-      Perfect for early-morning crews and relaxed Sunday brunch with family.
+      Arizona flavors and Texas comfort.
     </p>
 
     <h2>Contact</h2>
@@ -202,10 +169,6 @@
       📞 <a href="tel:19455460808">945-546-0808</a><br>
       📧 <a href="mailto:azsunrisecafe@gmail.com">azsunrisecafe@gmail.com</a>
     </p>
-
-    <a class="btn" href="contact.vcf" download>
-      Add Us to Your Contacts
-    </a>
 
   </div>
 
