@@ -18,7 +18,7 @@
 
     /* LOGO */
     .logo-wrap {
-      padding: 16px 16px 0;
+      padding: 12px 16px 0;
     }
 
     .logo-wrap img {
@@ -28,11 +28,11 @@
       margin: 0 auto;
     }
 
-    /* DIVIDER — pulled further UP */
+    /* DIVIDER — strong pull */
     .divider {
       width: 140px;
       height: 2px;
-      margin: -42px auto 6px; /* 🔑 stronger pull */
+      margin: -62px auto 4px; /* 🔥 tighter */
       background: linear-gradient(
         to right,
         #f6c177,
@@ -42,12 +42,12 @@
       border-radius: 2px;
     }
 
-    /* OPENING — also nudged UP */
+    /* OPENING — overlaps padding */
     .opening {
-      margin-top: -6px; /* 🔑 second pull */
-      margin-bottom: 22px;
+      margin-top: -12px; /* 🔥 tighter */
+      margin-bottom: 20px;
       font-size: 1.05rem;
-      line-height: 1.45;
+      line-height: 1.4;
     }
 
     .content {
@@ -80,8 +80,8 @@
 
     /* MOBILE */
     @media (max-width: 600px) {
-      .divider { margin-top: -48px; }
-      .opening { font-size: 1rem; }
+      .divider { margin-top: -70px; }
+      .opening { font-size: 1rem; margin-top: -14px; }
       .map-wrap iframe { height: 240px; }
     }
   </style>
