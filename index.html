@@ -18,7 +18,7 @@
 
     /* LOGO */
     .logo-wrap {
-      padding: 18px 16px 0;
+      padding: 16px 16px 0;
     }
 
     .logo-wrap img {
@@ -28,11 +28,11 @@
       margin: 0 auto;
     }
 
-    /* DIVIDER — pulled UP */
+    /* DIVIDER — pulled further UP */
     .divider {
       width: 140px;
       height: 2px;
-      margin: -22px auto 8px; /* 👈 KEY FIX */
+      margin: -42px auto 6px; /* 🔑 stronger pull */
       background: linear-gradient(
         to right,
         #f6c177,
@@ -42,14 +42,14 @@
       border-radius: 2px;
     }
 
-    /* OPENING — also pulled UP */
+    /* OPENING — also nudged UP */
     .opening {
-      margin: 0 0 22px;
+      margin-top: -6px; /* 🔑 second pull */
+      margin-bottom: 22px;
       font-size: 1.05rem;
       line-height: 1.45;
     }
 
-    /* CONTENT */
     .content {
       max-width: 900px;
       margin: 0 auto;
@@ -80,7 +80,7 @@
 
     /* MOBILE */
     @media (max-width: 600px) {
-      .divider { margin-top: -26px; }
+      .divider { margin-top: -48px; }
       .opening { font-size: 1rem; }
       .map-wrap iframe { height: 240px; }
     }
