@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arizona Sunrise Cafecito & Catering</title>
 
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <style>
     * { box-sizing: border-box; }
 
@@ -13,6 +16,43 @@
       font-family: Arial, Helvetica, sans-serif;
       background: linear-gradient(to bottom, #fff7f0 0%, #ffffff 45%);
       color: #333;
+    }
+
+    /* ===== LAYOUT ===== */
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* ===== SIDE NAV ===== */
+    .side-nav {
+      width: 220px;
+      background: #f7efe6;
+      padding: 24px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .side-nav a {
+      text-decoration: none;
+      color: #7a3b2e;
+      font-weight: 600;
+      padding: 12px 14px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: background 0.2s ease;
+    }
+
+    .side-nav a:hover {
+      background: #e6c3a5;
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    .main {
+      flex: 1;
       text-align: center;
     }
 
@@ -28,21 +68,15 @@
       margin: 0 auto;
     }
 
-    /* DIVIDER — desktop tight */
+    /* DIVIDER */
     .divider {
       width: 140px;
       height: 2px;
       margin: -78px auto 2px;
-      background: linear-gradient(
-        to right,
-        #f6c177,
-        #e36f47,
-        #f6c177
-      );
+      background: linear-gradient(to right, #f6c177, #e36f47, #f6c177);
       border-radius: 2px;
     }
 
-    /* OPENING — desktop tight */
     .opening {
       margin-top: -18px;
       margin-bottom: 18px;
@@ -50,7 +84,6 @@
       line-height: 1.35;
     }
 
-    /* CONTENT */
     .content {
       max-width: 900px;
       margin: 0 auto;
@@ -79,14 +112,26 @@
       border: 0;
     }
 
-    /* ✅ MOBILE FIX — NO OVERLAP */
+    /* ===== MOBILE ===== */
+    @media (max-width: 768px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .side-nav {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    }
+
     @media (max-width: 600px) {
       .divider {
-        margin: -22px auto 8px; /* softened */
+        margin: -22px auto 8px;
       }
 
       .opening {
-        margin-top: 0;          /* remove negative */
+        margin-top: 0;
         margin-bottom: 20px;
         font-size: 1rem;
       }
@@ -100,68 +145,63 @@
 
 <body>
 
-  <div class="logo-wrap">
-    <img src="logo.png" alt="Arizona Sunrise Cafecito & Catering logo">
-  </div>
+<div class="layout">
 
-  <div class="divider"></div>
+  <!-- ===== NAV ===== -->
+  <nav class="side-nav">
+    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="about.html"><i class="fa-solid fa-user-chef"></i> About Us</a>
+    <a href="soft-opening.html"><i class="fa-solid fa-star"></i> Soft Opening</a>
+    <a href="menu.html"><i class="fa-solid fa-utensils"></i> Menu</a>
+    <a href="catering.html"><i class="fa-solid fa-truck"></i> Catering</a>
+  </nav>
 
-  <div class="opening">
-    <strong>Soft Opening • February 28, 2026</strong><br>
-    11am - 2pm •  Free tastings while supplies last<br><br>
-    <strong>Grand Opening • March 1, 2026</strong>
-  </div>
+  <!-- ===== MAIN ===== -->
+  <div class="main">
 
-  <div class="content">
-
-    <h2>Hours</h2>
-    <p>
-      Wednesday – Sunday<br>
-      <strong>8:00 AM – 2:30 PM</strong>
-    </p>
-
-    <h2>Location</h2>
-    <p>
-      <strong>151 Sabine Creek Road</strong><br>
-      Royse City, Texas<br>
-      Serving Rockwall, Heath, Fate & surrounding areas
-    </p>
-
-    <div class="map-wrap">
-      <iframe
-        loading="lazy"
-        src="https://www.google.com/maps?q=151+Sabine+Creek+Road,+Royse+City,+TX&output=embed">
-      </iframe>
+    <div class="logo-wrap">
+      <img src="logo.png" alt="Arizona Sunrise Cafecito & Catering logo">
     </div>
 
-    <h2>About Us</h2>
-    <p>
-      A family-owned food trailer serving elevated American brunch inspired by
-      Arizona flavors and Texas comfort.
-    </p>
+    <div class="divider"></div>
 
-    <h2>Contact</h2>
-    <p>
-      📞 <a href="tel:19455460808">945-546-0808</a><br>
+    <div class="opening">
+      <strong>Soft Opening • February 28, 2026</strong><br>
+      11am - 2pm • Free tastings while supplies last<br><br>
+      <strong>Grand Opening • March 1, 2026</strong>
+    </div>
+
+    <div class="content">
+
+      <h2>Hours</h2>
       <p>
-  📧 <strong>Email us:</strong><br>
-  <a href="mailto:hello@azsunrisecafecito.com">
-    hello@azsunrisecafecito.com
-  </a>
-</p>
+        Wednesday – Sunday<br>
+        <strong>8:00 AM – 2:30 PM</strong>
+      </p>
 
-<p>
-  <a href="mailto:hello@azsunrisecafecito.com?subject=Catering%20Inquiry">
-    📩 Email Us
-  </a>
-  &nbsp;|&nbsp;
-  <a href="https://mail.google.com/mail/?view=cm&to=hello@azsunrisecafecito.com" target="_blank" rel="noopener">
-    Use Gmail
-  </a>
-</p>
+      <h2>Location</h2>
+      <p>
+        <strong>151 Sabine Creek Road</strong><br>
+        Royse City, Texas<br>
+        Serving Rockwall, Heath, Fate & surrounding areas
+      </p>
 
+      <div class="map-wrap">
+        <iframe loading="lazy"
+          src="https://www.google.com/maps?q=151+Sabine+Creek+Road,+Royse+City,+TX&output=embed">
+        </iframe>
+      </div>
+
+      <h2>Contact</h2>
+      <p>
+        📞 <a href="tel:19455460808">945-546-0808</a><br><br>
+        📧 <a href="mailto:hello@azsunrisecafecito.com">hello@azsunrisecafecito.com</a>
+      </p>
+
+    </div>
 
   </div>
+</div>
 
 </body>
 </html>
