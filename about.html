@@ -1,71 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us | Arizona Sunrise Cafecito & Catering</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #fff7f0;
+      background: linear-gradient(to bottom, #fff7f0 0%, #ffffff 45%);
       color: #333;
-      text-align: center;
-      padding: 40px 20px;
     }
 
-    .box {
-      max-width: 800px;
-      margin: 0 auto;
-      background: #ffffff;
-      padding: 40px 24px;
-      border-radius: 12px;
+    /* ===== LAYOUT ===== */
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* ===== SIDE NAV ===== */
+    .side-nav {
+      width: 220px;
+      background: #f7efe6;
+      padding: 24px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .side-nav a {
+      text-decoration: none;
+      color: #7a3b2e;
+      font-weight: 600;
+      padding: 12px 14px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .side-nav a:hover {
+      background: #e6c3a5;
+    }
+
+    /* ===== MAIN ===== */
+    .main {
+      flex: 1;
+      text-align: center;
+      padding-bottom: 40px;
+    }
+
+    .header {
+      padding: 30px 20px 10px;
     }
 
     h1 {
-      margin-bottom: 16px;
+      margin-bottom: 10px;
+      color: #7a3b2e;
     }
 
-    p {
-      font-size: 1.1rem;
+    .divider {
+      width: 140px;
+      height: 2px;
+      margin: 0 auto 20px;
+      background: linear-gradient(to right, #f6c177, #e36f47, #f6c177);
+      border-radius: 2px;
+    }
+
+    .content {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 20px;
+      text-align: left;
       line-height: 1.6;
-      margin: 14px 0;
     }
 
-    a {
-      display: inline-block;
-      margin-top: 30px;
-      text-decoration: none;
-      color: #0066cc;
-      font-weight: bold;
+    .highlight-box {
+      background: #fff3e8;
+      padding: 22px;
+      border-radius: 16px;
+      margin: 26px 0;
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 768px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .side-nav {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      .content {
+        text-align: center;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="box">
-    <h1>About Arizona Sunrise Cafecito</h1>
+<div class="layout">
 
-    <p>
-      Arizona Sunrise Cafecito & Catering is a family-owned food trailer
-      bringing bold Arizona flavor together with Texas comfort.
-    </p>
+  <!-- ===== NAV ===== -->
+  <nav class="side-nav">
+    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="about.html"><i class="fa-solid fa-user-chef"></i> About Us</a>
+    <a href="menu.html"><i class="fa-solid fa-utensils"></i> Menu</a>
+    <a href="catering.html"><i class="fa-solid fa-truck"></i> Catering</a>
+  </nav>
 
-    <p>
-      Our menu is inspired by early mornings, hardworking crews,
-      and relaxed weekend brunch — made fresh, served warm,
-      and always with heart.
-    </p>
+  <!-- ===== MAIN ===== -->
+  <div class="main">
 
-    <p>
-      From cafecito to catered events, our goal is simple:
-      good food, good people, and a welcoming place to start your day.
-    </p>
+    <div class="header">
+      <h1>Our Story</h1>
+      <div class="divider"></div>
+    </div>
 
-    <a href="index.html">← Back to Home</a>
+    <div class="content">
+
+      <p>
+        Arizona Sunrise Cafecito & Catering was created from a love of family,
+        culture, and the joy that comes from sharing good food and coffee.
+      </p>
+
+      <div class="highlight-box">
+        <p>
+          What started as a dream grew into a place where mornings feel warmer,
+          conversations last longer, and every cup is made with intention.
+        </p>
+      </div>
+
+      <p>
+        We believe food should feel like home — welcoming, comforting,
+        and crafted with care. Whether you’re stopping by for cafecito
+        or planning a catered event, we’re honored to be part of your day.
+      </p>
+
+      <p>
+        Thank you for supporting a family-owned business and being part of
+        the Arizona Sunrise story.
+      </p>
+
+    </div>
+
   </div>
+</div>
 
 </body>
 </html>
+
