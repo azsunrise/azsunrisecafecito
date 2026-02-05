@@ -1,76 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Catering | Arizona Sunrise Cafecito & Catering</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
+    * { box-sizing: border-box; }
+
     body {
+      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      text-align: center;
-      padding: 40px 20px;
-      background: linear-gradient(to bottom, #fff7f0 0%, #ffffff 60%);
+      background: linear-gradient(to bottom, #fff7f0 0%, #ffffff 55%);
       color: #333;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
     }
 
     h1 {
       margin-bottom: 10px;
+      color: #7a3b2e;
     }
 
     p {
-      font-size: 1.1rem;
-      margin: 8px 0;
+      font-size: 1.05rem;
+      margin: 10px 0 22px;
     }
 
-    /* ===== CATERING CTA ===== */
-    .catering-cta {
-      margin: 30px auto 10px;
+    form {
+      background: #ffffff;
+      padding: 28px 24px 32px;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      text-align: left;
     }
 
-    .catering-cta a {
-      display: inline-block;
-      padding: 16px 34px;
-      border-radius: 30px;
+    label {
+      display: block;
+      margin-top: 16px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      margin-top: 6px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    button {
+      margin-top: 22px;
+      width: 100%;
+      padding: 14px;
       font-size: 1.05rem;
       font-weight: 700;
+      background: linear-gradient(to right, #f6c177, #e36f47);
+      border: none;
+      border-radius: 10px;
       color: #fff;
-      text-decoration: none;
-      background: linear-gradient(to right, #e36f47, #f6c177);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
     }
 
-    .catering-cta a:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    button:hover {
+      opacity: 0.95;
     }
 
-    .back-link {
+    .back {
+      margin-top: 26px;
       display: inline-block;
-      margin-top: 30px;
       text-decoration: none;
       color: #0066cc;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding-top: 30px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <h1>Catering</h1>
-  <p>Catering options are coming soon.</p>
-  <p>Perfect for offices, events, and special occasions.</p>
+  <div class="container">
 
-  <!-- BOOK CATERING BUTTON -->
-  <div class="catering-cta">
-    <a href="mailto:hello@azsunrisecafecito.com
-?subject=Catering%20Inquiry
-&body=Hi%20Arizona%20Sunrise%20Team,%0A%0AI'd%20love%20to%20get%20more%20info%20about%20catering.%0A%0AEvent%20date:%0ALocation:%0AEstimated%20guest%20count:%0A%0AThank%20you!">
-      Book Catering
-    </a>
+    <h1>Catering</h1>
+    <p>
+      Let us cater your next event — offices, parties, schools, and special occasions.
+      Fill out the form below and we’ll be in touch.
+    </p>
+
+    <form action="mailto:hello@azsunrisecafecito.com" method="POST" enctype="text/plain">
+
+      <label for="name">Name</label>
+      <input type="text" id="name" name="Name" required>
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="Phone">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="Email" required>
+
+      <label for="date">Event Date</label>
+      <input type="date" id="date" name="Event Date">
+
+      <label for="guests">Estimated Number of Guests</label>
+      <input type="number" id="guests" name="Guests">
+
+      <label for="notes">Tell us about your event</label>
+      <textarea id="notes" name="Notes"></textarea>
+
+      <button type="submit">Request Catering Info</button>
+
+    </form>
+
+    <a class="back" href="index.html">← Back to Home</a>
+
   </div>
-
-  <a class="back-link" href="index.html">← Back to Home</a>
 
 </body>
 </html>
