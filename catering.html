@@ -4,20 +4,49 @@
   <meta charset="UTF-8">
   <title>Catering | Arizona Sunrise Cafecito & Catering</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
       text-align: center;
       padding: 40px 20px;
-      background: #fff7f0;
+      background: linear-gradient(to bottom, #fff7f0 0%, #ffffff 60%);
+      color: #333;
     }
+
     h1 {
       margin-bottom: 10px;
     }
+
     p {
       font-size: 1.1rem;
+      margin: 8px 0;
     }
-    a {
+
+    /* ===== CATERING CTA ===== */
+    .catering-cta {
+      margin: 30px auto 10px;
+    }
+
+    .catering-cta a {
+      display: inline-block;
+      padding: 16px 34px;
+      border-radius: 30px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+      background: linear-gradient(to right, #e36f47, #f6c177);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .catering-cta a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .back-link {
       display: inline-block;
       margin-top: 30px;
       text-decoration: none;
@@ -25,13 +54,23 @@
     }
   </style>
 </head>
+
 <body>
 
   <h1>Catering</h1>
   <p>Catering options are coming soon.</p>
   <p>Perfect for offices, events, and special occasions.</p>
 
-  <a href="index.html">← Back to Home</a>
+  <!-- BOOK CATERING BUTTON -->
+  <div class="catering-cta">
+    <a href="mailto:hello@azsunrisecafecito.com
+?subject=Catering%20Inquiry
+&body=Hi%20Arizona%20Sunrise%20Team,%0A%0AI'd%20love%20to%20get%20more%20info%20about%20catering.%0A%0AEvent%20date:%0ALocation:%0AEstimated%20guest%20count:%0A%0AThank%20you!">
+      Book Catering
+    </a>
+  </div>
+
+  <a class="back-link" href="index.html">← Back to Home</a>
 
 </body>
 </html>
