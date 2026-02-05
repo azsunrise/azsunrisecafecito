@@ -43,7 +43,6 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      transition: background 0.2s ease;
     }
 
     .side-nav a:hover {
@@ -70,16 +69,41 @@
     .divider {
       width: 140px;
       height: 2px;
-      margin: -78px auto 2px;
+      margin: -78px auto 6px;
       background: linear-gradient(to right, #f6c177, #e36f47, #f6c177);
       border-radius: 2px;
     }
 
     .opening {
-      margin-top: -18px;
-      margin-bottom: 18px;
+      margin: 0 0 16px;
       font-size: 1.05rem;
       line-height: 1.35;
+    }
+
+    /* ===== CTA BUTTONS ===== */
+    .home-cta {
+      margin: 10px 0 26px;
+    }
+
+    .home-cta a {
+      display: inline-block;
+      margin: 8px;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(to right, #e36f47, #f6c177);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .home-cta a.secondary {
+      background: linear-gradient(to right, #7a3b2e, #a65b4a);
+    }
+
+    .home-cta a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
     }
 
     .content {
@@ -90,25 +114,6 @@
 
     h2 { margin-top: 26px; }
     p { margin: 8px 0; }
-
-    a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-
-    .about-preview {
-      margin-top: 30px;
-      padding: 20px;
-      background: #fff3e8;
-      border-radius: 14px;
-    }
-
-    .about-preview a {
-      display: inline-block;
-      margin-top: 10px;
-      font-weight: 600;
-      color: #7a3b2e;
-    }
 
     /* MAP */
     .map-wrap {
@@ -139,12 +144,10 @@
 
     @media (max-width: 600px) {
       .divider {
-        margin: -22px auto 8px;
+        margin: -22px auto 10px;
       }
 
       .opening {
-        margin-top: 0;
-        margin-bottom: 20px;
         font-size: 1rem;
       }
 
@@ -182,6 +185,12 @@
       <strong>Grand Opening • March 1, 2026</strong>
     </div>
 
+    <!-- ===== HOME CTA ===== -->
+    <div class="home-cta">
+      <a href="menu.html">View Menu</a>
+      <a href="catering.html" class="secondary">Catering Info</a>
+    </div>
+
     <div class="content">
 
       <h2>Hours</h2>
@@ -200,16 +209,6 @@
         <iframe loading="lazy"
           src="https://www.google.com/maps?q=151+Sabine+Creek+Road,+Royse+City,+TX&output=embed">
         </iframe>
-      </div>
-
-      <!-- ===== ABOUT PREVIEW ===== -->
-      <div class="about-preview">
-        <h2>About Us</h2>
-        <p>
-          Arizona Sunrise Cafecito & Catering is rooted in family, culture,
-          and a love for handcrafted fresh food — served with heart.
-        </p>
-        <a href="about.html">Learn more about our story →</a>
       </div>
 
       <h2>Contact</h2>
