@@ -53,7 +53,7 @@
     .main {
       flex: 1;
       text-align: center;
-      padding-bottom: 40px;
+      padding-bottom: 50px;
     }
 
     .header {
@@ -86,6 +86,33 @@
       padding: 22px;
       border-radius: 16px;
       margin: 26px 0;
+    }
+
+    /* ===== CTA ===== */
+    .cta {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin: 10px;
+      padding: 14px 26px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(to right, #e36f47, #f6c177);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta a.secondary {
+      background: linear-gradient(to right, #7a3b2e, #a65b4a);
+    }
+
+    .cta a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
     }
 
     /* ===== MOBILE ===== */
@@ -152,6 +179,12 @@
         the Arizona Sunrise story.
       </p>
 
+      <!-- ===== CTA BUTTONS ===== -->
+      <div class="cta">
+        <a href="menu.html">View Our Menu</a>
+        <a href="catering.html" class="secondary">Catering Info</a>
+      </div>
+
     </div>
 
   </div>
@@ -159,4 +192,3 @@
 
 </body>
 </html>
-
