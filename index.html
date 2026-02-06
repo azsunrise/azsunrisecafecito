@@ -224,10 +224,24 @@
       </div>
 
       <h2>Contact</h2>
-      <p>
-        📞 <a href="tel:19455460808">945-546-0808</a><br><br>
-        📧 <a href="mailto:hello@azsunrisecafecito.com">hello@azsunrisecafecito.com</a>
-      </p>
+<p>
+  📞 <a href="tel:9455460808"
+       onclick="gtag('event', 'call_click', {
+         event_category: 'Contact',
+         event_label: 'Phone Call'
+       });">
+       945-546-0808
+  </a><br><br>
+
+  📧 <a href="mailto:hello@azsunrisecafecito.com"
+       onclick="gtag('event', 'email_click', {
+         event_category: 'Contact',
+         event_label: 'Email'
+       });">
+       hello@azsunrisecafecito.com
+  </a>
+</p>
+
 
     </div>
 
