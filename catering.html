@@ -2,106 +2,33 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XFY3V13DJN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XFY3V13DJN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-XFY3V13DJN');
-</script>
+    gtag('config', 'G-XFY3V13DJN');
+  </script>
   <meta charset="UTF-8" />
   <title>Catering | Arizona Sunrise Cafecito & Catering</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
+    /* Keep your existing styles */
     * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(to bottom, #fff7f0 0%, #ffffff 55%);
-      color: #333;
-      text-align: center;
-    }
-
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 40px 20px 60px;
-    }
-
-    h1 {
-      margin-bottom: 10px;
-      color: #7a3b2e;
-    }
-
-    p {
-      font-size: 1.05rem;
-      margin: 10px 0 22px;
-    }
-
-    form {
-      background: #ffffff;
-      padding: 28px 24px 32px;
-      border-radius: 14px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-      text-align: left;
-    }
-
-    label {
-      display: block;
-      margin-top: 16px;
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 10px 12px;
-      margin-top: 6px;
-      font-size: 1rem;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-family: inherit;
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 90px;
-    }
-
-    button {
-      margin-top: 22px;
-      width: 100%;
-      padding: 14px;
-      font-size: 1.05rem;
-      font-weight: 700;
-      background: linear-gradient(to right, #f6c177, #e36f47);
-      border: none;
-      border-radius: 10px;
-      color: #fff;
-      cursor: pointer;
-    }
-
-    button:hover {
-      opacity: 0.95;
-    }
-
-    .back {
-      margin-top: 26px;
-      display: inline-block;
-      text-decoration: none;
-      color: #0066cc;
-      font-weight: 600;
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        padding-top: 30px;
-      }
-    }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: linear-gradient(to bottom, #fff7f0 0%, #ffffff 55%); color: #333; text-align: center; }
+    .container { max-width: 720px; margin: 0 auto; padding: 40px 20px 60px; }
+    h1 { margin-bottom: 10px; color: #7a3b2e; }
+    p { font-size: 1.05rem; margin: 10px 0 22px; }
+    form { background: #ffffff; padding: 28px 24px 32px; border-radius: 14px; box-shadow: 0 8px 20px rgba(0,0,0,0.06); text-align: left; }
+    label { display: block; margin-top: 16px; font-weight: 600; font-size: 0.95rem; }
+    input, textarea { width: 100%; padding: 10px 12px; margin-top: 6px; font-size: 1rem; border-radius: 8px; border: 1px solid #ccc; font-family: inherit; }
+    textarea { resize: vertical; min-height: 90px; }
+    button { margin-top: 22px; width: 100%; padding: 14px; font-size: 1.05rem; font-weight: 700; background: linear-gradient(to right, #f6c177, #e36f47); border: none; border-radius: 10px; color: #fff; cursor: pointer; }
+    button:hover { opacity: 0.95; }
+    .back { margin-top: 26px; display: inline-block; text-decoration: none; color: #0066cc; font-weight: 600; }
+    @media (max-width: 600px) { .container { padding-top: 30px; } }
   </style>
 </head>
 
@@ -115,7 +42,11 @@
       Fill out the form below and we’ll be in touch.
     </p>
 
-    <form action="mailto:hello@azsunrisecafecito.com" method="POST" enctype="text/plain">
+    <form action="mailto:hello@azsunrisecafecito.com" method="POST" enctype="text/plain"
+          onsubmit="gtag('event', 'catering_request', {
+            event_category: 'Contact',
+            event_label: 'Catering Form Submit'
+          });">
 
       <label for="name">Name</label>
       <input type="text" id="name" name="Name" required>
@@ -139,9 +70,6 @@
 
     </form>
 
-    <a class="back" href="index.html">← Back to Home</a>
-
-  </div>
-
-</body>
-</html>
+    <a class="back" href="index.html"
+       onclick="gtag('event', 'catering_back_home', {
+         event_category: 'Navigation',
