@@ -11,173 +11,55 @@
   </script>
 
   <meta charset="UTF-8">
-  <title>Soft Opening Tasting Menu | Arizona Sunrise Cafecito & Catering</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soft Opening Menu | Arizona Sunrise Cafecito & Catering</title>
 
   <style>
-    * { box-sizing: border-box; }
-
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(to bottom, #fff7f0 0%, #ffffff 55%);
+      background: linear-gradient(to bottom, #fff7f0 0%, #ffffff 45%);
       color: #333;
       text-align: center;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 20px 60px;
+      padding: 40px 20px;
     }
 
     h1 {
-      color: #7a3b2e;
       margin-bottom: 6px;
     }
 
-    .badge {
-      display: inline-block;
-      margin: 12px 0 24px;
-      padding: 8px 18px;
-      border-radius: 20px;
-      background: linear-gradient(to right, #e36f47, #f6c177);
-      color: #fff;
-      font-weight: bold;
-      font-size: 0.95rem;
-    }
-
     .subtitle {
-      font-size: 1.05rem;
-      margin-bottom: 34px;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
     }
 
     .menu-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 24px;
+      max-width: 900px;
+      margin: 0 auto 40px;
     }
 
-    .menu-card {
-      background: #ffffff;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-      overflow: hidden;
-      text-align: left;
+    .menu-item {
+      background: #fff;
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
     }
 
-    .menu-card img {
+    .menu-item img {
       width: 100%;
-      height: 200px;
+      height: 180px;
       object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 12px;
     }
 
-    .menu-card .content {
-      padding: 18px;
-    }
-
-    .menu-card h3 {
-      margin: 0 0 8px;
+    .menu-item h3 {
+      margin: 10px 0 6px;
       color: #7a3b2e;
     }
 
-    .menu-card p {
-      margin: 0;
-      font-size: 0.95rem;
-      line-height: 1.4;
-    }
-
-    .note {
-      margin-top: 34px;
-      font-style: italic;
-      font-size: 0.95rem;
-    }
-
-    /* Back button */
-    .button-back {
-      display: inline-block;
-      margin-top: 38px;
-      padding: 14px 28px;
-      border-radius: 30px;
-      font-weight: 600;
-      text-decoration: none;
-      color: #fff;
-      background: linear-gradient(to right, #e36f47, #f6c177);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .button-back:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="container">
-
-    <h1>Soft Opening Free Tasting</h1>
-    <div class="badge">FREE • Limited Quantities</div>
-
-    <p class="subtitle">
-      Join us for our soft opening and enjoy a complimentary tasting of
-      three featured menu items — while supplies last.
-    </p>
-
-    <div class="menu-grid">
-
-      <!-- Green Chili Chicken Soup -->
-      <div class="menu-card">
-        <img src="images/green-chili-chicken-soup.jpg" alt="Green chili chicken soup">
-        <div class="content">
-          <h3>Green Chili Chicken Soup</h3>
-          <p>
-            Comforting and flavorful chicken soup with roasted green chiles,
-            slow-simmered spices, and a warming kick.
-          </p>
-        </div>
-      </div>
-
-      <!-- Crab Cakes -->
-      <div class="menu-card">
-        <img src="images/crab-cakes.jpg" alt="Crab cakes">
-        <div class="content">
-          <h3>Crab Cakes</h3>
-          <p>
-            Golden-crisp crab cakes with tender, savory centers —
-            a customer favorite in the making.
-          </p>
-        </div>
-      </div>
-
-      <!-- Reuben Fritters -->
-      <div class="menu-card">
-        <img src="images/reuben-fritters.jpg" alt="Reuben fritters">
-        <div class="content">
-          <h3>Reuben Fritters</h3>
-          <p>
-            Bite-sized fritters packed with corned beef, Swiss,
-            sauerkraut, and bold Reuben flavor.
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-    <p class="note">
-      Full menu coming soon — thank you for celebrating our soft opening with us!
-    </p>
-
-    <a class="button-back" href="index.html"
-       onclick="gtag('event', 'menu_back_home', {
-         event_category: 'Navigation',
-         event_label: 'Menu → Home'
-       });">
-       ← Back to Home
-    </a>
-
-  </div>
-
-</body>
-</html>
+    .menu-item p {
+      font-si
