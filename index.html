@@ -170,6 +170,40 @@ body {
   border-radius: 12px;
 }
 
+/* GRAND OPENING SHIMMER */
+.grand-opening {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 30px 0 15px;
+
+  /* Gradient text */
+  background: linear-gradient(90deg, #f6c177, #fcd8b1, #e36f47);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Soft shimmer animation */
+  animation: sunriseShimmer 3s ease-in-out infinite;
+}
+
+@keyframes sunriseShimmer {
+  0% {
+    background-position: 200% 0;
+    text-shadow: 0 0 5px rgba(227, 111, 71, 0.4);
+  }
+  50% {
+    background-position: 0% 0;
+    text-shadow: 0 0 15px rgba(246, 193, 119, 0.6);
+  }
+  100% {
+    background-position: 200% 0;
+    text-shadow: 0 0 5px rgba(227, 111, 71, 0.4);
+  }
+}
+
 /* Mobile */
 @media (max-width: 768px) {
   .layout { flex-direction: column; }
@@ -241,7 +275,8 @@ body {
   </ul>
 </div>
 
-<h2>Grand Opening 3/1 </h2>
+<!-- GRAND OPENING -->
+<h2 class="grand-opening">Grand Opening 3/1</h2>
 <p>
   Wednesday – Saturday<br>
   <strong>8:00 AM – 2:30 PM</strong><br><br>
