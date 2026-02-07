@@ -26,14 +26,34 @@
     p {
       font-size: 1.1rem;
     }
-    a {
+    a.button {
       display: inline-block;
       margin-top: 30px;
+      padding: 12px 24px;
+      background: #0066cc;
+      color: #fff;
       text-decoration: none;
-      color: #0066cc;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    a.button:hover {
+      opacity: 0.9;
     }
   </style>
 </head>
 <body>
 
-  <h1
+  <h1>Menu</h1>
+  <p>Our full menu is coming soon.</p>
+  <p>Please check back shortly!</p>
+
+  <a class="button" href="index.html"
+     onclick="gtag('event', 'menu_back_home', {
+       event_category: 'Navigation',
+       event_label: 'Menu → Home'
+     });">
+     ← Back to Home
+  </a>
+
+</body>
+</html>
