@@ -7,55 +7,154 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-XFY3V13DJN');
   </script>
+
   <meta charset="UTF-8">
-  <title>Menu | Arizona Sunrise Cafecito & Catering</title>
+  <title>Soft Opening Menu | Arizona Sunrise Cafecito & Catering</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
+    * { box-sizing: border-box; }
+
     body {
+      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(to bottom, #fff7f0 0%, #ffffff 55%);
+      color: #333;
       text-align: center;
-      padding: 40px 20px;
-      background: #fff7f0;
     }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
     h1 {
-      margin-bottom: 10px;
+      color: #7a3b2e;
+      margin-bottom: 6px;
     }
-    p {
-      font-size: 1.1rem;
+
+    .subtitle {
+      font-size: 1.05rem;
+      margin-bottom: 30px;
     }
-    a.button {
-      display: inline-block;
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+    }
+
+    .menu-card {
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      overflow: hidden;
+      text-align: left;
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .menu-card .content {
+      padding: 16px;
+    }
+
+    .menu-card h3 {
+      margin: 0 0 6px;
+      color: #7a3b2e;
+    }
+
+    .menu-card p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    .note {
       margin-top: 30px;
+      font-style: italic;
+      font-size: 0.95rem;
+    }
+
+    /* Back button */
+    .button-back {
+      display: inline-block;
+      margin-top: 36px;
       padding: 14px 28px;
       border-radius: 30px;
       font-weight: 600;
       text-decoration: none;
       color: #fff;
-      background: linear-gradient(to right, #e36f47, #f6c177); /* match home page CTA */
+      background: linear-gradient(to right, #e36f47, #f6c177);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    a.button:hover {
+
+    .button-back:hover {
       transform: translateY(-2px);
       box-shadow: 0 6px 14px rgba(0,0,0,0.15);
     }
   </style>
 </head>
+
 <body>
 
-  <h1>Menu</h1>
-  <p>Our full menu is coming soon.</p>
-  <p>Please check back shortly!</p>
+  <div class="container">
 
-  <a class="button" href="index.html"
-     onclick="gtag('event', 'menu_back_home', {
-       event_category: 'Navigation',
-       event_label: 'Menu → Home'
-     });">
-     ← Back to Home
-  </a>
+    <h1>Soft Opening Menu</h1>
+    <p class="subtitle">
+      A preview of what we’re serving during our soft opening 🌅  
+      Limited menu • Freshly made • While supplies last
+    </p>
+
+    <div class="menu-grid">
+
+      <!-- Coffee -->
+      <div class="menu-card">
+        <img src="images/coffee.jpg" alt="Fresh coffee">
+        <div class="content">
+          <h3>Café & Espresso</h3>
+          <p>Hot & iced coffee, café con leche, lattes, and seasonal flavors.</p>
+        </div>
+      </div>
+
+      <!-- Breakfast -->
+      <div class="menu-card">
+        <img src="images/breakfast.jpg" alt="Breakfast tacos">
+        <div class="content">
+          <h3>Breakfast Favorites</h3>
+          <p>Breakfast tacos, pastries, and grab-and-go morning bites.</p>
+        </div>
+      </div>
+
+      <!-- Specialty Drinks -->
+      <div class="menu-card">
+        <img src="images/specialty.jpg" alt="Specialty drinks">
+        <div class="content">
+          <h3>Specialty Drinks</h3>
+          <p>House specialties inspired by Latin flavors and sunrise vibes.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="note">
+      Full menu coming soon — thank you for supporting our soft opening!
+    </p>
+
+    <a class="button-back" href="index.html"
+       onclick="gtag('event', 'menu_back_home', {
+         event_category: 'Navigation',
+         event_label: 'Menu → Home'
+       });">
+       ← Back to Home
+    </a>
+
+  </div>
 
 </body>
 </html>
