@@ -29,15 +29,17 @@
     a.button {
       display: inline-block;
       margin-top: 30px;
-      padding: 12px 24px;
-      background: #0066cc;
-      color: #fff;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-weight: 600;
       text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+      color: #fff;
+      background: linear-gradient(to right, #e36f47, #f6c177); /* match home page CTA */
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     a.button:hover {
-      opacity: 0.9;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
     }
   </style>
 </head>
