@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XFY3V13DJN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-XFY3V13DJN');
-</script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XFY3V13DJN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XFY3V13DJN');
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arizona Sunrise Cafecito & Catering</title>
@@ -17,235 +18,265 @@
   <!-- ICONS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <style>
-    * { box-sizing: border-box; }
+<style>
+* { box-sizing: border-box; }
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(to bottom, #fff7f0 0%, #ffffff 45%);
-      color: #333;
-    }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to bottom, #fff7f0 0%, #ffffff 45%);
+  color: #333;
+}
 
-    /* ===== LAYOUT ===== */
-    .layout {
-      display: flex;
-      min-height: 100vh;
-    }
+/* Layout */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
 
-    /* ===== SIDE NAV ===== */
-    .side-nav {
-      width: 220px;
-      background: #f7efe6;
-      padding: 24px 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
+/* Side Nav */
+.side-nav {
+  width: 220px;
+  background: #f7efe6;
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 
-    .side-nav a {
-      text-decoration: none;
-      color: #7a3b2e;
-      font-weight: 600;
-      padding: 12px 14px;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+.side-nav a {
+  text-decoration: none;
+  color: #7a3b2e;
+  font-weight: 600;
+  padding: 12px 14px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-    .side-nav a:hover {
-      background: #e6c3a5;
-    }
+.side-nav a:hover {
+  background: #e6c3a5;
+}
 
-    /* ===== MAIN ===== */
-    .main {
-      flex: 1;
-      text-align: center;
-    }
+/* Main */
+.main {
+  flex: 1;
+  text-align: center;
+}
 
-    .logo-wrap {
-      padding: 10px 16px 0;
-    }
+.logo-wrap {
+  padding: 10px 16px 0;
+}
 
-    .logo-wrap img {
-      width: 100%;
-      max-width: 900px;
-      display: block;
-      margin: 0 auto;
-    }
+.logo-wrap img {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
 
-    .divider {
-      width: 140px;
-      height: 2px;
-      margin: -78px auto 6px;
-      background: linear-gradient(to right, #f6c177, #e36f47, #f6c177);
-      border-radius: 2px;
-    }
+/* HERO */
+.hero {
+  max-width: 700px;
+  margin: 0 auto 20px;
+  padding: 0 20px;
+}
 
-    .opening {
-      margin: 0 0 16px;
-      font-size: 1.05rem;
-      line-height: 1.35;
-    }
+.hero h1 {
+  color: #7a3b2e;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
 
-    /* ===== CTA BUTTONS ===== */
-    .home-cta {
-      margin: 10px 0 26px;
-    }
+.hero p {
+  font-size: 1.1rem;
+}
 
-    .home-cta a {
-      display: inline-block;
-      margin: 8px;
-      padding: 14px 28px;
-      border-radius: 30px;
-      font-weight: 600;
-      text-decoration: none;
-      color: #fff;
-      background: linear-gradient(to right, #e36f47, #f6c177);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
+/* Soft Opening Banner */
+.soft-opening {
+  max-width: 600px;
+  margin: 25px auto;
+  padding: 20px;
+  border-radius: 14px;
+  background: linear-gradient(to right, #e36f47, #f6c177);
+  color: white;
+  font-weight: 600;
+}
 
-    .home-cta a.secondary {
-      background: linear-gradient(to right, #7a3b2e, #a65b4a);
-    }
+/* Feature Image */
+.feature-image img {
+  width: 100%;
+  max-width: 650px;
+  border-radius: 14px;
+  margin-top: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
 
-    .home-cta a:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-    }
+/* CTA Buttons */
+.home-cta {
+  margin: 25px 0 30px;
+}
 
-    .content {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 20px 40px;
-    }
+.home-cta a {
+  display: inline-block;
+  margin: 8px;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(to right, #e36f47, #f6c177);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-    h2 { margin-top: 26px; }
-    p { margin: 8px 0; }
+.home-cta a.secondary {
+  background: linear-gradient(to right, #7a3b2e, #a65b4a);
+}
 
-    /* MAP */
-    .map-wrap {
-      margin: 14px auto 6px;
-      max-width: 900px;
-      border-radius: 12px;
-      overflow: hidden;
-    }
+.home-cta a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
 
-    .map-wrap iframe {
-      width: 100%;
-      height: 300px;
-      border: 0;
-    }
+/* Content Section */
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
 
-    /* ===== MOBILE ===== */
-    @media (max-width: 768px) {
-      .layout {
-        flex-direction: column;
-      }
+/* Why Us */
+.why-us {
+  margin-top: 30px;
+  text-align: left;
+}
 
-      .side-nav {
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-around;
-      }
-    }
+.why-us ul {
+  list-style: none;
+  padding: 0;
+}
 
-    @media (max-width: 600px) {
-      .divider {
-        margin: -22px auto 10px;
-      }
+.why-us li {
+  margin: 10px 0;
+  font-size: 1.05rem;
+}
 
-      .opening {
-        font-size: 1rem;
-      }
+/* Map */
+.map-wrap iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 12px;
+}
 
-      .map-wrap iframe {
-        height: 240px;
-      }
-    }
-  </style>
+/* Mobile */
+@media (max-width: 768px) {
+  .layout { flex-direction: column; }
+
+  .side-nav {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <div class="layout">
 
-  <!-- ===== NAV ===== -->
-  <nav class="side-nav">
-    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
-    <a href="about.html"><i class="fa-solid fa-user-chef"></i> About Us</a>
-    <a href="menu.html"><i class="fa-solid fa-utensils"></i> Menu</a>
-    <a href="catering.html"><i class="fa-solid fa-truck"></i> Catering</a>
-  </nav>
+<!-- NAV -->
+<nav class="side-nav">
+  <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+  <a href="about.html"><i class="fa-solid fa-user-chef"></i> About Us</a>
+  <a href="menu.html"><i class="fa-solid fa-utensils"></i> Menu</a>
+  <a href="catering.html"><i class="fa-solid fa-truck"></i> Catering</a>
+</nav>
 
-  <!-- ===== MAIN ===== -->
-  <div class="main">
+<!-- MAIN -->
+<div class="main">
 
-    <div class="logo-wrap">
-      <img src="logo.png" alt="Arizona Sunrise Cafecito & Catering logo">
-    </div>
+<div class="logo-wrap">
+  <img src="logo.png" alt="Arizona Sunrise Cafecito & Catering logo">
+</div>
 
-    <div class="divider"></div>
+<!-- HERO -->
+<div class="hero">
+  <h1>Comfort food with Southwest soul</h1>
+  <p>
+    Scratch-made favorites, warm flavors, and bold bites —
+    served fresh from our food trailer.
+  </p>
+</div>
 
-    <div class="opening">
-      <strong>Soft Opening • February 28, 2026</strong><br>
-      11am – 2pm • Free tastings while supplies last<br><br>
-      <strong>Grand Opening • March 1, 2026</strong>
-    </div>
+<!-- SOFT OPENING -->
+<div class="soft-opening">
+  🌅 Soft Opening Free Tasting<br>
+  February 28 • 11am – 2pm<br>
+  Sample three featured menu items while supplies last.
+</div>
 
-    <!-- ===== HOME CTA ===== -->
-    <div class="home-cta">
-      <a href="menu.html">View Menu</a>
-      <a href="catering.html" class="secondary">Catering Info</a>
-    </div>
+<!-- FEATURE IMAGE -->
+<div class="feature-image">
+  <!-- Replace with your favorite food or trailer image -->
+  <img src="cc.jpg" alt="Featured food item">
+</div>
 
-    <div class="content">
+<!-- CTA -->
+<div class="home-cta">
+  <a href="menu.html">View Soft Opening Menu</a>
+  <a href="catering.html" class="secondary">Book Catering / Learn More</a>
+</div>
 
-      <h2>Hours</h2>
-      <p>
-        Wednesday – Saturday<br>
-        <strong>8:00 AM – 2:30 PM</strong>
-      <p>  
-        Sunday</b> 
-        <strong>9:00 AM - 2:00 PM</strong>
-      </p>
+<div class="content">
 
-      <h2>Location</h2>
-      <p>
-        <strong>151 Sabine Creek Road</strong><br>
-        Royse City, Texas
-      </p>
+<!-- WHY US -->
+<div class="why-us">
+  <h2>Why Arizona Sunrise Cafecito & Catering?</h2>
+  <ul>
+    <li>🌅 Comfort food with Southwest flair</li>
+    <li>🧡 Locally owned & community-driven</li>
+    <li>🚚 Freshly prepared from our food trailer</li>
+  </ul>
+</div>
 
-      <div class="map-wrap">
-        <iframe loading="lazy"
-          src="https://www.google.com/maps?q=151+Sabine+Creek+Road,+Royse+City,+TX&output=embed">
-        </iframe>
-      </div>
+<h2>Hours</h2>
+<p>
+  Wednesday – Saturday<br>
+  <strong>8:00 AM – 2:30 PM</strong><br><br>
+  Sunday<br>
+  <strong>9:00 AM – 2:00 PM</strong>
+</p>
 
-      <h2>Contact</h2>
+<h2>Location</h2>
+<p>
+  <strong>151 Sabine Creek Road</strong><br>
+  Royse City, Texas
+</p>
+
+<div class="map-wrap">
+  <iframe loading="lazy"
+    src="https://www.google.com/maps?q=151+Sabine+Creek+Road,+Royse+City,+TX&output=embed">
+  </iframe>
+</div>
+
+<h2>Contact</h2>
+
 <p>
   📞 <a href="tel:9455460808"
-       onclick="gtag('event', 'call_click', {
-         event_category: 'Contact',
-         event_label: 'Phone Call'
-       });">
-       945-546-0808
+     onclick="gtag('event','call_click',{event_category:'Contact',event_label:'Phone Call'});">
+     945-546-0808
   </a><br><br>
 
   📧 <a href="mailto:hello@azsunrisecafecito.com"
-       onclick="gtag('event', 'email_click', {
-         event_category: 'Contact',
-         event_label: 'Email'
-       });">
-       hello@azsunrisecafecito.com
+     onclick="gtag('event','email_click',{event_category:'Contact',event_label:'Email'});">
+     hello@azsunrisecafecito.com
   </a>
 </p>
 
-
-    </div>
-
-  </div>
+</div>
+</div>
 </div>
 
 </body>
