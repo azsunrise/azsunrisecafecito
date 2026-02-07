@@ -18,321 +18,267 @@
   <!-- ICONS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<style>
-* { box-sizing: border-box; }
+  <style>
+    * { box-sizing: border-box; }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(to bottom, #fff7f0 0%, #ffffff 45%);
-  color: #333;
-}
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(to bottom, #fff7f0 0%, #ffffff 45%);
+      color: #333;
+    }
 
-/* Layout */
-.layout {
-  display: flex;
-  min-height: 100vh;
-}
+    /* Layout */
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
 
-/* Side Nav */
-.side-nav {
-  width: 220px;
-  background: #f7efe6;
-  padding: 24px 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
+    /* Side Nav */
+    .side-nav {
+      width: 220px;
+      background: #f7efe6;
+      padding: 24px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
 
-.side-nav a {
-  text-decoration: none;
-  color: #7a3b2e;
-  font-weight: 600;
-  padding: 12px 14px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+    .side-nav a {
+      text-decoration: none;
+      color: #7a3b2e;
+      font-weight: 600;
+      padding: 12px 14px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-.side-nav a:hover {
-  background: #e6c3a5;
-}
+    .side-nav a:hover {
+      background: #e6c3a5;
+    }
 
-/* Main */
-.main {
-  flex: 1;
-  text-align: center;
-}
+    /* Main */
+    .main {
+      flex: 1;
+      text-align: center;
+    }
 
-.logo-wrap {
-  padding: 10px 16px 0;
-}
+    .logo-wrap {
+      padding: 10px 16px 0;
+    }
 
-.logo-wrap img {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-}
+    .logo-wrap img {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      border-radius: 12px; /* optional */
+    }
 
-/* HERO */
-.hero {
-  max-width: 700px;
-  margin: 0 auto 20px;
-  padding: 0 20px;
-}
+    /* HERO */
+    .hero {
+      max-width: 700px;
+      margin: 0 auto 20px;
+      padding: 0 20px;
+    }
 
-.hero h1 {
-  color: #7a3b2e;
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
+    .hero h1 {
+      color: #7a3b2e;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
 
-.hero p {
-  font-size: 1.1rem;
-}
+    .hero p {
+      font-size: 1.1rem;
+    }
 
-/* Soft Opening Banner */
-.soft-opening {
-  max-width: 600px;
-  margin: 25px auto;
-  padding: 20px;
-  border-radius: 14px;
-  background: linear-gradient(to right, #e36f47, #f6c177);
-  color: white;
-  font-weight: 600;
-}
+    /* Soft Opening Banner */
+    .soft-opening {
+      max-width: 600px;
+      margin: 25px auto;
+      padding: 20px;
+      border-radius: 14px;
+      background: linear-gradient(to right, #e36f47, #f6c177);
+      color: white;
+      font-weight: 600;
+    }
 
-/* CTA Buttons */
-.home-cta {
-  margin: 25px 0 30px;
-}
+    /* Featured Image */
+    .feature-image img {
+      width: 100%;
+      max-width: 650px;
+      border-radius: 14px;
+      margin-top: 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
 
-.home-cta a {
-  display: inline-block;
-  margin: 8px;
-  padding: 14px 28px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #fff;
-  background: linear-gradient(to right, #e36f47, #f6c177);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+    /* CTA Buttons */
+    .home-cta {
+      margin: 25px 0 30px;
+    }
 
-.home-cta a.secondary {
-  background: linear-gradient(to right, #7a3b2e, #a65b4a);
-}
+    .home-cta a {
+      display: inline-block;
+      margin: 8px;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(to right, #e36f47, #f6c177);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
 
-.home-cta a:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-}
+    .home-cta a.secondary {
+      background: linear-gradient(to right, #7a3b2e, #a65b4a);
+    }
 
-/* Featured Slideshow */
-.feature-slideshow {
-  position: relative;
-  max-width: 650px;
-  margin: 20px auto;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-}
+    .home-cta a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    }
 
-.feature-slideshow .slide {
-  display: none;
-  text-align: center;
-  position: relative;
-}
+    /* Content Section */
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px 40px;
+    }
 
-.feature-slideshow .slide img {
-  width: 100%;
-  border-radius: 14px;
-}
+    /* Why Us */
+    .why-us {
+      margin-top: 30px;
+      text-align: left;
+    }
 
-.feature-slideshow .caption {
-  position: absolute;
-  bottom: 12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 12px;
-  font-weight: 600;
-  font-size: 1rem;
-}
+    .why-us ul {
+      list-style: none;
+      padding: 0;
+    }
 
-.feature-slideshow .active {
-  display: block;
-}
+    .why-us li {
+      margin: 10px 0;
+      font-size: 1.05rem;
+    }
 
-/* Content Section */
-.content {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px 40px;
-  text-align: left;
-}
+    /* Map */
+    .map-wrap iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 12px;
+    }
 
-/* Why Us */
-.why-us {
-  margin-top: 30px;
-}
+    /* Mobile */
+    @media (max-width: 768px) {
+      .layout { flex-direction: column; }
 
-.why-us ul {
-  list-style: none;
-  padding: 0;
-}
-
-.why-us li {
-  margin: 10px 0;
-  font-size: 1.05rem;
-}
-
-/* Map */
-.map-wrap iframe {
-  width: 100%;
-  height: 300px;
-  border: 0;
-  border-radius: 12px;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .layout { flex-direction: column; }
-
-  .side-nav {
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-}
-</style>
+      .side-nav {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <div class="layout">
 
-<!-- NAV -->
-<nav class="side-nav">
-  <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
-  <a href="about.html"><i class="fa-solid fa-user-chef"></i> About Us</a>
-  <a href="menu.html"><i class="fa-solid fa-utensils"></i> Menu</a>
-  <a href="catering.html"><i class="fa-solid fa-truck"></i> Catering</a>
-</nav>
+  <!-- NAV -->
+  <nav class="side-nav">
+    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="about.html"><i class="fa-solid fa-user-chef"></i> About Us</a>
+    <a href="menu.html"><i class="fa-solid fa-utensils"></i> Menu</a>
+    <a href="catering.html"><i class="fa-solid fa-truck"></i> Catering</a>
+  </nav>
 
-<!-- MAIN -->
-<div class="main">
+  <!-- MAIN -->
+  <div class="main">
 
-<div class="logo-wrap">
-  <img src="logo.png" alt="Arizona Sunrise Cafecito & Catering logo">
-</div>
+    <div class="logo-wrap">
+      <img src="trailer.jpeg" alt="Arizona Sunrise Cafecito & Catering food trailer">
+    </div>
 
-<!-- HERO -->
-<div class="hero">
-  <h1>Comfort food with Southwest soul</h1>
-  <p>
-    Scratch-made favorites, warm flavors, and bold bites —
-    served fresh from our food trailer.
-  </p>
-</div>
+    <!-- HERO -->
+    <div class="hero">
+      <h1>Comfort food with Southwest soul</h1>
+      <p>
+        Scratch-made favorites, warm flavors, and bold bites —
+        served fresh from our food trailer.
+      </p>
+    </div>
 
-<!-- SOFT OPENING -->
-<div class="soft-opening">
-   Soft Opening Free Tasting<br>
-  February 28 • 11am – 2pm<br>
-  Sample three featured menu items while supplies last.
-</div>
+    <!-- SOFT OPENING -->
+    <div class="soft-opening">
+      🌅 Soft Opening Free Tasting<br>
+      February 28 • 11am – 2pm<br>
+      Sample three featured menu items while supplies last.
+    </div>
 
-<!-- CTA -->
-<div class="home-cta">
-  <a href="menu.html">View Soft Opening Menu</a>
-  <a href="catering.html" class="secondary">Book Catering / Learn More</a>
-</div>
+    <!-- FEATURE IMAGE -->
+    <div class="feature-image">
+      <!-- Replace with your favorite food or trailer image -->
+      <img src="cc.jpg" alt="Featured food item">
+    </div>
 
-<!-- FEATURED SLIDESHOW -->
-<div class="feature-slideshow">
-  <div class="slide active">
-    <img src="gccs.jpg" alt="Green Chile Chicken Soup">
-    <div class="caption">Green Chile Chicken Soup</div>
+    <!-- CTA -->
+    <div class="home-cta">
+      <a href="menu.html">View Soft Opening Menu</a>
+      <a href="catering.html" class="secondary">Book Catering / Learn More</a>
+    </div>
+
+    <div class="content">
+
+      <!-- WHY US -->
+      <div class="why-us">
+        <h2>Why Arizona Sunrise Cafecito & Catering?</h2>
+        <ul>
+          <li>🌅 Comfort food with Southwest flair</li>
+          <li>🧡 Locally owned & community-driven</li>
+          <li>🚚 Freshly prepared from our food trailer</li>
+        </ul>
+      </div>
+
+      <h2>Hours</h2>
+      <p>
+        Wednesday – Saturday<br>
+        <strong>8:00 AM – 2:30 PM</strong><br><br>
+        Sunday<br>
+        <strong>9:00 AM – 2:00 PM</strong>
+      </p>
+
+      <h2>Location</h2>
+      <p>
+        <strong>151 Sabine Creek Road</strong><br>
+        Royse City, Texas
+      </p>
+
+      <div class="map-wrap">
+        <iframe loading="lazy"
+          src="https://www.google.com/maps?q=151+Sabine+Creek+Road,+Royse+City,+TX&output=embed">
+        </iframe>
+      </div>
+
+      <h2>Contact</h2>
+
+      <p>
+        📞 <a href="tel:9455460808"
+           onclick="gtag('event', 'call_click', {event_category:'Contact',event_label:'Phone Call'});">
+           945-546-0808
+        </a><br><br>
+
+        📧 <a href="mailto:hello@azsunrisecafecito.com"
+           onclick="gtag('event', 'email_click', {event_category:'Contact',event_label:'Email'});">
+           hello@azsunrisecafecito.com
+        </a>
+      </p>
+
+    </div>
   </div>
-  <div class="slide">
-    <img src="cc.jpg" alt="Crab Cakes">
-    <div class="caption">Crab Cakes</div>
-  </div>
-  <div class="slide">
-    <img src="r.jpeg" alt="Golden Reuben Croquettes">
-    <div class="caption">Golden Reuben Croquettes</div>
-  </div>
 </div>
-
-<div class="content">
-
-<!-- WHY US -->
-<div class="why-us">
-  <h2>Why Arizona Sunrise Cafecito & Catering?</h2>
-  <ul>
-    <li>🌅 Comfort food with Southwest flair</li>
-    <li>🧡 Locally owned & community-driven</li>
-    <li>🚚 Freshly prepared from our food trailer</li>
-  </ul>
-</div>
-
-<h2>Hours</h2>
-<p>
-  Wednesday – Saturday<br>
-  <strong>8:00 AM – 2:30 PM</strong><br><br>
-  Sunday<br>
-  <strong>9:00 AM – 2:00 PM</strong>
-</p>
-
-<h2>Location</h2>
-<p>
-  <strong>151 Sabine Creek Road</strong><br>
-  Royse City, Texas
-</p>
-
-<div class="map-wrap">
-  <iframe loading="lazy"
-    src="https://www.google.com/maps?q=151+Sabine+Creek+Road,+Royse+City,+TX&output=embed">
-  </iframe>
-</div>
-
-<h2>Contact</h2>
-
-<p>
-  📞 <a href="tel:9455460808"
-     onclick="gtag('event','call_click',{event_category:'Contact',event_label:'Phone Call'});">
-     945-546-0808
-  </a><br><br>
-
-  📧 <a href="mailto:hello@azsunrisecafecito.com"
-     onclick="gtag('event','email_click',{event_category:'Contact',event_label:'Email'});">
-     hello@azsunrisecafecito.com
-  </a>
-</p>
-
-</div>
-</div>
-</div>
-
-<!-- SLIDESHOW SCRIPT -->
-<script>
-let slideIndex = 0;
-const slides = document.querySelectorAll('.feature-slideshow .slide');
-
-function showSlides() {
-  slides.forEach((slide) => slide.classList.remove('active'));
-  slideIndex++;
-  if (slideIndex > slides.length) slideIndex = 1;
-  slides[slideIndex - 1].classList.add('active');
-  setTimeout(showSlides, 4000);
-}
-
-window.addEventListener('load', showSlides);
-</script>
 
 </body>
 </html>
