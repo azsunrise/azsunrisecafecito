@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XFY3V13DJN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-XFY3V13DJN');
-</script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XFY3V13DJN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XFY3V13DJN');
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arizona Sunrise Cafecito & Catering</title>
@@ -138,6 +139,35 @@
       border: 0;
     }
 
+    /* ===== HERO & SOFT OPENING ===== */
+    .hero {
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      color: #7a3b2e;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+    }
+
+    .soft-opening {
+      max-width: 600px;
+      margin: 25px auto;
+      padding: 20px;
+      border-radius: 14px;
+      background: linear-gradient(to right, #e36f47, #f6c177);
+      color: white;
+      font-weight: 600;
+      text-align: center;
+    }
+
     /* ===== MOBILE ===== */
     @media (max-width: 768px) {
       .layout {
@@ -164,6 +194,7 @@
         height: 240px;
       }
     }
+
   </style>
 </head>
 
@@ -186,17 +217,23 @@
       <img src="logo.png" alt="Arizona Sunrise Cafecito & Catering logo">
     </div>
 
-    <div class="divider"></div>
-
-    <div class="opening">
-      <strong>Soft Opening • February 28, 2026</strong><br>
-      11am – 2pm • Free tastings while supplies last<br><br>
-      <strong>Grand Opening • March 1, 2026</strong>
+    <!-- HERO & SOFT OPENING -->
+    <div class="hero">
+      <h1>Comfort food with Southwest soul</h1>
+      <p>Scratch-made favorites, warm flavors, and bold bites — served fresh from our food trailer.</p>
     </div>
+
+    <div class="soft-opening">
+      🌅 Soft Opening Free Tasting<br>
+      February 28 • 11am – 2pm<br>
+      Sample three featured menu items while supplies last.
+    </div>
+
+    <div class="divider"></div>
 
     <!-- ===== HOME CTA ===== -->
     <div class="home-cta">
-      <a href="menu.html">View Menu</a>
+      <a href="menu.html">View Soft Opening Menu</a>
       <a href="catering.html" class="secondary">Catering Info</a>
     </div>
 
@@ -205,10 +242,9 @@
       <h2>Hours</h2>
       <p>
         Wednesday – Saturday<br>
-        <strong>8:00 AM – 2:30 PM</strong>
-      <p>  
-        Sunday</b> 
-        <strong>9:00 AM - 2:00 PM</strong>
+        <strong>8:00 AM – 2:30 PM</strong><br><br>
+        Sunday<br>
+        <strong>9:00 AM – 2:00 PM</strong>
       </p>
 
       <h2>Location</h2>
@@ -224,24 +260,23 @@
       </div>
 
       <h2>Contact</h2>
-<p>
-  📞 <a href="tel:9455460808"
-       onclick="gtag('event', 'call_click', {
-         event_category: 'Contact',
-         event_label: 'Phone Call'
-       });">
-       945-546-0808
-  </a><br><br>
+      <p>
+        📞 <a href="tel:9455460808"
+           onclick="gtag('event', 'call_click', {
+             event_category: 'Contact',
+             event_label: 'Phone Call'
+           });">
+           945-546-0808
+        </a><br><br>
 
-  📧 <a href="mailto:hello@azsunrisecafecito.com"
-       onclick="gtag('event', 'email_click', {
-         event_category: 'Contact',
-         event_label: 'Email'
-       });">
-       hello@azsunrisecafecito.com
-  </a>
-</p>
-
+        📧 <a href="mailto:hello@azsunrisecafecito.com"
+           onclick="gtag('event', 'email_click', {
+             event_category: 'Contact',
+             event_label: 'Email'
+           });">
+           hello@azsunrisecafecito.com
+        </a>
+      </p>
 
     </div>
 
