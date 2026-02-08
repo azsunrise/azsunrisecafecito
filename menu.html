@@ -16,44 +16,37 @@ gtag('config', 'G-XFY3V13DJN');
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-* { box-sizing: border-box; }
+*{box-sizing:border-box;}
 
-body {
+body{
 margin:0;
-font-family: Arial, Helvetica, sans-serif;
-background: linear-gradient(to bottom, #fff7f0 0%, #ffffff 55%);
+font-family:Arial,Helvetica,sans-serif;
+background:linear-gradient(to bottom,#fff7f0 0%,#ffffff 55%);
 color:#333;
 text-align:center;
 }
 
-.container {
-max-width:900px;
-margin:0 auto;
-padding:40px 20px 60px;
-}
+.container{max-width:900px;margin:auto;padding:40px 20px 60px;}
 
-h1 { color:#7a3b2e; margin-bottom:6px; }
-h2 { color:#7a3b2e; margin-top:40px; }
+h1,h2{color:#7a3b2e;}
 
-.badge {
+.badge{
 display:inline-block;
 margin:12px 0 24px;
 padding:8px 18px;
 border-radius:20px;
-background: linear-gradient(to right, #e36f47, #f6c177);
+background:linear-gradient(to right,#e36f47,#f6c177);
 color:#fff;
 font-weight:bold;
 }
 
-.subtitle { margin-bottom:34px; }
-
-.menu-grid {
+.menu-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:24px;
 }
 
-.menu-card {
+.menu-card{
 background:#fff;
 border-radius:16px;
 box-shadow:0 8px 20px rgba(0,0,0,0.06);
@@ -61,20 +54,20 @@ overflow:hidden;
 text-align:left;
 }
 
-.menu-card img {
+.menu-card img{
 width:100%;
 height:200px;
 object-fit:cover;
 }
 
-.menu-card .content { padding:18px; }
+.menu-card .content{padding:18px;}
 
-.note {
-margin-top:34px;
-font-style:italic;
-}
+.menu-section{margin-bottom:14px;}
+.menu-section strong{display:block;margin-top:6px;}
 
-.button-back {
+.note{margin-top:34px;font-style:italic;}
+
+.button-back{
 display:inline-block;
 margin-top:38px;
 padding:14px 28px;
@@ -82,12 +75,9 @@ border-radius:30px;
 font-weight:600;
 text-decoration:none;
 color:#fff;
-background: linear-gradient(to right, #e36f47, #f6c177);
+background:linear-gradient(to right,#e36f47,#f6c177);
 }
-
-.price { float:right; font-weight:bold; }
 </style>
-
 </head>
 
 <body>
@@ -97,7 +87,7 @@ background: linear-gradient(to right, #e36f47, #f6c177);
 <h1>Soft Opening Free Tasting</h1>
 <div class="badge">FREE • Limited Quantities</div>
 
-<p class="subtitle">
+<p>
 Join us for our soft opening and enjoy a complimentary tasting of
 three featured menu items — while supplies last.
 </p>
@@ -105,15 +95,15 @@ three featured menu items — while supplies last.
 <div class="menu-grid">
 
 <div class="menu-card">
-<img src="gccs.jpg" alt="Green Chile Chicken Soup">
+<img src="gccs.jpg">
 <div class="content">
 <h3>Green Chile Chicken Soup</h3>
-<p>Comforting chicken soup with roasted green chiles and warming spices.</p>
+<p>Comforting chicken soup with roasted green chiles and slow-simmered spices.</p>
 </div>
 </div>
 
 <div class="menu-card">
-<img src="cc.jpg" alt="Crab Cakes">
+<img src="cc.jpg">
 <div class="content">
 <h3>Crab Cakes</h3>
 <p>Golden-crisp crab cakes with tender, savory centers.</p>
@@ -121,7 +111,7 @@ three featured menu items — while supplies last.
 </div>
 
 <div class="menu-card">
-<img src="r.jpeg" alt="Golden Reuben Croquettes">
+<img src="r.jpeg">
 <div class="content">
 <h3>Golden Reuben Croquettes</h3>
 <p>Bite-sized croquettes packed with corned beef, swiss, sauerkraut, and bold Reuben flavor.</p>
@@ -130,36 +120,77 @@ three featured menu items — while supplies last.
 
 </div>
 
-<!-- FULL BRUNCH MENU PREVIEW ADDED -->
-<h2>🌅 Full Brunch Menu Preview</h2>
+<h2>🌅 Full Brunch Menu — DRAFT</h2>
 
 <div class="menu-grid">
 
 <div class="menu-card"><div class="content">
 <h3>Breakfast Biscuits</h3>
-<p>Egg & Cheese <span class="price">$5.50</span><br>
-Biscuits & Gravy <span class="price">$7.50</span><br>
-Texan Benedict <span class="price">$9.75</span></p>
+<div class="menu-section">
+<strong>Egg & Cheese — $5.50</strong>
+Add Sausage, Bacon, or Ham $2
+<strong>Biscuits & Gravy — $7.50</strong>
+<strong>Texan Benedict — $9.75</strong>
+</div>
+</div></div>
+
+<div class="menu-card"><div class="content">
+<h3>Breakfast Tacos</h3>
+<div class="menu-section">
+<strong>Egg & Cheese — $3.50</strong>
+Add Sausage, Bacon, Ham, or Chorizo $1.25
+</div>
 </div></div>
 
 <div class="menu-card"><div class="content">
 <h3>Breakfast Burritos</h3>
-<p>Sonoran Burrito <span class="price">$10</span><br>
-Burracho Special <span class="price">$12</span><br>
-Cruda Special <span class="price">$12</span></p>
+<div class="menu-section">
+<strong>The Sonoran Burrito — $10.00</strong>
+Egg, chorizo, grilled onions, and cheese
+<strong>The Burracho Special — $12.00</strong>
+Fresh jalapeños
+<strong>The Cruda Special — $12.00</strong>
+Pico de gallo & tangy crema
+<strong>The Children’s Burrito — $5.00</strong>
+</div>
 </div></div>
 
 <div class="menu-card"><div class="content">
 <h3>Homemade Pancakes</h3>
-<p>Adult Pancakes <span class="price">$6.50</span><br>
-Kids Chocolate Chip <span class="price">$5</span></p>
+<div class="menu-section">
+<strong>Adult Pancakes — $6.50</strong>
+Add Sausage, Bacon, or Ham $2
+<strong>Children’s Chocolate Chip — $5.00</strong>
+</div>
 </div></div>
 
 <div class="menu-card"><div class="content">
-<h3>All-Day Favorites</h3>
-<p>Monte Cristo <span class="price">$9.50</span><br>
-Patty Melt <span class="price">$10.50</span><br>
-Chicken Nuggets <span class="price">$7.50</span></p>
+<h3>All-Day Brunch Favorites</h3>
+<div class="menu-section">
+<strong>Crab Cakes — $11.50</strong>
+Roasted garlic caper aioli
+<strong>Golden Reuben Croquettes — $10.75</strong>
+Fries or vinaigrette coleslaw
+<strong>Monte Cristo — $9.50</strong>
+Powdered sugar
+<strong>Patty Melt — $10.50</strong>
+Griddled with jalapeños
+<strong>Green Chile Chicken Soup — $5.50 / $7.50</strong>
+<strong>Children’s Chicken Nuggets — $7.50</strong>
+</div>
+</div></div>
+
+<div class="menu-card"><div class="content">
+<h3>Sides & Drinks</h3>
+<div class="menu-section">
+<strong>Bacon, Ham or Sausage — $2.50</strong>
+<strong>Coleslaw — $2.25</strong>
+<strong>French Fries — $3.00</strong>
+<strong>Lifeboost Coffee — $4.50</strong>
+<strong>Iced Tea — $3.00</strong>
+<strong>Seasonal Juice — $3.00</strong>
+<strong>Sodas — $2.50</strong>
+</div>
 </div></div>
 
 </div>
@@ -169,9 +200,11 @@ Full menu coming soon — thank you for celebrating our soft opening with us!
 </p>
 
 <a class="button-back" href="index.html"
-onclick="gtag('event', 'menu_back_home', {
-event_category:'Navigation',
-event_label:'Menu → Home'
-});">
+onclick="gtag('event','menu_back_home',{event_category:'Navigation',event_label:'Menu → Home'});">
 ← Back to Home
 </a>
+
+</div>
+
+</body>
+</html>
