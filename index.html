@@ -2,330 +2,150 @@
 <html lang="en">
 <head>
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XFY3V13DJN"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XFY3V13DJN');
-  </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XFY3V13DJN"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XFY3V13DJN');
+</script>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arizona Sunrise Cafecito & Catering</title>
-
-  <!-- ICONS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<meta charset="UTF-8">
+<title>Soft Opening Tasting Menu | Arizona Sunrise Cafecito & Catering</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(to bottom, #fff7f0 0%, #ffffff 45%);
-  color: #333;
+*{box-sizing:border-box;}
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:linear-gradient(to bottom,#fff7f0 0%,#ffffff 55%);
+color:#333;
+text-align:center;
 }
-
-/* Layout */
-.layout {
-  display: flex;
-  min-height: 100vh;
+.container{max-width:900px;margin:auto;padding:40px 20px 60px;}
+h1{color:#7a3b2e;}
+h2{color:#7a3b2e;margin-top:40px;}
+.badge{
+display:inline-block;
+margin:12px 0 24px;
+padding:8px 18px;
+border-radius:20px;
+background:linear-gradient(to right,#e36f47,#f6c177);
+color:#fff;font-weight:bold;
 }
-
-/* Side Nav */
-.side-nav {
-  width: 220px;
-  background: #f7efe6;
-  padding: 24px 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:24px;
 }
-
-.side-nav a {
-  text-decoration: none;
-  color: #7a3b2e;
-  font-weight: 600;
-  padding: 12px 14px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.menu-card{
+background:#fff;
+border-radius:16px;
+box-shadow:0 8px 20px rgba(0,0,0,0.06);
+overflow:hidden;
+text-align:left;
 }
-
-.side-nav a:hover {
-  background: #e6c3a5;
+.menu-card img{
+width:100%;
+height:200px;
+object-fit:cover;
 }
-
-/* Main */
-.main {
-  flex: 1;
-  text-align: center;
-}
-
-.logo-wrap {
-  padding: 10px 16px 0;
-}
-
-.logo-wrap img {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  border-radius: 14px;
-}
-
-/* HERO */
-.hero {
-  max-width: 700px;
-  margin: 0 auto 20px;
-  padding: 0 20px;
-}
-
-.hero h1 {
-  color: #7a3b2e;
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 1.1rem;
-}
-
-/* Soft Opening Banner */
-.soft-opening {
-  max-width: 600px;
-  margin: 25px auto;
-  padding: 20px;
-  border-radius: 14px;
-  background: linear-gradient(to right, #e36f47, #f6c177);
-  color: white;
-  font-weight: 600;
-}
-
-/* FEATURED IMAGE / SLIDESHOW */
-.feature-image img {
-  width: 100%;
-  max-width: 650px;
-  border-radius: 14px;
-  margin-top: 20px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-}
-
-/* CTA Buttons */
-.home-cta {
-  margin: 25px 0 30px;
-}
-
-.home-cta a {
-  display: inline-block;
-  margin: 8px;
-  padding: 14px 28px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #fff;
-  background: linear-gradient(to right, #e36f47, #f6c177);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.home-cta a.secondary {
-  background: linear-gradient(to right, #7a3b2e, #a65b4a);
-}
-
-.home-cta a:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-}
-
-/* Content Section */
-.content {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px 40px;
-}
-
-/* Why Us */
-.why-us {
-  margin-top: 30px;
-  text-align: left;
-}
-
-.why-us ul {
-  list-style: none;
-  padding: 0;
-}
-
-.why-us li {
-  margin: 10px 0;
-  font-size: 1.05rem;
-}
-
-/* Map */
-.map-wrap iframe {
-  width: 100%;
-  height: 300px;
-  border: 0;
-  border-radius: 12px;
-}
-
-/* GRAND OPENING SHIMMER */
-.grand-opening {
-  font-size: 2.5rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-align: center;
-  margin: 30px 0 15px;
-
-  /* Gradient text */
-  background: linear-gradient(90deg, #f6c177, #fcd8b1, #e36f47);
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  /* Soft shimmer animation */
-  animation: sunriseShimmer 3s ease-in-out infinite;
-}
-
-@keyframes sunriseShimmer {
-  0% {
-    background-position: 200% 0;
-    text-shadow: 0 0 5px rgba(227, 111, 71, 0.4);
-  }
-  50% {
-    background-position: 0% 0;
-    text-shadow: 0 0 15px rgba(246, 193, 119, 0.6);
-  }
-  100% {
-    background-position: 200% 0;
-    text-shadow: 0 0 5px rgba(227, 111, 71, 0.4);
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .layout { flex-direction: column; }
-
-  .side-nav {
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-around;
-  }
+.menu-card .content{padding:18px;}
+.menu-card h3{margin:0 0 8px;color:#7a3b2e;}
+.note{margin-top:34px;font-style:italic;}
+.button-back{
+display:inline-block;
+margin-top:38px;
+padding:14px 28px;
+border-radius:30px;
+font-weight:600;
+text-decoration:none;
+color:#fff;
+background:linear-gradient(to right,#e36f47,#f6c177);
 }
 </style>
 </head>
 
 <body>
 
-<div class="layout">
+<div class="container">
 
-<!-- NAV -->
-<nav class="side-nav">
-  <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
-  <a href="about.html"><i class="fa-solid fa-user-chef"></i> About Us</a>
-  <a href="menu.html"><i class="fa-solid fa-utensils"></i> Menu</a>
-  <a href="catering.html"><i class="fa-solid fa-truck"></i> Catering</a>
-</nav>
+<h1>Soft Opening Free Tasting</h1>
+<div class="badge">FREE • Limited Quantities</div>
 
-<!-- MAIN -->
-<div class="main">
+<p>
+Join us for our soft opening and enjoy a complimentary tasting of
+three featured menu items — while supplies last.
+</p>
 
-<div class="logo-wrap">
-  <img src="trailer.jpeg" alt="Arizona Sunrise Cafecito & Catering trailer">
-</div>
+<div class="menu-grid">
 
-<!-- HERO -->
-<div class="hero">
-  <h1>Comfort food with Southwest soul</h1>
-  <p>
-    Scratch-made favorites, warm flavors, and bold bites —
-    served fresh from our food trailer.
-  </p>
-</div>
-
-<!-- SOFT OPENING -->
-<div class="soft-opening">
-   Soft Opening Free Tasting<br>
-  February 28 • 11am – 2pm<br>
-  Sample three featured menu items while supplies last.
-</div>
-
-<!-- FEATURE IMAGE / SLIDESHOW -->
-<div class="feature-image">
-  <img id="slideshow" src="gccs.jpg" alt="Featured food item">
-</div>
-
-<!-- CTA -->
-<div class="home-cta">
-  <a href="menu.html">View Soft Opening Menu</a>
-  <a href="catering.html" class="secondary">Book Catering / Learn More</a>
-</div>
-
+<div class="menu-card">
+<img src="gccs.jpg">
 <div class="content">
-
-<!-- WHY US -->
-<div class="why-us">
-  <h2>Why Arizona Sunrise Cafecito & Catering?</h2>
-  <ul>
-    <li>🌅 Comfort food with Southwest flair</li>
-    <li>🧡 Locally owned & community-driven</li>
-    <li>🚚 Freshly prepared from our food trailer</li>
-  </ul>
-</div>
-
-<!-- GRAND OPENING -->
-<h2 class="grand-opening">Grand Opening 3/1</h2>
-<p>
-  Wednesday – Saturday<br>
-  <strong>8:00 AM – 2:30 PM</strong><br><br>
-  Sunday<br>
-  <strong>9:00 AM – 2:00 PM</strong>
-</p>
-
-<h2>Location</h2>
-<p>
-  <strong>151 Sabine Creek Road</strong><br>
-  Royse City, Texas
-</p>
-
-<div class="map-wrap">
-  <iframe loading="lazy"
-    src="https://www.google.com/maps?q=151+Sabine+Creek+Road,+Royse+City,+TX&output=embed">
-  </iframe>
-</div>
-
-<h2>Contact</h2>
-<p>
-  📞 <a href="tel:9455460808"
-     onclick="gtag('event','call_click',{event_category:'Contact',event_label:'Phone Call'});">
-     945-546-0808
-  </a><br><br>
-
-  📧 <a href="mailto:hello@azsunrisecafecito.com"
-     onclick="gtag('event','email_click',{event_category:'Contact',event_label:'Email'});">
-     hello@azsunrisecafecito.com
-  </a>
-</p>
-
-</div>
+<h3>Green Chile Chicken Soup</h3>
+<p>Comforting and flavorful chicken soup with roasted green chiles and slow-simmered spices.</p>
 </div>
 </div>
 
-<!-- SLIDESHOW SCRIPT -->
-<script>
-  const images = ["gccs.jpg", "cc.jpg", "r.jpeg"];
-  let current = 0;
-  const slideshow = document.getElementById("slideshow");
+<div class="menu-card">
+<img src="cc.jpg">
+<div class="content">
+<h3>Crab Cakes</h3>
+<p>Golden-crisp crab cakes with tender, savory centers — a customer favorite in the making.</p>
+</div>
+</div>
 
-  function nextImage() {
-    current = (current + 1) % images.length;
-    slideshow.src = images[current];
-  }
+<div class="menu-card">
+<img src="r.jpeg">
+<div class="content">
+<h3>Golden Reuben Croquettes</h3>
+<p>Bite-sized croquettes packed with corned beef, swiss, sauerkraut, and bold Reuben flavor.</p>
+</div>
+</div>
 
-  setInterval(nextImage, 3000); // change image every 3 seconds
-</script>
+</div>
 
-</body>
-</html>
+<h2>🌅 Full Brunch Menu Preview</h2>
+
+<div class="menu-grid">
+
+<div class="menu-card"><div class="content">
+<h3>Breakfast Biscuits</h3>
+<p>Egg & Cheese — $5.50 (add Sausage, Bacon, or Ham for $2)<br>
+Biscuits & Gravy — $7.50<br>
+Texan Benedict — $9.75</p>
+</div></div>
+
+<div class="menu-card"><div class="content">
+<h3>Breakfast Tacos</h3>
+<p>Egg & Cheese — $3.50 (add Sausage, Bacon, Ham, or Chorizo for $1.25)</p>
+</div></div>
+
+<div class="menu-card"><div class="content">
+<h3>Breakfast Burritos</h3>
+<p>The Sonoran Burrito — $10.00 (Egg, chorizo, grilled onions, and cheese)<br>
+The Burracho Special — $12.00 (Fresh jalapeños)<br>
+The Cruda Special — $12.00 (Pico & tangy crema)<br>
+The Children’s Burrito — $5.00</p>
+</div></div>
+
+<div class="menu-card"><div class="content">
+<h3>Homemade Pancakes</h3>
+<p>Adult Pancakes — $6.50 (add Sausage, Bacon, or Ham for $2)<br>
+Children’s Chocolate Chip Pancakes — $5.00</p>
+</div></div>
+
+<div class="menu-card"><div class="content">
+<h3>All-Day Brunch Favorites</h3>
+<p>Crab Cakes — $11.50 (Roasted garlic caper aioli)<br>
+Golden Reuben Croquettes — $10.75 (fries or coleslaw)<br>
+Monte Cristo Sandwich — $9.50 (powdered sugar)<br>
+Patty Melt — $10.50 (jalapeños)<br>
+Green Chile Chicken Soup — 10oz $5.50 | 16oz $7.50<br>
+Children’s Chicken Nuggets — $7.50</p>
+</div></div>
+
+<div class="men
