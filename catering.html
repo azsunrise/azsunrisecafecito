@@ -163,7 +163,7 @@
     }
     .checkline label{
       margin: 0;
-      font-weight: 700;
+      font-weight: 800;
       font-size: 0.95rem;
       color: #533f3a;
     }
@@ -239,22 +239,32 @@
 
     <div class="notice">
       <strong>Pickup Catering Only (for now)</strong>
+
       <div class="line">
         <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
         <div>
           <strong>Pickup Address:</strong> 151 Sabine Road, Royse City, TX
         </div>
       </div>
+
       <div class="line">
-        <i class="fa-solid fa-truck" aria-hidden="true"></i>
+        <i class="fa-solid fa-circle-dollar-to-slot" aria-hidden="true"></i>
         <div>
-          Need delivery? You’re welcome to use <strong>DoorDash</strong> (when available) for delivery, or send a courier.
+          <strong>Minimum Order:</strong> $150 (before tax)
         </div>
       </div>
+
       <div class="line">
         <i class="fa-solid fa-tag" aria-hidden="true"></i>
         <div>
           <strong>10% off</strong> catering orders paid in <strong>cash</strong>.
+        </div>
+      </div>
+
+      <div class="line">
+        <i class="fa-solid fa-truck" aria-hidden="true"></i>
+        <div>
+          Need delivery? You’re welcome to use <strong>DoorDash</strong> (when available) for delivery, or send a courier.
         </div>
       </div>
     </div>
@@ -293,7 +303,7 @@
       </div>
 
       <label for="estimated_total">Estimated Budget (optional)</label>
-      <input type="text" id="estimated_total" name="Estimated Budget" placeholder="Example: $200–$300">
+      <input type="text" id="estimated_total" name="Estimated Budget" placeholder="Example: $200–$300 (min. $150)">
 
       <label for="guest_count">Estimated Headcount</label>
       <input type="number" id="guest_count" name="Estimated Headcount" min="1" placeholder="Example: 12">
@@ -315,19 +325,23 @@
         placeholder="Example: no pork, vegetarian options, allergies, etc."></textarea>
 
       <div class="policy">
-        <strong>Deposit Policy (Required to Confirm)</strong><br>
-        We require a <strong>deposit to confirm</strong> pickup catering orders. This helps us prepare fresh food and reserve your time.
+        <strong>Deposit + Cancellation Policy</strong><br>
+        To protect your pickup time and ensure we prepare everything fresh, we require a deposit.
         <ul>
+          <li><strong>Minimum order:</strong> $150 (before tax)</li>
+          <li><strong>Deposit:</strong> 50% required to confirm your order</li>
           <li>Your order is <strong>not confirmed</strong> until the deposit is received.</li>
-          <li>After you submit this form, we’ll contact you to confirm details and collect the deposit.</li>
-          <li><strong>Cash Discount:</strong> 10% off when your catering order is paid in cash.</li>
+          <li><strong>Cancellation window:</strong> Cancel 48+ hours before pickup for a refund of your deposit (minus any non-recoverable ingredient costs, if applicable).</li>
+          <li>Cancellations within 48 hours are <strong>non-refundable</strong> because ingredients and prep are already in motion.</li>
+          <li><strong>Cash discount:</strong> 10% off when your catering order is paid in cash.</li>
         </ul>
 
         <div class="checkline">
-          <input type="checkbox" id="deposit_ack" name="Deposit Acknowledgement" value="I understand a deposit is required to confirm my order." required>
+          <input type="checkbox" id="deposit_ack" name="Policy Acknowledgement"
+                 value="I understand the $150 minimum, 50% deposit requirement, and the 48-hour cancellation policy." required>
           <div>
-            <label for="deposit_ack">I understand a deposit is required to confirm my catering order.</label>
-            <div class="small">Submitting this request does not guarantee availability until we confirm and receive the deposit.</div>
+            <label for="deposit_ack">I agree to the minimum order, deposit, and cancellation policy.</label>
+            <div class="small">Submitting this request does not guarantee availability until we confirm and receive your deposit.</div>
           </div>
         </div>
       </div>
