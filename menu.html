@@ -3,296 +3,181 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Soft Opening | Arizona Sunrise Cafecito & Catering</title>
-
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XFY3V13DJN"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-XFY3V13DJN');
-</script>
+<title>Menu | Arizona Sunrise Cafecito & Catering</title>
 
 <style>
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(to bottom, #fff7f0, #ffffff);
-  color: #333;
-  text-align: center;
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:linear-gradient(to bottom,#ffe3cf,#fff7f0,#ffffff);
+  color:#3b2a26;
 }
-
-.container {
-  max-width: 960px;
-  margin: auto;
-  padding: 40px 20px 60px;
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:40px 20px 70px;
 }
-
-h1, h2, h3 {
-  color: #7a3b2e;
+h1{
+  text-align:center;
+  color:#7a3b2e;
+  font-size:2.2rem;
 }
-
-h2 {
-  font-size: 1.6rem;
-  margin-top: 48px;
+h2{
+  color:#7a3b2e;
+  margin-top:42px;
+  border-bottom:3px solid #f6a25c;
+  padding-bottom:6px;
 }
-
-.badge {
-  display: inline-block;
-  margin: 12px 0 12px;
-  padding: 8px 18px;
-  border-radius: 20px;
-  background: linear-gradient(to right, #e36f47, #f6c177);
-  color: #fff;
-  font-weight: bold;
+.badge{
+  display:inline-block;
+  background:linear-gradient(to right,#e36f47,#f6c177);
+  color:#fff;
+  padding:8px 18px;
+  border-radius:20px;
+  font-weight:bold;
+  margin:10px auto 20px;
 }
-
-.menu-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
+.note{
+  text-align:center;
+  font-style:italic;
+  margin:18px 0 26px;
 }
-
-.menu-card {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-  overflow: hidden;
-  text-align: left;
+.menu-section{
+  margin-top:16px;
 }
-
-.menu-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+.menu-item{
+  display:flex;
+  justify-content:space-between;
+  margin:9px 0;
+  font-size:1rem;
 }
-
-.menu-card .content {
-  padding: 20px;
+.menu-item span{
+  display:block;
 }
-
-.menu-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
-  font-size: .95rem;
-  cursor: pointer;
+.star{
+  color:#e36f47;
+  font-weight:bold;
 }
-
-.menu-item:focus {
-  outline: 2px solid #f6c177;
+.must-try{
+  background:#fff1e6;
+  border-left:6px solid #e36f47;
+  padding:14px 16px;
+  border-radius:10px;
+  margin:20px 0 30px;
 }
-
-.menu-description {
-  display: none;
-  font-size: .9rem;
-  margin: 6px 0 12px;
-  color: #555;
-  line-height: 1.4;
+.kids{
+  font-size:0.9rem;
 }
-
-.static-note {
-  font-size: .9rem;
-  color: #555;
-  margin-bottom: 12px;
-}
-
-.icon {
-  font-weight: bold;
-  margin-left: 8px;
-}
-
-.tag {
-  font-size: .75rem;
-  padding: 3px 6px;
-  border-radius: 6px;
-  margin-left: 6px;
-  font-weight: bold;
-}
-
-.tag-kids { background: #9ed2c6; color: #1f3f3f; }
-.tag-fav { background: #f6c177; color: #7a3b2e; }
-
-.info-box {
-  background: #fff3e8;
-  border-left: 6px solid #e36f47;
-  padding: 18px;
-  margin: 20px auto 30px;
-  text-align: left;
-  border-radius: 10px;
-  max-width: 900px;
-}
-
-.note {
-  margin-top: 40px;
-  font-style: italic;
-}
-
-.button-back {
-  display: inline-block;
-  margin-top: 38px;
-  padding: 14px 28px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #fff;
-  background: linear-gradient(to right, #e36f47, #f6c177);
+.footer-note{
+  text-align:center;
+  margin-top:50px;
+  font-style:italic;
 }
 </style>
 </head>
 
 <body>
-
 <div class="container">
 
-<h1>Soft Opening Free Tasting</h1>
-<div class="badge">FREE • Limited Quantities</div>
-<p><strong>Friday, February 28 • 11:00am – 2:00pm</strong></p>
+<h1>🌅 Arizona Sunrise Cafecito & Catering</h1>
 
-<p>
-Join us for our soft opening and enjoy a complimentary tasting of
-three featured menu items — while supplies last.
-</p>
-
-<div class="menu-grid">
-
-<div class="menu-card">
-<img src="gccs.jpg" alt="Green Chile Chicken Soup">
-<div class="content">
-<h3>Green Chile Chicken Soup</h3>
-<p>Comforting chicken soup with roasted green chiles and slow-simmered spices.</p>
-</div>
-</div>
-
-<div class="menu-card">
-<img src="cc.jpg" alt="Crab Cakes">
-<div class="content">
-<h3>Crab Cakes</h3>
-<p>Golden-crisp crab cakes with tender savory centers.</p>
-</div>
-</div>
-
-<div class="menu-card">
-<img src="r.jpeg" alt="Golden Reuben Croquettes">
-<div class="content">
-<h3>Golden Reuben Croquettes</h3>
-<p>Corned beef, Swiss, sauerkraut & bold Reuben flavor.</p>
-</div>
-</div>
-
-</div>
-
-<h2>🌅 Full Brunch Menu — DRAFT</h2>
-
-<div class="info-box">
-Tap an item to see ingredients and details. Fries are always made fresh.
-</div>
-
-<div class="menu-grid">
-
-<!-- Breakfast Biscuits -->
-<div class="menu-card">
-<div class="content">
-<h3>Breakfast Biscuits</h3>
-
-<div class="menu-item" tabindex="0" onclick="toggleDescription(this)">
-<span>Egg & Cheese</span><span>$5.50</span><span class="icon">+</span>
-</div>
-<div class="menu-description">
-Fresh biscuit with egg & cheese. Add sausage, bacon, or ham for $2.
-</div>
-
-<div class="menu-item" tabindex="0" onclick="toggleDescription(this)">
-<span>Biscuits & Gravy</span><span>$7.50</span><span class="icon">+</span>
-</div>
-<div class="menu-description">
-Classic biscuits smothered in rich sausage gravy.
-</div>
-
-<div class="menu-item" tabindex="0" onclick="toggleDescription(this)">
-<span>Texan Benedict <span class="tag tag-fav">★</span></span><span>$9.75</span><span class="icon">+</span>
-</div>
-<div class="menu-description">
-Southern-style Benedict with bold Texas flavor.
-</div>
-</div>
-</div>
-
-<!-- Breakfast Tacos -->
-<div class="menu-card">
-<div class="content">
-<h3>Breakfast Tacos</h3>
-
-<div class="menu-item" tabindex="0" onclick="toggleDescription(this)">
-<span>Egg & Cheese</span><span>$3.50</span><span class="icon">+</span>
-</div>
-<div class="menu-description">
-Warm flour tortillas filled with eggs & cheese.
-</div>
-
-<p class="static-note">
-Add sausage, bacon, ham, or chorizo +$1.25
-</p>
-</div>
-</div>
-
-<!-- All-Day Favorites -->
-<div class="menu-card">
-<div class="content">
-<h3>All-Day Favorites</h3>
-
-<div class="menu-item" tabindex="0" onclick="toggleDescription(this)">
-<span>Golden Reuben Croquettes <span class="tag tag-fav">🌟</span></span><span>$10.75</span><span class="icon">+</span>
-</div>
-<div class="menu-description">
-Corned beef, Swiss & sauerkraut croquettes with bold Reuben flavor.
-</div>
-
-<div class="menu-item" tabindex="0" onclick="toggleDescription(this)">
-<span>Monte Cristo Sandwich (Brunch Style)</span><span>$9.50</span><span class="icon">+</span>
-</div>
-<div class="menu-description">
-Griddled brunch sandwich with ham, turkey, cheese & powdered sugar.
-</div>
-
-<div class="menu-item" tabindex="0" onclick="toggleDescription(this)">
-<span>Children’s Freshly Made Chicken Nuggets <span class="tag tag-kids">🧒</span></span><span>$7.50</span><span class="icon">+</span>
-</div>
-<div class="menu-description">
-Fresh, made-to-order chicken nuggets served with fresh fries.
-</div>
-
-</div>
-</div>
-
+<div style="text-align:center;">
+  <div class="badge">Soft Opening • Free Tasting • Limited</div>
 </div>
 
 <p class="note">
-Full menu coming soon — thank you for celebrating our soft opening with us!
+Sample three featured items while supplies last
 </p>
 
-<a class="button-back" href="index.html">← Back to Home</a>
-
+<div class="menu-section">
+  <div class="menu-item"><span>Crab Cakes</span></div>
+  <div class="menu-item"><span><span class="star">⭐</span> Golden Reuben Croquettes</span></div>
+  <div class="menu-item"><span>Green Chile Chicken Soup</span></div>
 </div>
 
-<script>
-// DUPLICATE A .menu-item + .menu-description PAIR TO ADD NEW ITEMS
-function toggleDescription(el) {
-  const desc = el.nextElementSibling;
-  const icon = el.querySelector('.icon');
-  if (desc.style.display === "block") {
-    desc.style.display = "none";
-    icon.textContent = "+";
-  } else {
-    desc.style.display = "block";
-    icon.textContent = "−";
-  }
-}
-</script>
+<!-- MUST TRY -->
+<div class="must-try">
+  <strong>⭐ Must-Try Favorites</strong>
+  <div class="menu-item"><span>Golden Reuben Croquettes</span></div>
+  <div class="menu-item"><span>Texan Benedict</span></div>
+  <div class="menu-item"><span>Crunch Tuna Melt</span></div>
+</div>
 
+<p class="note">Menu rotates • Ask about specials</p>
+
+<!-- BREAKFAST BISCUITS -->
+<h2>Breakfast Biscuits</h2>
+<div class="menu-section">
+  <div class="menu-item"><span>Egg & Cheese (add Sausage, Bacon, or Ham +$2)</span><span>$5.50</span></div>
+  <div class="menu-item"><span>Sausage, Egg & Cheese</span><span>$7.50</span></div>
+  <div class="menu-item"><span>Bacon, Egg & Cheese</span><span>$7.50</span></div>
+  <div class="menu-item"><span>Ham, Egg & Cheese</span><span>$7.25</span></div>
+  <div class="menu-item"><span>Biscuits & Gravy</span><span>$7.50</span></div>
+</div>
+
+<!-- BREAKFAST TACOS -->
+<h2>Breakfast Tacos (Flour Tortillas)</h2>
+<div class="menu-section">
+  <div class="menu-item"><span>Egg & Cheese</span><span>$3.50</span></div>
+  <div class="menu-item"><span>Egg, Cheese & Sausage</span><span>$4.75</span></div>
+  <div class="menu-item"><span>Egg, Cheese & Bacon</span><span>$4.75</span></div>
+  <div class="menu-item"><span>Egg, Chorizo & Cheese</span><span>$4.75</span></div>
+</div>
+
+<!-- BREAKFAST BURRITOS -->
+<h2>Breakfast Burritos</h2>
+<div class="menu-section">
+  <div class="menu-item"><span>Sonoran Burrito</span><span>$9.50</span></div>
+  <div class="menu-item"><span>Burracho Special</span><span>$10.50</span></div>
+  <div class="menu-item"><span>Cruda Special</span><span>$10.50</span></div>
+  <div class="menu-item kids"><span>Kids Burrito</span><span>$5.00</span></div>
+</div>
+
+<!-- PANCAKES -->
+<h2>Pancakes & More</h2>
+<div class="menu-section">
+  <div class="menu-item"><span>Homemade Pancakes (add Sausage, Bacon, or Ham +$2)</span><span>$6.50</span></div>
+  <div class="menu-item kids"><span>Children’s Chocolate Chip Pancakes</span><span>$5.00</span></div>
+  <div class="menu-item"><span>Seasonal Fruit Skillet</span><span>$5.50</span></div>
+  <div class="menu-item"><span><span class="star">⭐</span> Texan Benedict</span><span>$9.75</span></div>
+</div>
+
+<!-- ALL DAY -->
+<h2>All-Day Favorites</h2>
+<div class="menu-section">
+  <div class="menu-item"><span>Crab Cakes</span><span>$11.50</span></div>
+  <div class="menu-item"><span><span class="star">⭐</span> Golden Reuben Croquettes</span><span>$10.75</span></div>
+  <div class="menu-item"><span>NY Style Reuben Sandwich</span><span>$10.75</span></div>
+  <div class="menu-item"><span><span class="star">⭐</span> Crunch Tuna Melt (English muffin, provolone, w/fries)</span><span>$10.50</span></div>
+  <div class="menu-item"><span>Monte Cristo Sandwich (powdered sugar)</span><span>$9.50</span></div>
+  <div class="menu-item"><span>Patty Melt (griddled with jalapeños)</span><span>$10.50</span></div>
+  <div class="menu-item"><span>Green Chile Chicken Soup 10oz / 16oz</span><span>$5.50 / $7.50</span></div>
+  <div class="menu-item kids"><span>Freshly Made Chicken Nuggets (kids, w/fries)</span><span>$5.50</span></div>
+</div>
+
+<!-- SIDES -->
+<h2>Sides</h2>
+<div class="menu-section">
+  <div class="menu-item"><span>Bacon</span><span>$2.50</span></div>
+  <div class="menu-item"><span>Sausage</span><span>$2.50</span></div>
+  <div class="menu-item"><span>Toast</span><span>$1.50</span></div>
+  <div class="menu-item"><span>Coleslaw</span><span>$2.25</span></div>
+  <div class="menu-item"><span>French Fries (fresh made to order)</span><span>$3.00</span></div>
+</div>
+
+<!-- DRINKS -->
+<h2>Drinks</h2>
+<div class="menu-section">
+  <div class="menu-item"><span>Lifeboost Coffee</span><span>$3.00</span></div>
+  <div class="menu-item"><span>Iced Tea (Sweet or Unsweet)</span><span>$2.50</span></div>
+  <div class="menu-item"><span>Seasonal Juice</span><span>$3.00</span></div>
+  <div class="menu-item"><span>Sodas</span><span>$2.50</span></div>
+</div>
+
+<p class="footer-note">
+Thank you for supporting Arizona Sunrise Cafecito 🌅
+</p>
+
+</div>
 </body>
 </html>
