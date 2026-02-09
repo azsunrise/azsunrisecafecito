@@ -5,126 +5,142 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Soft Opening | Arizona Sunrise Cafecito & Catering</title>
 
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XFY3V13DJN"></script>
 <script>
-window.dataLayer=window.dataLayer||[];
+window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());
-gtag('config','G-XFY3V13DJN');
+gtag('js', new Date());
+gtag('config', 'G-XFY3V13DJN');
 </script>
 
 <style>
-*{box-sizing:border-box;}
-body{
-margin:0;
-font-family:Arial,Helvetica,sans-serif;
-background:linear-gradient(to bottom,#fff7f0,#ffffff);
-color:#333;
-text-align:center;
-}
-.container{max-width:960px;margin:auto;padding:40px 20px 60px;}
-h1,h2{color:#7a3b2e;margin-bottom:12px;}
-h2{font-size:1.6rem;margin-top:40px;}
+* { box-sizing: border-box; }
 
-.badge{
-display:inline-block;
-margin:12px 0 24px;
-padding:8px 18px;
-border-radius:20px;
-background:linear-gradient(to right,#e36f47,#f6c177);
-color:#fff;font-weight:bold;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to bottom, #fff7f0, #ffffff);
+  color: #333;
+  text-align: center;
 }
 
-.menu-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:24px;
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 40px 20px 60px;
 }
 
-.menu-card{
-background:#fff;
-border-radius:16px;
-box-shadow:0 8px 20px rgba(0,0,0,0.06);
-overflow:hidden;
-text-align:left;
-transition: transform 0.2s, box-shadow 0.2s;
-}
-.menu-card:hover{
-transform:translateY(-4px);
-box-shadow:0 12px 24px rgba(0,0,0,0.12);
+h1, h2, h3 {
+  color: #7a3b2e;
 }
 
-.menu-card img{width:100%;height:200px;object-fit:cover;}
-.menu-card .content{padding:20px;}
-
-.menu-item{
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin-bottom:8px;
-font-size:.95rem;
-cursor:pointer;
-user-select:none;
+h2 {
+  font-size: 1.6rem;
+  margin-top: 48px;
 }
 
-.menu-item span.label{flex:1;text-align:left;}
-.menu-item span.price{margin-left:10px;}
-.menu-item span.icon{
-margin-left:8px;
-transition: transform 0.2s;
-font-weight:bold;
+.badge {
+  display: inline-block;
+  margin: 12px 0 12px;
+  padding: 8px 18px;
+  border-radius: 20px;
+  background: linear-gradient(to right, #e36f47, #f6c177);
+  color: #fff;
+  font-weight: bold;
 }
 
-.tag{
-font-size:.75rem;
-padding:3px 6px;
-border-radius:6px;
-margin-left:6px;
-font-weight:bold;
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
 }
 
-.tag-kids{background:#9ed2c6;color:#1f3f3f;}
-.tag-fav{background:#f6c177;color:#7a3b2e;}
-.tag-star{background:#e36f47;color:#fff;}
-
-.menu-description{
-display:none;
-font-size:.9rem;
-margin-top:6px;
-color:#555;
-line-height:1.4;
-text-align:left;
-transition: max-height 0.3s ease;
+.menu-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  overflow: hidden;
+  text-align: left;
 }
 
-.info-box{
-background:#fff3e8;
-border-left:6px solid #e36f47;
-padding:18px;
-margin:20px auto 30px;
-text-align:left;
-border-radius:10px;
-max-width:900px;
-box-shadow:0 4px 12px rgba(0,0,0,0.05);
-line-height:1.5;
+.menu-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
-.note{margin-top:40px;font-style:italic;}
-
-.button-back{
-display:inline-block;
-margin-top:38px;
-padding:14px 28px;
-border-radius:30px;
-font-weight:600;
-text-decoration:none;
-color:#fff;
-background:linear-gradient(to right,#e36f47,#f6c177);
-transition:transform 0.2s, box-shadow 0.2s;
+.menu-card .content {
+  padding: 20px;
 }
-.button-back:hover{
-transform:translateY(-2px);
-box-shadow:0 6px 14px rgba(0,0,0,0.15);
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: .95rem;
+  cursor: pointer;
+}
+
+.menu-item:focus {
+  outline: 2px solid #f6c177;
+}
+
+.menu-description {
+  display: none;
+  font-size: .9rem;
+  margin: 6px 0 12px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.static-note {
+  font-size: .9rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.icon {
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.tag {
+  font-size: .75rem;
+  padding: 3px 6px;
+  border-radius: 6px;
+  margin-left: 6px;
+  font-weight: bold;
+}
+
+.tag-kids { background: #9ed2c6; color: #1f3f3f; }
+.tag-fav { background: #f6c177; color: #7a3b2e; }
+
+.info-box {
+  background: #fff3e8;
+  border-left: 6px solid #e36f47;
+  padding: 18px;
+  margin: 20px auto 30px;
+  text-align: left;
+  border-radius: 10px;
+  max-width: 900px;
+}
+
+.note {
+  margin-top: 40px;
+  font-style: italic;
+}
+
+.button-back {
+  display: inline-block;
+  margin-top: 38px;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(to right, #e36f47, #f6c177);
 }
 </style>
 </head>
@@ -135,6 +151,7 @@ box-shadow:0 6px 14px rgba(0,0,0,0.15);
 
 <h1>Soft Opening Free Tasting</h1>
 <div class="badge">FREE • Limited Quantities</div>
+<p><strong>Friday, February 28 • 11:00am – 2:00pm</strong></p>
 
 <p>
 Join us for our soft opening and enjoy a complimentary tasting of
@@ -143,7 +160,6 @@ three featured menu items — while supplies last.
 
 <div class="menu-grid">
 
-<!-- Soft Opening Items -->
 <div class="menu-card">
 <img src="gccs.jpg" alt="Green Chile Chicken Soup">
 <div class="content">
@@ -164,174 +180,116 @@ three featured menu items — while supplies last.
 <img src="r.jpeg" alt="Golden Reuben Croquettes">
 <div class="content">
 <h3>Golden Reuben Croquettes</h3>
-<p>Corned beef, swiss, sauerkraut & bold Reuben flavor.</p>
+<p>Corned beef, Swiss, sauerkraut & bold Reuben flavor.</p>
 </div>
 </div>
 
-</div> <!-- end soft opening -->
+</div>
 
 <h2>🌅 Full Brunch Menu — DRAFT</h2>
 
 <div class="info-box">
-Click a menu item below to see details about ingredients and preparation.
+Tap an item to see ingredients and details. Fries are always made fresh.
 </div>
 
 <div class="menu-grid">
 
 <!-- Breakfast Biscuits -->
-<div class="menu-card"><div class="content">
+<div class="menu-card">
+<div class="content">
 <h3>Breakfast Biscuits</h3>
-<div class="menu-item" onclick="toggleDescription(this)">
-<span class="label">Egg & Cheese</span><span class="price">$5.50</span><span class="icon">+</span>
-</div>
-<div class="menu-description">Freshly baked biscuit with melted cheese and a fluffy egg inside. Add sausage, bacon, or ham for $2.</div>
 
-<div class="menu-item" onclick="toggleDescription(this)">
-<span class="label">Biscuits & Gravy</span><span class="price">$7.50</span><span class="icon">+</span>
+<div class="menu-item" tabindex="0" onclick="toggleDescription(this)">
+<span>Egg & Cheese</span><span>$5.50</span><span class="icon">+</span>
 </div>
-<div class="menu-description">Classic southern biscuits smothered in rich, creamy sausage gravy.</div>
+<div class="menu-description">
+Fresh biscuit with egg & cheese. Add sausage, bacon, or ham for $2.
+</div>
 
-<div class="menu-item" onclick="toggleDescription(this)">
-<span class="label">Texan Benedict <span class="tag tag-star">★</span></span><span class="price">$9.75</span><span class="icon">+</span>
+<div class="menu-item" tabindex="0" onclick="toggleDescription(this)">
+<span>Biscuits & Gravy</span><span>$7.50</span><span class="icon">+</span>
 </div>
-<div class="menu-description">Southern-style eggs benedict with bold Texas flavor and hearty brunch comfort.</div>
-</div></div>
+<div class="menu-description">
+Classic biscuits smothered in rich sausage gravy.
+</div>
+
+<div class="menu-item" tabindex="0" onclick="toggleDescription(this)">
+<span>Texan Benedict <span class="tag tag-fav">★</span></span><span>$9.75</span><span class="icon">+</span>
+</div>
+<div class="menu-description">
+Southern-style Benedict with bold Texas flavor.
+</div>
+</div>
+</div>
 
 <!-- Breakfast Tacos -->
-<div class="menu-card"><div class="content">
+<div class="menu-card">
+<div class="content">
 <h3>Breakfast Tacos</h3>
-<div class="menu-item" onclick="toggleDescription(this)">
-<span class="label">Egg & Cheese</span><span class="price">$3.50</span><span class="icon">+</span>
-</div>
-<div class="menu-description">Flour tortillas filled with eggs & cheese.</div>
 
-<div class="menu-item" onclick="toggleDescription(this)">
-<span class="label">Add Sausage, Bacon, Ham, or Chorizo</span><span class="price">$1.25</span><span class="icon">+</span>
+<div class="menu-item" tabindex="0" onclick="toggleDescription(this)">
+<span>Egg & Cheese</span><span>$3.50</span><span class="icon">+</span>
 </div>
-<div class="menu-description">Extra protein for your tacos.</div>
-</div></div>
+<div class="menu-description">
+Warm flour tortillas filled with eggs & cheese.
+</div>
 
-<!-- Breakfast Burritos -->
-<div class="menu-card"><div class="content">
-<h3>Breakfast Burritos</h3>
-<div class="menu-item" onclick="toggleDescription(this)">
-<span class="label">Sonoran Burrito</span><span class="price">$10.00</span><span class="icon">+</span>
+<p class="static-note">
+Add sausage, bacon, ham, or chorizo +$1.25
+</p>
 </div>
-<div class="menu-description">Classic Arizona breakfast burrito with chorizo, eggs, grilled onions, and cheese.</div>
-
-<div class="menu-item" onclick="toggleDescription(this)">
-<span class="label">Burracho Special</span><span class="price">$12.00</span><span class="icon">+</span>
 </div>
-<div class="menu-description">Sonoran burrito with fresh jalapeños.</div>
-
-<div class="menu-item" onclick="toggleDescription(this)">
-<span class="label">Cruda Special</span><span class="price">$12.00</span><span class="icon">+</span>
-</div>
-<div class="menu-description">Topped with fresh pico de gallo and tangy crema.</div>
-
-<div class="menu-item" onclick="toggleDescription(this)">
-<span class="label">Children’s Burrito <span class="tag tag-kids">🧒</span></span><span class="price">$5.00</span><span class="icon">+</span>
-</div>
-<div class="menu-description">Egg & cheese, smaller portion perfect for kids.</div>
-</div></div>
-
-<!-- Homemade Pancakes -->
-<div class="menu-card"><div class="content">
-<h3>Homemade Pancakes</h3>
-<div class="menu-item" onclick="toggleDescription(this)">
-<span class="label">Adult Pancakes</span><span class="price">$6.50</span><span class="icon">+</span>
-</div>
-<div class="menu-description">Fluffy homemade pancakes. Add sausage, bacon, or ham for $2.</div>
-
-<div class="menu-item" onclick="toggleDescription(this)">
-<span class="label">Children’s Chocolate Chip <span class="tag tag-kids">🧒</span></span><span class="price">$5.00</span><span class="icon">+</span>
-</div>
-<div class="menu-description">Smaller portion pancakes with chocolate chips for kids.</div>
-</div></div>
 
 <!-- All-Day Favorites -->
-<div class="menu-card"><div class="content">
+<div class="menu-card">
+<div class="content">
 <h3>All-Day Favorites</h3>
-<div class="menu-item" onclick="toggleDescription(this)">
-<span class="label">Crab Cakes <span class="tag tag-fav">🌟</span></span><span class="price">$11.50</span><span class="icon">+</span>
+
+<div class="menu-item" tabindex="0" onclick="toggleDescription(this)">
+<span>Golden Reuben Croquettes <span class="tag tag-fav">🌟</span></span><span>$10.75</span><span class="icon">+</span>
 </div>
-<div class="menu-description">Golden-crisp crab cakes with roasted garlic caper aioli.</div>
-
-<div class="menu-item" onclick="toggleDescription(this)">
-<span class="label">Golden Reuben Croquettes <span class="tag tag-fav">🌟</span></span><span class="price">$10.75</span><span class="icon">+</span>
+<div class="menu-description">
+Corned beef, Swiss & sauerkraut croquettes with bold Reuben flavor.
 </div>
-<div class="menu-description">Bite-sized croquettes packed with corned beef, swiss, and sauerkraut.</div>
 
-<div class="menu-item" onclick="toggleDescription(this)">
-<span class="label">Monte Cristo Sandwich</span><span class="price">$9.50</span><span class="icon">+</span>
+<div class="menu-item" tabindex="0" onclick="toggleDescription(this)">
+<span>Monte Cristo Sandwich (Brunch Style)</span><span>$9.50</span><span class="icon">+</span>
 </div>
-<div class="menu-description">Griddled sandwich with ham, turkey, cheese, finished with powdered sugar.</div>
-
-<div class="menu-item" onclick="toggleDescription(this)">
-<span class="label">Patty Melt</span><span class="price">$10.50</span><span class="icon">+</span>
+<div class="menu-description">
+Griddled brunch sandwich with ham, turkey, cheese & powdered sugar.
 </div>
-<div class="menu-description">Cooked on the griddle with jalapeños, served with fries or coleslaw.</div>
 
-<div class="menu-item" onclick="toggleDescription(this)">
-<span class="label">Green Chile Chicken Soup — 10oz / 16oz</span><span class="price">$5.50 / $7.50</span><span class="icon">+</span>
+<div class="menu-item" tabindex="0" onclick="toggleDescription(this)">
+<span>Children’s Freshly Made Chicken Nuggets <span class="tag tag-kids">🧒</span></span><span>$7.50</span><span class="icon">+</span>
 </div>
-<div class="menu-description">Slow-simmered chicken soup with roasted green chiles.</div>
-
-<div class="menu-item" onclick="toggleDescription(this)">
-<span class="label">Children’s Freshly Made Chicken Nuggets <span class="tag tag-kids">🧒</span></span><span class="price">$7.50</span><span class="icon">+</span>
+<div class="menu-description">
+Fresh, made-to-order chicken nuggets served with fresh fries.
 </div>
-<div class="menu-description">Freshly made chicken nuggets for kids, served with fries and choice of BBQ or ranch.</div>
-</div></div>
 
-<!-- Sides & Drinks -->
-<div class="menu-card"><div class="content">
-<h3>Sides & Drinks</h3>
-<div class="menu-item" onclick="toggleDescription(this)"><span class="label">Bacon / Ham / Sausage</span><span class="price">$2.50</span><span class="icon">+</span></div>
-<div class="menu-description"></div>
+</div>
+</div>
 
-<div class="menu-item" onclick="toggleDescription(this)"><span class="label">Coleslaw</span><span class="price">$2.25</span><span class="icon">+</span></div>
-<div class="menu-description"></div>
-
-<div class="menu-item" onclick="toggleDescription(this)"><span class="label">French Fries</span><span class="price">$3.00</span><span class="icon">+</span></div>
-<div class="menu-description"></div>
-
-<div class="menu-item" onclick="toggleDescription(this)"><span class="label">Lifeboost Coffee</span><span class="price">$4.50</span><span class="icon">+</span></div>
-<div class="menu-description">Low-acid & mold/chemical-free dark blend coffee.</div>
-
-<div class="menu-item" onclick="toggleDescription(this)"><span class="label">Iced Tea</span><span class="price">$3.00</span><span class="icon">+</span></div>
-<div class="menu-description">Sweet or unsweetened iced tea.</div>
-
-<div class="menu-item" onclick="toggleDescription(this)"><span class="label">Seasonal Juice</span><span class="price">$3.00</span><span class="icon">+</span></div>
-<div class="menu-description"></div>
-
-<div class="menu-item" onclick="toggleDescription(this)"><span class="label">Sodas</span><span class="price">$2.50</span><span class="icon">+</span></div>
-<div class="menu-description"></div>
-</div></div>
-
-</div> <!-- end brunch grid -->
+</div>
 
 <p class="note">
 Full menu coming soon — thank you for celebrating our soft opening with us!
 </p>
 
-<a class="button-back" href="index.html"
-onclick="gtag('event','menu_back_home',{event_category:'Navigation',event_label:'Menu → Home'});">
-← Back to Home
-</a>
+<a class="button-back" href="index.html">← Back to Home</a>
 
 </div>
 
 <script>
-// Toggle description and icon
-function toggleDescription(el){
-  let desc = el.nextElementSibling;
-  let icon = el.querySelector('.icon');
-  if(desc.style.display === "block"){
+// DUPLICATE A .menu-item + .menu-description PAIR TO ADD NEW ITEMS
+function toggleDescription(el) {
+  const desc = el.nextElementSibling;
+  const icon = el.querySelector('.icon');
+  if (desc.style.display === "block") {
     desc.style.display = "none";
-    icon.textContent = '+';
+    icon.textContent = "+";
   } else {
     desc.style.display = "block";
-    icon.textContent = '−';
+    icon.textContent = "−";
   }
 }
 </script>
