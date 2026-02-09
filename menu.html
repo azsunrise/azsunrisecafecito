@@ -71,6 +71,12 @@ margin-left:6px;
 color:#e36f47;
 font-weight:bold;
 }
+.menu-description{
+font-size:.9rem;
+color:#555;
+line-height:1.4;
+margin-bottom:6px;
+}
 .note{margin-top:34px;font-style:italic;}
 
 .button-back{
@@ -82,6 +88,11 @@ font-weight:600;
 text-decoration:none;
 color:#fff;
 background:linear-gradient(to right,#e36f47,#f6c177);
+}
+
+@media (max-width:600px){
+.menu-item{flex-direction:column;align-items:flex-start;}
+.menu-item span{margin-bottom:4px;}
 }
 </style>
 </head>
@@ -96,7 +107,7 @@ background:linear-gradient(to right,#e36f47,#f6c177);
 <div class="menu-grid">
 
 <div class="menu-card">
-<img src="gccs.jpg">
+<img src="gccs.jpg" alt="Green Chile Chicken Soup">
 <div class="content">
 <h3>Green Chile Chicken Soup</h3>
 <p>Comforting chicken soup with roasted green chiles and slow-simmered spices.</p>
@@ -104,18 +115,18 @@ background:linear-gradient(to right,#e36f47,#f6c177);
 </div>
 
 <div class="menu-card">
-<img src="cc.jpg">
+<img src="cc.jpg" alt="Crab Cakes">
 <div class="content">
 <h3>Crab Cakes</h3>
-<p>Golden-crisp crab cakes with tender savory centers.</p>
+<p>Golden-crisp crab cakes with tender savory centers and roasted garlic caper aioli.</p>
 </div>
 </div>
 
 <div class="menu-card">
-<img src="r.jpeg">
+<img src="r.jpeg" alt="Golden Reuben Croquettes">
 <div class="content">
 <h3>⭐ Golden Reuben Croquettes</h3>
-<p>Corned beef, swiss, sauerkraut & bold Reuben flavor.</p>
+<p>Bite-sized croquettes packed with corned beef, swiss, and sauerkraut.</p>
 </div>
 </div>
 
@@ -127,60 +138,109 @@ background:linear-gradient(to right,#e36f47,#f6c177);
 
 <div class="menu-grid">
 
+<!-- Breakfast Biscuits -->
 <div class="menu-card"><div class="content">
 <h3>Breakfast Biscuits (served with cottage potatoes)</h3>
 <div class="menu-item"><span>Egg & Cheese</span><span>$5.50 (add Sausage, Bacon, or Ham +$2)</span></div>
+<div class="menu-description">Freshly baked biscuit with melted cheese and a fluffy egg inside.</div>
+
 <div class="menu-item"><span>Sausage, Egg & Cheese</span><span>$7.50</span></div>
+<div class="menu-description">Biscuit with sausage, egg, and melted cheese, served with cottage potatoes.</div>
+
 <div class="menu-item"><span>Bacon, Egg & Cheese</span><span>$7.50</span></div>
+<div class="menu-description">Biscuit with crispy bacon, egg, and melted cheese, served with cottage potatoes.</div>
+
 <div class="menu-item"><span>Ham, Egg & Cheese</span><span>$7.25</span></div>
+<div class="menu-description">Biscuit with ham, egg, and melted cheese, served with cottage potatoes.</div>
+
 <div class="menu-item"><span>Biscuits & Gravy</span><span>$7.50</span></div>
+<div class="menu-description">Classic southern biscuits smothered in rich, creamy sausage gravy, served with cottage potatoes.</div>
+
 <div class="menu-item"><span>Texan Benedict <span class="star">⭐</span></span><span>$9.75</span></div>
+<div class="menu-description">Southern-style eggs benedict with sausage, gravy, and two poached eggs, served with cottage potatoes.</div>
 </div></div>
 
+<!-- Breakfast Tacos -->
 <div class="menu-card"><div class="content">
 <h3>Breakfast Tacos (Flour Tortillas)</h3>
 <div class="menu-item"><span>Egg & Cheese</span><span>$3.50</span></div>
+<div class="menu-description">Flour tortillas filled with eggs & melted cheese.</div>
+
 <div class="menu-item"><span>Egg, Cheese & Sausage</span><span>$4.75</span></div>
+<div class="menu-description">Add savory sausage to your taco.</div>
+
 <div class="menu-item"><span>Egg, Cheese & Bacon</span><span>$4.75</span></div>
+<div class="menu-description">Add crispy bacon to your taco.</div>
+
 <div class="menu-item"><span>Egg, Chorizo & Cheese</span><span>$4.75</span></div>
+<div class="menu-description">Add spicy chorizo to your taco.</div>
 </div></div>
 
+<!-- Breakfast Burritos -->
 <div class="menu-card"><div class="content">
 <h3>Breakfast Burritos (Flour Tortillas)</h3>
 <div class="menu-item"><span>Sonoran Burrito</span><span>$9.50</span></div>
+<div class="menu-description">Eggs, cheese, potato, sausage & bacon wrapped in a flour tortilla.</div>
+
 <div class="menu-item"><span>Burracho Special</span><span>$10.50</span></div>
+<div class="menu-description">Sonoran burrito with spicy sauce & chef’s secret toppings.</div>
+
 <div class="menu-item"><span>Cruda Special</span><span>$10.50</span></div>
+<div class="menu-description">Sonoran burrito with fresh pico de gallo, avocado & tangy crema.</div>
+
 <div class="menu-item"><span>Kids Burrito <span class="tag">Kids</span></span><span>$5.00</span></div>
+<div class="menu-description">Smaller portion with eggs & cheese for kids.</div>
 </div></div>
 
+<!-- Pancakes & More -->
 <div class="menu-card"><div class="content">
 <h3>Pancakes & More</h3>
 <div class="menu-item"><span>Homemade Pancakes</span><span>$6.50 (add Sausage, Bacon, or Ham +$2)</span></div>
+<div class="menu-description">Fluffy homemade pancakes, served with cottage potatoes.</div>
+
 <div class="menu-item"><span>Children’s Chocolate Chip Pancakes <span class="tag">Kids</span></span><span>$5.00</span></div>
+<div class="menu-description">Smaller portion with chocolate chips for kids.</div>
+
 <div class="menu-item"><span>Seasonal Fruit Skillet</span><span>$5.50</span></div>
+<div class="menu-description">Fresh seasonal fruit with honey drizzle.</div>
 </div></div>
 
+<!-- All-Day Favorites -->
 <div class="menu-card"><div class="content">
 <h3>All-Day Favorites</h3>
-<div class="menu-item"><span>Crab Cakes <span class="tag">Fav</span></span><span>$11.50</span></div>
+<div class="menu-item"><span>⭐ Crab Cakes</span><span>$11.50</span></div>
+<div class="menu-description">Golden-crisp crab cakes with roasted garlic caper aioli.</div>
+
 <div class="menu-item"><span>⭐ Golden Reuben Croquettes</span><span>$10.75</span></div>
+<div class="menu-description">Bite-sized croquettes with corned beef, swiss, and sauerkraut.</div>
+
 <div class="menu-item"><span>NY Style Reuben Sandwich</span><span>$10.75</span></div>
+<div class="menu-description">Corned beef, Swiss cheese, sauerkraut & Reuben dressing, served with fries or vinaigrette coleslaw.</div>
+
 <div class="menu-item"><span>⭐ Crunch Tuna Melt Sandwich (English muffin, provolone, w/fries)</span><span>$10.50</span></div>
+<div class="menu-description">Savory tuna melt on English muffin with provolone cheese, served with fries.</div>
+
 <div class="menu-item"><span>Monte Cristo Sandwich (powdered sugar)</span><span>$9.50</span></div>
+<div class="menu-description">Griddled ham & turkey with melted cheese, finished with powdered sugar, served with fries.</div>
+
 <div class="menu-item"><span>Patty Melt (griddled with jalapeños)</span><span>$10.50</span></div>
+<div class="menu-description">Griddled burger with caramelized onions, melted cheese & jalapeños, served with fries.</div>
+
 <div class="menu-item"><span>Green Chile Chicken Soup 10oz / 16oz</span><span>$5.50 / $7.50</span></div>
-<div class="menu-item"><span>Freshly Made Chicken Nuggets <span class="tag">Kids</span></span><span>$5.50</span></div>
+<div class="menu-description">Slow-simmered chicken soup with roasted green chiles.</div>
+
+<div class="menu-item"><span>Freshly Made Chicken Nuggets <span class="tag">Kids</span></span><span>$7.50</span></div>
+<div class="menu-description">Freshly made to order, served with fries for kids.</div>
 </div></div>
 
+<!-- Sides & Drinks -->
 <div class="menu-card"><div class="content">
 <h3>Sides & Drinks</h3>
-<div class="menu-item"><span>Bacon</span><span>$2.50</span></div>
-<div class="menu-item"><span>Sausage</span><span>$2.50</span></div>
-<div class="menu-item"><span>Toast</span><span>$1.50</span></div>
-<div class="menu-item"><span>Coleslaw</span><span>$2.25</span></div>
+<div class="menu-item"><span>Bacon / Ham / Sausage</span><span>$2.50</span></div>
+<div class="menu-item"><span>Coleslaw (vinaigrette style)</span><span>$2.25</span></div>
 <div class="menu-item"><span>French Fries (fresh made to order)</span><span>$3.00</span></div>
-<div class="menu-item"><span>Lifeboost Coffee</span><span>$3.00</span></div>
-<div class="menu-item"><span>Iced Tea (Sweet or Unsweet)</span><span>$2.50</span></div>
+<div class="menu-item"><span>Lifeboost Coffee</span><span>$4.50</span></div>
+<div class="menu-item"><span>Iced Tea</span><span>$3.00</span></div>
 <div class="menu-item"><span>Seasonal Juice</span><span>$3.00</span></div>
 <div class="menu-item"><span>Sodas</span><span>$2.50</span></div>
 </div></div>
