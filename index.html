@@ -2,20 +2,21 @@
 <html lang="en">
 <head>
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XFY3V13DJN"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config','G-XFY3V13DJN');
-</script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XFY3V13DJN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XFY3V13DJN');
+  </script>
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Arizona Sunrise Cafecito & Catering</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arizona Sunrise Cafecito & Catering</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 * { box-sizing: border-box; }
@@ -33,45 +34,62 @@ body {
   min-height: 100vh;
 }
 
-/* Modern Sticky Side Nav */
-.side-nav {
+/* ===== NAV UPGRADE (modern, subtle) ===== */
+nav.side-nav{
   width: 220px;
-  background: rgba(247,239,230,0.85);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  padding: 18px 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  background: rgba(247,239,230,0.78);
+  border-right: 1px solid rgba(122,59,46,0.12);
+  padding: 16px 12px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+
   position: sticky;
   top: 0;
   align-self: flex-start;
   height: 100vh;
-  border-right: 1px solid rgba(122,59,46,0.12);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
-.side-nav a {
-  text-decoration: none;
-  color: #7a3b2e;
-  font-weight: 700;
+nav.side-nav a{
+  text-decoration:none;
+  color:#7a3b2e;
+  font-weight:700;
   padding: 10px 12px;
   border-radius: 12px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition: background 0.15s ease, transform 0.15s ease;
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  background: rgba(255,255,255,0.55);
+  border: 1px solid rgba(122,59,46,0.08);
+  transition: background .15s ease, transform .15s ease, box-shadow .15s ease;
 }
 
-.side-nav a:hover {
-  background: rgba(230,195,165,0.55);
+nav.side-nav a:hover{
+  background: rgba(230,195,165,0.45);
+  box-shadow: 0 6px 16px rgba(122,59,46,0.10);
   transform: translateX(2px);
 }
 
 /* Active page highlight */
-.side-nav a.active {
-  background: linear-gradient(to right, rgba(227,111,71,0.20), rgba(246,193,119,0.25));
-  border: 1px solid rgba(227,111,71,0.25);
-  box-shadow: 0 4px 12px rgba(227,111,71,0.15);
+nav.side-nav a.active{
+  background: linear-gradient(to right, rgba(227,111,71,0.18), rgba(246,193,119,0.22));
+  border: 1px solid rgba(227,111,71,0.28);
+  box-shadow: 0 10px 22px rgba(227,111,71,0.12);
+  position: relative;
+}
+nav.side-nav a.active::before{
+  content:"";
+  position:absolute;
+  left:6px;
+  top:10px;
+  bottom:10px;
+  width:4px;
+  border-radius:10px;
+  background: linear-gradient(to bottom, #e36f47, #f6c177);
 }
 
 /* Main */
@@ -119,7 +137,7 @@ body {
   font-weight: 600;
 }
 
-/* EXPERIENCE PREVIEW */
+/* ===== Holly Grounds Experience Preview ===== */
 .experience-preview {
   max-width: 720px;
   margin: 0 auto 10px;
@@ -131,6 +149,16 @@ body {
   color: #5b4b45;
 }
 
+.experience-preview a {
+  color: #7a3b2e;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.experience-preview a:hover {
+  text-decoration: underline;
+}
+
 .experience-icons {
   display: flex;
   flex-wrap: wrap;
@@ -138,6 +166,7 @@ body {
   gap: 14px;
   margin: 14px 0;
   font-weight: 600;
+  color: #533f3a;
 }
 
 .experience-icons span {
@@ -155,7 +184,7 @@ body {
   color: #e36f47;
 }
 
-/* Slideshow */
+/* FEATURED IMAGE / SLIDESHOW */
 .feature-image img {
   width: 100%;
   max-width: 650px;
@@ -164,7 +193,7 @@ body {
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
-/* CTA */
+/* CTA Buttons */
 .home-cta {
   margin: 25px 0 30px;
 }
@@ -190,7 +219,38 @@ body {
   box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
 
-/* GRAND OPENING */
+/* Content Section */
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+
+/* Why Us */
+.why-us {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.why-us ul {
+  list-style: none;
+  padding: 0;
+}
+
+.why-us li {
+  margin: 10px 0;
+  font-size: 1.05rem;
+}
+
+/* Map */
+.map-wrap iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 12px;
+}
+
+/* GRAND OPENING SHIMMER */
 .grand-opening {
   font-size: 2.5rem;
   font-weight: 900;
@@ -198,39 +258,53 @@ body {
   letter-spacing: 1px;
   text-align: center;
   margin: 30px 0 15px;
+
   background: linear-gradient(90deg, #f6c177, #fcd8b1, #e36f47);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
   animation: sunriseShimmer 3s ease-in-out infinite;
 }
 
 @keyframes sunriseShimmer {
-  0% { background-position: 200% 0; }
-  50% { background-position: 0% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: 200% 0;
+    text-shadow: 0 0 5px rgba(227, 111, 71, 0.4);
+  }
+  50% {
+    background-position: 0% 0;
+    text-shadow: 0 0 15px rgba(246, 193, 119, 0.6);
+  }
+  100% {
+    background-position: 200% 0;
+    text-shadow: 0 0 5px rgba(227, 111, 71, 0.4);
+  }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
   .layout { flex-direction: column; }
 
-  .side-nav {
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    justify-content: center;
-    gap: 8px;
-    padding: 10px;
-    border-right: none;
+  nav.side-nav{
+    width:100%;
+    height:auto;
+    flex-direction:row;
+    justify-content:center;
+    gap:8px;
+    padding:10px;
+    border-right:none;
     border-bottom: 1px solid rgba(122,59,46,0.12);
+    z-index:20;
   }
 
-  .side-nav a {
-    border-radius: 999px;
-    background: rgba(255,255,255,0.7);
-    border: 1px solid rgba(122,59,46,0.10);
+  nav.side-nav a{
+    border-radius:999px;
+    padding:10px 12px;
+    transform:none;
   }
+
+  nav.side-nav a.active::before{ display:none; }
 }
 </style>
 </head>
@@ -239,55 +313,146 @@ body {
 
 <div class="layout">
 
-<nav class="side-nav" aria-label="Primary navigation">
-  <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
-  <a href="about.html"><i class="fa-solid fa-user-chef"></i> About</a>
-  <a href="menu.html"><i class="fa-solid fa-utensils"></i> Menu</a>
-  <a href="catering.html"><i class="fa-solid fa-truck"></i> Catering</a>
-</nav>
+  <!-- NAV -->
+  <nav class="side-nav" aria-label="Primary navigation">
+    <a href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a>
+    <a href="about.html"><i class="fa-solid fa-user-chef" aria-hidden="true"></i> About Us</a>
+    <a href="menu.html"><i class="fa-solid fa-utensils" aria-hidden="true"></i> Menu</a>
+    <a href="catering.html"><i class="fa-solid fa-truck" aria-hidden="true"></i> Catering</a>
+  </nav>
 
-<div class="main">
+  <!-- MAIN -->
+  <div class="main">
 
-<div class="logo-wrap">
-  <img src="trailer.jpeg" alt="Arizona Sunrise Cafecito & Catering trailer">
-</div>
+    <div class="logo-wrap">
+      <img src="trailer.jpeg" alt="Arizona Sunrise Cafecito & Catering trailer">
+    </div>
 
-<div class="hero">
-  <h1>Comfort food with Southwest soul</h1>
-  <p>Scratch-made favorites, warm flavors, and bold bites — served fresh from our food trailer.</p>
-</div>
+    <!-- HERO -->
+    <div class="hero">
+      <h1>Comfort food with Southwest soul</h1>
+      <p>
+        Scratch-made favorites, warm flavors, and bold bites —
+        served fresh from our food trailer.
+      </p>
+    </div>
 
-<div class="soft-opening">
-Soft Opening Free Tasting<br>
-February 28 • 11am – 2pm<br>
-Sample three featured menu items while supplies last.
-</div>
+    <!-- SOFT OPENING -->
+    <div class="soft-opening">
+      Soft Opening Free Tasting<br>
+      February 28 • 11am – 2pm<br>
+      Sample three featured menu items while supplies last.
+    </div>
 
-<div class="feature-image">
-  <img id="slideshow" src="gccs.jpg" alt="Featured food item">
-</div>
+    <!-- HOLLY GROUNDS EXPERIENCE PREVIEW -->
+    <div class="experience-preview">
+      <p>
+        You’ll find us at
+        <a href="https://www.holygroundsfoodyard.com" target="_blank" rel="noopener"
+           onclick="gtag('event','hollygrounds_click',{event_category:'Outbound',event_label:'Holly Grounds Website'});">
+          Holly Grounds Food Yard in Royse City
+        </a>
+        — a space built for gathering.
+      </p>
 
-<div class="home-cta">
-  <a href="menu.html">View Soft Opening Menu</a>
-  <a href="catering.html" class="secondary">Book Catering / Learn More</a>
-</div>
+      <div class="experience-icons" aria-label="Experience highlights">
+        <span><i class="fa-solid fa-basketball" aria-hidden="true"></i> Open play space</span>
+        <span><i class="fa-solid fa-people-roof" aria-hidden="true"></i> Safe fenced-in area</span>
+        <span><i class="fa-solid fa-fire" aria-hidden="true"></i> Fire pits</span>
+        <span><i class="fa-solid fa-music" aria-hidden="true"></i> Live music (select Saturdays)</span>
+      </div>
 
-<h2 class="grand-opening">Grand Opening 3/1</h2>
+      <p>More than brunch — it’s an experience for the whole family.</p>
+    </div>
 
-</div>
-</div>
+    <!-- FEATURE IMAGE / SLIDESHOW -->
+    <div class="feature-image">
+      <img id="slideshow" src="gccs.jpg" alt="Featured food item">
+    </div>
 
-<!-- Auto Highlight Script -->
+    <!-- CTA -->
+    <div class="home-cta">
+      <a href="menu.html">View Soft Opening Menu</a>
+      <a href="catering.html" class="secondary">Book Catering / Learn More</a>
+    </div>
+
+    <div class="content">
+
+      <!-- WHY US -->
+      <div class="why-us">
+        <h2>Why Arizona Sunrise Cafecito & Catering?</h2>
+        <ul>
+          <li>🌅 Comfort food with Southwest flair</li>
+          <li>🧡 Locally owned & community-driven</li>
+          <li>🚚 Freshly prepared from our food trailer</li>
+        </ul>
+      </div>
+
+      <!-- GRAND OPENING -->
+      <h2 class="grand-opening">Grand Opening 3/1</h2>
+      <p>
+        Wednesday – Saturday<br>
+        <strong>8:00 AM – 2:30 PM</strong><br><br>
+        Sunday<br>
+        <strong>9:00 AM – 2:00 PM</strong>
+      </p>
+
+      <!-- (RESTORED) Location -->
+      <h2>Location</h2>
+      <p>
+        <strong>151 Sabine Creek Road</strong><br>
+        Royse City, Texas
+      </p>
+
+      <div class="map-wrap">
+        <iframe loading="lazy"
+          src="https://www.google.com/maps?q=151+Sabine+Creek+Road,+Royse+City,+TX&output=embed">
+        </iframe>
+      </div>
+
+      <!-- (RESTORED) Contact -->
+      <h2>Contact</h2>
+      <p>
+        📞 <a href="tel:9455460808"
+           onclick="gtag('event','call_click',{event_category:'Contact',event_label:'Phone Call'});">
+           945-546-0808
+        </a><br><br>
+
+        📧 <a href="mailto:hello@azsunrisecafecito.com"
+           onclick="gtag('event','email_click',{event_category:'Contact',event_label:'Email'});">
+           hello@azsunrisecafecito.com
+        </a>
+      </p>
+
+    </div><!-- /content -->
+
+  </div><!-- /main -->
+
+</div><!-- /layout -->
+
+<!-- SLIDESHOW SCRIPT -->
 <script>
-const currentPage = window.location.pathname.split("/").pop() || "index.html";
-const navLinks = document.querySelectorAll(".side-nav a");
+  const images = ["gccs.jpg", "cc.jpg", "r.jpeg"];
+  let current = 0;
+  const slideshow = document.getElementById("slideshow");
 
-navLinks.forEach(link => {
-  const linkPage = link.getAttribute("href");
-  if (linkPage === currentPage) {
-    link.classList.add("active");
+  function nextImage() {
+    current = (current + 1) % images.length;
+    slideshow.src = images[current];
   }
-});
+
+  setInterval(nextImage, 3000);
+</script>
+
+<!-- AUTO ACTIVE NAV LINK -->
+<script>
+  const path = window.location.pathname;
+  const currentPage = (path.endsWith("/") ? "index.html" : path.split("/").pop()).split("?")[0];
+
+  document.querySelectorAll("nav.side-nav a").forEach(a => {
+    const href = (a.getAttribute("href") || "").split("?")[0];
+    if (href === currentPage) a.classList.add("active");
+  });
 </script>
 
 </body>
