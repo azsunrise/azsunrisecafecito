@@ -27,13 +27,11 @@
       color: #333;
     }
 
-    /* ===== LAYOUT ===== */
     .layout {
       display: flex;
       min-height: 100vh;
     }
 
-    /* ===== SIDE NAV ===== */
     .side-nav {
       width: 220px;
       background: #f7efe6;
@@ -65,7 +63,6 @@
       border: 1px solid rgba(122,59,46,0.15);
     }
 
-    /* ===== MAIN ===== */
     .main {
       flex: 1;
       padding-bottom: 50px;
@@ -79,16 +76,6 @@
     h1 {
       margin: 0 0 10px;
       color: #7a3b2e;
-      letter-spacing: 0.2px;
-    }
-
-    .subhead {
-      margin: 0 auto 18px;
-      max-width: 820px;
-      padding: 0 20px;
-      color: #5b4b45;
-      line-height: 1.55;
-      text-align: center;
     }
 
     .divider {
@@ -97,6 +84,14 @@
       margin: 0 auto 18px;
       background: linear-gradient(to right, #f6c177, #e36f47, #f6c177);
       border-radius: 999px;
+    }
+
+    .subhead {
+      max-width: 820px;
+      margin: 0 auto 18px;
+      padding: 0 20px;
+      color: #5b4b45;
+      line-height: 1.55;
     }
 
     .brand-highlight {
@@ -111,14 +106,6 @@
       text-align: left;
     }
 
-    .brand-highlight p {
-      margin: 0 0 10px;
-    }
-
-    .brand-highlight p:last-child {
-      margin-bottom: 0;
-    }
-
     .content {
       max-width: 920px;
       margin: 0 auto;
@@ -126,79 +113,53 @@
       line-height: 1.7;
     }
 
-    /* ===== STORY GRID ===== */
     .story-grid{
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
       gap: 18px;
-      align-items: start;
       margin-top: 16px;
     }
 
     .card{
-      background: rgba(255,255,255,0.75);
+      background: rgba(255,255,255,0.85);
       border: 1px solid rgba(122,59,46,0.12);
       border-radius: 18px;
-      padding: 20px 20px 18px;
+      padding: 20px;
       box-shadow: 0 6px 18px rgba(0,0,0,0.06);
     }
 
     .card h2{
-      margin: 0 0 10px;
+      margin-top: 0;
       color: #7a3b2e;
-      font-size: 1.15rem;
-      display: flex;
-      align-items: center;
-      gap: 10px;
     }
 
-    .card p{
-      margin: 0 0 12px;
+    .story-quote{
+      background: #fff;
+      border-left: 6px solid #e36f47;
+      border-radius: 12px;
+      padding: 14px;
+      margin: 14px 0;
+      font-style: italic;
     }
 
-    .card p:last-child{
-      margin-bottom: 0;
-    }
-
-    /* ===== INNER HIGHLIGHT BOX ===== */
     .highlight-box {
       background: #fff3e8;
-      padding: 18px;
-      border-radius: 16px;
-      border: 1px solid rgba(227,111,71,0.18);
+      padding: 14px;
+      border-radius: 12px;
       margin: 14px 0;
     }
 
-    /* ===== QUICK LIST ===== */
-    .quick-list{
-      list-style: none;
-      padding: 0;
-      margin: 12px 0 0;
-      display: grid;
-      gap: 10px;
+    .capacity-note{
+      margin-top: 14px;
+      padding: 12px;
+      border-radius: 12px;
+      background: rgba(122,59,46,0.06);
+      border: 1px dashed rgba(122,59,46,0.22);
+      font-size: 0.95rem;
     }
 
-    .quick-list li{
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      padding: 10px 12px;
-      background: #fff;
-      border: 1px solid rgba(122,59,46,0.10);
-      border-radius: 14px;
-    }
-
-    .quick-list i{
-      margin-top: 2px;
-      color: #e36f47;
-      width: 18px;
-      text-align: center;
-      flex: 0 0 18px;
-    }
-
-    /* ===== CTA ===== */
     .cta {
-      margin-top: 22px;
+      margin-top: 30px;
       text-align: center;
     }
 
@@ -211,54 +172,30 @@
       text-decoration: none;
       color: white;
       background: linear-gradient(to right, #e36f47, #f6c177);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .cta a.secondary {
       background: linear-gradient(to right, #7a3b2e, #a65b4a);
     }
 
-    .cta a:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-    }
-
     .fineprint{
-      margin: 10px auto 0;
-      max-width: 820px;
-      padding: 0 20px;
       text-align: center;
+      margin-top: 15px;
+      font-size: 0.9rem;
       color: #6b5a53;
-      font-size: 0.95rem;
     }
 
-    /* ===== MOBILE ===== */
     @media (max-width: 900px){
-      .story-grid{
-        grid-template-columns: 1fr;
-      }
-      .brand-highlight { text-align: left; }
+      .story-grid{ grid-template-columns: 1fr; }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 768px){
       .layout { flex-direction: column; }
-
       .side-nav {
         width: 100%;
         flex-direction: row;
         justify-content: space-around;
-        gap: 8px;
-        padding: 14px 10px;
       }
-
-      .side-nav a{
-        padding: 10px 10px;
-        font-size: 0.95rem;
-      }
-
-      .subhead { text-align: center; }
-      .brand-highlight { margin: 16px 12px 6px; }
-      .content { text-align: left; }
     }
   </style>
 </head>
@@ -266,18 +203,16 @@
 <body>
 <div class="layout">
 
-  <!-- ===== NAV ===== -->
-  <nav class="side-nav" aria-label="Primary">
+  <nav class="side-nav">
     <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
     <a href="about.html" aria-current="page"><i class="fa-solid fa-user-chef"></i> About Us</a>
     <a href="menu.html"><i class="fa-solid fa-utensils"></i> Menu</a>
     <a href="catering.html"><i class="fa-solid fa-truck"></i> Catering</a>
   </nav>
 
-  <!-- ===== MAIN ===== -->
   <main class="main">
 
-    <header class="header">
+    <div class="header">
       <h1>Our Story</h1>
       <div class="divider"></div>
 
@@ -289,96 +224,75 @@
       <div class="brand-highlight">
         <p>
           At Arizona Sunrise, we like to say it’s where <strong>Arizona spice meets Texas soul</strong>.
-          Having lived near the Mexican border, Sonoran flavors became part of everyday life — bold chiles,
-          fresh ingredients, and food made to bring people together. We carry those influences into our kitchen today,
-          blending Southwestern flavor with genuine Texas hospitality.
+          Inspired by years living near the Sonoran border, we bring bold Southwestern flavor together with genuine Texas hospitality.
         </p>
         <p>
-          Don’t worry — we can turn up the heat or keep it mild.
-          Everything we serve is made fresh in our kitchen — never store-bought, never pre-made.
+          We can turn up the heat or keep it mild — flavor should be bold, never overwhelming.
+          Everything we serve is made fresh in our kitchen — never store-bought.
           And as our trailer says, <em>the secret ingredient is made with love.</em>
         </p>
       </div>
-    </header>
+    </div>
 
-    <section class="content">
+    <div class="content">
 
       <div class="story-grid">
 
-        <!-- ===== MAIN STORY ===== -->
-        <article class="card">
-          <h2><i class="fa-solid fa-sun"></i> Meet Jack &amp; Wendy</h2>
+        <div class="card">
+          <h2>Meet Jack &amp; Wendy</h2>
 
           <p>
-            Arizona Sunrise began as a shared dream: build something meaningful, serve our community, and make mornings better.
-            Jack (Chef John Ahern) has spent decades in professional kitchens — from resort and country club environments in Tucson, Arizona,
+            Jack has spent decades in professional kitchens — from Arizona resorts and country clubs
             to restaurant ownership and catering.
           </p>
 
-          <p>
-            Before launching his own place, Jack cooked at La Paloma and Loews Ventana Canyon, building a foundation of technique,
-            consistency, and hospitality. Later, he ran Ric’s Café for 15 years and grew a catering operation that focused on gatherings,
-            celebrations, and food people remember.
-          </p>
-
-          <p>
-            After that chapter, Wendy’s career moved our family to Texas — first to Weston Lakes and later to Heath —
-            where Jack continued serving as an Executive Chef at Sweetwater Country Club and Pecan Grove.
-          </p>
-
-          <div class="highlight-box">
-            <p>
-              When we had twins, Jack stepped away from chef roles to become a stay-at-home dad — trading kitchen hours for school mornings,
-              practices, and raising our kids. He even hosted cooking classes at their school because food has always been about connection for us.
-            </p>
+          <div class="story-quote">
+            The first time Jack cooked Wendy a burger in his backyard, it tasted like steak.
+            That was the moment she thought, “Well… I’m going to marry this man.”
           </div>
 
           <p>
-            Now that our kids are older and Wendy became retirement-eligible, we decided it was time for a change —
-            and a return to what we’ve always loved: creating food for people and catering events that bring everyone together.
+            After raising twins and years in Executive Chef roles in Texas,
+            we decided it was time to build something together.
+          </p>
+
+          <div class="highlight-box">
+            Jack leads the kitchen. Wendy leads the business side — operations, content,
+            communication, and the behind-the-scenes prep and cleaning.
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Catering</h2>
+
+          <p>
+            We specialize in smaller, intimate gatherings — dinner parties,
+            family celebrations, showers, and meaningful events where food truly matters.
           </p>
 
           <p>
-            Jack leads the kitchen. Wendy leads the business side — operations, content, customer communication, and the behind-the-scenes prep and cleaning
-            that keeps everything running smoothly.
-          </p>
-        </article>
-
-        <!-- ===== QUICK HITS ===== -->
-        <aside class="card" aria-label="What you can expect">
-          <h2><i class="fa-solid fa-heart"></i> What You Can Expect</h2>
-
-          <p>
-            Simple, satisfying brunch — made fresh and served with heart.
+            We love thoughtful, curated experiences more than large-scale weddings or high-volume banquet events.
           </p>
 
-          <ul class="quick-list">
-            <li><i class="fa-solid fa-bolt"></i> Fast, friendly service (perfect for busy mornings)</li>
-            <li><i class="fa-solid fa-kitchen-set"></i> Real kitchen experience behind every item</li>
-            <li><i class="fa-solid fa-burger"></i> Brunch favorites: burritos, biscuits, pancakes, fresh sides</li>
-            <li><i class="fa-solid fa-utensils"></i> Catering for gatherings &amp; celebrations (we love events)</li>
-            <li><i class="fa-solid fa-people-group"></i> Proudly serving families &amp; hardworking local crews</li>
-          </ul>
-
-          <p style="margin-top:14px;">
-            <strong>Why “Arizona Sunrise”?</strong><br>
-            It honors where our journey began — and represents a fresh start.
-          </p>
-        </aside>
+          <div class="capacity-note">
+            We are currently a hands-on, two-person team.
+            For catering, we focus on <strong>pickup large-order trays</strong> and intimate events with advance notice.
+            As we grow, we’ll expand our offerings.
+          </div>
+        </div>
 
       </div>
 
-      <!-- ===== CTA BUTTONS ===== -->
-      <div class="cta" aria-label="Next steps">
+      <div class="cta">
         <a href="menu.html">View Our Menu</a>
         <a href="catering.html" class="secondary">Catering Info</a>
       </div>
 
       <p class="fineprint">
-        Thanks for supporting a family-owned business. We’re grateful to be here — and we can’t wait to serve you.
+        Thanks for supporting a family-owned business. We’re grateful to be here.
       </p>
 
-    </section>
+    </div>
 
   </main>
 </div>
