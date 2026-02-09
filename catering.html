@@ -27,6 +27,72 @@
       color: #333;
     }
 
+    /* ===== LAYOUT (adds nav like other pages) ===== */
+    .layout{
+      display:flex;
+      min-height:100vh;
+    }
+    .main{
+      flex:1;
+    }
+
+    /* ===== NAV UPGRADE (modern, subtle) ===== */
+    nav.side-nav{
+      width: 220px;
+      background: rgba(247,239,230,0.78);
+      border-right: 1px solid rgba(122,59,46,0.12);
+      padding: 16px 12px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+
+      position: sticky;
+      top: 0;
+      align-self: flex-start;
+      height: 100vh;
+
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    nav.side-nav a{
+      text-decoration:none;
+      color:#7a3b2e;
+      font-weight:700;
+      padding: 10px 12px;
+      border-radius: 12px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+
+      background: rgba(255,255,255,0.55);
+      border: 1px solid rgba(122,59,46,0.08);
+      transition: background .15s ease, transform .15s ease, box-shadow .15s ease;
+    }
+
+    nav.side-nav a:hover{
+      background: rgba(230,195,165,0.45);
+      box-shadow: 0 6px 16px rgba(122,59,46,0.10);
+      transform: translateX(2px);
+    }
+
+    nav.side-nav a.active{
+      background: linear-gradient(to right, rgba(227,111,71,0.18), rgba(246,193,119,0.22));
+      border: 1px solid rgba(227,111,71,0.28);
+      box-shadow: 0 10px 22px rgba(227,111,71,0.12);
+      position: relative;
+    }
+    nav.side-nav a.active::before{
+      content:"";
+      position:absolute;
+      left:6px;
+      top:10px;
+      bottom:10px;
+      width:4px;
+      border-radius:10px;
+      background: linear-gradient(to bottom, #e36f47, #f6c177);
+    }
+
     .container {
       max-width: 860px;
       margin: 0 auto;
@@ -223,142 +289,192 @@
       .row { grid-template-columns: 1fr; }
       .container { padding-top: 30px; }
     }
+
+    /* Mobile nav becomes top pill bar */
+    @media (max-width: 768px) {
+      .layout { flex-direction: column; }
+
+      nav.side-nav{
+        width:100%;
+        height:auto;
+        flex-direction:row;
+        justify-content:center;
+        gap:8px;
+        padding:10px;
+        border-right:none;
+        border-bottom: 1px solid rgba(122,59,46,0.12);
+        z-index:60;
+      }
+      nav.side-nav a{
+        border-radius:999px;
+        padding:10px 12px;
+        transform:none;
+        font-size:0.95rem;
+      }
+      nav.side-nav a.active::before{ display:none; }
+    }
   </style>
 </head>
 
 <body>
-  <div class="container">
+<div class="layout">
 
-    <h1>Catering</h1>
-    <div class="divider"></div>
+  <!-- NAV (added) -->
+  <nav class="side-nav" aria-label="Primary navigation">
+    <a href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a>
+    <a href="about.html"><i class="fa-solid fa-user-chef" aria-hidden="true"></i> About Us</a>
+    <a href="menu.html"><i class="fa-solid fa-utensils" aria-hidden="true"></i> Menu</a>
+    <a href="catering.html"><i class="fa-solid fa-truck" aria-hidden="true"></i> Catering</a>
+  </nav>
 
-    <p>
-      We love catering smaller, intimate gatherings — dinner parties, family celebrations, showers, and meaningful events
-      where food truly matters.
-    </p>
+  <!-- MAIN -->
+  <main class="main">
+    <div class="container">
 
-    <div class="notice">
-      <strong>Pickup Catering Only (for now)</strong>
+      <h1>Catering</h1>
+      <div class="divider"></div>
 
-      <div class="line">
-        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-        <div>
-          <strong>Pickup Address:</strong> 151 Sabine Road, Royse City, TX
-        </div>
-      </div>
+      <p>
+        We love catering smaller, intimate gatherings — dinner parties, family celebrations, showers, and meaningful events
+        where food truly matters.
+      </p>
 
-      <div class="line">
-        <i class="fa-solid fa-circle-dollar-to-slot" aria-hidden="true"></i>
-        <div>
-          <strong>Minimum Order:</strong> $150 (before tax)
-        </div>
-      </div>
+      <div class="notice">
+        <strong>Pickup Catering Only (for now)</strong>
 
-      <div class="line">
-        <i class="fa-solid fa-tag" aria-hidden="true"></i>
-        <div>
-          <strong>10% off</strong> catering orders paid in <strong>cash</strong>.
-        </div>
-      </div>
-
-      <div class="line">
-        <i class="fa-solid fa-truck" aria-hidden="true"></i>
-        <div>
-          Need delivery? You’re welcome to use <strong>DoorDash</strong> (when available) for delivery, or send a courier.
-        </div>
-      </div>
-    </div>
-
-    <!-- Mailto form (pickup-only) -->
-    <form action="mailto:hello@azsunrisecafecito.com" method="POST" enctype="text/plain"
-          onsubmit="gtag('event','catering_form_submit',{event_category:'Lead',event_label:'Pickup Catering Form'});">
-
-      <label for="name">Name</label>
-      <input type="text" id="name" name="Name" required>
-
-      <div class="row">
-        <div>
-          <label for="phone">Phone (required)</label>
-          <input type="tel" id="phone" name="Phone" required placeholder="###-###-####">
-          <div class="help">So we can confirm details quickly.</div>
-        </div>
-        <div>
-          <label for="email">Email</label>
-          <input type="email" id="email" name="Email" required>
-        </div>
-      </div>
-
-      <div class="row">
-        <div>
-          <label for="pickup_date">Preferred Pickup Date</label>
-          <input type="date" id="pickup_date" name="Preferred Pickup Date">
-          <div class="help">We’ll confirm availability after you submit.</div>
-        </div>
-
-        <div>
-          <label for="pickup_time">Preferred Pickup Time</label>
-          <input type="time" id="pickup_time" name="Preferred Pickup Time">
-          <div class="help">Example: 10:30 AM</div>
-        </div>
-      </div>
-
-      <label for="estimated_total">Estimated Budget (optional)</label>
-      <input type="text" id="estimated_total" name="Estimated Budget" placeholder="Example: $200–$300 (min. $150)">
-
-      <label for="guest_count">Estimated Headcount</label>
-      <input type="number" id="guest_count" name="Estimated Headcount" min="1" placeholder="Example: 12">
-
-      <label for="heat_level">Heat Preference</label>
-      <select id="heat_level" name="Heat Preference">
-        <option value="Mild / no heat">Mild / no heat</option>
-        <option value="Medium">Medium</option>
-        <option value="Spicy">Spicy</option>
-        <option value="Mix (some mild, some spicy)">Mix (some mild, some spicy)</option>
-      </select>
-
-      <label for="menu_interest">What are you thinking?</label>
-      <textarea id="menu_interest" name="Order Details / Menu Interest"
-        placeholder="Example: 20 breakfast burritos (10 mild / 10 spicy), 2 trays of cottage potatoes, 1 tray of slaw..."></textarea>
-
-      <label for="dietary">Dietary Notes (optional)</label>
-      <textarea id="dietary" name="Dietary Notes"
-        placeholder="Example: no pork, vegetarian options, allergies, etc."></textarea>
-
-      <div class="policy">
-        <strong>Deposit + Cancellation Policy</strong><br>
-        To protect your pickup time and ensure we prepare everything fresh, we require a deposit.
-        <ul>
-          <li><strong>Minimum order:</strong> $150 (before tax)</li>
-          <li><strong>Deposit:</strong> 50% required to confirm your order</li>
-          <li>Your order is <strong>not confirmed</strong> until the deposit is received.</li>
-          <li><strong>Cancellation window:</strong> Cancel 48+ hours before pickup for a refund of your deposit (minus any non-recoverable ingredient costs, if applicable).</li>
-          <li>Cancellations within 48 hours are <strong>non-refundable</strong> because ingredients and prep are already in motion.</li>
-          <li><strong>Cash discount:</strong> 10% off when your catering order is paid in cash.</li>
-        </ul>
-
-        <div class="checkline">
-          <input type="checkbox" id="deposit_ack" name="Policy Acknowledgement"
-                 value="I understand the $150 minimum, 50% deposit requirement, and the 48-hour cancellation policy." required>
+        <div class="line">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
           <div>
-            <label for="deposit_ack">I agree to the minimum order, deposit, and cancellation policy.</label>
-            <div class="small">Submitting this request does not guarantee availability until we confirm and receive your deposit.</div>
+            <strong>Pickup Address:</strong> 151 Sabine Road, Royse City, TX
+          </div>
+        </div>
+
+        <div class="line">
+          <i class="fa-solid fa-circle-dollar-to-slot" aria-hidden="true"></i>
+          <div>
+            <strong>Minimum Order:</strong> $150 (before tax)
+          </div>
+        </div>
+
+        <div class="line">
+          <i class="fa-solid fa-tag" aria-hidden="true"></i>
+          <div>
+            <strong>10% off</strong> catering orders paid in <strong>cash</strong>.
+          </div>
+        </div>
+
+        <div class="line">
+          <i class="fa-solid fa-truck" aria-hidden="true"></i>
+          <div>
+            Need delivery? You’re welcome to use <strong>DoorDash</strong> (when available) for delivery, or send a courier.
           </div>
         </div>
       </div>
 
-      <button type="submit">Request Pickup Catering</button>
+      <!-- Mailto form (pickup-only) -->
+      <form action="mailto:hello@azsunrisecafecito.com" method="POST" enctype="text/plain"
+            onsubmit="gtag('event','catering_form_submit',{event_category:'Lead',event_label:'Pickup Catering Form'});">
 
-      <div class="tiny">
-        <strong>Quick note:</strong> This form sends an email request (it will open your email app to send).
-        If your device doesn’t support mailto, email us at <strong>hello@azsunrisecafecito.com</strong>.
-      </div>
-    </form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="Name" required>
 
-    <a class="button-back" href="index.html"
-       onclick="gtag('event', 'catering_back_home', { event_category: 'Navigation', event_label: 'Catering → Home' });">
-      ← Back to Home
-    </a>
+        <div class="row">
+          <div>
+            <label for="phone">Phone (required)</label>
+            <input type="tel" id="phone" name="Phone" required placeholder="###-###-####">
+            <div class="help">So we can confirm details quickly.</div>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="Email" required>
+          </div>
+        </div>
 
-  </div>
+        <div class="row">
+          <div>
+            <label for="pickup_date">Preferred Pickup Date</label>
+            <input type="date" id="pickup_date" name="Preferred Pickup Date">
+            <div class="help">We’ll confirm availability after you submit.</div>
+          </div>
+
+          <div>
+            <label for="pickup_time">Preferred Pickup Time</label>
+            <input type="time" id="pickup_time" name="Preferred Pickup Time">
+            <div class="help">Example: 10:30 AM</div>
+          </div>
+        </div>
+
+        <label for="estimated_total">Estimated Budget (optional)</label>
+        <input type="text" id="estimated_total" name="Estimated Budget" placeholder="Example: $200–$300 (min. $150)">
+
+        <label for="guest_count">Estimated Headcount</label>
+        <input type="number" id="guest_count" name="Estimated Headcount" min="1" placeholder="Example: 12">
+
+        <label for="heat_level">Heat Preference</label>
+        <select id="heat_level" name="Heat Preference">
+          <option value="Mild / no heat">Mild / no heat</option>
+          <option value="Medium">Medium</option>
+          <option value="Spicy">Spicy</option>
+          <option value="Mix (some mild, some spicy)">Mix (some mild, some spicy)</option>
+        </select>
+
+        <label for="menu_interest">What are you thinking?</label>
+        <textarea id="menu_interest" name="Order Details / Menu Interest"
+          placeholder="Example: 20 breakfast burritos (10 mild / 10 spicy), 2 trays of cottage potatoes, 1 tray of slaw..."></textarea>
+
+        <label for="dietary">Dietary Notes (optional)</label>
+        <textarea id="dietary" name="Dietary Notes"
+          placeholder="Example: no pork, vegetarian options, allergies, etc."></textarea>
+
+        <div class="policy">
+          <strong>Deposit + Cancellation Policy</strong><br>
+          To protect your pickup time and ensure we prepare everything fresh, we require a deposit.
+          <ul>
+            <li><strong>Minimum order:</strong> $150 (before tax)</li>
+            <li><strong>Deposit:</strong> 50% required to confirm your order</li>
+            <li>Your order is <strong>not confirmed</strong> until the deposit is received.</li>
+            <li><strong>Cancellation window:</strong> Cancel 48+ hours before pickup for a refund of your deposit (minus any non-recoverable ingredient costs, if applicable).</li>
+            <li>Cancellations within 48 hours are <strong>non-refundable</strong> because ingredients and prep are already in motion.</li>
+            <li><strong>Cash discount:</strong> 10% off when your catering order is paid in cash.</li>
+          </ul>
+
+          <div class="checkline">
+            <input type="checkbox" id="deposit_ack" name="Policy Acknowledgement"
+                   value="I understand the $150 minimum, 50% deposit requirement, and the 48-hour cancellation policy." required>
+            <div>
+              <label for="deposit_ack">I agree to the minimum order, deposit, and cancellation policy.</label>
+              <div class="small">Submitting this request does not guarantee availability until we confirm and receive your deposit.</div>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit">Request Pickup Catering</button>
+
+        <div class="tiny">
+          <strong>Quick note:</strong> This form sends an email request (it will open your email app to send).
+          If your device doesn’t support mailto, email us at <strong>hello@azsunrisecafecito.com</strong>.
+        </div>
+      </form>
+
+      <a class="button-back" href="index.html"
+         onclick="gtag('event', 'catering_back_home', { event_category: 'Navigation', event_label: 'Catering → Home' });">
+        ← Back to Home
+      </a>
+
+    </div>
+  </main>
+</div>
+
+<!-- AUTO ACTIVE NAV LINK -->
+<script>
+  const path = window.location.pathname;
+  const currentPage = (path.endsWith("/") ? "index.html" : path.split("/").pop()).split("?")[0];
+
+  document.querySelectorAll("nav.side-nav a").forEach(a => {
+    const href = (a.getAttribute("href") || "").split("?")[0];
+    if (href === currentPage) a.classList.add("active");
+  });
+</script>
+
 </body>
 </html>
