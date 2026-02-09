@@ -7,12 +7,15 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-XFY3V13DJN');
   </script>
+
   <meta charset="UTF-8" />
   <title>Catering | Arizona Sunrise Cafecito & Catering</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ICONS (optional but nice) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
     * { box-sizing: border-box; }
@@ -22,24 +25,49 @@
       font-family: Arial, Helvetica, sans-serif;
       background: linear-gradient(to bottom, #fff7f0 0%, #ffffff 55%);
       color: #333;
-      text-align: center;
     }
 
     .container {
-      max-width: 720px;
+      max-width: 820px;
       margin: 0 auto;
       padding: 40px 20px 60px;
+      text-align: center;
     }
 
     h1 {
-      margin-bottom: 10px;
+      margin: 0 0 10px;
       color: #7a3b2e;
+    }
+
+    .divider {
+      width: 140px;
+      height: 3px;
+      margin: 0 auto 18px;
+      background: linear-gradient(to right, #f6c177, #e36f47, #f6c177);
+      border-radius: 999px;
     }
 
     p {
       font-size: 1.05rem;
-      margin: 10px 0 22px;
+      margin: 10px auto 18px;
+      max-width: 700px;
+      line-height: 1.55;
+      color: #5b4b45;
     }
+
+    .notice {
+      max-width: 700px;
+      margin: 0 auto 22px;
+      text-align: left;
+      background: #fff3e8;
+      border: 1px solid rgba(227,111,71,0.20);
+      border-radius: 14px;
+      padding: 14px 14px;
+      color: #5b4b45;
+      line-height: 1.5;
+    }
+
+    .notice strong { color: #7a3b2e; }
 
     form {
       background: #ffffff;
@@ -47,28 +75,44 @@
       border-radius: 14px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.06);
       text-align: left;
+      max-width: 720px;
+      margin: 0 auto;
     }
 
     label {
       display: block;
       margin-top: 16px;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 0.95rem;
+      color: #533f3a;
     }
 
-    input, textarea {
+    input, textarea, select {
       width: 100%;
       padding: 10px 12px;
       margin-top: 6px;
       font-size: 1rem;
-      border-radius: 8px;
+      border-radius: 10px;
       border: 1px solid #ccc;
       font-family: inherit;
     }
 
     textarea {
       resize: vertical;
-      min-height: 90px;
+      min-height: 110px;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .help {
+      margin-top: 6px;
+      font-size: 0.92rem;
+      color: #6b5a53;
+      line-height: 1.35;
     }
 
     button {
@@ -76,28 +120,38 @@
       width: 100%;
       padding: 14px;
       font-size: 1.05rem;
-      font-weight: 700;
+      font-weight: 800;
       background: linear-gradient(to right, #f6c177, #e36f47);
       border: none;
-      border-radius: 10px;
+      border-radius: 12px;
       color: #fff;
       cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     button:hover {
-      opacity: 0.95;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    }
+
+    .tiny {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 0.92rem;
+      color: #6b5a53;
+      line-height: 1.35;
     }
 
     /* ===== Back to Home button ===== */
     .button-back {
       display: inline-block;
-      margin-top: 30px;
+      margin-top: 26px;
       padding: 14px 28px;
       border-radius: 30px;
-      font-weight: 600;
+      font-weight: 700;
       text-decoration: none;
       color: #fff;
-      background: linear-gradient(to right, #e36f47, #f6c177); /* matches home CTA */
+      background: linear-gradient(to right, #e36f47, #f6c177);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
@@ -106,57 +160,102 @@
       box-shadow: 0 6px 14px rgba(0,0,0,0.15);
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 720px) {
+      .row { grid-template-columns: 1fr; }
       .container { padding-top: 30px; }
     }
   </style>
 </head>
 
 <body>
-
   <div class="container">
 
     <h1>Catering</h1>
+    <div class="divider"></div>
+
     <p>
-      Let us cater your next event — offices, parties, schools, and special occasions.
-      Fill out the form below and we’ll be in touch.
+      We love catering smaller, intimate gatherings — dinner parties, family celebrations, showers, and meaningful events
+      where food truly matters.
     </p>
 
-    <!-- Original mailto form -->
-    <form action="mailto:hello@azsunrisecafecito.com" method="POST" enctype="text/plain">
+    <div class="notice">
+      <strong>Pickup Catering Only (for now):</strong> We’re currently focused on <strong>pickup large-order trays</strong>
+      with advance notice so we can keep everything fresh and made with care.
+      <br><br>
+      Need delivery? You’re welcome to use <strong>DoorDash</strong> (when available) for delivery, or you can send a courier.
+    </div>
+
+    <!-- Mailto form (pickup-only) -->
+    <form action="mailto:hello@azsunrisecafecito.com" method="POST" enctype="text/plain"
+          onsubmit="gtag('event','catering_form_submit',{event_category:'Lead',event_label:'Pickup Catering Form'});">
 
       <label for="name">Name</label>
       <input type="text" id="name" name="Name" required>
 
-      <label for="phone">Phone</label>
-      <input type="tel" id="phone" name="Phone">
+      <div class="row">
+        <div>
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="Phone" placeholder="Optional">
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="Email" required>
+        </div>
+      </div>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="Email" required>
+      <div class="row">
+        <div>
+          <label for="pickup_date">Preferred Pickup Date</label>
+          <input type="date" id="pickup_date" name="Preferred Pickup Date">
+          <div class="help">We’ll confirm availability after you submit.</div>
+        </div>
 
-      <label for="date">Event Date</label>
-      <input type="date" id="date" name="Event Date">
+        <div>
+          <label for="pickup_time">Preferred Pickup Time</label>
+          <input type="time" id="pickup_time" name="Preferred Pickup Time">
+          <div class="help">Example: 10:30 AM</div>
+        </div>
+      </div>
 
-      <label for="guests">Estimated Number of Guests</label>
-      <input type="number" id="guests" name="Guests">
+      <label for="pickup_location">Pickup Location</label>
+      <select id="pickup_location" name="Pickup Location">
+        <option value="Trailer pickup (Royse City)">Trailer pickup (Royse City)</option>
+        <option value="Other (describe below)">Other (describe below)</option>
+      </select>
+      <div class="help">If “Other,” tell us details in the notes.</div>
 
-      <label for="notes">Tell us about your event</label>
-      <textarea id="notes" name="Notes"></textarea>
+      <label for="guest_count">Estimated Headcount</label>
+      <input type="number" id="guest_count" name="Estimated Headcount" min="1" placeholder="Example: 12">
 
-      <button type="submit">Request Catering Info</button>
+      <label for="heat_level">Heat Preference</label>
+      <select id="heat_level" name="Heat Preference">
+        <option value="Mild / no heat">Mild / no heat</option>
+        <option value="Medium">Medium</option>
+        <option value="Spicy">Spicy</option>
+        <option value="Mix (some mild, some spicy)">Mix (some mild, some spicy)</option>
+      </select>
 
+      <label for="menu_interest">What are you thinking?</label>
+      <textarea id="menu_interest" name="Order Details / Menu Interest"
+        placeholder="Example: 20 breakfast burritos (10 mild / 10 spicy), 2 trays of cottage potatoes, 1 tray of slaw..."></textarea>
+
+      <label for="dietary">Dietary Notes (optional)</label>
+      <textarea id="dietary" name="Dietary Notes"
+        placeholder="Example: no pork, vegetarian options, allergies, etc."></textarea>
+
+      <button type="submit">Request Pickup Catering</button>
+
+      <div class="tiny">
+        <strong>Quick note:</strong> This form sends an email request (it will open your email app to send).
+        If your device doesn’t support mailto, email us at <strong>hello@azsunrisecafecito.com</strong>.
+      </div>
     </form>
 
-    <!-- Back to Home button -->
     <a class="button-back" href="index.html"
-       onclick="gtag('event', 'catering_back_home', {
-         event_category: 'Navigation',
-         event_label: 'Catering → Home'
-       });">
-       ← Back to Home
+       onclick="gtag('event', 'catering_back_home', { event_category: 'Navigation', event_label: 'Catering → Home' });">
+      ← Back to Home
     </a>
 
   </div>
-
 </body>
 </html>
