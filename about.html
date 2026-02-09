@@ -33,35 +33,62 @@
       min-height: 100vh;
     }
 
-    /* ===== SIDE NAV ===== */
-    .side-nav {
+    /* ===== NAV UPGRADE (modern, subtle) ===== */
+    nav.side-nav{
       width: 220px;
-      background: #f7efe6;
-      padding: 24px 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
+      background: rgba(247,239,230,0.78);
+      border-right: 1px solid rgba(122,59,46,0.12);
+      padding: 16px 12px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+
+      position: sticky;
+      top: 0;
+      align-self: flex-start;
+      height: 100vh;
+
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
     }
 
-    .side-nav a {
-      text-decoration: none;
-      color: #7a3b2e;
-      font-weight: 700;
-      padding: 12px 14px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      transition: background 0.2s ease;
+    nav.side-nav a{
+      text-decoration:none;
+      color:#7a3b2e;
+      font-weight:700;
+      padding: 10px 12px;
+      border-radius: 12px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+
+      background: rgba(255,255,255,0.55);
+      border: 1px solid rgba(122,59,46,0.08);
+      transition: background .15s ease, transform .15s ease, box-shadow .15s ease;
     }
 
-    .side-nav a:hover {
-      background: #e6c3a5;
+    nav.side-nav a:hover{
+      background: rgba(230,195,165,0.45);
+      box-shadow: 0 6px 16px rgba(122,59,46,0.10);
+      transform: translateX(2px);
     }
 
-    .side-nav a[aria-current="page"]{
-      background: #fff3e8;
-      border: 1px solid rgba(122,59,46,0.15);
+    /* Active page highlight */
+    nav.side-nav a.active{
+      background: linear-gradient(to right, rgba(227,111,71,0.18), rgba(246,193,119,0.22));
+      border: 1px solid rgba(227,111,71,0.28);
+      box-shadow: 0 10px 22px rgba(227,111,71,0.12);
+      position: relative;
+    }
+    nav.side-nav a.active::before{
+      content:"";
+      position:absolute;
+      left:6px;
+      top:10px;
+      bottom:10px;
+      width:4px;
+      border-radius:10px;
+      background: linear-gradient(to bottom, #e36f47, #f6c177);
     }
 
     /* ===== MAIN ===== */
@@ -338,16 +365,31 @@
       .brand-bullets{ grid-template-columns: 1fr; }
     }
 
+    /* Mobile */
     @media (max-width: 768px){
       .layout { flex-direction: column; }
-      .side-nav {
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-around;
-        gap: 8px;
-        padding: 14px 10px;
+
+      nav.side-nav{
+        width:100%;
+        height:auto;
+        flex-direction:row;
+        justify-content:center;
+        gap:8px;
+        padding:10px;
+        border-right:none;
+        border-bottom: 1px solid rgba(122,59,46,0.12);
+        z-index:20;
       }
-      .side-nav a{ padding: 10px 10px; font-size: 0.95rem; }
+
+      nav.side-nav a{
+        border-radius:999px;
+        padding:10px 12px;
+        transform:none;
+        font-size: 0.95rem;
+      }
+
+      nav.side-nav a.active::before{ display:none; }
+
       .brand-highlight{ padding: 18px; }
     }
   </style>
@@ -357,11 +399,11 @@
 <div class="layout">
 
   <!-- ===== NAV ===== -->
-  <nav class="side-nav">
-    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
-    <a href="about.html" aria-current="page"><i class="fa-solid fa-user-chef"></i> About Us</a>
-    <a href="menu.html"><i class="fa-solid fa-utensils"></i> Menu</a>
-    <a href="catering.html"><i class="fa-solid fa-truck"></i> Catering</a>
+  <nav class="side-nav" aria-label="Primary navigation">
+    <a href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a>
+    <a href="about.html"><i class="fa-solid fa-user-chef" aria-hidden="true"></i> About Us</a>
+    <a href="menu.html"><i class="fa-solid fa-utensils" aria-hidden="true"></i> Menu</a>
+    <a href="catering.html"><i class="fa-solid fa-truck" aria-hidden="true"></i> Catering</a>
   </nav>
 
   <!-- ===== MAIN ===== -->
@@ -371,13 +413,11 @@
       <h1>Our Story</h1>
       <div class="divider"></div>
 
-      <!-- TIGHTENED SUBHEAD -->
       <p class="subhead">
         We’re a family-run food trailer bringing scratch-made brunch to Royse City —
         Sonoran-inspired flavor, Texas hospitality, and the kind of care you can taste.
       </p>
 
-      <!-- ELEVATED BRAND BOX -->
       <section class="brand-highlight" aria-label="Brand statement">
         <div class="brand-kicker">
           <span class="pill">Our vibe</span>
@@ -430,26 +470,25 @@
           <h2><i class="fa-solid fa-sun" aria-hidden="true"></i> Meet Wendy</h2>
 
           <p>
-    While Jack leads the kitchen, Wendy leads the business side — overseeing operations,
-    planning, and customer communication. She’s a natural mentor and team-builder
-    who brings clarity and steady leadership to every moving part.
-  </p>
+            While Jack leads the kitchen, Wendy leads the business side — overseeing operations,
+            planning, and customer communication. She’s a natural mentor and team-builder
+            who brings clarity and steady leadership to every moving part.
+          </p>
 
-  <div class="story-quote">
-    Wendy has always led by serving others — consistently, and with a high bar for doing things the right way.
-    She connects the dots quickly — between people, ideas, and details — creating alignment and momentum wherever she’s needed.
-    You’ll feel it in how smoothly everything runs.
-  </div>
+          <div class="story-quote">
+            Wendy has always led by serving others — consistently, and with a high bar for doing things the right way.
+            She connects the dots quickly — between people, ideas, and details — creating alignment and momentum wherever she’s needed.
+            You’ll feel it in how smoothly everything runs.
+          </div>
 
-  <p>
-    You’ll also find her working alongside Jack in the kitchen,
-    supporting prep and ensuring each service runs with care and consistency.
-  </p>
+          <p>
+            You’ll also find her working alongside Jack in the kitchen,
+            supporting prep and ensuring each service runs with care and consistency.
+          </p>
         </section>
 
       </div>
 
-      <!-- ===== EXPERIENCE SECTION ===== -->
       <section class="experience-section" aria-label="Holy Grounds Food Yard experience">
         <h2>More Than a Meal</h2>
 
@@ -475,7 +514,6 @@
         </p>
       </section>
 
-      <!-- ===== CATERING ===== -->
       <section class="catering-section" aria-label="Catering">
         <h2>Catering</h2>
         <p>
@@ -485,7 +523,6 @@
         </p>
       </section>
 
-      <!-- ===== CTA BUTTONS ===== -->
       <div class="cta" aria-label="Next steps">
         <a href="menu.html">View Our Menu</a>
         <a href="catering.html" class="secondary">Catering Info</a>
@@ -495,5 +532,17 @@
 
   </main>
 </div>
+
+<!-- AUTO ACTIVE NAV LINK -->
+<script>
+  const path = window.location.pathname;
+  const currentPage = (path.endsWith("/") ? "index.html" : path.split("/").pop()).split("?")[0];
+
+  document.querySelectorAll("nav.side-nav a").forEach(a => {
+    const href = (a.getAttribute("href") || "").split("?")[0];
+    if (href === currentPage) a.classList.add("active");
+  });
+</script>
+
 </body>
 </html>
