@@ -22,7 +22,7 @@ body{
   color:#333;
   text-align:center;
 }
-.container{max-width:950px;margin:auto;padding:40px 20px 60px;}
+.container{max-width:950px;margin:auto;padding:30px 15px 50px;}
 h1,h2{color:#7a3b2e;}
 .badge{
   display:inline-block;
@@ -35,7 +35,7 @@ h1,h2{color:#7a3b2e;}
 .menu-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:24px;
+  gap:20px;
 }
 .menu-card{
   background:#fff;
@@ -49,8 +49,8 @@ h1,h2{color:#7a3b2e;}
   transform:translateY(-2px);
   box-shadow:0 12px 24px rgba(0,0,0,0.12);
 }
-.menu-card img{width:100%;height:200px;object-fit:cover;}
-.menu-card .content{padding:18px;}
+.menu-card img{width:100%;height:180px;object-fit:cover;}
+.menu-card .content{padding:16px;}
 .menu-item{
   display:flex;
   justify-content:space-between;
@@ -58,14 +58,28 @@ h1,h2{color:#7a3b2e;}
   font-size:.95rem;
   cursor:pointer;
   align-items:center;
+  padding:4px 2px;
+  transition: background 0.2s;
 }
 .menu-item:hover{background:#fff3e8;border-radius:6px;}
 .menu-item span.label{flex:1;text-align:left;}
 .menu-item span.price{margin-left:8px;}
 .menu-item span.icon{
   margin-left:6px;
-  transition: transform 0.2s;
+  transition: transform 0.2s, color 0.2s;
   font-weight:bold;
+  color:#e36f47;
+}
+.menu-item.open span.icon{
+  animation: bounce 0.3s;
+  color:#7a3b2e;
+}
+@keyframes bounce{
+  0%{transform:translateY(0);}
+  25%{transform:translateY(-3px);}
+  50%{transform:translateY(0);}
+  75%{transform:translateY(-2px);}
+  100%{transform:translateY(0);}
 }
 .menu-description{
   display:none;
@@ -79,16 +93,28 @@ h1,h2{color:#7a3b2e;}
 }
 .tag{font-size:.7rem;background:#f6c177;padding:2px 6px;border-radius:6px;margin-left:6px;}
 .tag-star{background:#e36f47;color:#fff;font-weight:bold;}
-.note{margin-top:34px;font-style:italic;}
+.note{margin-top:28px;font-style:italic;}
 .button-back{
   display:inline-block;
-  margin-top:38px;
-  padding:14px 28px;
+  margin-top:32px;
+  padding:12px 24px;
   border-radius:30px;
   font-weight:600;
   text-decoration:none;
   color:#fff;
   background:linear-gradient(to right,#e36f47,#f6c177);
+}
+/* Mobile responsiveness */
+@media (max-width:600px){
+  .menu-grid{
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+  .menu-card .content{padding:12px;}
+  .menu-item{font-size:.92rem;padding:3px 2px;}
+  .menu-card img{height:160px;}
+  h1{font-size:1.8rem;}
+  h2{font-size:1.4rem;}
 }
 </style>
 </head>
@@ -130,19 +156,13 @@ h1,h2{color:#7a3b2e;}
 <!-- Breakfast Biscuits -->
 <div class="menu-card"><div class="content">
 <h3>Breakfast Biscuits (served with cottage potatoes)</h3>
-<div class="menu-item" onclick="toggleDescription(this)">
-<span class="label">Egg & Cheese</span><span class="price">$5.50</span><span class="icon">+</span>
-</div>
+<div class="menu-item" onclick="toggleDescription(this)"><span class="label">Egg & Cheese</span><span class="price">$5.50</span><span class="icon">+</span></div>
 <div class="menu-description">Freshly baked biscuit with melted cheese and a fluffy egg inside. Add sausage, bacon, or ham for $2.</div>
 
-<div class="menu-item" onclick="toggleDescription(this)">
-<span class="label">Biscuits & Gravy</span><span class="price">$7.50</span><span class="icon">+</span>
-</div>
+<div class="menu-item" onclick="toggleDescription(this)"><span class="label">Biscuits & Gravy</span><span class="price">$7.50</span><span class="icon">+</span></div>
 <div class="menu-description">Classic southern biscuits smothered in rich, creamy sausage gravy.</div>
 
-<div class="menu-item" onclick="toggleDescription(this)">
-<span class="label">Texan Benedict <span class="tag tag-star">⭐</span></span><span class="price">$9.75</span><span class="icon">+</span>
-</div>
+<div class="menu-item" onclick="toggleDescription(this)"><span class="label">Texan Benedict <span class="tag tag-star">⭐</span></span><span class="price">$9.75</span><span class="icon">+</span></div>
 <div class="menu-description">Southern-style eggs benedict with bold Texas flavor and hearty brunch comfort.</div>
 </div></div>
 
@@ -151,13 +171,10 @@ h1,h2{color:#7a3b2e;}
 <h3>Breakfast Tacos</h3>
 <div class="menu-item" onclick="toggleDescription(this)"><span class="label">Egg & Cheese</span><span class="price">$3.50</span><span class="icon">+</span></div>
 <div class="menu-description">Flour tortillas filled with eggs & cheese.</div>
-
 <div class="menu-item" onclick="toggleDescription(this)"><span class="label">Egg, Cheese & Sausage</span><span class="price">$4.75</span><span class="icon">+</span></div>
 <div class="menu-description">Add savory sausage to your taco.</div>
-
 <div class="menu-item" onclick="toggleDescription(this)"><span class="label">Egg, Cheese & Bacon</span><span class="price">$4.75</span><span class="icon">+</span></div>
 <div class="menu-description">Add crisp bacon for extra flavor.</div>
-
 <div class="menu-item" onclick="toggleDescription(this)"><span class="label">Egg, Chorizo & Cheese</span><span class="price">$4.75</span><span class="icon">+</span></div>
 <div class="menu-description">Spicy chorizo with eggs and cheese in a flour tortilla.</div>
 </div></div>
@@ -167,14 +184,11 @@ h1,h2{color:#7a3b2e;}
 <h3>Breakfast Burritos (flour tortillas)</h3>
 <div class="menu-item" onclick="toggleDescription(this)"><span class="label">Sonoran Burrito</span><span class="price">$9.50</span><span class="icon">+</span></div>
 <div class="menu-description">Classic Arizona breakfast burrito with chorizo, eggs, grilled onions, and cheese.</div>
-
 <div class="menu-item" onclick="toggleDescription(this)"><span class="label">Burracho Special</span><span class="price">$10.50</span><span class="icon">+</span></div>
 <div class="menu-description">Sonoran burrito with fresh jalapeños and bold flavors.</div>
-
 <div class="menu-item" onclick="toggleDescription(this)"><span class="label">Cruda Special</span><span class="price">$10.50</span><span class="icon">+</span></div>
 <div class="menu-description">Topped with fresh pico de gallo and tangy crema.</div>
-
-<div class="menu-item" onclick="toggleDescription(this)"><span class="label">Kids Burrito <span class=\"tag\">Kids</span></span><span class="price">$5.00</span><span class="icon">+</span></div>
+<div class="menu-item" onclick="toggleDescription(this)"><span class="label">Kids Burrito <span class="tag">Kids</span></span><span class="price">$5.00</span><span class="icon">+</span></div>
 <div class="menu-description">Smaller portion, egg & cheese, perfect for kids.</div>
 </div></div>
 
@@ -183,18 +197,17 @@ h1,h2{color:#7a3b2e;}
 <h3>Homemade Pancakes</h3>
 <div class="menu-item" onclick="toggleDescription(this)"><span class="label">Adult Pancakes</span><span class="price">$6.50</span><span class="icon">+</span></div>
 <div class="menu-description">Fluffy homemade pancakes. Add sausage, bacon, or ham for $2.</div>
-
-<div class="menu-item" onclick="toggleDescription(this)"><span class="label">Kids Chocolate Chip <span class=\"tag\">Kids</span></span><span class="price">$5.00</span><span class="icon">+</span></div>
+<div class="menu-item" onclick="toggleDescription(this)"><span class="label">Kids Chocolate Chip <span class="tag">Kids</span></span><span class="price">$5.00</span><span class="icon">+</span></div>
 <div class="menu-description">Smaller portion pancakes with chocolate chips for kids.</div>
 </div></div>
 
 <!-- All-Day Favorites -->
 <div class="menu-card"><div class="content">
 <h3>All-Day Favorites</h3>
-<div class="menu-item" onclick="toggleDescription(this)"><span class="label">Crab Cakes <span class=\"tag tag-star\">⭐</span></span><span class="price">$11.50</span><span class="icon">+</span></div>
+<div class="menu-item" onclick="toggleDescription(this)"><span class="label">Crab Cakes <span class="tag tag-star">⭐</span></span><span class="price">$11.50</span><span class="icon">+</span></div>
 <div class="menu-description">Golden-crisp crab cakes with roasted garlic caper aioli.</div>
 
-<div class="menu-item" onclick="toggleDescription(this)"><span class="label">Golden Reuben Croquettes <span class=\"tag tag-star\">⭐</span></span><span class="price">$10.75</span><span class="icon">+</span></div>
+<div class="menu-item" onclick="toggleDescription(this)"><span class="label">Golden Reuben Croquettes <span class="tag tag-star">⭐</span></span><span class="price">$10.75</span><span class="icon">+</span></div>
 <div class="menu-description">Bite-sized croquettes packed with corned beef, swiss, and sauerkraut.</div>
 
 <div class="menu-item" onclick="toggleDescription(this)"><span class="label">Monte Cristo Sandwich (fresh fries or vinaigrette cole slaw)</span><span class="price">$9.50</span><span class="icon">+</span></div>
@@ -203,7 +216,7 @@ h1,h2{color:#7a3b2e;}
 <div class="menu-item" onclick="toggleDescription(this)"><span class="label">Patty Melt (fresh fries or vinaigrette cole slaw, griddled with jalapenos)</span><span class="price">$10.50</span><span class="icon">+</span></div>
 <div class="menu-description">Beef patty with melted cheese, onions, and jalapenos on griddled bread.</div>
 
-<div class="menu-item" onclick="toggleDescription(this)"><span class="label">Freshly Made Chicken Nuggets (Kids, served w/fries) <span class=\"tag\">Kids</span></span><span class="price">$7.50</span><span class="icon">+</span></div>
+<div class="menu-item" onclick="toggleDescription(this)"><span class="label">Freshly Made Chicken Nuggets (Kids, served w/fries) <span class="tag">Kids</span></span><span class="price">$7.50</span><span class="icon">+</span></div>
 <div class="menu-description">Made-to-order chicken nuggets, perfect for kids.</div>
 
 <div class="menu-item" onclick="toggleDescription(this)"><span class="label">Green Chile Chicken Soup 10oz / 16oz</span><span class="price">$5.50 / $7.50</span><span class="icon">+</span></div>
@@ -214,36 +227,23 @@ h1,h2{color:#7a3b2e;}
 <div class="menu-card"><div class="content">
 <h3>Sides & Drinks</h3>
 <div class="menu-item" onclick="toggleDescription(this)"><span class="label">Bacon / Ham / Sausage</span><span class="price">$2.50</span><span class="icon">+</span></div>
-<div class="menu-description"></div>
-
-<div class="menu-item" onclick="toggleDescription(this)"><span class=\"label\">Coleslaw (vinaigrette)</span><span class=\"price\">$2.25</span><span class=\"icon\">+</span></div>
-<div class=\"menu-description\"></div>
-
-<div class=\"menu-item\" onclick="toggleDescription(this)"><span class=\"label\">French Fries (always fresh)</span><span class=\"price\">$3.00</span><span class=\"icon\">+</span></div>
-<div class=\"menu-description\"></div>
-
-<div class=\"menu-item\" onclick="toggleDescription(this)"><span class=\"label\">Lifeboost Coffee</span><span class=\"price\">$4.50</span><span class=\"icon\">+</span></div>
-<div class=\"menu-description\">Low-acid, mold/chemical-free coffee.</div>
-
-<div class=\"menu-item\" onclick="toggleDescription(this)"><span class=\"label\">Iced Tea</span><span class=\"price\">$3.00</span><span class=\"icon\">+</span></div>
-<div class=\"menu-description\">Sweetened or unsweetened.</div>
-
-<div class=\"menu-item\" onclick="toggleDescription(this)"><span class=\"label\">Seasonal Juice</span><span class=\"price\">$3.00</span><span class=\"icon\">+</span></div>
-<div class=\"menu-description\"></div>
-
-<div class=\"menu-item\" onclick="toggleDescription(this)"><span class=\"label\">Sodas</span><span class=\"price\">$2.50</span><span class=\"icon\">+</span></div>
-<div class=\"menu-description\"></div>
+<div class="menu-item" onclick="toggleDescription(this)"><span class="label">Coleslaw (vinaigrette)</span><span class="price">$2.25</span><span class="icon">+</span></div>
+<div class="menu-item" onclick="toggleDescription(this)"><span class="label">French Fries (always fresh)</span><span class="price">$3.00</span><span class="icon">+</span></div>
+<div class="menu-item" onclick="toggleDescription(this)"><span class="label">Lifeboost Coffee</span><span class="price">$4.50</span><span class="icon">+</span></div>
+<div class="menu-item" onclick="toggleDescription(this)"><span class="label">Iced Tea</span><span class="price">$3.00</span><span class="icon">+</span></div>
+<div class="menu-item" onclick="toggleDescription(this)"><span class="label">Seasonal Juice</span><span class="price">$3.00</span><span class="icon">+</span></div>
+<div class="menu-item" onclick="toggleDescription(this)"><span class="label">Sodas</span><span class="price">$2.50</span><span class="icon">+</span></div>
 </div></div>
 
 </div>
 
 <p class="note">Full menu coming soon — thank you for celebrating our soft opening with us!</p>
-
 <a class="button-back" href="index.html" onclick="gtag('event','menu_back_home',{event_category:'Navigation',event_label:'Menu → Home'});">← Back to Home</a>
 </div>
 
 <script>
 function toggleDescription(el){
+  el.classList.toggle('open');
   let desc = el.nextElementSibling;
   let icon = el.querySelector('.icon');
   if(desc.style.display === 'block'){
