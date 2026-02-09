@@ -14,7 +14,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us | Arizona Sunrise Cafecito & Catering</title>
 
-  <!-- ICONS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
@@ -27,13 +26,11 @@
       color: #333;
     }
 
-    /* ===== LAYOUT ===== */
     .layout {
       display: flex;
       min-height: 100vh;
     }
 
-    /* ===== SIDE NAV ===== */
     .side-nav {
       width: 220px;
       background: #f7efe6;
@@ -64,7 +61,6 @@
       border: 1px solid rgba(122,59,46,0.15);
     }
 
-    /* ===== MAIN ===== */
     .main {
       flex: 1;
       padding-bottom: 50px;
@@ -108,9 +104,6 @@
       color: #5b4b45;
     }
 
-    .brand-highlight p { margin: 0 0 10px; }
-    .brand-highlight p:last-child { margin-bottom: 0; }
-
     .content {
       max-width: 920px;
       margin: 0 auto;
@@ -145,7 +138,6 @@
       padding: 16px;
       margin: 16px 0;
       line-height: 1.6;
-      color: #5b4b45;
     }
 
     .highlight-box {
@@ -153,7 +145,6 @@
       padding: 14px;
       border-radius: 12px;
       margin: 14px 0;
-      color: #5b4b45;
     }
 
     .capacity-note{
@@ -163,8 +154,6 @@
       background: rgba(122,59,46,0.06);
       border: 1px dashed rgba(122,59,46,0.22);
       font-size: 0.95rem;
-      line-height: 1.55;
-      color: #5b4b45;
     }
 
     .cta {
@@ -181,16 +170,10 @@
       text-decoration: none;
       color: white;
       background: linear-gradient(to right, #e36f47, #f6c177);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .cta a.secondary {
       background: linear-gradient(to right, #7a3b2e, #a65b4a);
-    }
-
-    .cta a:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
     }
 
     .fineprint{
@@ -210,11 +193,7 @@
         width: 100%;
         flex-direction: row;
         justify-content: space-around;
-        gap: 8px;
-        padding: 14px 10px;
       }
-      .side-nav a{ padding: 10px 10px; font-size: 0.95rem; }
-      .brand-highlight { margin: 16px 12px 6px; }
     }
   </style>
 </head>
@@ -222,7 +201,7 @@
 <body>
 <div class="layout">
 
-  <nav class="side-nav" aria-label="Primary">
+  <nav class="side-nav">
     <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
     <a href="about.html" aria-current="page"><i class="fa-solid fa-user-chef"></i> About Us</a>
     <a href="menu.html"><i class="fa-solid fa-utensils"></i> Menu</a>
@@ -257,8 +236,8 @@
 
       <div class="story-grid">
 
-        <section class="card" aria-label="Meet Jack and Wendy">
-          <h2>Meet Jack &amp; Wendy</h2>
+        <div class="card">
+          <h2>Meet Jack</h2>
 
           <p>
             Jack has spent decades in professional kitchens — from Arizona resorts and country clubs
@@ -275,38 +254,42 @@
           </div>
 
           <p>
-            After raising twins and serving in Executive Chef roles in Texas,
-            we decided it was time to build something together.
+            When we had twins, Jack stepped away from chef roles to become a stay-at-home dad —
+            trading kitchen hours for school mornings and family time.
+          </p>
+        </div>
+
+        <div class="card">
+          <h2>Meet Wendy</h2>
+
+          <p>
+            While Jack leads the kitchen, Wendy leads the business side — overseeing operations,
+            planning, and customer communication. With years of executive leadership experience,
+            she brings strategic organization, disciplined execution, and a servant-leader mindset
+            to Arizona Sunrise.
           </p>
 
           <div class="highlight-box">
-            Jack leads the kitchen. Wendy leads the business side — operations,
-            content, communication, and the behind-the-scenes work that keeps everything running smoothly.
+            You’ll also find her working alongside Jack in the kitchen,
+            supporting prep and ensuring each service runs with care and consistency.
           </div>
-        </section>
 
-        <section class="card" aria-label="Catering">
-          <h2>Catering</h2>
+          <h2 style="margin-top:20px;">Catering</h2>
 
           <p>
             We currently specialize in <strong>pickup catering</strong> for smaller, intimate gatherings —
             dinner parties, family celebrations, showers, and meaningful events where food truly matters.
           </p>
 
-          <p>
-            As a hands-on, two-person team, this allows us to focus on quality, freshness,
-            and personal attention with every order.
-          </p>
-
           <div class="capacity-note">
-            For catering, we focus on <strong>pickup large-order trays</strong> with advance notice.
-            We’ll share updates as we grow.
+            As a hands-on, two-person team, we focus on <strong>pickup large-order trays</strong>
+            with advance notice so we can maintain quality and attention to detail.
           </div>
-        </section>
+        </div>
 
       </div>
 
-      <div class="cta" aria-label="Next steps">
+      <div class="cta">
         <a href="menu.html">View Our Menu</a>
         <a href="catering.html" class="secondary">Catering Info</a>
       </div>
