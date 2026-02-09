@@ -14,7 +14,7 @@
   <title>Catering | Arizona Sunrise Cafecito & Catering</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ICONS (optional but nice) -->
+  <!-- ICONS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
@@ -28,7 +28,7 @@
     }
 
     .container {
-      max-width: 820px;
+      max-width: 860px;
       margin: 0 auto;
       padding: 40px 20px 60px;
       text-align: center;
@@ -50,13 +50,13 @@
     p {
       font-size: 1.05rem;
       margin: 10px auto 18px;
-      max-width: 700px;
+      max-width: 740px;
       line-height: 1.55;
       color: #5b4b45;
     }
 
     .notice {
-      max-width: 700px;
+      max-width: 740px;
       margin: 0 auto 22px;
       text-align: left;
       background: #fff3e8;
@@ -69,13 +69,27 @@
 
     .notice strong { color: #7a3b2e; }
 
+    .notice .line {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-top: 10px;
+    }
+    .notice .line i{
+      margin-top: 2px;
+      color: #e36f47;
+      width: 18px;
+      text-align: center;
+      flex: 0 0 18px;
+    }
+
     form {
       background: #ffffff;
       padding: 28px 24px 32px;
       border-radius: 14px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.06);
       text-align: left;
-      max-width: 720px;
+      max-width: 740px;
       margin: 0 auto;
     }
 
@@ -115,6 +129,52 @@
       line-height: 1.35;
     }
 
+    .policy {
+      margin-top: 18px;
+      padding: 14px 14px;
+      border-radius: 14px;
+      background: rgba(122,59,46,0.06);
+      border: 1px dashed rgba(122,59,46,0.22);
+      color: #5b4b45;
+      font-size: 0.95rem;
+      line-height: 1.45;
+    }
+
+    .policy ul {
+      margin: 10px 0 0 18px;
+      padding: 0;
+    }
+
+    .checkline {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-top: 12px;
+      padding: 10px 12px;
+      border: 1px solid rgba(122,59,46,0.14);
+      border-radius: 12px;
+      background: #fff;
+    }
+    .checkline input[type="checkbox"]{
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+      flex: 0 0 18px;
+    }
+    .checkline label{
+      margin: 0;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #533f3a;
+    }
+    .checkline .small{
+      font-weight: 400;
+      color: #6b5a53;
+      margin-top: 4px;
+      font-size: 0.92rem;
+      line-height: 1.35;
+    }
+
     button {
       margin-top: 22px;
       width: 100%;
@@ -142,7 +202,6 @@
       line-height: 1.35;
     }
 
-    /* ===== Back to Home button ===== */
     .button-back {
       display: inline-block;
       margin-top: 26px;
@@ -179,10 +238,25 @@
     </p>
 
     <div class="notice">
-      <strong>Pickup Catering Only (for now):</strong> We’re currently focused on <strong>pickup large-order trays</strong>
-      with advance notice so we can keep everything fresh and made with care.
-      <br><br>
-      Need delivery? You’re welcome to use <strong>DoorDash</strong> (when available) for delivery, or you can send a courier.
+      <strong>Pickup Catering Only (for now)</strong>
+      <div class="line">
+        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+        <div>
+          <strong>Pickup Address:</strong> 151 Sabine Road, Royse City, TX
+        </div>
+      </div>
+      <div class="line">
+        <i class="fa-solid fa-truck" aria-hidden="true"></i>
+        <div>
+          Need delivery? You’re welcome to use <strong>DoorDash</strong> (when available) for delivery, or send a courier.
+        </div>
+      </div>
+      <div class="line">
+        <i class="fa-solid fa-tag" aria-hidden="true"></i>
+        <div>
+          <strong>10% off</strong> catering orders paid in <strong>cash</strong>.
+        </div>
+      </div>
     </div>
 
     <!-- Mailto form (pickup-only) -->
@@ -194,8 +268,9 @@
 
       <div class="row">
         <div>
-          <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="Phone" placeholder="Optional">
+          <label for="phone">Phone (required)</label>
+          <input type="tel" id="phone" name="Phone" required placeholder="###-###-####">
+          <div class="help">So we can confirm details quickly.</div>
         </div>
         <div>
           <label for="email">Email</label>
@@ -217,12 +292,8 @@
         </div>
       </div>
 
-      <label for="pickup_location">Pickup Location</label>
-      <select id="pickup_location" name="Pickup Location">
-        <option value="Trailer pickup (Royse City)">Trailer pickup (Royse City)</option>
-        <option value="Other (describe below)">Other (describe below)</option>
-      </select>
-      <div class="help">If “Other,” tell us details in the notes.</div>
+      <label for="estimated_total">Estimated Budget (optional)</label>
+      <input type="text" id="estimated_total" name="Estimated Budget" placeholder="Example: $200–$300">
 
       <label for="guest_count">Estimated Headcount</label>
       <input type="number" id="guest_count" name="Estimated Headcount" min="1" placeholder="Example: 12">
@@ -242,6 +313,24 @@
       <label for="dietary">Dietary Notes (optional)</label>
       <textarea id="dietary" name="Dietary Notes"
         placeholder="Example: no pork, vegetarian options, allergies, etc."></textarea>
+
+      <div class="policy">
+        <strong>Deposit Policy (Required to Confirm)</strong><br>
+        We require a <strong>deposit to confirm</strong> pickup catering orders. This helps us prepare fresh food and reserve your time.
+        <ul>
+          <li>Your order is <strong>not confirmed</strong> until the deposit is received.</li>
+          <li>After you submit this form, we’ll contact you to confirm details and collect the deposit.</li>
+          <li><strong>Cash Discount:</strong> 10% off when your catering order is paid in cash.</li>
+        </ul>
+
+        <div class="checkline">
+          <input type="checkbox" id="deposit_ack" name="Deposit Acknowledgement" value="I understand a deposit is required to confirm my order." required>
+          <div>
+            <label for="deposit_ack">I understand a deposit is required to confirm my catering order.</label>
+            <div class="small">Submitting this request does not guarantee availability until we confirm and receive the deposit.</div>
+          </div>
+        </div>
+      </div>
 
       <button type="submit">Request Pickup Catering</button>
 
