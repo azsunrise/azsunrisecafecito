@@ -28,7 +28,6 @@ gtag('config','G-XFY3V13DJN');
     --boardBorder:rgba(45,27,18,.14);
     --line:rgba(45,27,18,.14);
     --shadow:0 12px 30px rgba(0,0,0,.12);
-    --radius:18px;
   }
 
   *{box-sizing:border-box;}
@@ -48,13 +47,32 @@ gtag('config','G-XFY3V13DJN');
 
   .container{max-width:980px;margin:auto;padding:26px 14px 52px;}
 
+  /* a11y: skip link */
+  .skip-link{
+    position:absolute;
+    left:-999px; top:auto;
+    width:1px; height:1px;
+    overflow:hidden;
+  }
+  .skip-link:focus{
+    left:12px; top:12px;
+    width:auto; height:auto;
+    padding:10px 12px;
+    background:#fff;
+    border:2px solid rgba(227,111,71,.55);
+    border-radius:12px;
+    z-index:9999;
+    outline:none;
+    font-weight:900;
+  }
+
   h1,h2{color:var(--brown);margin:0;}
   h1{font-size:clamp(1.7rem,3.2vw,2.35rem);}
   h2{font-size:clamp(1.25rem,2.6vw,1.55rem);margin-top:16px;}
 
   .badge{
     display:inline-block;
-    margin:12px 0 18px;
+    margin:12px 0 14px;
     padding:8px 18px;
     border-radius:999px;
     background:linear-gradient(to right,var(--orange),var(--sun));
@@ -64,7 +82,7 @@ gtag('config','G-XFY3V13DJN');
     box-shadow:0 10px 20px rgba(227,111,71,.16);
   }
 
-  /* SOFT OPENING: keep your card style */
+  /* SOFT OPENING cards */
   .menu-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -87,7 +105,7 @@ gtag('config','G-XFY3V13DJN');
   .menu-card h3{margin:0 0 6px;color:var(--brown);}
   .menu-card p{margin:0;color:#4b3328;line-height:1.35;}
 
-  /* “Poster menu” board */
+  /* DRAFT MENU board */
   .board{
     margin:14px auto 0;
     width:min(940px, 100%);
@@ -108,7 +126,7 @@ gtag('config','G-XFY3V13DJN');
     font-style:italic;
   }
 
-  /* Today’s Special box (editable) */
+  /* Today’s Special */
   .special{
     margin:12px auto 0;
     width:min(860px, 100%);
@@ -154,7 +172,25 @@ gtag('config','G-XFY3V13DJN');
     .special .items{grid-template-columns:1fr;}
   }
 
-  /* Sticky Jump Nav (mobile-first) */
+  /* Small info pills */
+  .cards-only{
+    margin-top:10px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:8px;
+  }
+  .mini-pill{
+    display:inline-block;
+    padding:8px 12px;
+    border-radius:999px;
+    font-weight:900;
+    font-size:.92rem;
+    background:rgba(255,255,255,.82);
+    border:1px solid rgba(45,27,18,.12);
+  }
+
+  /* Sticky Jump Nav (mobile) */
   .jump-wrap{
     position:sticky;
     top:0;
@@ -176,28 +212,28 @@ gtag('config','G-XFY3V13DJN');
     font-weight:900;
     font-size:.86rem;
     color:var(--ink);
-    padding:7px 10px;
+    padding:8px 10px;
     border-radius:999px;
     background:rgba(255,255,255,.82);
     border:1px solid rgba(45,27,18,.10);
   }
-  .jump a:focus{outline:3px solid rgba(227,111,71,.35); outline-offset:3px;}
-
-  /* Only stick on smaller screens (desktop doesn’t need it) */
+  .jump a:focus{
+    outline:3px solid rgba(227,111,71,.35);
+    outline-offset:3px;
+  }
   @media (min-width:900px){
     .jump-wrap{position:static; background:transparent; border:0; padding:12px 0 0;}
   }
 
   .board-body{padding:14px;}
 
-  /* 2-column like your poster image */
+  /* 2-column like poster */
   .columns{
     display:grid;
     grid-template-columns: 1.55fr .95fr;
     gap:14px;
     align-items:start;
   }
-
   .panel{
     background:rgba(255,255,255,.82);
     border:1px solid rgba(45,27,18,.12);
@@ -206,13 +242,15 @@ gtag('config','G-XFY3V13DJN');
     text-align:left;
   }
 
-  /* “plank” section header */
+  /* Section header + back-to-top */
   .section-title{
     display:flex;
-    justify-content:center;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
     margin:0 0 10px;
   }
-  .section-title span{
+  .section-title .plank{
     display:inline-block;
     padding:10px 14px;
     border-radius:14px;
@@ -224,12 +262,26 @@ gtag('config','G-XFY3V13DJN');
     box-shadow:0 10px 18px rgba(0,0,0,.16);
     border:1px solid rgba(255,255,255,.18);
   }
+  .toplink{
+    text-decoration:none;
+    font-weight:900;
+    font-size:.86rem;
+    color:var(--ink);
+    padding:7px 10px;
+    border-radius:999px;
+    background:rgba(255,255,255,.82);
+    border:1px solid rgba(45,27,18,.10);
+    white-space:nowrap;
+  }
+  .toplink:focus{
+    outline:3px solid rgba(227,111,71,.35);
+    outline-offset:3px;
+  }
 
   .menu-list{list-style:none;margin:0;padding:0;}
   .row{padding:10px 2px;border-top:1px solid var(--line);}
   .row:first-child{border-top:0;}
 
-  /* clean name/price line */
   .line{
     display:flex;
     align-items:flex-start;
@@ -279,6 +331,12 @@ gtag('config','G-XFY3V13DJN');
     color:#fff;
     border:0;
   }
+  .tag-spicy{
+    background:rgba(227,111,71,.12);
+    border:1px solid rgba(227,111,71,.25);
+    color:#8a2e1c;
+    font-weight:900;
+  }
 
   /* Notes & button */
   .note{
@@ -307,10 +365,22 @@ gtag('config','G-XFY3V13DJN');
     .menu-card img{height:160px;}
     .menu-card .content{padding:12px;}
   }
+
+  /* Print-friendly */
+  @media print{
+    body{background:#fff !important;}
+    .jump-wrap, .button-back {display:none !important;}
+    .board, .menu-card{box-shadow:none !important;}
+    .board, .panel, .special{background:#fff !important;}
+    .badge{color:#000 !important; background:#fff !important; border:2px solid #000 !important; box-shadow:none !important;}
+    a{color:#000 !important; text-decoration:none !important;}
+  }
 </style>
 </head>
 
 <body>
+<a class="skip-link" href="#draftTop">Skip to draft menu</a>
+
 <div class="container">
 
   <!-- SOFT OPENING (as-is) -->
@@ -343,27 +413,35 @@ gtag('config','G-XFY3V13DJN');
     </div>
   </div>
 
-  <!-- DRAFT MENU (poster style) -->
-  <section class="board" aria-label="Full Brunch Menu Draft" id="draft">
+  <!-- DRAFT MENU -->
+  <section class="board" aria-label="Full Brunch Menu Draft" id="draftTop">
     <div class="board-head">
       <h2>🌅 Full Brunch Menu — DRAFT</h2>
       <p><em>Menu rotates • Ask about specials</em></p>
 
-      <!-- Today’s Special (edit these 2 lines whenever you want) -->
+      <!-- Today’s Special -->
       <div class="special" aria-label="Today's special">
         <div class="top">
           <div class="title">⭐ Today’s Special</div>
-          <div class="small">Quick-edit box (change text anytime)</div>
+          <div class="small">Limited quantities</div>
         </div>
         <div class="items">
-          <div class="line"><span class="label">Special:</span> (add today’s special here)</div>
-          <div class="line"><span class="label">Limited:</span> (ex: while it lasts)</div>
+          <div class="line"><span class="label">Special:</span> TBD</div>
+          <div class="line"><span class="label">Limited:</span> TBD</div>
         </div>
+      </div>
+
+      <!-- Quick info -->
+      <div class="cards-only" aria-label="Quick info">
+        <span class="mini-pill">💳 Credit cards accepted</span>
+        <!-- OPTIONAL: turn on if you decide to do it -->
+        <!-- <span class="mini-pill">💵 5% cash discount (applied at checkout)</span> -->
+        <span class="mini-pill">🌶 mild • 🌶🌶 spicy</span>
       </div>
     </div>
 
-    <!-- Sticky jump links (mobile) -->
-    <div class="jump-wrap">
+    <!-- Sticky jump links -->
+    <div class="jump-wrap" id="topNav">
       <nav class="jump" aria-label="Jump to section">
         <a href="#biscuits">Biscuits</a>
         <a href="#tacos">Tacos</a>
@@ -381,7 +459,10 @@ gtag('config','G-XFY3V13DJN');
         <div class="panel">
 
           <!-- BISCUITS -->
-          <div class="section-title" id="biscuits"><span>Biscuits</span></div>
+          <div class="section-title" id="biscuits">
+            <span class="plank">Biscuits</span>
+            <a class="toplink" href="#topNav">Back to top ↑</a>
+          </div>
           <ul class="menu-list">
             <li class="row">
               <div class="line">
@@ -413,7 +494,10 @@ gtag('config','G-XFY3V13DJN');
 
           <!-- TACOS -->
           <div style="height:10px"></div>
-          <div class="section-title" id="tacos"><span>Breakfast Tacos</span></div>
+          <div class="section-title" id="tacos">
+            <span class="plank">Breakfast Tacos</span>
+            <a class="toplink" href="#topNav">Back to top ↑</a>
+          </div>
           <ul class="menu-list">
             <li class="row">
               <div class="line">
@@ -444,13 +528,17 @@ gtag('config','G-XFY3V13DJN');
                 <div class="name">Egg, Chorizo &amp; Cheese</div>
                 <div class="price">$4.75</div>
               </div>
+              <div class="tags"><span class="tag tag-spicy">🌶🌶 spicy</span></div>
               <div class="menu-description">Spicy chorizo with eggs and cheese in a flour tortilla.</div>
             </li>
           </ul>
 
           <!-- BURRITOS -->
           <div style="height:10px"></div>
-          <div class="section-title" id="burritos"><span>Breakfast Burritos</span></div>
+          <div class="section-title" id="burritos">
+            <span class="plank">Breakfast Burritos</span>
+            <a class="toplink" href="#topNav">Back to top ↑</a>
+          </div>
           <ul class="menu-list">
             <li class="row">
               <div class="line">
@@ -466,7 +554,10 @@ gtag('config','G-XFY3V13DJN');
                 <div class="name">Burracho Special</div>
                 <div class="price">$10.50</div>
               </div>
-              <div class="tags"><span class="tag">flour tortillas</span></div>
+              <div class="tags">
+                <span class="tag">flour tortillas</span>
+                <span class="tag tag-spicy">🌶🌶 spicy</span>
+              </div>
               <div class="menu-description">Sonoran burrito with fresh jalapeños and bold flavors.</div>
             </li>
 
@@ -491,7 +582,10 @@ gtag('config','G-XFY3V13DJN');
 
           <!-- PANCAKES -->
           <div style="height:10px"></div>
-          <div class="section-title" id="pancakes"><span>Homemade Pancakes</span></div>
+          <div class="section-title" id="pancakes">
+            <span class="plank">Homemade Pancakes</span>
+            <a class="toplink" href="#topNav">Back to top ↑</a>
+          </div>
           <ul class="menu-list">
             <li class="row">
               <div class="line">
@@ -513,7 +607,10 @@ gtag('config','G-XFY3V13DJN');
 
           <!-- FAVORITES -->
           <div style="height:10px"></div>
-          <div class="section-title" id="favorites"><span>All-Day Favorites</span></div>
+          <div class="section-title" id="favorites">
+            <span class="plank">All-Day Favorites</span>
+            <a class="toplink" href="#topNav">Back to top ↑</a>
+          </div>
           <ul class="menu-list">
             <li class="row">
               <div class="line">
@@ -531,7 +628,6 @@ gtag('config','G-XFY3V13DJN');
               <div class="menu-description">Bite-sized croquettes packed with corned beef, swiss, and sauerkraut.</div>
             </li>
 
-            <!-- parentheses -> tags -->
             <li class="row">
               <div class="line">
                 <div class="name">Monte Cristo Sandwich</div>
@@ -544,7 +640,6 @@ gtag('config','G-XFY3V13DJN');
               <div class="menu-description">Griddled ham &amp; turkey with melted cheese, finished with powdered sugar.</div>
             </li>
 
-            <!-- parentheses -> tags -->
             <li class="row">
               <div class="line">
                 <div class="name">Patty Melt</div>
@@ -553,7 +648,8 @@ gtag('config','G-XFY3V13DJN');
               <div class="tags">
                 <span class="tag">fresh fries</span>
                 <span class="tag">vinaigrette cole slaw option</span>
-                <span class="tag">griddled with jalapenos</span>
+                <span class="tag tag-spicy">🌶 mild</span>
+                <span class="tag">jalapeños</span>
               </div>
               <div class="menu-description">Beef patty with melted cheese, onions, and jalapenos on griddled bread.</div>
             </li>
@@ -572,7 +668,10 @@ gtag('config','G-XFY3V13DJN');
                 <div class="name">Green Chile Chicken Soup</div>
                 <div class="price">$5.50 / $7.50</div>
               </div>
-              <div class="tags"><span class="tag">10oz / 16oz</span></div>
+              <div class="tags">
+                <span class="tag">10oz / 16oz</span>
+                <span class="tag tag-spicy">🌶 mild</span>
+              </div>
               <div class="menu-description">Slow-simmered chicken soup with roasted green chiles.</div>
             </li>
           </ul>
@@ -581,7 +680,10 @@ gtag('config','G-XFY3V13DJN');
 
         <!-- RIGHT COLUMN -->
         <div class="panel" id="sidesdrinks">
-          <div class="section-title"><span>Sides &amp; Drinks</span></div>
+          <div class="section-title">
+            <span class="plank">Sides &amp; Drinks</span>
+            <a class="toplink" href="#topNav">Back to top ↑</a>
+          </div>
 
           <ul class="menu-list">
             <li class="row">
@@ -640,8 +742,11 @@ gtag('config','G-XFY3V13DJN');
       </div>
 
       <p class="note">Full menu coming soon — thank you for celebrating our soft opening with us!</p>
+
       <a class="button-back" href="index.html"
-         onclick="gtag('event','menu_back_home',{event_category:'Navigation',event_label:'Menu → Home'});">← Back to Home</a>
+         onclick="gtag('event','menu_back_home',{event_category:'Navigation',event_label:'Menu → Home'});">
+         ← Back to Home
+      </a>
     </div>
   </section>
 
