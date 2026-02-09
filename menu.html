@@ -32,13 +32,13 @@ gtag('config','G-XFY3V13DJN');
   }
 
   *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
   body{
     margin:0;
     font-family:Arial,Helvetica,sans-serif;
     color:var(--ink);
     text-align:center;
 
-    /* warm “menu board” background */
     background:
       radial-gradient(1000px 520px at 50% 0%, rgba(246,193,119,.28), transparent 60%),
       radial-gradient(900px 420px at 15% 40%, rgba(227,111,71,.12), transparent 60%),
@@ -64,7 +64,7 @@ gtag('config','G-XFY3V13DJN');
     box-shadow:0 10px 20px rgba(227,111,71,.16);
   }
 
-  /* KEEP soft opening as-is (your cards), just slight polish */
+  /* SOFT OPENING: keep your card style */
   .menu-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -87,7 +87,7 @@ gtag('config','G-XFY3V13DJN');
   .menu-card h3{margin:0 0 6px;color:var(--brown);}
   .menu-card p{margin:0;color:#4b3328;line-height:1.35;}
 
-  /* “Poster menu” board for the draft menu */
+  /* “Poster menu” board */
   .board{
     margin:14px auto 0;
     width:min(940px, 100%);
@@ -108,29 +108,89 @@ gtag('config','G-XFY3V13DJN');
     font-style:italic;
   }
 
-  /* Simple jump links (great UX on mobile) */
+  /* Today’s Special box (editable) */
+  .special{
+    margin:12px auto 0;
+    width:min(860px, 100%);
+    text-align:left;
+    background:rgba(255,255,255,.78);
+    border:1px solid rgba(45,27,18,.12);
+    border-radius:18px;
+    padding:12px 12px 10px;
+  }
+  .special .top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .special .title{
+    font-weight:900;
+    color:var(--brown);
+    letter-spacing:.3px;
+  }
+  .special .small{
+    font-size:.86rem;
+    color:#5b3a2e;
+    opacity:.9;
+    font-style:italic;
+  }
+  .special .items{
+    margin-top:8px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+  .special .line{
+    font-size:.95rem;
+    color:#3c271e;
+  }
+  .special .label{
+    font-weight:900;
+    color:#3c271e;
+  }
+  @media (max-width:700px){
+    .special .items{grid-template-columns:1fr;}
+  }
+
+  /* Sticky Jump Nav (mobile-first) */
+  .jump-wrap{
+    position:sticky;
+    top:0;
+    z-index:50;
+    padding:10px 10px 12px;
+    background:rgba(255,247,240,.92);
+    border-bottom:1px solid rgba(45,27,18,.10);
+    backdrop-filter: blur(6px);
+  }
   .jump{
     display:flex;
     flex-wrap:wrap;
     gap:8px;
     justify-content:center;
-    margin:12px 0 0;
+    margin:0;
   }
   .jump a{
     text-decoration:none;
-    font-weight:800;
+    font-weight:900;
     font-size:.86rem;
     color:var(--ink);
-    padding:6px 10px;
+    padding:7px 10px;
     border-radius:999px;
-    background:rgba(255,255,255,.75);
+    background:rgba(255,255,255,.82);
     border:1px solid rgba(45,27,18,.10);
   }
   .jump a:focus{outline:3px solid rgba(227,111,71,.35); outline-offset:3px;}
 
+  /* Only stick on smaller screens (desktop doesn’t need it) */
+  @media (min-width:900px){
+    .jump-wrap{position:static; background:transparent; border:0; padding:12px 0 0;}
+  }
+
   .board-body{padding:14px;}
 
-  /* 2-column like the image: big left, small right */
+  /* 2-column like your poster image */
   .columns{
     display:grid;
     grid-template-columns: 1.55fr .95fr;
@@ -146,7 +206,7 @@ gtag('config','G-XFY3V13DJN');
     text-align:left;
   }
 
-  /* plank-ish section header */
+  /* “plank” section header */
   .section-title{
     display:flex;
     justify-content:center;
@@ -189,7 +249,7 @@ gtag('config','G-XFY3V13DJN');
 
   /* descriptions always visible */
   .menu-description{
-    display:block;               /* <-- change from your old toggle */
+    display:block;
     margin:6px 0 0 0;
     font-size:.92rem;
     line-height:1.35;
@@ -198,12 +258,17 @@ gtag('config','G-XFY3V13DJN');
   }
 
   /* tags */
+  .tags{
+    margin-top:6px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+  }
   .tag{
     font-size:.72rem;
     background:rgba(246,193,119,.55);
     padding:3px 8px;
     border-radius:999px;
-    margin-left:6px;
     border:1px solid rgba(45,27,18,.10);
     font-weight:800;
     color:#3d281f;
@@ -248,7 +313,7 @@ gtag('config','G-XFY3V13DJN');
 <body>
 <div class="container">
 
-  <!-- SOFT OPENING (unchanged layout) -->
+  <!-- SOFT OPENING (as-is) -->
   <h1>Soft Opening Free Tasting</h1>
   <div class="badge">FREE • Limited Quantities</div>
 
@@ -284,6 +349,21 @@ gtag('config','G-XFY3V13DJN');
       <h2>🌅 Full Brunch Menu — DRAFT</h2>
       <p><em>Menu rotates • Ask about specials</em></p>
 
+      <!-- Today’s Special (edit these 2 lines whenever you want) -->
+      <div class="special" aria-label="Today's special">
+        <div class="top">
+          <div class="title">⭐ Today’s Special</div>
+          <div class="small">Quick-edit box (change text anytime)</div>
+        </div>
+        <div class="items">
+          <div class="line"><span class="label">Special:</span> (add today’s special here)</div>
+          <div class="line"><span class="label">Limited:</span> (ex: while it lasts)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sticky jump links (mobile) -->
+    <div class="jump-wrap">
       <nav class="jump" aria-label="Jump to section">
         <a href="#biscuits">Biscuits</a>
         <a href="#tacos">Tacos</a>
@@ -308,6 +388,7 @@ gtag('config','G-XFY3V13DJN');
                 <div class="name">Egg &amp; Cheese</div>
                 <div class="price">$5.50</div>
               </div>
+              <div class="tags"><span class="tag">served w/ cottage potatoes</span></div>
               <div class="menu-description">Freshly baked biscuit with melted cheese and a fluffy egg inside. Add sausage, bacon, or ham for $2.</div>
             </li>
 
@@ -316,6 +397,7 @@ gtag('config','G-XFY3V13DJN');
                 <div class="name">Biscuits &amp; Gravy</div>
                 <div class="price">$7.50</div>
               </div>
+              <div class="tags"><span class="tag">served w/ cottage potatoes</span></div>
               <div class="menu-description">Classic southern biscuits smothered in rich, creamy sausage gravy.</div>
             </li>
 
@@ -324,11 +406,8 @@ gtag('config','G-XFY3V13DJN');
                 <div class="name">Texan Benedict <span class="tag tag-star">⭐</span></div>
                 <div class="price">$9.75</div>
               </div>
+              <div class="tags"><span class="tag">served w/ cottage potatoes</span></div>
               <div class="menu-description">Southern-style eggs benedict with bold Texas flavor and hearty brunch comfort.</div>
-            </li>
-
-            <li class="row">
-              <div class="menu-description"><strong>Served with cottage potatoes.</strong></div>
             </li>
           </ul>
 
@@ -378,6 +457,7 @@ gtag('config','G-XFY3V13DJN');
                 <div class="name">Sonoran Burrito</div>
                 <div class="price">$9.50</div>
               </div>
+              <div class="tags"><span class="tag">flour tortillas</span></div>
               <div class="menu-description">Classic Arizona breakfast burrito with chorizo, eggs, grilled onions, and cheese.</div>
             </li>
 
@@ -386,6 +466,7 @@ gtag('config','G-XFY3V13DJN');
                 <div class="name">Burracho Special</div>
                 <div class="price">$10.50</div>
               </div>
+              <div class="tags"><span class="tag">flour tortillas</span></div>
               <div class="menu-description">Sonoran burrito with fresh jalapeños and bold flavors.</div>
             </li>
 
@@ -394,6 +475,7 @@ gtag('config','G-XFY3V13DJN');
                 <div class="name">Cruda Special</div>
                 <div class="price">$10.50</div>
               </div>
+              <div class="tags"><span class="tag">flour tortillas</span></div>
               <div class="menu-description">Topped with fresh pico de gallo and tangy crema.</div>
             </li>
 
@@ -402,11 +484,8 @@ gtag('config','G-XFY3V13DJN');
                 <div class="name">Kids Burrito <span class="tag">Kids</span></div>
                 <div class="price">$5.00</div>
               </div>
+              <div class="tags"><span class="tag">flour tortillas</span></div>
               <div class="menu-description">Smaller portion, egg &amp; cheese, perfect for kids.</div>
-            </li>
-
-            <li class="row">
-              <div class="menu-description"><strong>Flour tortillas.</strong></div>
             </li>
           </ul>
 
@@ -419,6 +498,7 @@ gtag('config','G-XFY3V13DJN');
                 <div class="name">Adult Pancakes</div>
                 <div class="price">$6.50</div>
               </div>
+              <div class="tags"><span class="tag">add sausage/bacon/ham +$2</span></div>
               <div class="menu-description">Fluffy homemade pancakes. Add sausage, bacon, or ham for $2.</div>
             </li>
 
@@ -451,35 +531,48 @@ gtag('config','G-XFY3V13DJN');
               <div class="menu-description">Bite-sized croquettes packed with corned beef, swiss, and sauerkraut.</div>
             </li>
 
+            <!-- parentheses -> tags -->
             <li class="row">
               <div class="line">
-                <div class="name">Monte Cristo Sandwich (fresh fries or vinaigrette cole slaw)</div>
+                <div class="name">Monte Cristo Sandwich</div>
                 <div class="price">$9.50</div>
+              </div>
+              <div class="tags">
+                <span class="tag">fresh fries</span>
+                <span class="tag">vinaigrette cole slaw option</span>
               </div>
               <div class="menu-description">Griddled ham &amp; turkey with melted cheese, finished with powdered sugar.</div>
             </li>
 
+            <!-- parentheses -> tags -->
             <li class="row">
               <div class="line">
-                <div class="name">Patty Melt (fresh fries or vinaigrette cole slaw, griddled with jalapenos)</div>
+                <div class="name">Patty Melt</div>
                 <div class="price">$10.50</div>
+              </div>
+              <div class="tags">
+                <span class="tag">fresh fries</span>
+                <span class="tag">vinaigrette cole slaw option</span>
+                <span class="tag">griddled with jalapenos</span>
               </div>
               <div class="menu-description">Beef patty with melted cheese, onions, and jalapenos on griddled bread.</div>
             </li>
 
             <li class="row">
               <div class="line">
-                <div class="name">Freshly Made Chicken Nuggets (Kids, served w/fries) <span class="tag">Kids</span></div>
+                <div class="name">Freshly Made Chicken Nuggets <span class="tag">Kids</span></div>
                 <div class="price">$7.50</div>
               </div>
+              <div class="tags"><span class="tag">served w/ fries</span></div>
               <div class="menu-description">Made-to-order chicken nuggets, perfect for kids.</div>
             </li>
 
             <li class="row">
               <div class="line">
-                <div class="name">Green Chile Chicken Soup 10oz / 16oz</div>
+                <div class="name">Green Chile Chicken Soup</div>
                 <div class="price">$5.50 / $7.50</div>
               </div>
+              <div class="tags"><span class="tag">10oz / 16oz</span></div>
               <div class="menu-description">Slow-simmered chicken soup with roasted green chiles.</div>
             </li>
           </ul>
@@ -507,9 +600,10 @@ gtag('config','G-XFY3V13DJN');
 
             <li class="row">
               <div class="line">
-                <div class="name">French Fries (always fresh)</div>
+                <div class="name">French Fries</div>
                 <div class="price">$3.00</div>
               </div>
+              <div class="tags"><span class="tag">always fresh</span></div>
             </li>
 
             <li class="row">
@@ -552,7 +646,5 @@ gtag('config','G-XFY3V13DJN');
   </section>
 
 </div>
-
-<!-- No toggle JS needed now because descriptions are always visible -->
 </body>
 </html>
