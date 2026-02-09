@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XFY3V13DJN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XFY3V13DJN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XFY3V13DJN');
+  </script>
 
-  gtag('config', 'G-XFY3V13DJN');
-</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us | Arizona Sunrise Cafecito & Catering</title>
@@ -46,60 +46,138 @@
     .side-nav a {
       text-decoration: none;
       color: #7a3b2e;
-      font-weight: 600;
+      font-weight: 700;
       padding: 12px 14px;
-      border-radius: 8px;
+      border-radius: 10px;
       display: flex;
       align-items: center;
       gap: 10px;
+      transition: background 0.2s ease, transform 0.2s ease;
     }
 
     .side-nav a:hover {
       background: #e6c3a5;
+      transform: translateY(-1px);
+    }
+
+    .side-nav a[aria-current="page"]{
+      background: #fff3e8;
+      border: 1px solid rgba(122,59,46,0.15);
     }
 
     /* ===== MAIN ===== */
     .main {
       flex: 1;
-      text-align: center;
       padding-bottom: 50px;
     }
 
     .header {
-      padding: 30px 20px 10px;
+      padding: 34px 20px 10px;
+      text-align: center;
     }
 
     h1 {
-      margin-bottom: 10px;
+      margin: 0 0 10px;
       color: #7a3b2e;
+      letter-spacing: 0.2px;
+    }
+
+    .subhead {
+      margin: 0 auto 18px;
+      max-width: 820px;
+      padding: 0 20px;
+      color: #5b4b45;
+      line-height: 1.55;
+      text-align: center;
     }
 
     .divider {
-      width: 140px;
-      height: 2px;
-      margin: 0 auto 20px;
+      width: 150px;
+      height: 3px;
+      margin: 0 auto 18px;
       background: linear-gradient(to right, #f6c177, #e36f47, #f6c177);
-      border-radius: 2px;
+      border-radius: 999px;
     }
 
     .content {
-      max-width: 820px;
+      max-width: 920px;
       margin: 0 auto;
       padding: 0 20px;
-      text-align: left;
-      line-height: 1.6;
+      line-height: 1.7;
+    }
+
+    /* ===== STORY GRID ===== */
+    .story-grid{
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+      align-items: start;
+      margin-top: 16px;
+    }
+
+    .card{
+      background: rgba(255,255,255,0.75);
+      border: 1px solid rgba(122,59,46,0.12);
+      border-radius: 18px;
+      padding: 20px 20px 18px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+
+    .card h2{
+      margin: 0 0 10px;
+      color: #7a3b2e;
+      font-size: 1.15rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card p{
+      margin: 0 0 12px;
+    }
+
+    .card p:last-child{
+      margin-bottom: 0;
     }
 
     .highlight-box {
       background: #fff3e8;
-      padding: 22px;
+      padding: 18px;
       border-radius: 16px;
-      margin: 26px 0;
+      border: 1px solid rgba(227,111,71,0.18);
+      margin: 0;
+    }
+
+    /* ===== QUICK LIST ===== */
+    .quick-list{
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .quick-list li{
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 10px 12px;
+      background: #fff;
+      border: 1px solid rgba(122,59,46,0.10);
+      border-radius: 14px;
+    }
+
+    .quick-list i{
+      margin-top: 2px;
+      color: #e36f47;
+      width: 18px;
+      text-align: center;
+      flex: 0 0 18px;
     }
 
     /* ===== CTA ===== */
     .cta {
-      margin-top: 40px;
+      margin-top: 22px;
       text-align: center;
     }
 
@@ -108,7 +186,7 @@
       margin: 10px;
       padding: 14px 26px;
       border-radius: 30px;
-      font-weight: 600;
+      font-weight: 700;
       text-decoration: none;
       color: white;
       background: linear-gradient(to right, #e36f47, #f6c177);
@@ -124,80 +202,137 @@
       box-shadow: 0 6px 14px rgba(0,0,0,0.15);
     }
 
+    .fineprint{
+      margin: 10px auto 0;
+      max-width: 820px;
+      padding: 0 20px;
+      text-align: center;
+      color: #6b5a53;
+      font-size: 0.95rem;
+    }
+
     /* ===== MOBILE ===== */
-    @media (max-width: 768px) {
-      .layout {
-        flex-direction: column;
+    @media (max-width: 900px){
+      .story-grid{
+        grid-template-columns: 1fr;
       }
+    }
+
+    @media (max-width: 768px) {
+      .layout { flex-direction: column; }
 
       .side-nav {
         width: 100%;
         flex-direction: row;
         justify-content: space-around;
+        gap: 8px;
+        padding: 14px 10px;
       }
 
-      .content {
-        text-align: center;
+      .side-nav a{
+        padding: 10px 10px;
+        font-size: 0.95rem;
       }
+
+      .subhead { text-align: center; }
     }
   </style>
 </head>
 
 <body>
-
 <div class="layout">
 
   <!-- ===== NAV ===== -->
-  <nav class="side-nav">
+  <nav class="side-nav" aria-label="Primary">
     <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
-    <a href="about.html"><i class="fa-solid fa-user-chef"></i> About Us</a>
+    <a href="about.html" aria-current="page"><i class="fa-solid fa-user-chef"></i> About Us</a>
     <a href="menu.html"><i class="fa-solid fa-utensils"></i> Menu</a>
     <a href="catering.html"><i class="fa-solid fa-truck"></i> Catering</a>
   </nav>
 
   <!-- ===== MAIN ===== -->
-  <div class="main">
+  <main class="main">
 
-    <div class="header">
+    <header class="header">
       <h1>Our Story</h1>
       <div class="divider"></div>
-    </div>
-
-    <div class="content">
-
-      <p>
-        Arizona Sunrise Cafecito & Catering was created from a love of family,
-        culture, and the joy that comes from sharing good food and coffee.
+      <p class="subhead">
+        Arizona Sunrise Cafecito &amp; Catering is built on experience, family, and the courage to start fresh —
+        serving Royse City with brunch that feels warm, welcoming, and made with care.
       </p>
+    </header>
 
-      <div class="highlight-box">
-        <p>
-          What started as a dream grew into a place where mornings feel warmer,
-          conversations last longer, and every cup is made with intention.
-        </p>
+    <section class="content">
+
+      <div class="story-grid">
+
+        <!-- ===== MAIN STORY ===== -->
+        <article class="card">
+          <h2><i class="fa-solid fa-sun"></i> Meet Jack &amp; Wendy</h2>
+
+          <p>
+            Arizona Sunrise began as a shared dream — build something meaningful, serve our community, and make mornings better.
+            Jack (Chef John Ahern) has spent decades in professional kitchens, from resort and country club environments to running his own restaurant and catering operation in Tucson, Arizona.
+          </p>
+
+          <p>
+            After closing that chapter, Wendy’s career brought our family to Texas — first to Weston Lakes and later to Heath —
+            where Jack continued as an Executive Chef at Sweetwater Country Club and Pecan Grove.
+          </p>
+
+          <div class="highlight-box">
+            <p>
+              When we had twins, Jack stepped away from chef roles to become a stay-at-home dad.
+              He even hosted cooking classes at their school — because food has always been about connection for us.
+            </p>
+          </div>
+
+          <p>
+            Now that our kids are older and Wendy became retirement-eligible, we decided it was time for a change —
+            and a return to what we’ve always loved: creating food for people, and catering celebrations that bring everyone together.
+          </p>
+
+          <p>
+            Jack leads the kitchen. Wendy handles the business side — operations, content, customer communication, and the behind-the-scenes prep and cleaning that keeps everything running smoothly.
+          </p>
+        </article>
+
+        <!-- ===== QUICK HITS ===== -->
+        <aside class="card" aria-label="What you can expect">
+          <h2><i class="fa-solid fa-heart"></i> What You Can Expect</h2>
+
+          <p>
+            Simple, satisfying brunch — made fresh and served with heart.
+          </p>
+
+          <ul class="quick-list">
+            <li><i class="fa-solid fa-bolt"></i> Fast, friendly service (perfect for busy mornings)</li>
+            <li><i class="fa-solid fa-kitchen-set"></i> Real kitchen experience behind every item</li>
+            <li><i class="fa-solid fa-burger"></i> Brunch favorites: burritos, biscuits, pancakes, fresh sides</li>
+            <li><i class="fa-solid fa-utensils"></i> Catering for gatherings &amp; celebrations (we love events)</li>
+            <li><i class="fa-solid fa-people-group"></i> Proudly serving families &amp; hardworking local crews</li>
+          </ul>
+
+          <p style="margin-top:14px;">
+            <strong>Why “Arizona Sunrise”?</strong><br>
+            It honors where our journey began — and represents a fresh start.
+          </p>
+        </aside>
+
       </div>
 
-      <p>
-        We believe food should feel like home — welcoming, comforting,
-        and crafted with care. Whether you’re stopping by for brunch
-        or planning a catered event, we’re honored to be part of your day.
-      </p>
-
-      <p>
-        Thank you for supporting a family-owned business and being part of
-        the Arizona Sunrise story.
-      </p>
-
       <!-- ===== CTA BUTTONS ===== -->
-      <div class="cta">
+      <div class="cta" aria-label="Next steps">
         <a href="menu.html">View Our Menu</a>
         <a href="catering.html" class="secondary">Catering Info</a>
       </div>
 
-    </div>
+      <p class="fineprint">
+        Thanks for supporting a family-owned business. We’re grateful to be here — and we can’t wait to serve you.
+      </p>
 
-  </div>
+    </section>
+  </main>
 </div>
-
 </body>
 </html>
