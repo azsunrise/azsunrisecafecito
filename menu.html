@@ -44,7 +44,12 @@
       linear-gradient(to bottom,var(--bgTop),var(--bgBottom));
   }
 
-  .container{max-width:980px;margin:auto;padding:26px 14px 52px;}
+  /* Keep content centered without interfering with your site's global left sidebar */
+  .container{
+    max-width:900px;
+    margin:0 auto;
+    padding:26px 20px 52px;
+  }
 
   /* a11y: skip link */
   .skip-link{
@@ -181,7 +186,7 @@
 
   .board-body{padding:14px;}
 
-  /* 2-column layout */
+  /* 2-column layout for menu + sides */
   .columns{
     display:grid;
     grid-template-columns: 1.55fr .95fr;
@@ -285,6 +290,13 @@
     border:0;
   }
 
+  .section-subnote{
+    margin:-2px 0 10px;
+    color:#5b3a2e;
+    font-style:italic;
+    font-size:.92rem;
+  }
+
   .button-back{
     display:inline-block;
     margin-top:18px;
@@ -295,13 +307,6 @@
     color:#fff;
     background:linear-gradient(to right,var(--orange),var(--sun));
     box-shadow:0 12px 22px rgba(227,111,71,.18);
-  }
-
-  .section-subnote{
-    margin:-2px 0 10px;
-    color:#5b3a2e;
-    font-style:italic;
-    font-size:.92rem;
   }
 
   @media (max-width:860px){
@@ -334,7 +339,7 @@
 
 <div class="container">
 
-  <!-- Featured photos (keeps your soft opening images) -->
+  <!-- Featured photos (soft-opening photos, but NO "soft opening" text anywhere) -->
   <h1>Menu</h1>
   <div class="badge">Featured Favorites</div>
 
@@ -351,7 +356,7 @@
       <img src="cc.jpg" alt="Crab Cakes">
       <div class="content">
         <h3>Crab Cakes</h3>
-        <p>Two jumbo lump crab cakes served with roasted garlic caper aioli.</p>
+        <p>Two jumbo lump crab cakes with roasted garlic caper aioli.</p>
       </div>
     </div>
 
@@ -359,7 +364,7 @@
       <img src="r.jpeg" alt="Golden Reuben Croquettes">
       <div class="content">
         <h3>Golden Reuben Croquettes</h3>
-        <p>Finished with creamy Russian sauce.</p>
+        <p>Corned beef, Swiss and sauerkraut — finished with creamy Russian sauce.</p>
       </div>
     </div>
   </div>
@@ -389,7 +394,7 @@
     <div class="board-body">
       <div class="columns">
 
-        <!-- LEFT COLUMN -->
+        <!-- LEFT: MAIN MENU -->
         <div class="panel">
 
           <!-- BISCUITS & BREAKFAST PLATES -->
@@ -505,7 +510,7 @@
 
         </div>
 
-        <!-- RIGHT COLUMN -->
+        <!-- RIGHT: SIDES & DRINKS -->
         <div class="panel" id="sidesdrinks">
           <div class="section-title">
             <span class="plank">Sides &amp; Drinks</span>
