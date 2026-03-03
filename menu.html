@@ -360,6 +360,13 @@
       color:#fff;
       border:0;
     }
+    /* NEW: clear "no side" indicator (for soup) */
+    .tag-note{
+      background: rgba(156,163,175,.18);
+      border: 1px solid rgba(156,163,175,.35);
+      color: #4b5563;
+      font-weight: 900;
+    }
 
     .button-back{
       display:inline-block;
@@ -588,12 +595,21 @@
                   <div class="menu-description">Griddled ham and turkey with melted Swiss cheese, lightly dusted with powdered sugar. Strawberry jam served on the side.</div>
                 </li>
 
+                <!-- NEW: Kids Grilled Cheese -->
+                <li class="row">
+                  <div class="line"><div class="name">Kids Grilled Cheese <span class="tag">Kids</span></div><div class="price">$6.00</div></div>
+                  <div class="menu-description">Texas toast grilled cheese.</div>
+                </li>
+
+                <!-- UPDATED: Soup does NOT include fries/coleslaw -->
                 <li class="row">
                   <div class="line"><div class="name">Green Chile Chicken Soup <span class="tag">Cup</span></div><div class="price">$5.50</div></div>
+                  <div class="tags"><span class="tag tag-note">no side</span></div>
                 </li>
 
                 <li class="row">
                   <div class="line"><div class="name">Green Chile Chicken Soup <span class="tag">Bowl</span></div><div class="price">$7.50</div></div>
+                  <div class="tags"><span class="tag tag-note">no side</span></div>
                 </li>
 
                 <li class="row">
