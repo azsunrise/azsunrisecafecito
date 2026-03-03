@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Soft Opening | Arizona Sunrise Cafecito & Catering</title>
+<title>Menu | Arizona Sunrise Cafecito & Catering</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XFY3V13DJN"></script>
@@ -81,7 +81,7 @@
     box-shadow:0 10px 20px rgba(227,111,71,.16);
   }
 
-  /* SOFT OPENING cards */
+  /* Featured photo cards */
   .menu-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -105,7 +105,7 @@
   .menu-card h3{margin:0 0 6px;color:var(--brown);}
   .menu-card p{margin:0;color:#4b3328;line-height:1.35;}
 
-  /* DRAFT MENU board */
+  /* Menu board */
   .board{
     margin:18px auto 0;
     width:min(940px, 100%);
@@ -124,52 +124,6 @@
     margin:6px 0 0;
     color:#5b3a2e;
     font-style:italic;
-  }
-
-  /* Today’s Special */
-  .special{
-    margin:12px auto 0;
-    width:min(860px, 100%);
-    text-align:left;
-    background:rgba(255,255,255,.78);
-    border:1px solid rgba(45,27,18,.12);
-    border-radius:18px;
-    padding:12px 12px 10px;
-  }
-  .special .top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:10px;
-    flex-wrap:wrap;
-  }
-  .special .title{
-    font-weight:900;
-    color:var(--brown);
-    letter-spacing:.3px;
-  }
-  .special .small{
-    font-size:.86rem;
-    color:#5b3a2e;
-    opacity:.9;
-    font-style:italic;
-  }
-  .special .items{
-    margin-top:8px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:10px;
-  }
-  .special .line{
-    font-size:.95rem;
-    color:#3c271e;
-  }
-  .special .label{
-    font-weight:900;
-    color:#3c271e;
-  }
-  @media (max-width:700px){
-    .special .items{grid-template-columns:1fr;}
   }
 
   /* Small info pills */
@@ -330,18 +284,7 @@
     color:#fff;
     border:0;
   }
-  .tag-spicy{
-    background:rgba(227,111,71,.12);
-    border:1px solid rgba(227,111,71,.25);
-    color:#8a2e1c;
-    font-weight:900;
-  }
 
-  .note{
-    margin:16px 0 0;
-    font-style:italic;
-    color:#4b3328;
-  }
   .button-back{
     display:inline-block;
     margin-top:18px;
@@ -352,6 +295,13 @@
     color:#fff;
     background:linear-gradient(to right,var(--orange),var(--sun));
     box-shadow:0 12px 22px rgba(227,111,71,.18);
+  }
+
+  .section-subnote{
+    margin:-2px 0 10px;
+    color:#5b3a2e;
+    font-style:italic;
+    font-size:.92rem;
   }
 
   @media (max-width:860px){
@@ -367,7 +317,7 @@
     body{background:#fff !important;}
     .jump-wrap,.button-back{display:none !important;}
     .board,.menu-card{box-shadow:none !important;}
-    .board,.panel,.special{background:#fff !important;}
+    .board,.panel{background:#fff !important;}
     .badge{
       color:#000 !important;
       background:#fff !important;
@@ -380,20 +330,20 @@
 </head>
 
 <body>
-<a class="skip-link" href="#draftTop">Skip to draft menu</a>
+<a class="skip-link" href="#menuTop">Skip to menu</a>
 
 <div class="container">
 
-  <!-- SOFT OPENING (as-is) -->
-  <h1>Soft Opening Free Tasting</h1>
-  <div class="badge">FREE • Limited Quantities</div>
+  <!-- Featured photos (keeps your soft opening images) -->
+  <h1>Menu</h1>
+  <div class="badge">Featured Favorites</div>
 
-  <div class="menu-grid">
+  <div class="menu-grid" aria-label="Featured food photos">
     <div class="menu-card">
       <img src="gccs.jpg" alt="Green Chile Chicken Soup">
       <div class="content">
         <h3>Green Chile Chicken Soup</h3>
-        <p>Comforting chicken soup with roasted green chiles and slow-simmered spices.</p>
+        <p>Slow-simmered chicken soup with roasted green chiles.</p>
       </div>
     </div>
 
@@ -401,7 +351,7 @@
       <img src="cc.jpg" alt="Crab Cakes">
       <div class="content">
         <h3>Crab Cakes</h3>
-        <p>Golden-crisp crab cakes with tender savory centers.</p>
+        <p>Two jumbo lump crab cakes served with roasted garlic caper aioli.</p>
       </div>
     </div>
 
@@ -409,40 +359,26 @@
       <img src="r.jpeg" alt="Golden Reuben Croquettes">
       <div class="content">
         <h3>Golden Reuben Croquettes</h3>
-        <p>Corned beef, swiss, sauerkraut &amp; bold Reuben flavor.</p>
+        <p>Finished with creamy Russian sauce.</p>
       </div>
     </div>
   </div>
 
-  <!-- DRAFT MENU -->
-  <section class="board" aria-label="Full Brunch Menu Draft" id="draftTop">
+  <!-- FULL MENU -->
+  <section class="board" aria-label="Full Menu" id="menuTop">
     <div class="board-head">
-      <h2>🌅 Full Brunch Menu — DRAFT</h2>
+      <h2>🌅 Full Menu</h2>
       <p><em>Menu rotates • Ask about specials</em></p>
-
-      <div class="special" aria-label="Today's special">
-        <div class="top">
-          <div class="title">⭐ Today’s Special</div>
-          <div class="small">Limited quantities</div>
-        </div>
-        <div class="items">
-          <div class="line"><span class="label">Special:</span> TBD</div>
-          <div class="line"><span class="label">Limited:</span> TBD</div>
-        </div>
-      </div>
 
       <div class="cards-only" aria-label="Quick info">
         <span class="mini-pill">💳 Credit cards accepted</span>
-        <!-- OPTIONAL: turn on if you decide to do it -->
-        <!-- <span class="mini-pill">💵 5% cash discount (applied at checkout)</span> -->
         <span class="mini-pill">🌶 mild • 🌶🌶 spicy</span>
       </div>
     </div>
 
     <div class="jump-wrap" id="topNav">
       <nav class="jump" aria-label="Jump to section">
-        <a href="#biscuits">Biscuits</a>
-        <a href="#bagels">Bagels</a>
+        <a href="#biscuits">Biscuits & Plates</a>
         <a href="#burritos">Burritos</a>
         <a href="#pancakes">Pancakes</a>
         <a href="#favorites">Favorites</a>
@@ -456,27 +392,28 @@
         <!-- LEFT COLUMN -->
         <div class="panel">
 
-          <!-- BISCUITS (no return link) -->
+          <!-- BISCUITS & BREAKFAST PLATES -->
           <div class="section-title" id="biscuits">
-            <span class="plank">Biscuits</span>
+            <span class="plank">Biscuits &amp; Breakfast Plates</span>
           </div>
+          <div class="section-subnote">(All served with cottage potatoes)</div>
+
           <ul class="menu-list">
             <li class="row">
               <div class="line">
-                <div class="name">Egg &amp; Cheese</div>
-                <div class="price">$5.50</div>
+                <div class="name">Egg &amp; Cheese Biscuit</div>
+                <div class="price">$6.00</div>
               </div>
-              <div class="tags"><span class="tag">served w/ cottage potatoes</span></div>
-              <div class="menu-description">Freshly baked biscuit with melted cheese and a fluffy egg inside. Add sausage, bacon, or ham for $2.</div>
+              <div class="menu-description">Fresh baked biscuit with egg and melted cheese.</div>
+              <div class="tags"><span class="tag">Add bacon, sausage, or ham +$2.00</span></div>
             </li>
 
             <li class="row">
               <div class="line">
                 <div class="name">Biscuits &amp; Gravy</div>
-                <div class="price">$7.50</div>
+                <div class="price">$8.00</div>
               </div>
-              <div class="tags"><span class="tag">served w/ cottage potatoes</span></div>
-              <div class="menu-description">Classic southern biscuits smothered in rich, creamy sausage gravy.</div>
+              <div class="menu-description">Buttery biscuits topped with house-made sausage gravy.</div>
             </li>
 
             <li class="row">
@@ -484,139 +421,85 @@
                 <div class="name">Texan Benedict <span class="tag tag-star">⭐</span></div>
                 <div class="price">$10.50</div>
               </div>
-              <div class="tags"><span class="tag">served w/ cottage potatoes</span></div>
-              <div class="menu-description">Southern-style eggs benedict with bold Texas flavor and hearty brunch comfort.</div>
+              <div class="menu-description">Two biscuits topped with two eggs and sausage gravy.</div>
+              <div class="tags"><span class="tag">Gravy packed on the side for delivery.</span></div>
             </li>
           </ul>
 
-          <!-- BREAKFAST BAGEL SANDWICHES (return link ON) -->
-          <div style="height:10px"></div>
-          <div class="section-title" id="bagels">
-            <span class="plank">Breakfast Bagel Sandwiches</span>
-            <a class="toplink" href="#topNav">Return to Top ↑</a>
-          </div>
-          <ul class="menu-list">
-            <li class="row">
-              <div class="line">
-                <div class="name">Bacon, Egg &amp; Cheddar</div>
-                <div class="price">$7.50</div>
-              </div>
-              <div class="menu-description">Toasted bagel with crispy bacon, fluffy egg, and melted cheddar.</div>
-            </li>
-
-            <li class="row">
-              <div class="line">
-                <div class="name">Sausage, Egg &amp; Pepper Jack</div>
-                <div class="price">$7.75</div>
-              </div>
-              <div class="menu-description">Savory sausage, egg, and pepper jack on a toasted bagel.</div>
-            </li>
-
-            <li class="row">
-              <div class="line">
-                <div class="name">Jalapeño Cream Cheese + Egg</div>
-                <div class="price">$6.75</div>
-              </div>
-              <div class="tags"><span class="tag tag-spicy">🌶 mild</span></div>
-              <div class="menu-description">Creamy jalapeño cream cheese with egg on a toasted bagel.</div>
-            </li>
-          </ul>
-
-          <!-- BURRITOS (return link ON) -->
+          <!-- SONORAN BREAKFAST BURRITOS -->
           <div style="height:10px"></div>
           <div class="section-title" id="burritos">
-            <span class="plank">Breakfast Burritos</span>
+            <span class="plank">Sonoran Breakfast Burritos</span>
             <a class="toplink" href="#topNav">Return to Top ↑</a>
           </div>
+          <div class="section-subnote">(Wrapped in flour tortilla, includes salsa or pico)</div>
+
           <ul class="menu-list">
             <li class="row">
-              <div class="line"><div class="name">Sonoran Burrito</div><div class="price">$9.50</div></div>
-              <div class="tags"><span class="tag">flour tortillas</span></div>
-              <div class="menu-description">Classic Arizona breakfast burrito with chorizo, eggs, grilled onions, and cheese.</div>
+              <div class="line"><div class="name">Sonoran Burrito</div><div class="price">$10.00</div></div>
+              <div class="menu-description">Chorizo, eggs, grilled onions and cheese.</div>
             </li>
 
             <li class="row">
               <div class="line"><div class="name">Burracho Special</div><div class="price">$10.50</div></div>
-              <div class="tags"><span class="tag">flour tortillas</span><span class="tag tag-spicy">🌶🌶 spicy</span></div>
-              <div class="menu-description">Sonoran burrito with fresh jalapeños and bold flavors.</div>
-            </li>
-
-            <li class="row">
-              <div class="line"><div class="name">Cruda Special</div><div class="price">$10.50</div></div>
-              <div class="tags"><span class="tag">flour tortillas</span></div>
-              <div class="menu-description">Topped with fresh pico de gallo and tangy crema.</div>
+              <div class="menu-description">Chorizo burrito with fresh jalapeños.</div>
             </li>
 
             <li class="row">
               <div class="line"><div class="name">Kids Burrito <span class="tag">Kids</span></div><div class="price">$5.00</div></div>
-              <div class="tags"><span class="tag">flour tortillas</span></div>
-              <div class="menu-description">Smaller portion, egg &amp; cheese, perfect for kids.</div>
+              <div class="menu-description">Egg and cheese.</div>
             </li>
           </ul>
 
-          <!-- PANCAKES (return link ON) -->
+          <!-- HOMEMADE PANCAKES -->
           <div style="height:10px"></div>
           <div class="section-title" id="pancakes">
             <span class="plank">Homemade Pancakes</span>
             <a class="toplink" href="#topNav">Return to Top ↑</a>
           </div>
+          <div class="section-subnote">(Served with cottage potatoes)</div>
+
           <ul class="menu-list">
             <li class="row">
-              <div class="line"><div class="name">Adult Pancakes</div><div class="price">$6.50</div></div>
-              <div class="tags"><span class="tag">add sausage/bacon/ham +$2</span></div>
-              <div class="menu-description">Fluffy homemade pancakes. Add sausage, bacon, or ham for $2.</div>
+              <div class="line"><div class="name">Adult Pancakes</div><div class="price">$7.00</div></div>
+              <div class="tags"><span class="tag">Add bacon, sausage, or ham +$2.00</span></div>
             </li>
 
             <li class="row">
-              <div class="line"><div class="name">Kids Chocolate Chip <span class="tag">Kids</span></div><div class="price">$5.00</div></div>
-              <div class="menu-description">Smaller portion pancakes with chocolate chips for kids.</div>
+              <div class="line"><div class="name">Kids Chocolate Chip Pancakes <span class="tag">Kids</span></div><div class="price">$5.00</div></div>
             </li>
           </ul>
 
-          <!-- FAVORITES (return link ON) -->
+          <!-- ALL DAY FAVORITES -->
           <div style="height:10px"></div>
           <div class="section-title" id="favorites">
-            <span class="plank">All-Day Favorites</span>
+            <span class="plank">All Day Favorites</span>
             <a class="toplink" href="#topNav">Return to Top ↑</a>
           </div>
+          <div class="section-subnote">(Served with fries or vinaigrette coleslaw unless noted)</div>
+
           <ul class="menu-list">
             <li class="row">
-              <div class="line"><div class="name">Crab Cakes <span class="tag tag-star">⭐</span></div><div class="price">$16.00</div></div>
-              <div class="menu-description">Golden-crisp crab cakes with roasted garlic caper aioli.</div>
+              <div class="line"><div class="name">Golden Reuben Croquettes</div><div class="price">$12.00</div></div>
+              <div class="menu-description">Three croquettes filled with corned beef, Swiss and sauerkraut. Finished with creamy Russian sauce.</div>
             </li>
 
             <li class="row">
-              <div class="line"><div class="name">Golden Reuben Croquettes <span class="tag tag-star">⭐</span></div><div class="price">$11.75</div></div>
-              <div class="menu-description">Bite-sized croquettes packed with corned beef, swiss, and sauerkraut.</div>
+              <div class="line"><div class="name">Monte Cristo Sandwich</div><div class="price">$10.00</div></div>
+              <div class="menu-description">Griddled ham and turkey with melted Swiss cheese, lightly dusted with powdered sugar. Strawberry jam served on the side.</div>
             </li>
 
             <li class="row">
-              <div class="line"><div class="name">Monte Cristo Sandwich</div><div class="price">$9.50</div></div>
-              <div class="tags"><span class="tag">fresh fries</span><span class="tag">vinaigrette cole slaw option</span></div>
-              <div class="menu-description">Griddled ham &amp; turkey with melted cheese, finished with powdered sugar.</div>
+              <div class="line"><div class="name">Green Chile Chicken Soup <span class="tag">Cup</span></div><div class="price">$5.50</div></div>
             </li>
 
             <li class="row">
-              <div class="line"><div class="name">Patty Melt</div><div class="price">$10.50</div></div>
-              <div class="tags">
-                <span class="tag">fresh fries</span>
-                <span class="tag">vinaigrette cole slaw option</span>
-                <span class="tag tag-spicy">🌶 mild</span>
-                <span class="tag">jalapeños</span>
-              </div>
-              <div class="menu-description">Beef patty with melted cheese, onions, and jalapenos on griddled bread.</div>
+              <div class="line"><div class="name">Green Chile Chicken Soup <span class="tag">Bowl</span></div><div class="price">$7.50</div></div>
             </li>
 
             <li class="row">
-              <div class="line"><div class="name">Freshly Made Chicken Nuggets <span class="tag">Kids</span></div><div class="price">$7.50</div></div>
-              <div class="tags"><span class="tag">served w/ fries</span></div>
-              <div class="menu-description">Made-to-order chicken nuggets, perfect for kids.</div>
-            </li>
-
-            <li class="row">
-              <div class="line"><div class="name">Green Chile Chicken Soup</div><div class="price">$5.50 / $7.50</div></div>
-              <div class="tags"><span class="tag">cup / bowl</span><span class="tag tag-spicy">🌶 mild</span></div>
-              <div class="menu-description">Slow-simmered chicken soup with roasted green chiles.</div>
+              <div class="line"><div class="name">Crab Cakes</div><div class="price">$16.00</div></div>
+              <div class="menu-description">Two jumbo lump crab cakes served with roasted garlic caper aioli.</div>
             </li>
           </ul>
 
@@ -624,19 +507,14 @@
 
         <!-- RIGHT COLUMN -->
         <div class="panel" id="sidesdrinks">
-          <!-- Sides & Drinks (no return link) -->
           <div class="section-title">
             <span class="plank">Sides &amp; Drinks</span>
           </div>
 
           <ul class="menu-list">
             <li class="row"><div class="line"><div class="name">Bacon / Ham / Sausage</div><div class="price">$2.50</div></div></li>
-            <li class="row"><div class="line"><div class="name">Coleslaw (vinaigrette)</div><div class="price">$2.25</div></div></li>
-
-            <li class="row">
-              <div class="line"><div class="name">French Fries</div><div class="price">$3.00</div></div>
-              <div class="tags"><span class="tag">always fresh</span></div>
-            </li>
+            <li class="row"><div class="line"><div class="name">Coleslaw</div><div class="price">$2.25</div></div></li>
+            <li class="row"><div class="line"><div class="name">French Fries</div><div class="price">$3.00</div></div></li>
 
             <li class="row"><div class="line"><div class="name">Lifeboost Coffee</div><div class="price">$4.50</div></div></li>
             <li class="row"><div class="line"><div class="name">Iced Tea</div><div class="price">$3.50</div></div></li>
@@ -646,8 +524,6 @@
         </div>
 
       </div>
-
-      <p class="note">Full menu coming soon — thank you for celebrating our soft opening with us!</p>
 
       <a class="button-back" href="index.html"
          onclick="gtag('event','menu_back_home',{event_category:'Navigation',event_label:'Menu → Home'});">
