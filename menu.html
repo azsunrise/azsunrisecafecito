@@ -360,7 +360,6 @@
       color:#fff;
       border:0;
     }
-    /* NEW: clear "no side" indicator (for soup) */
     .tag-note{
       background: rgba(156,163,175,.18);
       border: 1px solid rgba(156,163,175,.35);
@@ -434,7 +433,7 @@
 
 <div class="layout">
 
-  <!-- NAV (matches About/Catering exactly) -->
+  <!-- NAV -->
   <nav class="side-nav" aria-label="Primary navigation">
     <a href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a>
     <a href="about.html"><i class="fa-solid fa-user-chef" aria-hidden="true"></i> About Us</a>
@@ -491,7 +490,7 @@
           <nav class="jump" aria-label="Jump to section">
             <a href="#biscuits">Biscuits & Plates</a>
             <a href="#burritos">Burritos</a>
-            <a href="#pancakes">Pancakes</a>
+            <a href="#pancakes">Pancakes & French Toast</a>
             <a href="#favorites">Favorites</a>
             <a href="#sidesdrinks">Sides/Drinks</a>
           </nav>
@@ -562,16 +561,24 @@
 
               <div style="height:10px"></div>
               <div class="section-title" id="pancakes">
-                <span class="plank">Homemade Pancakes</span>
+                <span class="plank">Homemade Pancakes &amp; French Toast</span>
                 <a class="toplink" href="#topNav">Return to Top ↑</a>
               </div>
               <div class="section-subnote">(Served with cottage potatoes)</div>
 
               <ul class="menu-list">
                 <li class="row">
-                  <div class="line"><div class="name">Adult Pancakes</div><div class="price">$7.00</div></div>
+                  <div class="line"><div class="name">Adult Pancakes</div><div class="price">$9.50</div></div>
+                  <div class="menu-description">Fluffy homemade pancakes.</div>
                   <div class="tags"><span class="tag">Add bacon, sausage, or ham +$2.00</span></div>
                 </li>
+
+                <li class="row">
+                  <div class="line"><div class="name">French Toast</div><div class="price">$9.50</div></div>
+                  <div class="menu-description">Texas toast French toast with powdered sugar and syrup, served with cottage potatoes and a fresh orange slice.</div>
+                  <div class="tags"><span class="tag">Add bacon, sausage, or ham +$2.00</span></div>
+                </li>
+
                 <li class="row">
                   <div class="line"><div class="name">Kids Chocolate Chip Pancakes <span class="tag">Kids</span></div><div class="price">$5.00</div></div>
                 </li>
@@ -595,13 +602,11 @@
                   <div class="menu-description">Griddled ham and turkey with melted Swiss cheese, lightly dusted with powdered sugar. Strawberry jam served on the side.</div>
                 </li>
 
-                <!-- NEW: Kids Grilled Cheese -->
                 <li class="row">
                   <div class="line"><div class="name">Kids Grilled Cheese <span class="tag">Kids</span></div><div class="price">$6.00</div></div>
-                  <div class="menu-description">Texas toast grilled cheese.</div>
+                  <div class="menu-description">Texas toast grilled cheese served with fries.</div>
                 </li>
 
-                <!-- UPDATED: Soup does NOT include fries/coleslaw -->
                 <li class="row">
                   <div class="line"><div class="name">Green Chile Chicken Soup <span class="tag">Cup</span></div><div class="price">$5.50</div></div>
                   <div class="tags"><span class="tag tag-note">no side</span></div>
@@ -633,6 +638,7 @@
 
               <ul class="menu-list">
                 <li class="row"><div class="line"><div class="name">Bacon / Ham / Sausage</div><div class="price">$2.50</div></div></li>
+                <li class="row"><div class="line"><div class="name">Buttermilk Biscuit</div><div class="price">$2.50</div></div></li>
                 <li class="row"><div class="line"><div class="name">Coleslaw</div><div class="price">$2.25</div></div></li>
                 <li class="row"><div class="line"><div class="name">French Fries</div><div class="price">$3.00</div></div></li>
 
@@ -640,6 +646,7 @@
                 <li class="row"><div class="line"><div class="name">Iced Tea</div><div class="price">$3.50</div></div></li>
                 <li class="row"><div class="line"><div class="name">Seasonal Juice</div><div class="price">$3.50</div></div></li>
                 <li class="row"><div class="line"><div class="name">Sodas</div><div class="price">$3.00</div></div></li>
+                <li class="row"><div class="line"><div class="name">Bottled Water (16.9 oz)</div><div class="price">$2.00</div></div></li>
               </ul>
             </div>
 
@@ -652,7 +659,7 @@
 
 </div>
 
-<!-- AUTO ACTIVE NAV LINK (same as your other page) -->
+<!-- AUTO ACTIVE NAV LINK -->
 <script>
   const path = window.location.pathname;
   const currentPage = (path.endsWith("/") ? "index.html" : path.split("/").pop()).split("?")[0];
