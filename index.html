@@ -403,6 +403,18 @@ nav.side-nav a.active::before{
       </p>
     </div>
 
+    <div style="
+      background: linear-gradient(to right, #e36f47, #f6c177);
+      color: white;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: 800;
+      margin: 10px auto 20px;
+      max-width: 650px;
+      text-align: center;">
+      🌅 Now Serving Brunch at 10 AM • Wednesday – Sunday
+    </div>
+
     <!-- HOLLY GROUNDS EXPERIENCE PREVIEW -->
     <div class="experience-preview">
       <p>
@@ -431,16 +443,52 @@ nav.side-nav a.active::before{
         </div>
 
         <div class="event-item">
-          <i class="fa-solid fa-store" aria-hidden="true"></i>
+          <i class="fa-solid fa-egg" aria-hidden="true"></i>
           <div>
-            <strong>Local Vendor Market</strong><br>
-            Saturday, March 14th, 2026<br>
+            <strong>Easter Egg Hunt</strong><br>
+            Saturday, April 4th, 2026<br>
+            1:00 PM
+          </div>
+        </div>
+
+        <div class="event-item">
+          <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+          <div>
+            <strong>Earth Day Vendor Market</strong><br>
+            Saturday, April 11th, 2026<br>
+            9:00 AM – 5:00 PM
+          </div>
+        </div>
+
+        <div class="event-item">
+          <i class="fa-solid fa-palette" aria-hidden="true"></i>
+          <div>
+            <strong>May Makers Market</strong><br>
+            Saturday, May 16th, 2026<br>
+            9:00 AM – 5:00 PM
+          </div>
+        </div>
+
+        <div class="event-item">
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <div>
+            <strong>Once Upon a Magical Market</strong><br>
+            Saturday, June 13th, 2026<br>
+            9:00 AM – 5:00 PM
+          </div>
+        </div>
+
+        <div class="event-item">
+          <i class="fa-solid fa-flag-usa" aria-hidden="true"></i>
+          <div>
+            <strong>Lone Star Shop & Stroll</strong><br>
+            Saturday, July 11th, 2026<br>
             9:00 AM – 5:00 PM
           </div>
         </div>
 
         <div class="event-note">
-          🥧 It’s Pi Day (3.14)! Come celebrate with brunch at the food park.
+          🌅 Weekly at Holy Grounds: Wednesday – Sunday • 10:00 AM – 2:00 PM
         </div>
       </div>
     </div>
@@ -543,7 +591,7 @@ nav.side-nav a.active::before{
     const isOpenDay = (day === 0) || (day >= 3 && day <= 6);
     const isClosedAllDay = (day === 1 || day === 2); // Mon/Tue
 
-    const openMinutes = 8 * 60;   // 10:00
+    const openMinutes = 10 * 60;  // 10:00
     const closeMinutes = 14 * 60; // 14:00
 
     const isOpenNow = isOpenDay && (minutes >= openMinutes) && (minutes < closeMinutes);
