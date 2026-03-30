@@ -529,7 +529,7 @@ nav.side-nav a.active::before{
   setInterval(nextImage, 3000);
 </script>
 
-<!-- OPEN TODAY INDICATOR (Closed Mon/Tue • Open Wed–Sun 8am–2pm) -->
+<!-- OPEN TODAY INDICATOR (Closed Mon/Tue • Open Wed–Sun 10am–2pm) -->
 <script>
   (function(){
     const indicator = document.getElementById("openIndicator");
@@ -543,7 +543,7 @@ nav.side-nav a.active::before{
     const isOpenDay = (day === 0) || (day >= 3 && day <= 6);
     const isClosedAllDay = (day === 1 || day === 2); // Mon/Tue
 
-    const openMinutes = 8 * 60;   // 08:00
+    const openMinutes = 8 * 60;   // 10:00
     const closeMinutes = 14 * 60; // 14:00
 
     const isOpenNow = isOpenDay && (minutes >= openMinutes) && (minutes < closeMinutes);
@@ -564,20 +564,20 @@ nav.side-nav a.active::before{
     }
 
     if (isClosedAllDay){
-      setClosed("Closed today • Opens Wednesday at 8:00 AM");
+      setClosed("Closed today • Opens Wednesday at 10:00 AM");
       return;
     }
 
     if (isOpenDay){
       if (minutes < openMinutes){
-        setClosed("Closed now • Opens at 8:00 AM");
+        setClosed("Closed now • Opens at 10:00 AM");
         return;
       }
 
       if (day === 0){
-        setClosed("Closed now • Opens Wednesday at 8:00 AM");
+        setClosed("Closed now • Opens Wednesday at 10:00 AM");
       } else {
-        setClosed("Closed now • Opens tomorrow at 8:00 AM");
+        setClosed("Closed now • Opens tomorrow at 10:00 AM");
       }
       return;
     }
