@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 
   <!-- Google Analytics -->
-
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XFY3V13DJN"></script>
-
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -19,7 +16,6 @@
   <title>Arizona Sunrise Cafecito & Catering</title>
 
   <!-- ICONS -->
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
@@ -230,7 +226,7 @@ nav.side-nav a.active::before{
   font-weight: 700;
 }
 
-/* FEATURE IMAGE / SLIDESHOW */
+/* FEATURED IMAGE / SLIDESHOW */
 .feature-image img {
   width: 100%;
   max-width: 650px;
@@ -339,21 +335,23 @@ nav.side-nav a.active::before{
   width: 10px;
   height: 10px;
   border-radius: 999px;
-  background: #22c55e;
+  background: #22c55e; /* green */
   box-shadow: 0 0 0 4px rgba(34,197,94,0.18);
 }
 
+/* Neutral closed state (not alarming) */
 .open-indicator.closed{
   opacity: .92;
 }
 .open-indicator.closed .open-dot{
-  background: #9ca3af;
+  background: #9ca3af; /* gray */
   box-shadow: 0 0 0 4px rgba(156,163,175,0.18);
 }
 
 /* Mobile */
 @media (max-width: 768px) {
   .layout { flex-direction: column; }
+
   nav.side-nav{
     width:100%;
     height:auto;
@@ -363,118 +361,240 @@ nav.side-nav a.active::before{
     padding:10px;
     border-right:none;
     border-bottom: 1px solid rgba(122,59,46,0.12);
+    z-index:20;
   }
+
+  nav.side-nav a{
+    border-radius:999px;
+    padding:10px 12px;
+    transform:none;
+  }
+
+  nav.side-nav a.active::before{ display:none; }
 }
 </style>
-
 </head>
 
 <body>
 
 <div class="layout">
 
-<nav class="side-nav">
-  <a href="index.html">Home</a>
-  <a href="about.html">About Us</a>
-  <a href="menu.html">Menu</a>
-  <a href="catering.html">Catering</a>
-</nav>
+  <!-- NAV -->
+  <nav class="side-nav" aria-label="Primary navigation">
+    <a href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a>
+    <a href="about.html"><i class="fa-solid fa-user-chef" aria-hidden="true"></i> About Us</a>
+    <a href="menu.html"><i class="fa-solid fa-utensils" aria-hidden="true"></i> Menu</a>
+    <a href="catering.html"><i class="fa-solid fa-truck" aria-hidden="true"></i> Catering</a>
+  </nav>
 
-<div class="main">
+  <!-- MAIN -->
+  <div class="main">
 
-<div class="logo-wrap">
-  <img src="trailer.jpeg">
-</div>
+    <div class="logo-wrap">
+      <img src="trailer.jpeg" alt="Arizona Sunrise Cafecito & Catering trailer">
+    </div>
 
-<div class="hero">
-  <h1>Comfort food with Southwest soul</h1>
-  <p>Scratch-made favorites, warm flavors, and bold bites — served fresh.</p>
-</div>
+    <!-- HERO -->
+    <div class="hero">
+      <h1>Comfort food with Southwest soul</h1>
+      <p>
+        Scratch-made favorites, warm flavors, and bold bites —
+        served fresh from our food trailer.
+      </p>
+    </div>
 
-<!-- BANNER -->
+    <!-- HOLLY GROUNDS EXPERIENCE PREVIEW -->
+    <div class="experience-preview">
+      <p>
+        You’ll find us at
+        <a href="https://www.holygroundsfoodyard.com" target="_blank" rel="noopener"
+           onclick="gtag('event','hollygrounds_click',{event_category:'Outbound',event_label:'Holly Grounds Website'});">
+          Holly Grounds Food Yard in Royse City
+        </a>
+        — a space built for gathering.
+      </p>
 
-<div style="background: linear-gradient(to right, #e36f47, #f6c177); color: white; padding: 12px 18px; border-radius: 12px; font-weight: 800; margin: 10px auto 20px; max-width: 650px;">
-🌅 Now Serving Brunch at 10 AM • Wednesday – Sunday
-</div>
+      <div class="experience-icons" aria-label="Experience highlights">
+        <span><i class="fa-solid fa-basketball" aria-hidden="true"></i> Open play space</span>
+        <span><i class="fa-solid fa-people-roof" aria-hidden="true"></i> Safe fenced-in area</span>
+        <span><i class="fa-solid fa-fire" aria-hidden="true"></i> Fire pits</span>
+        <span><i class="fa-solid fa-music" aria-hidden="true"></i> Live music (select Saturdays)</span>
+      </div>
 
-<div class="experience-preview">
+      <p>More than brunch — it’s an experience for the whole family.</p>
 
-<div class="events-box">
+      <!-- UPCOMING EVENTS -->
+      <div class="events-box" aria-label="Upcoming events">
+        <div class="events-title">
+          <i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
+          Upcoming Events
+        </div>
 
-<div class="events-title">
-<i class="fa-solid fa-calendar-days"></i> Upcoming Events
-</div>
+        <div class="event-item">
+          <i class="fa-solid fa-store" aria-hidden="true"></i>
+          <div>
+            <strong>Local Vendor Market</strong><br>
+            Saturday, March 14th, 2026<br>
+            9:00 AM – 5:00 PM
+          </div>
+        </div>
 
-<div class="event-item">
-<i class="fa-solid fa-egg"></i>
-<div>
-<strong>Easter Egg Hunt</strong><br>
-Saturday, April 4th, 2026<br>
-1:00 PM
-</div>
-</div>
+        <div class="event-note">
+          🥧 It’s Pi Day (3.14)! Come celebrate with brunch at the food park.
+        </div>
+      </div>
+    </div>
 
-<div class="event-item">
-<i class="fa-solid fa-leaf"></i>
-<div>
-<strong>Earth Day Vendor Market</strong><br>
-Saturday, April 11th, 2026<br>
-9:00 AM – 5:00 PM
-</div>
-</div>
+    <!-- FEATURE IMAGE / SLIDESHOW -->
+    <div class="feature-image">
+      <img id="slideshow" src="gccs.jpg" alt="Featured food item">
+    </div>
 
-<div class="event-item">
-<i class="fa-solid fa-palette"></i>
-<div>
-<strong>May Makers Market</strong><br>
-Saturday, May 16th, 2026<br>
-9:00 AM – 5:00 PM
-</div>
-</div>
+    <!-- CTA -->
+    <div class="home-cta">
+      <a href="menu.html">View Menu</a>
+      <a href="catering.html" class="secondary">Book Catering / Learn More</a>
+    </div>
 
-<div class="event-item">
-<i class="fa-solid fa-star"></i>
-<div>
-<strong>Once Upon a Magical Market</strong><br>
-Saturday, June 13th, 2026<br>
-9:00 AM – 5:00 PM
-</div>
-</div>
+    <div class="content">
 
-<div class="event-item">
-<i class="fa-solid fa-flag-usa"></i>
-<div>
-<strong>Lone Star Shop & Stroll</strong><br>
-Saturday, July 11th, 2026<br>
-9:00 AM – 5:00 PM
-</div>
-</div>
+      <!-- WHY US -->
+      <div class="why-us">
+        <h2>Why Arizona Sunrise Cafecito & Catering?</h2>
+        <ul>
+          <li>🌅 Comfort food with Southwest flair</li>
+          <li>🧡 Locally owned & community-driven</li>
+          <li>🚚 Freshly prepared from our food trailer</li>
+        </ul>
+      </div>
 
-<div class="event-note">
-🌅 Weekly at Holy Grounds: Wednesday – Sunday • 10:00 AM – 2:00 PM
-</div>
+      <!-- NOW OPEN -->
+      <h2 class="now-open">Now Open</h2>
 
-</div>
+      <!-- Dynamic Open Today indicator -->
+      <div id="openIndicator" class="open-indicator" aria-live="polite">
+        <span class="open-dot" aria-hidden="true"></span>
+        <span id="openText">Checking hours…</span>
+      </div>
 
-</div>
+      <p>
+        <strong>Wednesday – Sunday</strong><br>
+        10:00 AM – 2:00 PM
+      </p>
 
-<h2 class="now-open">Now Open</h2>
+      <!-- Location -->
+      <h2>Location</h2>
+      <p>
+        <strong>151 Sabine Creek Road</strong><br>
+        Royse City, Texas
+      </p>
 
-<div id="openIndicator" class="open-indicator">
-<span class="open-dot"></span>
-<span id="openText">Open Today</span>
-</div>
+      <div class="map-wrap">
+        <iframe loading="lazy"
+          src="https://www.google.com/maps?q=151+Sabine+Creek+Road,+Royse+City,+TX&output=embed">
+        </iframe>
+      </div>
 
-<p>
-<strong>Wednesday – Sunday</strong><br>
-10:00 AM – 2:00 PM
-</p>
+      <!-- Contact -->
+      <h2>Contact</h2>
+      <p>
+        📞 <a href="tel:9455460808"
+           onclick="gtag('event','call_click',{event_category:'Contact',event_label:'Phone Call'});">
+           945-546-0808
+        </a><br><br>
 
-</div>
-</div>
+        📧 <a href="mailto:hello@azsunrisecafecito.com"
+           onclick="gtag('event','email_click',{event_category:'Contact',event_label:'Email'});">
+           hello@azsunrisecafecito.com
+        </a>
+      </p>
 
+    </div><!-- /content -->
+
+  </div><!-- /main -->
+
+</div><!-- /layout -->
+
+<!-- SLIDESHOW SCRIPT -->
 <script>
-const openMinutes = 10 * 60;
+  const images = ["gccs.jpg", "cc.jpg", "r.jpeg"];
+  let current = 0;
+  const slideshow = document.getElementById("slideshow");
+
+  function nextImage() {
+    current = (current + 1) % images.length;
+    slideshow.src = images[current];
+  }
+
+  setInterval(nextImage, 3000);
+</script>
+
+<!-- OPEN TODAY INDICATOR (Closed Mon/Tue • Open Wed–Sun 10am–2pm) -->
+<script>
+  (function(){
+    const indicator = document.getElementById("openIndicator");
+    const textEl = document.getElementById("openText");
+
+    const now = new Date();
+    const day = now.getDay(); // 0 Sun ... 6 Sat
+    const minutes = now.getHours() * 60 + now.getMinutes();
+
+    // Open days: Wed(3) Thu(4) Fri(5) Sat(6) Sun(0)
+    const isOpenDay = (day === 0) || (day >= 3 && day <= 6);
+    const isClosedAllDay = (day === 1 || day === 2); // Mon/Tue
+
+    const openMinutes = 8 * 60;   // 10:00
+    const closeMinutes = 14 * 60; // 14:00
+
+    const isOpenNow = isOpenDay && (minutes >= openMinutes) && (minutes < closeMinutes);
+
+    function setOpen(){
+      textEl.textContent = "Open Today";
+      indicator.classList.remove("closed");
+    }
+
+    function setClosed(msg){
+      textEl.textContent = msg;
+      indicator.classList.add("closed");
+    }
+
+    if (isOpenNow){
+      setOpen();
+      return;
+    }
+
+    if (isClosedAllDay){
+      setClosed("Closed today • Opens Wednesday at 10:00 AM");
+      return;
+    }
+
+    if (isOpenDay){
+      if (minutes < openMinutes){
+        setClosed("Closed now • Opens at 10:00 AM");
+        return;
+      }
+
+      if (day === 0){
+        setClosed("Closed now • Opens Wednesday at 10:00 AM");
+      } else {
+        setClosed("Closed now • Opens tomorrow at 10:00 AM");
+      }
+      return;
+    }
+
+    setClosed("Closed now");
+  })();
+</script>
+
+<!-- AUTO ACTIVE NAV LINK -->
+<script>
+  const path = window.location.pathname;
+  const currentPage = (path.endsWith("/") ? "index.html" : path.split("/").pop()).split("?")[0];
+
+  document.querySelectorAll("nav.side-nav a").forEach(a => {
+    const href = (a.getAttribute("href") || "").split("?")[0];
+    if (href === currentPage) a.classList.add("active");
+  });
 </script>
 
 </body>
