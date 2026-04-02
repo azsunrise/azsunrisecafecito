@@ -124,7 +124,6 @@
       background: linear-gradient(to bottom, #e36f47, #f6c177);
     }
 
-    /* Keep FA icons aligned like your other page */
     nav.side-nav i{
       width:18px;
       text-align:center;
@@ -132,7 +131,6 @@
       color:#7a3b2e;
     }
 
-    /* a11y skip link */
     .skip-link{
       position:absolute;
       left:-999px; top:auto;
@@ -167,7 +165,6 @@
       box-shadow:0 10px 20px rgba(227,111,71,.16);
     }
 
-    /* Featured Favorites cards */
     .menu-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -191,7 +188,6 @@
     .menu-card h3{ margin:0 0 6px; color:var(--brown); }
     .menu-card p{ margin:0; color:#4b3328; line-height:1.35; }
 
-    /* Full menu board */
     .board{
       margin:18px auto 0;
       width:min(940px, 100%);
@@ -231,7 +227,6 @@
       border:1px solid rgba(45,27,18,.12);
     }
 
-    /* Jump nav (menu sections) */
     .jump-wrap{
       position:sticky;
       top:0;
@@ -494,6 +489,7 @@
             <a href="#pancakes">Pancakes & French Toast</a>
             <a href="#favorites">Favorites</a>
             <a href="#kids">Kids</a>
+            <a href="#treats">Seasonal Desserts & Treats</a>
             <a href="#sidesdrinks">Sides/Drinks</a>
           </nav>
         </div>
@@ -667,8 +663,25 @@
             </div>
 
             <!-- RIGHT COLUMN -->
-            <div class="panel" id="sidesdrinks">
-              <div class="section-title">
+            <div class="panel">
+
+              <div class="section-title" id="treats">
+                <span class="plank">Seasonal Desserts &amp; Treats</span>
+              </div>
+
+              <ul class="menu-list">
+                <li class="row">
+                  <div class="line"><div class="name">Chocolate Chip Brownie</div><div class="price">$5.00</div></div>
+                  <div class="menu-description">Large 3&quot; x 3&quot; brownie dusted with powdered sugar.</div>
+                </li>
+
+                <li class="row">
+                  <div class="line"><div class="name">Popsicles</div><div class="price">$2.50</div></div>
+                </li>
+              </ul>
+
+              <div style="height:10px"></div>
+              <div class="section-title" id="sidesdrinks">
                 <span class="plank">Sides &amp; Drinks</span>
               </div>
 
@@ -682,7 +695,9 @@
                 <li class="row"><div class="line"><div class="name">Iced Tea (sweet & unsweet)</div><div class="price">$3.50</div></div></li>
                 <li class="row"><div class="line"><div class="name">Arizona Green Tea</div><div class="price">$2.50</div></div></li>
                 <li class="row"><div class="line"><div class="name">Seasonal Juice</div><div class="price">$3.50</div></div></li>
-                <li class="row"><div class="line"><div class="name">Sodas</div><div class="price">$3.00</div></div></li>
+                <li class="row"><div class="line"><div class="name">Mexican Coca-Cola</div><div class="price">$3.00</div></div><div class="tags"><span class="tag">glass bottle</span></div></li>
+                <li class="row"><div class="line"><div class="name">Orange Fanta</div><div class="price">$3.00</div></div><div class="tags"><span class="tag">glass bottle</span></div></li>
+                <li class="row"><div class="line"><div class="name">Sprite</div><div class="price">$3.00</div></div><div class="tags"><span class="tag">glass bottle</span></div></li>
                 <li class="row"><div class="line"><div class="name">Bottled Water (16.9 oz)</div><div class="price">$2.00</div></div></li>
               </ul>
             </div>
