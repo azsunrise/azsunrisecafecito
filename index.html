@@ -126,6 +126,26 @@ nav.side-nav a.active::before{
   font-size: 1.1rem;
 }
 
+/* Promo bars */
+.promo-bar {
+  color: white;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 800;
+  margin: 10px auto 20px;
+  max-width: 650px;
+  text-align: center;
+}
+
+.promo-bar.hours {
+  background: linear-gradient(to right, #e36f47, #f6c177);
+}
+
+.promo-bar.military {
+  background: linear-gradient(to right, #7a3b2e, #a65b4a);
+  box-shadow: 0 8px 18px rgba(122,59,46,0.14);
+}
+
 /* ===== Holly Grounds Experience Preview ===== */
 .experience-preview {
   max-width: 720px;
@@ -462,16 +482,12 @@ nav.side-nav a.active::before{
       </p>
     </div>
 
-    <div style="
-      background: linear-gradient(to right, #e36f47, #f6c177);
-      color: white;
-      padding: 12px 18px;
-      border-radius: 12px;
-      font-weight: 800;
-      margin: 10px auto 20px;
-      max-width: 650px;
-      text-align: center;">
+    <div class="promo-bar hours">
       🌅 Now Serving Brunch at 10 AM • Wednesday – Sunday
+    </div>
+
+    <div class="promo-bar military">
+      🇺🇸 Military Discount: 10% off every day for active military and veterans with valid ID on regular-priced items
     </div>
 
     <!-- HOLLY GROUNDS EXPERIENCE PREVIEW -->
@@ -548,7 +564,7 @@ nav.side-nav a.active::before{
       </div>
     </div>
 
-    <!-- FEATURE IMAGE / SLIDESHOW -->
+    <!-- FEATURED IMAGE / SLIDESHOW -->
     <div class="feature-image">
       <img id="slideshow" src="gccs.jpg" alt="Featured food item">
     </div>
