@@ -48,7 +48,7 @@
         linear-gradient(to bottom,var(--bgTop),var(--bgBottom));
     }
 
-    /* ===== LAYOUT (matches About/Catering pages) ===== */
+    /* ===== LAYOUT ===== */
     .layout{
       display:flex;
       min-height:100vh;
@@ -67,52 +67,50 @@
       text-align:center;
     }
 
-    /* ===== NAV UPGRADE (copied from your About/Catering) ===== */
+    /* ===== SIDE NAV ===== */
     nav.side-nav{
-      width: 220px;
-      background: rgba(247,239,230,0.78);
-      border-right: 1px solid rgba(122,59,46,0.12);
-      padding: 16px 12px;
+      width:220px;
+      background:rgba(247,239,230,0.78);
+      border-right:1px solid rgba(122,59,46,0.12);
+      padding:16px 12px;
       display:flex;
       flex-direction:column;
       gap:10px;
-
-      position: sticky;
-      top: 0;
-      align-self: flex-start;
-      height: 100vh;
-
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      position:sticky;
+      top:0;
+      align-self:flex-start;
+      height:100vh;
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
     }
 
     nav.side-nav a{
       text-decoration:none;
       color:#7a3b2e;
       font-weight:700;
-      padding: 10px 12px;
-      border-radius: 12px;
+      padding:10px 12px;
+      border-radius:12px;
       display:flex;
       align-items:center;
       gap:10px;
-
-      background: rgba(255,255,255,0.55);
-      border: 1px solid rgba(122,59,46,0.08);
-      transition: background .15s ease, transform .15s ease, box-shadow .15s ease;
+      background:rgba(255,255,255,0.55);
+      border:1px solid rgba(122,59,46,0.08);
+      transition:background .15s ease, transform .15s ease, box-shadow .15s ease;
     }
 
     nav.side-nav a:hover{
-      background: rgba(230,195,165,0.45);
-      box-shadow: 0 6px 16px rgba(122,59,46,0.10);
-      transform: translateX(2px);
+      background:rgba(230,195,165,0.45);
+      box-shadow:0 6px 16px rgba(122,59,46,0.10);
+      transform:translateX(2px);
     }
 
     nav.side-nav a.active{
-      background: linear-gradient(to right, rgba(227,111,71,0.18), rgba(246,193,119,0.22));
-      border: 1px solid rgba(227,111,71,0.28);
-      box-shadow: 0 10px 22px rgba(227,111,71,0.12);
-      position: relative;
+      background:linear-gradient(to right, rgba(227,111,71,0.18), rgba(246,193,119,0.22));
+      border:1px solid rgba(227,111,71,0.28);
+      box-shadow:0 10px 22px rgba(227,111,71,0.12);
+      position:relative;
     }
+
     nav.side-nav a.active::before{
       content:"";
       position:absolute;
@@ -121,7 +119,7 @@
       bottom:10px;
       width:4px;
       border-radius:10px;
-      background: linear-gradient(to bottom, #e36f47, #f6c177);
+      background:linear-gradient(to bottom, #e36f47, #f6c177);
     }
 
     nav.side-nav i{
@@ -133,13 +131,18 @@
 
     .skip-link{
       position:absolute;
-      left:-999px; top:auto;
-      width:1px; height:1px;
+      left:-999px;
+      top:auto;
+      width:1px;
+      height:1px;
       overflow:hidden;
     }
+
     .skip-link:focus{
-      left:12px; top:12px;
-      width:auto; height:auto;
+      left:12px;
+      top:12px;
+      width:auto;
+      height:auto;
       padding:10px 12px;
       background:#fff;
       border:2px solid rgba(227,111,71,.55);
@@ -171,19 +174,27 @@
       gap:20px;
       margin-top:14px;
     }
+
     .menu-card{
       background:#fff;
       border-radius:16px;
       box-shadow:0 8px 20px rgba(0,0,0,0.06);
       overflow:hidden;
       text-align:left;
-      transition:transform 0.2s,box-shadow 0.2s;
+      transition:transform 0.2s, box-shadow 0.2s;
     }
+
     .menu-card:hover{
       transform:translateY(-2px);
       box-shadow:0 12px 24px rgba(0,0,0,0.12);
     }
-    .menu-card img{ width:100%; height:180px; object-fit:cover; }
+
+    .menu-card img{
+      width:100%;
+      height:180px;
+      object-fit:cover;
+    }
+
     .menu-card .content{ padding:16px; }
     .menu-card h3{ margin:0 0 6px; color:var(--brown); }
     .menu-card p{ margin:0; color:#4b3328; line-height:1.35; }
@@ -198,12 +209,14 @@
       overflow:hidden;
       text-align:left;
     }
+
     .board-head{
       padding:14px 14px 10px;
       background:rgba(246,193,119,.18);
       border-bottom:1px solid rgba(45,27,18,.10);
       text-align:center;
     }
+
     .board-head p{
       margin:6px 0 0;
       color:#5b3a2e;
@@ -217,6 +230,7 @@
       justify-content:center;
       gap:8px;
     }
+
     .mini-pill{
       display:inline-block;
       padding:8px 12px;
@@ -234,8 +248,9 @@
       padding:10px 10px 12px;
       background:rgba(255,247,240,.92);
       border-bottom:1px solid rgba(45,27,18,.10);
-      backdrop-filter: blur(6px);
+      backdrop-filter:blur(6px);
     }
+
     .jump{
       display:flex;
       flex-wrap:wrap;
@@ -244,6 +259,7 @@
       margin:0;
       padding:0;
     }
+
     .jump a{
       text-decoration:none;
       font-weight:900;
@@ -254,18 +270,25 @@
       background:rgba(255,255,255,.82);
       border:1px solid rgba(45,27,18,.10);
     }
+
     @media (min-width:900px){
-      .jump-wrap{ position:static; background:transparent; border:0; padding:12px 0 0; }
+      .jump-wrap{
+        position:static;
+        background:transparent;
+        border:0;
+        padding:12px 0 0;
+      }
     }
 
     .board-body{ padding:14px; }
 
     .columns{
       display:grid;
-      grid-template-columns: 1.55fr .95fr;
+      grid-template-columns:1.55fr .95fr;
       gap:14px;
       align-items:start;
     }
+
     .panel{
       background:rgba(255,255,255,.82);
       border:1px solid rgba(45,27,18,.12);
@@ -280,6 +303,7 @@
       gap:10px;
       margin:0 0 10px;
     }
+
     .section-title .plank{
       display:inline-block;
       padding:10px 14px;
@@ -292,6 +316,7 @@
       box-shadow:0 10px 18px rgba(0,0,0,.16);
       border:1px solid rgba(255,255,255,.18);
     }
+
     .toplink{
       text-decoration:none;
       font-weight:900;
@@ -303,6 +328,7 @@
       border:1px solid rgba(45,27,18,.10);
       white-space:nowrap;
     }
+
     .toplink:hover{ background:rgba(246,193,119,.45); }
 
     .section-subnote{
@@ -312,8 +338,17 @@
       font-size:.92rem;
     }
 
-    .menu-list{ list-style:none; margin:0; padding:0; }
-    .row{ padding:10px 2px; border-top:1px solid var(--line); }
+    .menu-list{
+      list-style:none;
+      margin:0;
+      padding:0;
+    }
+
+    .row{
+      padding:10px 2px;
+      border-top:1px solid var(--line);
+    }
+
     .row:first-child{ border-top:0; }
 
     .line{
@@ -322,8 +357,18 @@
       justify-content:space-between;
       gap:12px;
     }
-    .name{ font-weight:900; color:var(--ink); line-height:1.2; }
-    .price{ font-weight:900; white-space:nowrap; color:var(--ink); }
+
+    .name{
+      font-weight:900;
+      color:var(--ink);
+      line-height:1.2;
+    }
+
+    .price{
+      font-weight:900;
+      white-space:nowrap;
+      color:var(--ink);
+    }
 
     .menu-description{
       display:block;
@@ -340,6 +385,7 @@
       flex-wrap:wrap;
       gap:6px;
     }
+
     .tag{
       font-size:.72rem;
       background:rgba(246,193,119,.55);
@@ -350,16 +396,18 @@
       color:#3d281f;
       white-space:nowrap;
     }
+
     .tag-star{
       background:linear-gradient(to right,var(--orange),var(--sun));
       color:#fff;
       border:0;
     }
+
     .tag-note{
-      background: rgba(156,163,175,.18);
-      border: 1px solid rgba(156,163,175,.35);
-      color: #4b5563;
-      font-weight: 900;
+      background:rgba(156,163,175,.18);
+      border:1px solid rgba(156,163,175,.35);
+      color:#4b5563;
+      font-weight:900;
     }
 
     .button-back{
@@ -389,15 +437,17 @@
         gap:8px;
         padding:10px;
         border-right:none;
-        border-bottom: 1px solid rgba(122,59,46,0.12);
+        border-bottom:1px solid rgba(122,59,46,0.12);
         z-index:60;
       }
+
       nav.side-nav a{
         border-radius:999px;
         padding:10px 12px;
         transform:none;
         font-size:0.95rem;
       }
+
       nav.side-nav a.active::before{ display:none; }
     }
 
@@ -483,13 +533,14 @@
 
         <div class="jump-wrap" id="topNav">
           <nav class="jump" aria-label="Jump to section">
-            <a href="#biscuits">Biscuits & Plates</a>
+            <a href="#biscuits">Biscuits &amp; Plates</a>
             <a href="#burritos">Burritos</a>
-            <a href="#bowls">Breakfast Bowls</a>
-            <a href="#pancakes">Pancakes & French Toast</a>
+            <a href="#tacos">Tacos</a>
+            <a href="#bowls">Bowls</a>
+            <a href="#pancakes">Pancakes &amp; French Toast</a>
             <a href="#favorites">Favorites</a>
             <a href="#kids">Kids</a>
-            <a href="#treats">Seasonal Desserts & Treats</a>
+            <a href="#treats">Desserts &amp; Treats</a>
             <a href="#sidesdrinks">Sides/Drinks</a>
           </nav>
         </div>
@@ -529,11 +580,12 @@
                     <div class="price">$12.00</div>
                   </div>
                   <div class="menu-description">Two biscuits topped with two eggs and sausage gravy.</div>
-                  <div class="tags"><span class="tag">Gravy packed on the side for delivery.</span></div>
+                  <div class="tags"><span class="tag">Gravy packed on the side for delivery</span></div>
                 </li>
               </ul>
 
               <div style="height:10px"></div>
+
               <div class="section-title" id="burritos">
                 <span class="plank">Sonoran Breakfast Burritos</span>
                 <a class="toplink" href="#topNav">Return to Top ↑</a>
@@ -542,17 +594,74 @@
 
               <ul class="menu-list">
                 <li class="row">
-                  <div class="line"><div class="name">Sonoran Burrito</div><div class="price">$10.00</div></div>
-                  <div class="menu-description">Chorizo, eggs, grilled onions and cheese.</div>
+                  <div class="line">
+                    <div class="name">Sonoran Burrito</div>
+                    <div class="price">$10.00</div>
+                  </div>
+                  <div class="menu-description">Chorizo, eggs, grilled onions, and cheese.</div>
                 </li>
 
                 <li class="row">
-                  <div class="line"><div class="name">Borracho Special🌶🌶</div><div class="price">$10.95</div></div>
+                  <div class="line">
+                    <div class="name">Borracho Special 🌶🌶</div>
+                    <div class="price">$10.95</div>
+                  </div>
                   <div class="menu-description">Sonoran burrito with fresh jalapeños.</div>
                 </li>
               </ul>
 
               <div style="height:10px"></div>
+
+              <div class="section-title" id="tacos">
+                <span class="plank">Breakfast Tacos</span>
+                <a class="toplink" href="#topNav">Return to Top ↑</a>
+              </div>
+              <div class="section-subnote">(Served on warm flour tortillas, includes salsa or pico)</div>
+
+              <ul class="menu-list">
+                <li class="row">
+                  <div class="line">
+                    <div class="name">Bacon, Egg &amp; Cheese</div>
+                    <div class="price">$4.00</div>
+                  </div>
+                  <div class="menu-description">Crispy bacon, eggs, and melted cheese.</div>
+                </li>
+
+                <li class="row">
+                  <div class="line">
+                    <div class="name">Sausage, Egg &amp; Cheese</div>
+                    <div class="price">$4.00</div>
+                  </div>
+                  <div class="menu-description">Savory sausage, eggs, and melted cheese.</div>
+                </li>
+
+                <li class="row">
+                  <div class="line">
+                    <div class="name">Sonoran Chorizo Taco</div>
+                    <div class="price">$4.25</div>
+                  </div>
+                  <div class="menu-description">Bold chorizo, eggs, and melted cheese.</div>
+                </li>
+
+                <li class="row">
+                  <div class="line">
+                    <div class="name">Potato, Egg &amp; Cheese</div>
+                    <div class="price">$3.75</div>
+                  </div>
+                  <div class="menu-description">Seasoned potatoes, eggs, and melted cheese.</div>
+                </li>
+
+                <li class="row">
+                  <div class="line">
+                    <div class="name">Sonoran Steak Taco</div>
+                    <div class="price">$5.95</div>
+                  </div>
+                  <div class="menu-description">Carne asada, eggs, cheese, and pico.</div>
+                </li>
+              </ul>
+
+              <div style="height:10px"></div>
+
               <div class="section-title" id="bowls">
                 <span class="plank">Breakfast Bowls</span>
                 <a class="toplink" href="#topNav">Return to Top ↑</a>
@@ -560,12 +669,16 @@
 
               <ul class="menu-list">
                 <li class="row">
-                  <div class="line"><div class="name">Breakfast Bowl</div><div class="price">$9.50</div></div>
+                  <div class="line">
+                    <div class="name">Breakfast Bowl</div>
+                    <div class="price">$9.50</div>
+                  </div>
                   <div class="menu-description">Cottage potatoes, eggs, chorizo, cheese, and pico.</div>
                 </li>
               </ul>
 
               <div style="height:10px"></div>
+
               <div class="section-title" id="pancakes">
                 <span class="plank">Homemade Pancakes &amp; French Toast</span>
                 <a class="toplink" href="#topNav">Return to Top ↑</a>
@@ -574,19 +687,26 @@
 
               <ul class="menu-list">
                 <li class="row">
-                  <div class="line"><div class="name">Adult Pancakes</div><div class="price">$9.50</div></div>
-                  <div class="menu-description">Fluffy homemade pancakes.</div>
+                  <div class="line">
+                    <div class="name">Adult Pancakes</div>
+                    <div class="price">$9.50</div>
+                  </div>
+                  <div class="menu-description">Homemade pancakes.</div>
                   <div class="tags"><span class="tag">Add bacon, sausage, or ham +$2.00</span></div>
                 </li>
 
                 <li class="row">
-                  <div class="line"><div class="name">French Toast</div><div class="price">$9.50</div></div>
-                  <div class="menu-description">Texas toast French toast with powdered sugar and syrup, served with cottage potatoes and a fresh orange slice.</div>
+                  <div class="line">
+                    <div class="name">French Toast</div>
+                    <div class="price">$9.50</div>
+                  </div>
+                  <div class="menu-description">Texas toast French toast with powdered sugar and syrup, served with cottage potatoes and an orange slice.</div>
                   <div class="tags"><span class="tag">Add bacon, sausage, or ham +$2.00</span></div>
                 </li>
               </ul>
 
               <div style="height:10px"></div>
+
               <div class="section-title" id="favorites">
                 <span class="plank">All Day Favorites</span>
                 <a class="toplink" href="#topNav">Return to Top ↑</a>
@@ -595,41 +715,59 @@
 
               <ul class="menu-list">
                 <li class="row">
-                  <div class="line"><div class="name">Golden Reuben Croquettes</div><div class="price">$13.00</div></div>
-                  <div class="menu-description">Three croquettes filled with corned beef, Swiss and sauerkraut. Finished with creamy Russian sauce.</div>
+                  <div class="line">
+                    <div class="name">Golden Reuben Croquettes</div>
+                    <div class="price">$13.00</div>
+                  </div>
+                  <div class="menu-description">Three croquettes filled with corned beef, Swiss, and sauerkraut. Finished with creamy Russian sauce.</div>
                 </li>
 
                 <li class="row">
-                  <div class="line"><div class="name">Monte Cristo Sandwich</div><div class="price">$10.00</div></div>
-                  <div class="menu-description">Griddled ham and turkey with melted Swiss cheese, lightly dusted with powdered sugar. Strawberry jam served on the side.</div>
+                  <div class="line">
+                    <div class="name">Monte Cristo Sandwich</div>
+                    <div class="price">$10.00</div>
+                  </div>
+                  <div class="menu-description">Griddled ham and turkey with melted Swiss, lightly dusted with powdered sugar. Strawberry jam on the side.</div>
                 </li>
 
                 <li class="row">
-                  <div class="line"><div class="name">Green Chile Chicken Soup <span class="tag">Cup</span></div><div class="price">$5.50</div></div>
+                  <div class="line">
+                    <div class="name">Green Chile Chicken Soup <span class="tag">Cup</span></div>
+                    <div class="price">$5.50</div>
+                  </div>
+                  <div class="menu-description">Slow-simmered chicken soup with roasted green chiles.</div>
                   <div class="tags"><span class="tag tag-note">no side</span></div>
                 </li>
 
                 <li class="row">
-                  <div class="line"><div class="name">Green Chile Chicken Soup <span class="tag">Bowl</span></div><div class="price">$7.50</div></div>
+                  <div class="line">
+                    <div class="name">Green Chile Chicken Soup <span class="tag">Bowl</span></div>
+                    <div class="price">$7.50</div>
+                  </div>
+                  <div class="menu-description">Slow-simmered chicken soup with roasted green chiles.</div>
                   <div class="tags"><span class="tag tag-note">no side</span></div>
                 </li>
 
                 <li class="row">
-                  <div class="line"><div class="name">Crab Cakes</div><div class="price">$17.50</div></div>
+                  <div class="line">
+                    <div class="name">Crab Cakes</div>
+                    <div class="price">$17.50</div>
+                  </div>
                   <div class="menu-description">Three lump crab cakes served with roasted garlic caper aioli.</div>
                 </li>
 
                 <li class="row">
-  <div class="line">
-    <div class="name">Smoked Mango Chipotle Shrimp &amp; Grits <span class="tag tag-star">NEW</span></div>
-    <div class="price">$17.00</div>
-  </div>
-  <div class="menu-description">Four large shrimp in a smoky-sweet mango chipotle sauce over creamy grits.</div>
-  <div class="tags"><span class="tag tag-note">no side</span></div>
-</li>
-</ul>
+                  <div class="line">
+                    <div class="name">Smoked Mango Chipotle Shrimp &amp; Grits <span class="tag tag-star">NEW</span></div>
+                    <div class="price">$17.00</div>
+                  </div>
+                  <div class="menu-description">Four large shrimp in a smoky-sweet mango chipotle sauce over creamy grits.</div>
+                  <div class="tags"><span class="tag tag-note">no side</span></div>
+                </li>
+              </ul>
 
               <div style="height:10px"></div>
+
               <div class="section-title" id="kids">
                 <span class="plank">Kids</span>
                 <a class="toplink" href="#topNav">Return to Top ↑</a>
@@ -637,29 +775,47 @@
 
               <ul class="menu-list">
                 <li class="row">
-                  <div class="line"><div class="name">Kids Toad in the Hole</div><div class="price">$5.00</div></div>
-                  <div class="menu-description">Texas toast with an egg cooked cooked in the middle.</div>
+                  <div class="line">
+                    <div class="name">Kids Toad in the Hole</div>
+                    <div class="price">$5.00</div>
+                  </div>
+                  <div class="menu-description">Texas toast with an egg cooked in the middle.</div>
                 </li>
 
                 <li class="row">
-                  <div class="line"><div class="name">Kids Burrito</div><div class="price">$5.00</div></div>
-                  <div class="menu-description">Egg and cheese</div>
+                  <div class="line">
+                    <div class="name">Kids Burrito</div>
+                    <div class="price">$5.00</div>
+                  </div>
+                  <div class="menu-description">Egg and cheese.</div>
                 </li>
 
                 <li class="row">
-                  <div class="line"><div class="name">Kids Egg &amp; Cheese Biscuit</div><div class="price">$5.00</div></div>
+                  <div class="line">
+                    <div class="name">Kids Egg &amp; Cheese Biscuit</div>
+                    <div class="price">$5.00</div>
+                  </div>
                 </li>
 
                 <li class="row">
-                  <div class="line"><div class="name">Kids Chocolate Chip Pancakes</div><div class="price">$5.00</div></div>
+                  <div class="line">
+                    <div class="name">Kids Chocolate Chip Pancakes</div>
+                    <div class="price">$5.00</div>
+                  </div>
                 </li>
 
                 <li class="row">
-                  <div class="line"><div class="name">Kids French Toast</div><div class="price">$5.50</div></div>
+                  <div class="line">
+                    <div class="name">Kids French Toast</div>
+                    <div class="price">$5.50</div>
+                  </div>
                 </li>
 
                 <li class="row">
-                  <div class="line"><div class="name">Kids Grilled Cheese</div><div class="price">$6.00</div></div>
+                  <div class="line">
+                    <div class="name">Kids Grilled Cheese</div>
+                    <div class="price">$6.00</div>
+                  </div>
                   <div class="menu-description">Texas toast grilled cheese served with fries.</div>
                 </li>
               </ul>
@@ -680,16 +836,23 @@
 
               <ul class="menu-list">
                 <li class="row">
-                  <div class="line"><div class="name">Chocolate Chip Brownie</div><div class="price">$3.00</div></div>
+                  <div class="line">
+                    <div class="name">Chocolate Chip Brownie</div>
+                    <div class="price">$3.00</div>
+                  </div>
                   <div class="menu-description">Large 3&quot; x 3&quot; brownie dusted with powdered sugar.</div>
                 </li>
 
                 <li class="row">
-                  <div class="line"><div class="name">Popsicles</div><div class="price">$2.50</div></div>
+                  <div class="line">
+                    <div class="name">Popsicles</div>
+                    <div class="price">$2.50</div>
+                  </div>
                 </li>
               </ul>
 
               <div style="height:10px"></div>
+
               <div class="section-title" id="sidesdrinks">
                 <span class="plank">Sides &amp; Drinks</span>
               </div>
@@ -701,7 +864,7 @@
                 <li class="row"><div class="line"><div class="name">French Fries</div><div class="price">$3.00</div></div></li>
 
                 <li class="row"><div class="line"><div class="name">Lifeboost Coffee</div><div class="price">$4.50</div></div></li>
-                <li class="row"><div class="line"><div class="name">Iced Tea (sweet & unsweet)</div><div class="price">$3.50</div></div></li>
+                <li class="row"><div class="line"><div class="name">Iced Tea (sweet &amp; unsweet)</div><div class="price">$3.50</div></div></li>
                 <li class="row"><div class="line"><div class="name">Arizona Green Tea</div><div class="price">$2.50</div></div></li>
                 <li class="row"><div class="line"><div class="name">Seasonal Juice</div><div class="price">$3.50</div></div></li>
                 <li class="row"><div class="line"><div class="name">Mexican Coca-Cola</div><div class="price">$3.00</div></div><div class="tags"><span class="tag">glass bottle</span></div></li>
@@ -709,6 +872,7 @@
                 <li class="row"><div class="line"><div class="name">Sprite</div><div class="price">$3.00</div></div><div class="tags"><span class="tag">glass bottle</span></div></li>
                 <li class="row"><div class="line"><div class="name">Bottled Water (16.9 oz)</div><div class="price">$2.00</div></div></li>
               </ul>
+
             </div>
 
           </div>
