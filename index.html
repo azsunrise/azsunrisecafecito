@@ -340,6 +340,122 @@ nav.side-nav a.active::before{
   box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
 
+/* ===== Follow / Review / Order Section ===== */
+.social-hub {
+  max-width: 840px;
+  margin: 0 auto 34px;
+  padding: 0 20px;
+}
+
+.social-hub-inner {
+  background:
+    radial-gradient(circle at top left, rgba(246,193,119,0.38), transparent 32%),
+    linear-gradient(135deg, #fff8ef 0%, #ffffff 58%, #fff3e8 100%);
+  border: 1px solid rgba(122,59,46,0.14);
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: 0 12px 30px rgba(122,59,46,0.10);
+}
+
+.social-hub h2 {
+  color: #7a3b2e;
+  margin: 0 0 8px;
+  font-size: 1.7rem;
+}
+
+.social-hub .hub-subtitle {
+  color: #5b4b45;
+  margin: 0 auto 18px;
+  max-width: 650px;
+  line-height: 1.5;
+  font-size: 1.02rem;
+}
+
+.social-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.social-card {
+  text-decoration: none;
+  color: #4a332d;
+  background: rgba(255,255,255,0.88);
+  border: 1px solid rgba(122,59,46,0.12);
+  border-radius: 18px;
+  padding: 18px 14px;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.social-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(122,59,46,0.14);
+  border-color: rgba(227,111,71,0.35);
+}
+
+.social-card i {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+}
+
+.social-card strong {
+  color: #7a3b2e;
+  display: block;
+  font-size: 1.03rem;
+  margin-bottom: 6px;
+}
+
+.social-card span {
+  font-size: 0.92rem;
+  line-height: 1.35;
+  color: #5b4b45;
+}
+
+.social-card.facebook i {
+  background: linear-gradient(135deg, #1877f2, #0b4ea2);
+}
+
+.social-card.instagram i {
+  background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af);
+}
+
+.social-card.review i {
+  background: linear-gradient(135deg, #e36f47, #f6c177);
+}
+
+.social-card.doordash i {
+  background: linear-gradient(135deg, #d91414, #ff6b35);
+}
+
+.social-note {
+  margin: 18px auto 0;
+  padding: 12px 14px;
+  max-width: 660px;
+  background: rgba(122,59,46,0.06);
+  border: 1px dashed rgba(122,59,46,0.20);
+  border-radius: 14px;
+  color: #5b4b45;
+  line-height: 1.45;
+  font-size: 0.96rem;
+}
+
+.social-note strong {
+  color: #7a3b2e;
+}
+
 /* Content Section */
 .content {
   max-width: 800px;
@@ -428,6 +544,12 @@ nav.side-nav a.active::before{
 }
 
 /* Mobile */
+@media (max-width: 900px) {
+  .social-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .layout { flex-direction: column; }
 
@@ -450,6 +572,23 @@ nav.side-nav a.active::before{
   }
 
   nav.side-nav a.active::before{ display:none; }
+
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .social-hub-inner {
+    padding: 18px 14px;
+  }
+
+  .social-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .social-card {
+    min-height: auto;
+    padding: 16px 14px;
+  }
 }
 </style>
 </head>
@@ -490,13 +629,13 @@ nav.side-nav a.active::before{
       🇺🇸 Military Discount: 10% off every day for active military and veterans with valid ID on regular-priced items
     </div>
 
-    <!-- HOLLY GROUNDS EXPERIENCE PREVIEW -->
+    <!-- HOLY GROUNDS EXPERIENCE PREVIEW -->
     <div class="experience-preview">
       <p>
         You’ll find us at
         <a href="https://www.holygroundsfoodyard.com" target="_blank" rel="noopener"
-           onclick="gtag('event','hollygrounds_click',{event_category:'Outbound',event_label:'Holly Grounds Website'});">
-          Holly Grounds Food Yard in Royse City
+           onclick="gtag('event','holygrounds_click',{event_category:'Outbound',event_label:'Holy Grounds Website'});">
+          Holy Grounds Food Yard in Royse City
         </a>
         — a space built for gathering.
       </p>
@@ -524,7 +663,7 @@ nav.side-nav a.active::before{
           </div>
           <div>
             <strong>Movie Night: The Sandlot</strong>
-            <div class="event-date">Saturday, April 25th, 2026 • 7:30 PM – 9:30 PM</div>
+            <div class="event-date">Saturday, April 25th, 2026 • 7:00 PM</div>
           </div>
         </div>
 
@@ -575,6 +714,65 @@ nav.side-nav a.active::before{
       <a href="catering.html" class="secondary">Book Catering / Learn More</a>
     </div>
 
+    <!-- FOLLOW / REVIEW / ORDER -->
+    <section class="social-hub" aria-label="Follow, review, and order Arizona Sunrise Cafecito">
+      <div class="social-hub-inner">
+        <h2>Come for the biscuits. Stay for the chaos.</h2>
+        <p class="hub-subtitle">
+          Follow Arizona Sunrise Cafecito &amp; Catering for specials, menu drops, event updates,
+          and the occasional food trailer shenanigan. If we made your day better, reviews help our
+          small family business more than you know.
+        </p>
+
+        <div class="social-cards">
+
+          <a class="social-card facebook"
+             href="https://www.facebook.com/azsunrisecafecito"
+             target="_blank"
+             rel="noopener"
+             onclick="gtag('event','facebook_click',{event_category:'Social',event_label:'Facebook'});">
+            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+            <strong>Like us on Facebook</strong>
+            <span>Daily specials, event posts, and local updates.</span>
+          </a>
+
+          <a class="social-card instagram"
+             href="https://www.instagram.com/az_sunrise_cafecito_catering?igsh=b2i0nmw2ctfvzwvp"
+             target="_blank"
+             rel="noopener"
+             onclick="gtag('event','instagram_click',{event_category:'Social',event_label:'Instagram'});">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            <strong>Follow us on Instagram</strong>
+            <span>@az_sunrise_cafecito_catering</span>
+          </a>
+
+          <a class="social-card review"
+             href="mailto:hello@azsunrisecafecito.com?subject=Arizona%20Sunrise%20Review%20or%20Feedback&body=Hi%20Arizona%20Sunrise%2C%0A%0AI%20wanted%20to%20share%20this%20review%20or%20feedback%3A%0A%0A"
+             onclick="gtag('event','feedback_click',{event_category:'Feedback',event_label:'Review or Feedback Email'});">
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <strong>Leave a review or feedback</strong>
+            <span>Tell us what you loved — or what we can make better.</span>
+          </a>
+
+          <a class="social-card doordash"
+             href="https://www.doordash.com/store/arizona-sunrise-cafecito-&-catering-royse-city-41398559/99996355/?pickup=false"
+             target="_blank"
+             rel="noopener"
+             onclick="gtag('event','doordash_click',{event_category:'Order',event_label:'DoorDash'});">
+            <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+            <strong>Order on DoorDash</strong>
+            <span>Brunch cravings delivered when available.</span>
+          </a>
+
+        </div>
+
+        <div class="social-note">
+          <strong>Small business truth:</strong> every follow, like, share, review, and tag helps more local families find us.
+          Thank you for supporting our little food trailer with big brunch energy.
+        </div>
+      </div>
+    </section>
+
     <div class="content">
 
       <!-- WHY US -->
@@ -584,6 +782,8 @@ nav.side-nav a.active::before{
           <li>🌅 Comfort food with Southwest flair</li>
           <li>🧡 Locally owned & community-driven</li>
           <li>🚚 Freshly prepared from our food trailer</li>
+          <li>🇺🇸 10% military discount for active military and veterans with valid ID on regular-priced items</li>
+          <li>🚗 Available on DoorDash when delivery is active</li>
         </ul>
       </div>
 
