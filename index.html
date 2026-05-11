@@ -353,7 +353,7 @@ nav.side-nav a.active::before{
 
 /* ===== Follow / Review / Order Section ===== */
 .social-hub {
-  max-width: 840px;
+  max-width: 900px;
   margin: 0 auto 34px;
   padding: 0 20px;
 }
@@ -384,7 +384,7 @@ nav.side-nav a.active::before{
 
 .social-cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 14px;
   margin-top: 18px;
 }
@@ -445,6 +445,10 @@ nav.side-nav a.active::before{
 
 .social-card.review i {
   background: linear-gradient(135deg, #e36f47, #f6c177);
+}
+
+.social-card.yelp i {
+  background: linear-gradient(135deg, #d32323, #f15c4f);
 }
 
 .social-card.doordash i {
@@ -555,6 +559,12 @@ nav.side-nav a.active::before{
 }
 
 /* Mobile */
+@media (max-width: 1100px) {
+  .social-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 900px) {
   .social-cards {
     grid-template-columns: repeat(2, 1fr);
@@ -673,26 +683,15 @@ nav.side-nav a.active::before{
         </div>
 
         <div class="event-item featured">
-  <div class="event-icon magic">
-    <i class="fa-solid fa-children" aria-hidden="true"></i>
-  </div>
-  <div>
-    <strong>Meet the Celebree Family Community Kickoff</strong>
-    <div class="event-date">Thursday, May 14th, 2026 • 5:30 PM – 7:00 PM</div>
-    <div class="event-date">Robert Smith Family Park • Fate, TX</div>
-  </div>
-</div>
-
-<div class="event-item featured">
-  <div class="event-icon lonestar">
-    <i class="fa-solid fa-pepper-hot" aria-hidden="true"></i>
-  </div>
-  <div>
-    <strong>Cinco de Mayo Pop-Up at Lowe’s Rockwall</strong>
-    <div class="event-date">Tuesday, May 5th, 2026 • 9:00 AM – 2:00 PM</div>
-    <div class="event-date">Lowe’s Rockwall</div>
-  </div>
-</div>
+          <div class="event-icon magic">
+            <i class="fa-solid fa-children" aria-hidden="true"></i>
+          </div>
+          <div>
+            <strong>Meet the Celebree Family Community Kickoff</strong>
+            <div class="event-date">Thursday, May 14th, 2026 • 5:30 PM – 7:00 PM</div>
+            <div class="event-date">Robert Smith Family Park • Fate, TX</div>
+          </div>
+        </div>
 
         <div class="event-item">
           <div class="event-icon makers">
@@ -701,6 +700,16 @@ nav.side-nav a.active::before{
           <div>
             <strong>May Makers Market</strong>
             <div class="event-date">Saturday, May 16th, 2026 • 9:00 AM – 5:00 PM</div>
+          </div>
+        </div>
+
+        <div class="event-item">
+          <div class="event-icon movie">
+            <i class="fa-solid fa-film" aria-hidden="true"></i>
+          </div>
+          <div>
+            <strong>Movie Night at Holy Grounds</strong>
+            <div class="event-date">Saturday, May 30th, 2026 • Movie starts at 7:00 PM</div>
           </div>
         </div>
 
@@ -747,8 +756,8 @@ nav.side-nav a.active::before{
         <h2>Come for the biscuits. Stay for the chaos.</h2>
         <p class="hub-subtitle">
           Follow Arizona Sunrise Cafecito &amp; Catering for specials, menu drops, event updates,
-          and the occasional food trailer shenanigan. If we made your day better, a Google review helps our
-          small family business more than you know.
+          and the occasional food trailer shenanigan. If we made your day better, a Google review or Yelp feedback
+          helps our small family business more than you know.
         </p>
 
         <div class="social-cards">
@@ -783,6 +792,16 @@ nav.side-nav a.active::before{
             <span>Love your meal? A quick Google review helps local families find us.</span>
           </a>
 
+          <a class="social-card yelp"
+             href="https://www.yelp.com/search?find_desc=Arizona+Sunrise+Cafecito+%26+Catering&find_loc=Royse+City%2C+TX"
+             target="_blank"
+             rel="noopener"
+             onclick="gtag('event','yelp_click',{event_category:'Reviews',event_label:'Yelp Feedback'});">
+            <i class="fa-brands fa-yelp" aria-hidden="true"></i>
+            <strong>Find us on Yelp</strong>
+            <span>Share feedback so more local food lovers can discover us.</span>
+          </a>
+
           <a class="social-card doordash"
              href="https://www.doordash.com/store/arizona-sunrise-cafecito-&-catering-royse-city-41398559/99996355/?pickup=false"
              target="_blank"
@@ -796,7 +815,7 @@ nav.side-nav a.active::before{
         </div>
 
         <div class="social-note">
-          <strong>Small business truth:</strong> every follow, like, share, Google review, and tag helps more local families find us.
+          <strong>Small business truth:</strong> every follow, like, share, Google review, Yelp mention, and tag helps more local families find us.
           Thank you for supporting our little food trailer with big brunch energy.
         </div>
       </div>
@@ -865,7 +884,7 @@ nav.side-nav a.active::before{
 
 <!-- SLIDESHOW SCRIPT -->
 <script>
-  const images = ["gccs.jpg", "cc.jpg", "r.jpeg", "IMG_0163.jpeg"];
+  const images = ["gccs.jpg", "cc.jpg", "r.jpeg"];
   let current = 0;
   const slideshow = document.getElementById("slideshow");
 
