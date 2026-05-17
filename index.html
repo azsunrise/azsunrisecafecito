@@ -145,6 +145,11 @@ nav.side-nav a.active::before{
   box-shadow: 0 8px 18px rgba(122,59,46,0.14);
 }
 
+.promo-bar.vacation {
+  background: linear-gradient(to right, #3f2a24, #7a3b2e);
+  box-shadow: 0 8px 18px rgba(122,59,46,0.14);
+}
+
 /* ===== Holy Grounds Experience Preview ===== */
 .experience-preview {
   max-width: 720px;
@@ -654,6 +659,10 @@ nav.side-nav a.active::before{
       🇺🇸 Military Discount: 10% off every day for active military and veterans with valid ID on regular-priced items
     </div>
 
+    <div class="promo-bar vacation">
+      🌵 Family Vacation Closure: June 15 – July 7 • Reopening Wednesday, July 8 at 10 AM
+    </div>
+
     <!-- HOLY GROUNDS EXPERIENCE PREVIEW -->
     <div class="experience-preview">
       <p>
@@ -683,16 +692,12 @@ nav.side-nav a.active::before{
         </div>
 
         <div class="event-item featured">
-          <div class="event-icon magic">
-            <i class="fa-solid fa-children" aria-hidden="true"></i>
-          </div>
-        <div class="event-item">
           <div class="event-icon movie">
             <i class="fa-solid fa-film" aria-hidden="true"></i>
           </div>
           <div>
             <strong>Movie Night at Holy Grounds</strong>
-            <div class="event-date">Saturday, May 30th, 2026 • Movie starts at 7:00 PM</div>
+            <div class="event-date">Saturday, May 30th, 2026 • Movie starts at 7:15 PM</div>
           </div>
         </div>
 
@@ -717,7 +722,8 @@ nav.side-nav a.active::before{
         </div>
 
         <div class="event-note">
-          🌅 Weekly at Holy Grounds: Wednesday – Sunday • 10:00 AM – 2:00 PM
+          🌅 Weekly at Holy Grounds: Wednesday – Sunday • 10:00 AM – 2:00 PM<br>
+          🌵 Family Vacation Closure: June 15 – July 7 • Reopening Wednesday, July 8 at 10:00 AM
         </div>
       </div>
     </div>
@@ -879,13 +885,38 @@ nav.side-nav a.active::before{
   setInterval(nextImage, 3000);
 </script>
 
-<!-- OPEN TODAY INDICATOR (Closed Mon/Tue • Open Wed–Sun 10am–2pm) -->
+<!-- OPEN TODAY INDICATOR (Closed Mon/Tue • Open Wed–Sun 10am–2pm • Family vacation closure June 15–July 7, 2026) -->
 <script>
   (function(){
     const indicator = document.getElementById("openIndicator");
     const textEl = document.getElementById("openText");
 
     const now = new Date();
+
+    // Use local browser date
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+    // Family vacation closure: June 15, 2026 through July 7, 2026
+    // Reopening Wednesday, July 8, 2026 at 10:00 AM
+    const vacationStart = new Date(2026, 5, 15); // June 15
+    const vacationEnd = new Date(2026, 6, 7);   // July 7
+
+    function setOpen(){
+      textEl.textContent = "Open Today";
+      indicator.classList.remove("closed");
+    }
+
+    function setClosed(msg){
+      textEl.textContent = msg;
+      indicator.classList.add("closed");
+    }
+
+    // Vacation closure overrides normal weekly hours
+    if (today >= vacationStart && today <= vacationEnd){
+      setClosed("Closed for family vacation • Reopening Wednesday, July 8 at 10:00 AM");
+      return;
+    }
+
     const day = now.getDay(); // 0 Sun ... 6 Sat
     const minutes = now.getHours() * 60 + now.getMinutes();
 
@@ -897,16 +928,6 @@ nav.side-nav a.active::before{
     const closeMinutes = 14 * 60;
 
     const isOpenNow = isOpenDay && (minutes >= openMinutes) && (minutes < closeMinutes);
-
-    function setOpen(){
-      textEl.textContent = "Open Today";
-      indicator.classList.remove("closed");
-    }
-
-    function setClosed(msg){
-      textEl.textContent = msg;
-      indicator.classList.add("closed");
-    }
 
     if (isOpenNow){
       setOpen();
