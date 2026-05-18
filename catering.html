@@ -304,12 +304,14 @@
         border-right:none;
         border-bottom: 1px solid rgba(122,59,46,0.12);
         z-index:60;
+        overflow-x:auto;
       }
       nav.side-nav a{
         border-radius:999px;
         padding:10px 12px;
         transform:none;
         font-size:0.95rem;
+        white-space:nowrap;
       }
       nav.side-nav a.active::before{ display:none; }
     }
@@ -319,12 +321,13 @@
 <body>
 <div class="layout">
 
-  <!-- NAV (added) -->
+  <!-- NAV -->
   <nav class="side-nav" aria-label="Primary navigation">
     <a href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a>
     <a href="about.html"><i class="fa-solid fa-user-chef" aria-hidden="true"></i> About Us</a>
     <a href="menu.html"><i class="fa-solid fa-utensils" aria-hidden="true"></i> Menu</a>
     <a href="catering.html"><i class="fa-solid fa-truck" aria-hidden="true"></i> Catering</a>
+    <a href="celebree-family-night.html"><i class="fa-solid fa-clipboard-list" aria-hidden="true"></i> Event Sample Menu</a>
   </nav>
 
   <!-- MAIN -->
@@ -335,24 +338,39 @@
       <div class="divider"></div>
 
       <p>
-        We love catering smaller, intimate gatherings — dinner parties, family celebrations, showers, and meaningful events
-        where food truly matters.
+        We love catering smaller, intimate gatherings — dinner parties, family celebrations, showers, community events,
+        pop-ups, and meaningful moments where food truly matters.
       </p>
 
       <div class="notice">
-        <strong>Pickup & Drop-off Catering </strong>
+        <strong>Catering & Food Trailer Event Minimums</strong>
 
         <div class="line">
-          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
           <div>
-            <strong>Pickup Address:</strong> 151 Sabine Road, Royse City, TX
+            <strong>Pickup or drop-off catering orders:</strong> $150 minimum before tax.
           </div>
         </div>
 
         <div class="line">
-          <i class="fa-solid fa-circle-dollar-to-slot" aria-hidden="true"></i>
+          <i class="fa-solid fa-truck" aria-hidden="true"></i>
           <div>
-            <strong>Minimum Order:</strong> $150 (before tax)
+            <strong>Food trailer events:</strong> $350 minimum.
+          </div>
+        </div>
+
+        <div class="line">
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+          <div>
+            Food trailer event minimums do not include park fees, venue fees, vendor fees, permit fees, electricity fees,
+            or other event/location fees required by the venue, park, city, or organizer.
+          </div>
+        </div>
+
+        <div class="line">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <div>
+            <strong>Pickup Address:</strong> 151 Sabine Creek Road, Royse City, TX
           </div>
         </div>
 
@@ -364,16 +382,16 @@
         </div>
 
         <div class="line">
-          <i class="fa-solid fa-truck" aria-hidden="true"></i>
+          <i class="fa-solid fa-motorcycle" aria-hidden="true"></i>
           <div>
-            Need delivery? You’re welcome to use <strong>DoorDash</strong> (when available) for delivery, or send a courier.
+            Need delivery for a pickup-style order? You’re welcome to use <strong>DoorDash</strong> when available, or send a courier.
           </div>
         </div>
       </div>
 
-      <!-- Mailto form (pickup-only) -->
+      <!-- Mailto form -->
       <form action="mailto:hello@azsunrisecafecito.com" method="POST" enctype="text/plain"
-            onsubmit="gtag('event','catering_form_submit',{event_category:'Lead',event_label:'Pickup Catering Form'});">
+            onsubmit="gtag('event','catering_form_submit',{event_category:'Lead',event_label:'Catering Form'});">
 
         <label for="name">Name</label>
         <input type="text" id="name" name="Name" required>
@@ -390,25 +408,36 @@
           </div>
         </div>
 
+        <label for="request_type">What type of request is this?</label>
+        <select id="request_type" name="Request Type">
+          <option value="Pickup catering order">Pickup catering order</option>
+          <option value="Drop-off catering order">Drop-off catering order</option>
+          <option value="Food trailer event">Food trailer event</option>
+          <option value="Not sure yet">Not sure yet</option>
+        </select>
+
         <div class="row">
           <div>
-            <label for="pickup_date">Preferred Pickup or Drop-off Date</label>
-            <input type="date" id="pickup_date" name="Preferred Pickup or Drop-off Date">
+            <label for="event_date">Preferred Date</label>
+            <input type="date" id="event_date" name="Preferred Date">
             <div class="help">We’ll confirm availability after you submit.</div>
           </div>
 
           <div>
-            <label for="pickup_time">Preferred Pickup or Drop-off Time</label>
-            <input type="time" id="pickup_time" name="Preferred Pickup Time">
+            <label for="event_time">Preferred Time</label>
+            <input type="time" id="event_time" name="Preferred Time">
             <div class="help">Example: 10:30 AM</div>
           </div>
         </div>
 
+        <label for="event_location">Event Location or Pickup Notes</label>
+        <input type="text" id="event_location" name="Event Location or Pickup Notes" placeholder="Example: pickup at trailer, school event, park, office, private home...">
+
         <label for="estimated_total">Estimated Budget (optional)</label>
-        <input type="text" id="estimated_total" name="Estimated Budget" placeholder="Example: $200–$300 (min. $150)">
+        <input type="text" id="estimated_total" name="Estimated Budget" placeholder="Example: $150+ pickup order or $350+ trailer event">
 
         <label for="guest_count">Estimated Headcount</label>
-        <input type="number" id="guest_count" name="Estimated Headcount" min="1" placeholder="Example: 12">
+        <input type="number" id="guest_count" name="Estimated Headcount" min="1" placeholder="Example: 25">
 
         <label for="heat_level">Heat Preference</label>
         <select id="heat_level" name="Heat Preference">
@@ -420,7 +449,7 @@
 
         <label for="menu_interest">What are you thinking?</label>
         <textarea id="menu_interest" name="Order Details / Menu Interest"
-          placeholder="Example: 20 breakfast burritos (10 mild / 10 spicy), 2 trays of cottage potatoes, 1 tray of slaw..."></textarea>
+          placeholder="Example: breakfast burritos, burgers, tacos, chicken tenders, event sample menu, brunch setup, family event, school event..."></textarea>
 
         <label for="dietary">Dietary Notes (optional)</label>
         <textarea id="dietary" name="Dietary Notes"
@@ -428,30 +457,32 @@
 
         <div class="policy">
           <strong>Deposit + Cancellation Policy</strong><br>
-          To protect your pickup time and ensure we prepare everything fresh, we require a deposit.
+          To protect your date, pickup time, and event preparation, we require a deposit once your order or event is confirmed.
           <ul>
-            <li><strong>Minimum order:</strong> $150 (before tax)</li>
-            <li><strong>Deposit:</strong> 50% required to confirm your order</li>
-            <li>Your order is <strong>not confirmed</strong> until the deposit is received.</li>
-            <li><strong>Cancellation window:</strong> Cancel 48+ hours before pickup for a refund of your deposit (minus any non-recoverable ingredient costs, if applicable).</li>
+            <li><strong>Pickup/drop-off catering minimum:</strong> $150 before tax</li>
+            <li><strong>Food trailer event minimum:</strong> $350</li>
+            <li>Food trailer event minimums do not include park, venue, vendor, permit, electricity, or other event/location fees.</li>
+            <li><strong>Deposit:</strong> 50% required to confirm your order or event.</li>
+            <li>Your order or event is <strong>not confirmed</strong> until the deposit is received.</li>
+            <li><strong>Cancellation window:</strong> Cancel 48+ hours before pickup or event service for a refund of your deposit, minus any non-recoverable ingredient costs or event-related costs, if applicable.</li>
             <li>Cancellations within 48 hours are <strong>non-refundable</strong> because ingredients and prep are already in motion.</li>
             <li><strong>Cash discount:</strong> 10% off when your catering order is paid in cash.</li>
           </ul>
 
           <div class="checkline">
             <input type="checkbox" id="deposit_ack" name="Policy Acknowledgement"
-                   value="I understand the $150 minimum, 50% deposit requirement, and the 48-hour cancellation policy." required>
+                   value="I understand the catering/event minimums, 50% deposit requirement, and the 48-hour cancellation policy." required>
             <div>
-              <label for="deposit_ack">I agree to the minimum order, deposit, and cancellation policy.</label>
+              <label for="deposit_ack">I agree to the minimums, deposit, and cancellation policy.</label>
               <div class="small">Submitting this request does not guarantee availability until we confirm and receive your deposit.</div>
             </div>
           </div>
         </div>
 
-        <button type="submit">Request Pickup or Dropoff Catering</button>
+        <button type="submit">Request Catering or Food Trailer Event</button>
 
         <div class="tiny">
-          <strong>Quick note:</strong> This form sends an email request (it will open your email app to send).
+          <strong>Quick note:</strong> This form sends an email request and may open your email app to send.
           If your device doesn’t support mailto, email us at <strong>hello@azsunrisecafecito.com</strong>.
         </div>
       </form>
