@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Community Events at the Yard | Holy Grounds Food Yard</title>
+
+  <meta name="description" content="Upcoming community events, family nights, markets, movie nights, pop-ups, and local happenings at Holy Grounds Food Yard & Mercantile in Royse City, Texas." />
+
+  <style>
+    :root {
+      --sun: #f7b733;
+      --orange: #e76f2e;
+      --brown: #5b351f;
+      --cream: #fff7e8;
+      --light: #fffdf7;
+      --ink: #2b2118;
+      --green: #5f7f3f;
+      --shadow: rgba(91, 53, 31, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(247,183,51,0.28), transparent 30%),
+        linear-gradient(180deg, #fff7e8 0%, #fffdf7 45%, #fdf1dc 100%);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .top-note {
+      text-align: center;
+      background: var(--brown);
+      color: white;
+      padding: 10px 16px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .hero {
+      min-height: 78vh;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 34px;
+      align-items: center;
+      padding: 48px 0 32px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: white;
+      border: 2px solid rgba(91, 53, 31, 0.12);
+      color: var(--brown);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 800;
+      box-shadow: 0 8px 18px var(--shadow);
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 6vw, 5.5rem);
+      line-height: 0.95;
+      margin: 0 0 18px;
+      color: var(--brown);
+      letter-spacing: -0.06em;
+    }
+
+    .sun-word {
+      color: var(--orange);
+    }
+
+    .hero p {
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      max-width: 680px;
+      margin: 0 0 18px;
+    }
+
+    .hero-sub {
+      font-weight: 700;
+      color: var(--brown);
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 14px 20px;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px var(--shadow);
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: white;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--brown);
+      border: 2px solid rgba(91, 53, 31, 0.16);
+    }
+
+    .card-stack {
+      position: relative;
+    }
+
+    .event-card {
+      background: white;
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: 0 18px 38px var(--shadow);
+      border: 1px solid rgba(91, 53, 31, 0.08);
+      margin-bottom: 18px;
+      transform: rotate(-1.5deg);
+    }
+
+    .event-card:nth-child(2) {
+      transform: rotate(1.2deg);
+      margin-left: 22px;
+    }
+
+    .event-card:nth-child(3) {
+      transform: rotate(-0.6deg);
+      margin-left: 6px;
+    }
+
+    .event-card h3 {
+      margin: 0 0 8px;
+      color: var(--brown);
+      font-size: 1.35rem;
+    }
+
+    .event-card p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .emoji {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .section {
+      background: rgba(255, 255, 255, 0.72);
+      border-radius: 30px;
+      padding: 32px;
+      margin: 28px 0;
+      box-shadow: 0 12px 28px rgba(91, 53, 31, 0.10);
+      border: 1px solid rgba(91, 53, 31, 0.08);
+    }
+
+    .section h2 {
+      color: var(--brown);
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      margin: 0 0 12px;
+      letter-spacing: -0.04em;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .mini-card {
+      background: var(--light);
+      border-radius: 22px;
+      padding: 22px;
+      border: 1px solid rgba(91, 53, 31, 0.08);
+    }
+
+    .mini-card h3 {
+      margin: 0 0 8px;
+      color: var(--brown);
+    }
+
+    .mini-card p {
+      margin: 0;
+    }
+
+    .subscribe-box {
+      background:
+        linear-gradient(135deg, rgba(231,111,46,0.95), rgba(247,183,51,0.95));
+      color: white;
+      border-radius: 30px;
+      padding: 34px;
+      text-align: center;
+      box-shadow: 0 16px 35px var(--shadow);
+      margin: 34px 0;
+    }
+
+    .subscribe-box h2 {
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    .subscribe-box p {
+      max-width: 720px;
+      margin: 0 auto 22px;
+      font-size: 1.1rem;
+    }
+
+    .fine-print {
+      font-size: 0.92rem;
+      color: rgba(43, 33, 24, 0.75);
+      text-align: center;
+      margin: 34px auto 10px;
+      max-width: 780px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0 10px;
+      color: var(--brown);
+      font-weight: 700;
+    }
+
+    @media (max-width: 850px) {
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding-top: 34px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .event-card,
+      .event-card:nth-child(2),
+      .event-card:nth-child(3) {
+        transform: none;
+        margin-left: 0;
+      }
+
+      .page {
+        padding: 18px;
+      }
+
+      .section,
+      .subscribe-box {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-note">
+    What’s happening at Holy Grounds Food Yard & Mercantile?
+  </div>
+
+  <main class="page">
+
+    <section class="hero">
+      <div>
+        <span class="badge">Royse City, TX • Family-Friendly • Local Events</span>
+
+        <h1>
+          Community Events<br>
+          at the <span class="sun-word">Yard</span>
+        </h1>
+
+        <p class="hero-sub">
+          Markets, movie nights, brunch events, pop-ups, music, family fun, and those “wait…is that happening this weekend?” moments all in one place.
+        </p>
+
+        <p>
+          Holy Grounds Food Yard & Mercantile is home to local food, neighbors, families, small businesses, and community gatherings. This page is here to help you keep up with what’s coming next.
+        </p>
+
+        <div class="buttons">
+          <a class="btn btn-primary" href="#upcoming-events">See Upcoming Events</a>
+          <a class="btn btn-secondary" href="#subscribe">Subscribe for Updates</a>
+        </div>
+      </div>
+
+      <div class="card-stack" aria-label="Event examples">
+        <div class="event-card">
+          <span class="emoji">🎬</span>
+          <h3>Movie Nights</h3>
+          <p>Bring the kids, grab dinner, and enjoy a night under the stars.</p>
+        </div>
+
+        <div class="event-card">
+          <span class="emoji">🛍️</span>
+          <h3>Markets & Pop-Ups</h3>
+          <p>Shop local vendors, discover small businesses, and make a day of it.</p>
+        </div>
+
+        <div class="event-card">
+          <span class="emoji">☕🚗</span>
+          <h3>Coffee, Cars & Community</h3>
+          <p>Casual meetups, cool rides, hot coffee, and zero pressure.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="upcoming-events">
+      <h2>Upcoming Events</h2>
+      <p>
+        This section will be updated as new community events are announced. Check back often, or subscribe below so you don’t have to rely on memory, screenshots, or that one friend who says, “I thought you knew.”
+      </p>
+
+      <div class="grid">
+
+        <div class="mini-card">
+          <h3>🎬 Movie Night Under the Stars</h3>
+          <p>
+            Saturday, May 30 at 7:15 PM<br>
+            Family movie night at the Yard. Food, open space, and an easy night out.
+          </p>
+        </div>
+
+        <div class="mini-card">
+          <h3>🥞 Pajamas & Pancakes at the Yard</h3>
+          <p>
+            Saturday, June 6 from 8 AM–2 PM<br>
+            Family-friendly pajamas encouraged. Pancakes, coffee, brunch, and cozy Saturday chaos.
+          </p>
+        </div>
+
+        <div class="mini-card">
+          <h3>☕🚗 Coffee, Cars & Cafecito</h3>
+          <p>
+            Sunday, July 19 from 8:30–11 AM<br>
+            A casual Sunday test run with cars, coffee, breakfast, brunch, and community.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>What You’ll Find Here</h2>
+
+      <div class="grid">
+        <div class="mini-card">
+          <h3>Family Nights</h3>
+          <p>Movie nights, kid-friendly gatherings, pajama brunches, and low-stress reasons to get everyone out of the house.</p>
+        </div>
+
+        <div class="mini-card">
+          <h3>Local Vendors</h3>
+          <p>Markets, makers, pop-ups, small businesses, food vendors, and community partners.</p>
+        </div>
+
+        <div class="mini-card">
+          <h3>Food & Specials</h3>
+          <p>Menus, special event offerings, vendor highlights, and helpful links before you head to the Yard.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="subscribe-box" id="subscribe">
+      <h2>Want Yard Updates?</h2>
+      <p>
+        Sign up for community event updates, family nights, markets, movie nights, pop-ups, and local happenings at Holy Grounds Food Yard & Mercantile.
+      </p>
+
+      <!-- Replace this link with your Mailchimp, Google Form, Square Marketing, or signup form link -->
+      <a class="btn btn-secondary" href="YOUR-SIGNUP-LINK-HERE" target="_blank" rel="noopener">
+        Subscribe for Event Updates
+      </a>
+    </section>
+
+    <p class="fine-print">
+      This community events page is maintained by Arizona Sunrise Cafecito & Catering to help guests, vendors, neighbors, and local families stay connected with what’s happening at Holy Grounds Food Yard & Mercantile.
+    </p>
+
+    <footer>
+      Holy Grounds Food Yard & Mercantile • Royse City, Texas
+    </footer>
+
+  </main>
+
+</body>
+</html>
