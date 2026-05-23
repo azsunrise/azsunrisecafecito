@@ -6,23 +6,24 @@
 
   <title>Community Events at the Yard | Holy Grounds Food Yard</title>
 
-  <meta name="description" content="Upcoming community events, family nights, movie nights, brunch events, cruise-ins, pig roasts, pop-ups, and local happenings at Holy Grounds Food Yard & Mercantile in Royse City, Texas." />
+  <meta name="description" content="Upcoming community events, family nights, movie nights, markets, brunch events, cruise-ins, pig roasts, pop-ups, and local happenings at Holy Grounds Food Yard & Mercantile in Royse City, Texas." />
 
   <style>
     :root {
       --ink: #1f2933;
       --muted: #5f6f7a;
-      --paper: #fffdf7;
-      --cream: #fff4df;
-      --sun: #ffbf3f;
+      --paper: #ffffff;
+      --soft: #fff8ec;
+      --soft-2: #fff3dc;
+      --line: rgba(31, 41, 51, 0.12);
+      --shadow: rgba(31, 41, 51, 0.10);
       --coral: #ff6f61;
-      --teal: #009688;
-      --blue: #3f8cff;
-      --purple: #8e5cf7;
-      --green: #5caf6d;
-      --brown: #5a3825;
-      --shadow: rgba(31, 41, 51, 0.16);
-      --soft-shadow: rgba(31, 41, 51, 0.08);
+      --gold: #ffbf3f;
+      --teal: #14a38b;
+      --blue: #4f86f7;
+      --purple: #8a63f6;
+      --green: #5aa96b;
+      --brown: #5b3825;
     }
 
     * {
@@ -38,91 +39,88 @@
       font-family: Arial, Helvetica, sans-serif;
       color: var(--ink);
       background:
-        radial-gradient(circle at top left, rgba(255, 191, 63, 0.35), transparent 28%),
-        radial-gradient(circle at top right, rgba(63, 140, 255, 0.22), transparent 26%),
-        linear-gradient(180deg, #fff8e8 0%, #ffffff 44%, #fff2df 100%);
+        radial-gradient(circle at top left, rgba(255, 191, 63, 0.28), transparent 28%),
+        linear-gradient(180deg, #fff8e8 0%, #ffffff 46%, #fff2df 100%);
       line-height: 1.6;
     }
 
     a {
       color: inherit;
+      text-decoration: none;
     }
 
     .top-strip {
-      background: linear-gradient(90deg, var(--coral), var(--sun), var(--teal));
-      color: white;
+      background: linear-gradient(90deg, var(--coral), var(--gold), var(--teal));
+      color: #fff;
       text-align: center;
-      padding: 11px 16px;
+      padding: 12px 16px;
       font-weight: 900;
       letter-spacing: 0.02em;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.16);
+      text-shadow: 0 1px 2px rgba(0,0,0,0.15);
     }
 
     .page {
-      max-width: 1160px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 22px;
+      padding: 24px;
     }
 
     .hero {
-      padding: 42px 0 26px;
+      padding: 40px 0 20px;
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 28px;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 26px;
       align-items: center;
     }
 
     .badge {
       display: inline-block;
-      background: white;
-      border: 2px solid rgba(31, 41, 51, 0.08);
+      background: #fff;
+      border: 1px solid var(--line);
       color: var(--brown);
       padding: 8px 14px;
       border-radius: 999px;
       font-weight: 900;
-      box-shadow: 0 8px 18px var(--soft-shadow);
-      margin-bottom: 18px;
+      box-shadow: 0 8px 18px rgba(31, 41, 51, 0.07);
+      margin-bottom: 16px;
     }
 
     h1 {
-      font-size: clamp(2.8rem, 7vw, 6.1rem);
-      line-height: 0.9;
-      margin: 0 0 20px;
+      font-size: clamp(2.8rem, 7vw, 5.8rem);
+      line-height: 0.92;
+      margin: 0 0 18px;
       letter-spacing: -0.07em;
       color: var(--ink);
     }
 
     .highlight {
       color: var(--coral);
-      white-space: nowrap;
     }
 
     .hero-sub {
-      font-size: clamp(1.15rem, 2.1vw, 1.42rem);
+      font-size: clamp(1.12rem, 2vw, 1.35rem);
       font-weight: 800;
       color: var(--brown);
-      max-width: 720px;
       margin: 0 0 14px;
+      max-width: 720px;
     }
 
     .hero-copy {
-      font-size: 1.08rem;
-      max-width: 720px;
+      font-size: 1.05rem;
       margin: 0;
-      color: var(--ink);
+      max-width: 720px;
     }
 
     .buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 13px;
-      margin-top: 26px;
+      gap: 12px;
+      margin-top: 24px;
     }
 
     .btn {
       display: inline-block;
-      text-decoration: none;
-      padding: 13px 19px;
+      padding: 13px 20px;
       border-radius: 999px;
       font-weight: 900;
       transition: transform 0.15s ease, box-shadow 0.15s ease;
@@ -135,132 +133,116 @@
 
     .btn-primary {
       background: var(--coral);
-      color: white;
+      color: #fff;
     }
 
     .btn-secondary {
-      background: white;
+      background: #fff;
       color: var(--brown);
-      border: 2px solid rgba(90, 56, 37, 0.14);
+      border: 2px solid rgba(91, 56, 37, 0.14);
     }
 
-    .hero-board {
-      background: white;
-      border-radius: 32px;
-      padding: 22px;
-      box-shadow: 0 20px 42px var(--shadow);
-      border: 1px solid rgba(31, 41, 51, 0.08);
-      position: relative;
+    .hero-panel {
+      background: #fff;
+      border-radius: 28px;
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 38px var(--shadow);
       overflow: hidden;
     }
 
-    .hero-board::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      height: 12px;
-      background: linear-gradient(90deg, var(--coral), var(--sun), var(--teal), var(--blue), var(--purple));
+    .hero-panel-bar {
+      height: 10px;
+      background: linear-gradient(90deg, var(--coral), var(--gold), var(--teal), var(--blue), var(--purple));
     }
 
-    .board-title {
-      margin: 16px 0 14px;
+    .hero-panel-content {
+      padding: 22px;
+    }
+
+    .hero-panel h2 {
+      margin: 0 0 14px;
       color: var(--brown);
-      font-size: 1.35rem;
-      font-weight: 900;
-    }
-
-    .quick-list {
-      display: grid;
-      gap: 12px;
-    }
-
-    .quick-item {
-      display: grid;
-      grid-template-columns: 44px 1fr;
-      gap: 12px;
-      align-items: center;
-      background: var(--cream);
-      border-radius: 20px;
-      padding: 13px;
-      border: 1px solid rgba(31, 41, 51, 0.06);
-    }
-
-    .quick-emoji {
-      width: 44px;
-      height: 44px;
-      display: grid;
-      place-items: center;
-      background: white;
-      border-radius: 15px;
       font-size: 1.55rem;
-      box-shadow: 0 6px 12px var(--soft-shadow);
     }
 
-    .quick-item strong {
+    .mini-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .mini-item {
+      background: var(--soft);
+      border: 1px solid rgba(31, 41, 51, 0.06);
+      border-radius: 18px;
+      padding: 12px 14px;
+    }
+
+    .mini-item strong {
       display: block;
       color: var(--brown);
-      line-height: 1.2;
+      font-size: 1rem;
+      line-height: 1.25;
+      margin-bottom: 2px;
     }
 
-    .quick-item span {
+    .mini-item span {
+      display: block;
       color: var(--muted);
       font-size: 0.95rem;
+      line-height: 1.35;
     }
 
     .section {
-      background: rgba(255, 255, 255, 0.82);
-      border-radius: 32px;
+      background: rgba(255,255,255,0.88);
+      border: 1px solid var(--line);
+      border-radius: 30px;
       padding: 30px;
       margin: 26px 0;
-      box-shadow: 0 12px 26px var(--soft-shadow);
-      border: 1px solid rgba(31, 41, 51, 0.08);
+      box-shadow: 0 12px 26px rgba(31, 41, 51, 0.06);
     }
 
     .section h2 {
       margin: 0 0 10px;
-      color: var(--ink);
-      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-size: clamp(2rem, 4vw, 3rem);
       line-height: 1;
       letter-spacing: -0.05em;
+      color: var(--ink);
     }
 
     .section-intro {
+      margin: 0 0 18px;
       font-size: 1.08rem;
       max-width: 920px;
-      margin: 0 0 20px;
-      color: var(--ink);
     }
 
     .event-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 18px;
-      margin-top: 22px;
+      margin-top: 20px;
     }
 
     .event-card {
       background: var(--paper);
-      border-radius: 25px;
-      padding: 22px;
-      border: 2px solid rgba(31, 41, 51, 0.06);
-      box-shadow: 0 10px 22px var(--soft-shadow);
-      position: relative;
-      overflow: hidden;
+      border: 1px solid var(--line);
+      border-top: 8px solid var(--gold);
+      border-radius: 24px;
+      padding: 20px;
+      box-shadow: 0 8px 18px rgba(31, 41, 51, 0.05);
     }
 
-    .event-card::before {
-      content: "";
-      position: absolute;
-      inset: 0 0 auto 0;
-      height: 9px;
-      background: var(--card-color, var(--sun));
-    }
+    .event-card.movie { border-top-color: var(--blue); }
+    .event-card.pancakes { border-top-color: var(--gold); }
+    .event-card.market { border-top-color: var(--green); }
+    .event-card.cars { border-top-color: var(--teal); }
+    .event-card.pig { border-top-color: var(--coral); }
+    .event-card.campout { border-top-color: var(--purple); }
 
     .event-card h3 {
-      margin: 10px 0 8px;
-      font-size: 1.32rem;
-      line-height: 1.15;
+      margin: 0 0 10px;
       color: var(--brown);
+      font-size: 1.35rem;
+      line-height: 1.2;
     }
 
     .event-card p {
@@ -271,43 +253,19 @@
       margin-bottom: 0;
     }
 
-    .movie {
-      --card-color: var(--blue);
-    }
-
-    .pancakes {
-      --card-color: var(--sun);
-    }
-
-    .cars {
-      --card-color: var(--teal);
-    }
-
-    .pig {
-      --card-color: var(--coral);
-    }
-
-    .campout {
-      --card-color: var(--purple);
-    }
-
-    .market {
-      --card-color: var(--green);
-    }
-
     .event-date {
       display: inline-block;
       background: rgba(31, 41, 51, 0.06);
       color: var(--ink);
-      font-weight: 900;
       padding: 7px 11px;
       border-radius: 999px;
-      margin: 4px 0 13px;
+      font-weight: 900;
       font-size: 0.94rem;
+      margin-bottom: 12px;
     }
 
     .tentative {
-      background: rgba(255, 111, 97, 0.13);
+      background: rgba(255, 111, 97, 0.14);
     }
 
     .tag-row {
@@ -318,34 +276,34 @@
     }
 
     .tag {
-      background: white;
+      background: var(--soft);
+      border: 1px solid rgba(31, 41, 51, 0.07);
       color: var(--muted);
       border-radius: 999px;
-      padding: 5px 9px;
-      font-size: 0.84rem;
+      padding: 5px 10px;
+      font-size: 0.82rem;
       font-weight: 800;
-      border: 1px solid rgba(31, 41, 51, 0.08);
     }
 
     .info-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 18px;
-      margin-top: 22px;
+      margin-top: 20px;
     }
 
     .info-card {
-      background: white;
-      border-radius: 24px;
-      padding: 22px;
-      border: 1px solid rgba(31, 41, 51, 0.08);
-      box-shadow: 0 8px 18px var(--soft-shadow);
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 20px;
+      box-shadow: 0 8px 18px rgba(31, 41, 51, 0.05);
     }
 
     .info-card h3 {
       margin: 0 0 8px;
       color: var(--brown);
-      font-size: 1.25rem;
+      font-size: 1.2rem;
     }
 
     .info-card p {
@@ -353,50 +311,44 @@
     }
 
     .callout {
-      background:
-        linear-gradient(135deg, rgba(31,41,51,0.98), rgba(90,56,37,0.94));
-      color: white;
-      border-radius: 28px;
-      padding: 26px;
-      margin-top: 24px;
-      box-shadow: 0 14px 30px var(--shadow);
+      margin-top: 22px;
+      background: linear-gradient(135deg, #26323f, #5b3825);
+      color: #fff;
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 14px 28px rgba(31, 41, 51, 0.16);
     }
 
     .callout h3 {
       margin: 0 0 8px;
-      font-size: 1.7rem;
+      font-size: 1.55rem;
     }
 
     .callout p {
       margin: 0;
-      font-size: 1.05rem;
     }
 
     .subscribe-box {
-      background:
-        radial-gradient(circle at top left, rgba(255,255,255,0.24), transparent 35%),
-        linear-gradient(135deg, var(--coral), var(--sun));
-      color: white;
-      border-radius: 34px;
+      background: linear-gradient(135deg, var(--coral), var(--gold));
+      color: #fff;
+      border-radius: 30px;
       padding: 34px;
       text-align: center;
-      box-shadow: 0 18px 38px var(--shadow);
-      margin: 32px 0;
+      box-shadow: 0 18px 36px rgba(31, 41, 51, 0.14);
+      margin: 30px 0;
     }
 
     .subscribe-box h2 {
-      color: white;
       margin: 0 0 8px;
-      font-size: clamp(2rem, 4vw, 3.3rem);
+      font-size: clamp(2rem, 4vw, 3.1rem);
       line-height: 1;
       letter-spacing: -0.05em;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.12);
     }
 
     .subscribe-box p {
       max-width: 760px;
       margin: 0 auto 22px;
-      font-size: 1.1rem;
+      font-size: 1.08rem;
       font-weight: 700;
     }
 
@@ -422,7 +374,6 @@
     @media (max-width: 940px) {
       .hero {
         grid-template-columns: 1fr;
-        padding-top: 32px;
       }
 
       .event-grid,
@@ -437,7 +388,7 @@
       .section,
       .subscribe-box,
       .callout {
-        padding: 23px;
+        padding: 22px;
       }
     }
 
@@ -446,23 +397,17 @@
         font-size: 0.92rem;
       }
 
-      .quick-item {
-        grid-template-columns: 38px 1fr;
-      }
-
-      .quick-emoji {
-        width: 38px;
-        height: 38px;
-        font-size: 1.3rem;
-      }
-
       .buttons {
         flex-direction: column;
       }
 
       .btn {
-        text-align: center;
         width: 100%;
+        text-align: center;
+      }
+
+      .hero-panel-content {
+        padding: 18px;
       }
     }
   </style>
@@ -486,7 +431,7 @@
         </h1>
 
         <p class="hero-sub">
-          Movie nights, pajama brunches, cruise-ins, pig roasts, campouts, pop-ups, music, food, and those “wait…is that happening this weekend?” moments all in one place.
+          Movie nights, markets, pajama brunches, cruise-ins, pig roasts, campouts, pop-ups, music, food, and those “wait…is that happening this weekend?” moments all in one place.
         </p>
 
         <p class="hero-copy">
@@ -499,38 +444,39 @@
         </div>
       </div>
 
-      <div class="hero-board" aria-label="Event preview board">
-        <div class="board-title">Coming up at the Yard</div>
+      <div class="hero-panel">
+        <div class="hero-panel-bar"></div>
+        <div class="hero-panel-content">
+          <h2>Coming Up at the Yard</h2>
 
-        <div class="quick-list">
-          <div class="quick-item">
-            <div class="quick-emoji">🎬</div>
-            <div>
-              <strong>Movie Night Under the Stars</strong>
+          <div class="mini-list">
+            <div class="mini-item">
+              <strong>🎬 Movie Night Under the Stars</strong>
               <span>Saturday, May 30 at 7:15 PM</span>
             </div>
-          </div>
 
-          <div class="quick-item">
-            <div class="quick-emoji">🥞</div>
-            <div>
-              <strong>Pajamas & Pancakes</strong>
+            <div class="mini-item">
+              <strong>🥞 Pajamas & Pancakes at the Yard</strong>
               <span>Saturday, June 6 from 8 AM–2 PM</span>
             </div>
-          </div>
 
-          <div class="quick-item">
-            <div class="quick-emoji">☕🚗</div>
-            <div>
-              <strong>Coffee, Cars & Cafecito</strong>
+            <div class="mini-item">
+              <strong>🛍️ Once Upon a Magical Market</strong>
+              <span>Saturday, June 13, 2026 • 9:00 AM–5:00 PM</span>
+            </div>
+
+            <div class="mini-item">
+              <strong>🛍️ Lone Star Shop & Stroll</strong>
+              <span>Saturday, July 11, 2026 • 9:00 AM–5:00 PM</span>
+            </div>
+
+            <div class="mini-item">
+              <strong>☕🚗 Coffee, Cars & Cafecito</strong>
               <span>Sunday, July 19 from 8:30–11 AM</span>
             </div>
-          </div>
 
-          <div class="quick-item">
-            <div class="quick-emoji">🌺🐖</div>
-            <div>
-              <strong>Pig Out at the Yard</strong>
+            <div class="mini-item">
+              <strong>🌺 Pig Out at the Yard</strong>
               <span>Tentative: Saturday, August 22</span>
             </div>
           </div>
@@ -549,7 +495,7 @@
 
         <div class="event-card movie">
           <h3>🎬 Movie Night Under the Stars</h3>
-          <span class="event-date">Saturday, May 30 at 7:15 PM</span>
+          <div class="event-date">Saturday, May 30 at 7:15 PM</div>
           <p>
             Family movie night at the Yard. Food, open space, and an easy night out under the stars.
           </p>
@@ -559,13 +505,13 @@
           <div class="tag-row">
             <span class="tag">Family night</span>
             <span class="tag">Outdoor movie</span>
-            <span class="tag">Dinner at the Yard</span>
+            <span class="tag">Easy night out</span>
           </div>
         </div>
 
         <div class="event-card pancakes">
           <h3>🥞 Pajamas & Pancakes at the Yard</h3>
-          <span class="event-date">Saturday, June 6 from 8 AM–2 PM</span>
+          <div class="event-date">Saturday, June 6 from 8 AM–2 PM</div>
           <p>
             Family-friendly pajamas encouraged. Pancakes, coffee, brunch, and cozy Saturday chaos.
           </p>
@@ -579,14 +525,46 @@
           </div>
         </div>
 
+        <div class="event-card market">
+          <h3>🛍️ Once Upon a Magical Market</h3>
+          <div class="event-date">Saturday, June 13, 2026 • 9:00 AM–5:00 PM</div>
+          <p>
+            A full day at the Yard with shopping, local vendors, browsing, food, and community fun.
+          </p>
+          <p>
+            Come stroll, shop, and make a day of it with family and friends.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Local vendors</span>
+            <span class="tag">Shop & stroll</span>
+            <span class="tag">All-day event</span>
+          </div>
+        </div>
+
+        <div class="event-card market">
+          <h3>🛍️ Lone Star Shop & Stroll</h3>
+          <div class="event-date">Saturday, July 11, 2026 • 9:00 AM–5:00 PM</div>
+          <p>
+            Another marketplace day at the Yard featuring local makers, shopping, food, and community.
+          </p>
+          <p>
+            Stop by, support small businesses, and enjoy a laid-back Saturday out.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Marketplace</span>
+            <span class="tag">Small business</span>
+            <span class="tag">Community day</span>
+          </div>
+        </div>
+
         <div class="event-card cars">
           <h3>☕🚗 Coffee, Cars & Cafecito</h3>
-          <span class="event-date">Sunday, July 19 from 8:30–11 AM</span>
+          <div class="event-date">Sunday, July 19 from 8:30–11 AM</div>
           <p>
             A casual Sunday test run with cars, coffee, breakfast, brunch, and community.
           </p>
           <p>
-            Classic cars, Jeeps, trucks, motorcycles, family rides, and daily drivers with questionable backseat snack situations are all welcome.
+            Classic cars, Jeeps, trucks, motorcycles, family rides, and daily drivers are all welcome.
           </p>
           <div class="tag-row">
             <span class="tag">No trophies</span>
@@ -597,12 +575,12 @@
 
         <div class="event-card pig">
           <h3>🌺 Pig Out at the Yard</h3>
-          <span class="event-date tentative">Tentative: Saturday, August 22</span>
+          <div class="event-date tentative">Tentative: Saturday, August 22</div>
           <p>
             A Hawaiian-inspired community pig roast at the Yard with island music, tropical fun, and a whole pig roasting outside on a rotisserie where guests can see the action.
           </p>
           <p>
-            We’re planning limbo contests, tiki torches, calypso or Hawaiian-style music, and a relaxed Saturday gathering for families, neighbors, and anyone ready to “pig out” at the Yard.
+            We’re planning limbo contests, tiki torches, calypso or Hawaiian-style music, and a relaxed Saturday gathering for families, neighbors, and anyone ready to pig out at the Yard.
           </p>
           <p>
             Hawaiian shirts, grass skirts, floral prints, leis, flip-flops, and vacation-mode outfits are encouraged.
@@ -616,23 +594,23 @@
 
         <div class="event-card campout">
           <h3>🏕️ The Slightly Haunted Yard Campout 👻</h3>
-          <span class="event-date tentative">Date & time coming soon</span>
+          <div class="event-date tentative">Date & time coming soon</div>
           <p>
             Pack your tents, grab your sleeping bags, and bring your favorite family-friendly costumes for a night of spooky-but-not-too-spooky fun at the Yard.
           </p>
           <p>
-            Planned activities may include costume contests by age group, trick-or-treating around the campsites, a “Slightly Haunted” trail, campfire and s’mores under the stars, dinner, breakfast, and overnight camping at the Yard.
+            Planned activities may include costume contests by age group, trick-or-treating around the campsites, a slightly haunted trail, campfire and s’mores under the stars, dinner, breakfast, and overnight camping at the Yard.
           </p>
           <div class="tag-row">
             <span class="tag">Family campout</span>
             <span class="tag">Costumes</span>
-            <span class="tag">Spooky-ish</span>
+            <span class="tag">Spooky-ish fun</span>
           </div>
         </div>
 
         <div class="event-card market">
-          <h3>🛍️ Markets, Pop-Ups & Local Fun</h3>
-          <span class="event-date tentative">More dates coming soon</span>
+          <h3>🛍️ More Markets, Pop-Ups & Local Fun</h3>
+          <div class="event-date tentative">More dates coming soon</div>
           <p>
             Vendor markets, local makers, food specials, community gatherings, and other Yard happenings will be added here as they are announced.
           </p>
@@ -641,7 +619,7 @@
           </p>
           <div class="tag-row">
             <span class="tag">Local vendors</span>
-            <span class="tag">Small business</span>
+            <span class="tag">Pop-ups</span>
             <span class="tag">Community</span>
           </div>
         </div>
