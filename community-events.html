@@ -272,6 +272,18 @@
       background: rgba(255, 111, 97, 0.14);
     }
 
+    .completed {
+      background: rgba(20, 163, 139, 0.14);
+    }
+
+    .internal-note {
+      background: #fff3cd;
+      border: 1px solid rgba(91, 56, 37, 0.18);
+      border-radius: 14px;
+      padding: 10px 12px;
+      font-size: 0.95rem;
+    }
+
     .vendor-list {
       margin: 10px 0 0;
       padding-left: 0;
@@ -441,11 +453,6 @@
 
       <div class="mini-list">
         <div class="mini-item">
-          <strong>🎬 Movie Night Under the Stars</strong>
-          <span>Saturday, May 30 at 7:15 PM</span>
-        </div>
-
-        <div class="mini-item">
           <strong>🥞 Pajamas & Pancakes + Once Upon a Magical Market</strong>
           <span>Saturday, June 13, 2026 • 8:00 AM–5:00 PM</span>
         </div>
@@ -468,6 +475,11 @@
         <div class="mini-item">
           <strong>☕🚗 Coffee, Cars & Cafecito</strong>
           <span>Sunday, July 19 from 8:30–11 AM</span>
+        </div>
+
+        <div class="mini-item">
+          <strong>🎬 Summer Movie Night Under the Stars</strong>
+          <span>Tentative: Saturday, July 25, 2026 • Confirm with Victor before publishing</span>
         </div>
 
         <div class="mini-item">
@@ -499,18 +511,15 @@
   <div class="event-grid">
 
     <div class="event-card movie">
-      <h3>🎬 Movie Night Under the Stars</h3>
-      <div class="event-date">Saturday, May 30 at 7:15 PM</div>
+      <h3>✅ Completed: May Movie Night Under the Stars</h3>
+      <div class="event-date completed">Saturday, May 30 at 7:15 PM</div>
       <p>
-        Family movie night at the Yard. Food, open space, and an easy night out under the stars.
-      </p>
-      <p>
-        Bring the kids, grab dinner, and enjoy a relaxed community night outside.
+        Our May movie night is complete — thank you to everyone who came out to enjoy food, family time, and a night under the stars at the Yard.
       </p>
       <div class="tag-row">
+        <span class="tag">Completed</span>
         <span class="tag">Family night</span>
         <span class="tag">Outdoor movie</span>
-        <span class="tag">Easy night out</span>
       </div>
     </div>
 
@@ -629,6 +638,32 @@
         <span class="tag">No trophies</span>
         <span class="tag">No pressure</span>
         <span class="tag">Coffee + brunch</span>
+      </div>
+    </div>
+
+    <div class="event-card movie">
+      <h3>🎬 Summer Movie Night Under the Stars</h3>
+      <div class="event-date tentative">Tentative: Saturday, July 25, 2026 • Arrive at 7:00 PM • Movie starts around 7:45 PM</div>
+      <p>
+        We’re planning our next family movie night at the Yard for Saturday, July 25.
+      </p>
+      <p>
+        Come early around 7:00 PM so everyone has time to order food, grab drinks, let the kids settle in, and find a good spot before the movie starts.
+      </p>
+      <p>
+        The movie will start around 7:45 PM, once the sun goes down and everyone has had a chance to get dinner.
+      </p>
+      <p>
+        Movie title and final details coming soon.
+      </p>
+      <p class="internal-note">
+        <strong>Internal note:</strong> Please confirm with Victor that Saturday, July 25 is feasible before publishing this event publicly.
+      </p>
+      <div class="tag-row">
+        <span class="tag">Tentative</span>
+        <span class="tag">Arrive at 7 PM</span>
+        <span class="tag">Movie around 7:45 PM</span>
+        <span class="tag">Confirm with Victor</span>
       </div>
     </div>
 
