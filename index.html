@@ -1,9 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 
   <!-- Google Analytics -->
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XFY3V13DJN"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -16,6 +19,7 @@
   <title>Arizona Sunrise Cafecito & Catering</title>
 
   <!-- ICONS -->
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
@@ -293,6 +297,11 @@ nav.side-nav a.active::before{
   color: #0f766e;
 }
 
+.event-icon.community{
+  background: rgba(227,111,71,0.18);
+  color: #c2410c;
+}
+
 .event-item strong{
   color:#7a3b2e;
   display:block;
@@ -319,6 +328,25 @@ nav.side-nav a.active::before{
   color: #5b4b45;
   font-weight: 700;
   font-size: 0.95rem;
+}
+
+.event-page-link{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: linear-gradient(to right, #7a3b2e, #a65b4a);
+  color: #ffffff !important;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(122,59,46,0.14);
+}
+
+.event-page-link:hover{
+  text-decoration: none !important;
+  filter: brightness(1.04);
 }
 
 /* FEATURED IMAGE / SLIDESHOW */
@@ -638,6 +666,7 @@ nav.side-nav a.active::before{
   }
 }
 </style>
+
 </head>
 
 <body>
@@ -645,8 +674,10 @@ nav.side-nav a.active::before{
 <div class="layout">
 
   <!-- NAV -->
+
   <nav class="side-nav" aria-label="Primary navigation">
     <a href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a>
+    <a href="community-events.html"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> Community Events</a>
     <a href="about.html"><i class="fa-solid fa-user-chef" aria-hidden="true"></i> About Us</a>
     <a href="menu.html"><i class="fa-solid fa-utensils" aria-hidden="true"></i> Menu</a>
     <a href="catering.html"><i class="fa-solid fa-truck" aria-hidden="true"></i> Catering</a>
@@ -654,267 +685,278 @@ nav.side-nav a.active::before{
   </nav>
 
   <!-- MAIN -->
+
   <div class="main">
 
-    <div class="logo-wrap">
-      <img src="trailer.jpeg" alt="Arizona Sunrise Cafecito & Catering trailer">
+```
+<div class="logo-wrap">
+  <img src="trailer.jpeg" alt="Arizona Sunrise Cafecito & Catering trailer">
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Comfort food with Southwest soul</h1>
+  <p>
+    Scratch-made favorites, warm flavors, and bold bites —
+    served fresh from our food trailer.
+  </p>
+</div>
+
+<div class="promo-bar hours">
+  🌅 Now Serving Brunch at 10 AM • Wednesday – Sunday
+</div>
+
+<div class="promo-bar military">
+  🇺🇸 Military Discount: 10% off every day for active military and veterans with valid ID on regular-priced items
+</div>
+
+<!-- HOLY GROUNDS EXPERIENCE PREVIEW -->
+<div class="experience-preview">
+  <p>
+    You’ll find us at
+    <a href="https://www.holygroundsfoodyard.com" target="_blank" rel="noopener"
+       onclick="gtag('event','holygrounds_click',{event_category:'Outbound',event_label:'Holy Grounds Website'});">
+      Holy Grounds Food Yard in Royse City
+    </a>
+    — a space built for gathering.
+  </p>
+
+  <div class="experience-icons" aria-label="Experience highlights">
+    <span><i class="fa-solid fa-basketball" aria-hidden="true"></i> Open play space</span>
+    <span><i class="fa-solid fa-people-roof" aria-hidden="true"></i> Safe fenced-in area</span>
+    <span><i class="fa-solid fa-paw" aria-hidden="true"></i> Fur babies are welcome</span>
+    <span><i class="fa-solid fa-fire" aria-hidden="true"></i> Fire pits</span>
+    <span><i class="fa-solid fa-music" aria-hidden="true"></i> Live music (select Saturdays)</span>
+  </div>
+
+  <p>More than brunch — it’s an experience for the whole family.</p>
+
+  <!-- UPCOMING EVENTS -->
+  <div class="events-box" aria-label="Upcoming events">
+    <div class="events-title">
+      <i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
+      Upcoming Events
     </div>
 
-    <!-- HERO -->
-    <div class="hero">
-      <h1>Comfort food with Southwest soul</h1>
-      <p>
-        Scratch-made favorites, warm flavors, and bold bites —
-        served fresh from our food trailer.
-      </p>
-    </div>
-
-    <div class="promo-bar hours">
-      🌅 Now Serving Brunch at 10 AM • Wednesday – Sunday
-    </div>
-
-    <div class="promo-bar military">
-      🇺🇸 Military Discount: 10% off every day for active military and veterans with valid ID on regular-priced items
-    </div>
-
-    <!-- HOLY GROUNDS EXPERIENCE PREVIEW -->
-    <div class="experience-preview">
-      <p>
-        You’ll find us at
-        <a href="https://www.holygroundsfoodyard.com" target="_blank" rel="noopener"
-           onclick="gtag('event','holygrounds_click',{event_category:'Outbound',event_label:'Holy Grounds Website'});">
-          Holy Grounds Food Yard in Royse City
-        </a>
-        — a space built for gathering.
-      </p>
-
-      <div class="experience-icons" aria-label="Experience highlights">
-        <span><i class="fa-solid fa-basketball" aria-hidden="true"></i> Open play space</span>
-        <span><i class="fa-solid fa-people-roof" aria-hidden="true"></i> Safe fenced-in area</span>
-        <span><i class="fa-solid fa-paw" aria-hidden="true"></i> Fur babies are welcome</span>
-        <span><i class="fa-solid fa-fire" aria-hidden="true"></i> Fire pits</span>
-        <span><i class="fa-solid fa-music" aria-hidden="true"></i> Live music (select Saturdays)</span>
+    <div class="event-item featured">
+      <div class="event-icon movie">
+        <i class="fa-solid fa-film" aria-hidden="true"></i>
       </div>
+      <div>
+        <strong>Movie Night at Holy Grounds</strong>
+        <div class="event-date">Saturday, May 30th, 2026 • Movie starts at 7:15 PM</div>
+      </div>
+    </div>
 
-      <p>More than brunch — it’s an experience for the whole family.</p>
+    <div class="event-item featured">
+      <div class="event-icon pancakes">
+        <i class="fa-solid fa-mug-saucer" aria-hidden="true"></i>
+      </div>
+      <div>
+        <strong>Pajamas &amp; Pancakes at the Yard ☀️🥞</strong>
+        <div class="event-date">Saturday, June 6th, 2026 • 8:00 AM – 2:00 PM &amp; beyond</div>
+        <div class="event-date">Holy Grounds Food Yard &amp; Mercantile</div>
+      </div>
+    </div>
 
-      <!-- UPCOMING EVENTS -->
-      <div class="events-box" aria-label="Upcoming events">
-        <div class="events-title">
-          <i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
-          Upcoming Events
-        </div>
+    <div class="event-item">
+      <div class="event-icon magic">
+        <i class="fa-solid fa-star" aria-hidden="true"></i>
+      </div>
+      <div>
+        <strong>Once Upon a Magical Market</strong>
+        <div class="event-date">Saturday, June 13th, 2026 • 9:00 AM – 5:00 PM</div>
+      </div>
+    </div>
 
-        <div class="event-item featured">
-          <div class="event-icon movie">
-            <i class="fa-solid fa-film" aria-hidden="true"></i>
-          </div>
-          <div>
-            <strong>Movie Night at Holy Grounds</strong>
-            <div class="event-date">Saturday, May 30th, 2026 • Movie starts at 7:15 PM</div>
-          </div>
-        </div>
+    <div class="event-item">
+      <div class="event-icon lonestar">
+        <i class="fa-solid fa-flag-usa" aria-hidden="true"></i>
+      </div>
+      <div>
+        <strong>Lone Star Shop &amp; Stroll</strong>
+        <div class="event-date">Saturday, July 11th, 2026 • 9:00 AM – 5:00 PM</div>
+      </div>
+    </div>
 
-        <div class="event-item featured">
-          <div class="event-icon pancakes">
-            <i class="fa-solid fa-mug-saucer" aria-hidden="true"></i>
-          </div>
-          <div>
-            <strong>Pajamas &amp; Pancakes at the Yard ☀️🥞</strong>
-            <div class="event-date">Saturday, June 6th, 2026 • 8:00 AM – 2:00 PM &amp; beyond</div>
-            <div class="event-date">Holy Grounds Food Yard &amp; Mercantile</div>
-          </div>
-        </div>
-
-        <div class="event-item">
-          <div class="event-icon magic">
-            <i class="fa-solid fa-star" aria-hidden="true"></i>
-          </div>
-          <div>
-            <strong>Once Upon a Magical Market</strong>
-            <div class="event-date">Saturday, June 13th, 2026 • 9:00 AM – 5:00 PM</div>
-          </div>
-        </div>
-
-        <div class="event-item">
-          <div class="event-icon lonestar">
-            <i class="fa-solid fa-flag-usa" aria-hidden="true"></i>
-          </div>
-          <div>
-            <strong>Lone Star Shop &amp; Stroll</strong>
-            <div class="event-date">Saturday, July 11th, 2026 • 9:00 AM – 5:00 PM</div>
-          </div>
-        </div>
-
-        <div class="event-item featured">
-          <div class="event-icon cars">
-            <i class="fa-solid fa-car-side" aria-hidden="true"></i>
-          </div>
-          <div>
-            <strong>Coffee, Cars &amp; Cafecito ☕🚗🌵</strong>
-            <div class="event-date">Sunday, July 19th, 2026 • Cruise-in: 8:30 AM – 11:00 AM</div>
-            <div class="event-date">Arizona Sunrise open early: 8:00 AM – 2:00 PM</div>
-            <div class="event-detail">
-              Casual Sunday test run at Holy Grounds with coffee, breakfast, brunch, and cool rides.
-              Classic cars, Jeeps, trucks, motorcycles, and family minivans welcome.
-            </div>
-          </div>
-        </div>
-
-        <div class="event-note">
-          🌅 Regular Hours: Wednesday – Sunday • 10:00 AM – 2:00 PM<br>
-          🌵 Closed for Family Vacation: June 15 – July 7<br>
-          Reopening Wednesday, July 8 at 10:00 AM
+    <div class="event-item featured">
+      <div class="event-icon cars">
+        <i class="fa-solid fa-car-side" aria-hidden="true"></i>
+      </div>
+      <div>
+        <strong>Coffee, Cars &amp; Cafecito ☕🚗🌵</strong>
+        <div class="event-date">Sunday, July 19th, 2026 • Cruise-in: 8:30 AM – 11:00 AM</div>
+        <div class="event-date">Arizona Sunrise open early: 8:00 AM – 2:00 PM</div>
+        <div class="event-detail">
+          Casual Sunday test run at Holy Grounds with coffee, breakfast, brunch, and cool rides.
+          Classic cars, Jeeps, trucks, motorcycles, and family minivans welcome.
         </div>
       </div>
     </div>
 
-    <!-- FEATURED IMAGE / SLIDESHOW -->
-    <div class="feature-image">
-      <img id="slideshow" src="gccs.jpg" alt="Featured food item">
+    <div class="event-note">
+      🌅 Regular Hours: Wednesday – Sunday • 10:00 AM – 2:00 PM<br>
+      🌵 Closed for Family Vacation: June 15 – July 7<br>
+      Reopening Wednesday, July 8 at 10:00 AM
     </div>
 
-    <!-- CTA -->
-    <div class="home-cta">
-      <a href="menu.html">View Menu</a>
-      <a href="catering.html" class="secondary">Book Catering / Learn More</a>
-      <a href="celebree-family-night.html" class="secondary">Event Sample Menu</a>
+    <a class="event-page-link" href="community-events.html"
+       onclick="gtag('event','community_events_click',{event_category:'Navigation',event_label:'Upcoming Events Box'});">
+      <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+      See all Community Events at the Yard
+    </a>
+  </div>
+</div>
+
+<!-- FEATURED IMAGE / SLIDESHOW -->
+<div class="feature-image">
+  <img id="slideshow" src="gccs.jpg" alt="Featured food item">
+</div>
+
+<!-- CTA -->
+<div class="home-cta">
+  <a href="menu.html">View Menu</a>
+  <a href="community-events.html" class="secondary">Community Events at the Yard</a>
+  <a href="catering.html" class="secondary">Book Catering / Learn More</a>
+  <a href="celebree-family-night.html" class="secondary">Event Sample Menu</a>
+</div>
+
+<!-- FOLLOW / REVIEW / ORDER -->
+<section class="social-hub" aria-label="Follow, review, and order Arizona Sunrise Cafecito">
+  <div class="social-hub-inner">
+    <h2>Come for the biscuits. Stay for the chaos.</h2>
+    <p class="hub-subtitle">
+      Follow Arizona Sunrise Cafecito &amp; Catering for specials, menu drops, event updates,
+      and the occasional food trailer shenanigan. If we made your day better, a Google review or Yelp feedback
+      helps our small family business more than you know.
+    </p>
+
+    <div class="social-cards">
+
+      <a class="social-card facebook"
+         href="https://www.facebook.com/azsunrisecafecito"
+         target="_blank"
+         rel="noopener"
+         onclick="gtag('event','facebook_click',{event_category:'Social',event_label:'Facebook'});">
+        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+        <strong>Like us on Facebook</strong>
+        <span>Daily specials, event posts, and local updates.</span>
+      </a>
+
+      <a class="social-card instagram"
+         href="https://www.instagram.com/az_sunrise_cafecito_catering?igsh=b2i0nmw2ctfvzwvp"
+         target="_blank"
+         rel="noopener"
+         onclick="gtag('event','instagram_click',{event_category:'Social',event_label:'Instagram'});">
+        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        <strong>Follow us on Instagram</strong>
+        <span>Food pics, specials, events, and behind-the-scenes trailer life.</span>
+      </a>
+
+      <a class="social-card review"
+         href="https://www.google.com/maps/search/?api=1&query=Arizona%20Sunrise%20Cafecito%20%26%20Catering%20151%20Sabine%20Creek%20Rd%20Royse%20City%20TX"
+         target="_blank"
+         rel="noopener"
+         onclick="gtag('event','google_review_click',{event_category:'Reviews',event_label:'Google Maps Review'});">
+        <i class="fa-solid fa-star" aria-hidden="true"></i>
+        <strong>Review us on Google</strong>
+        <span>Love your meal? A quick Google review helps local families find us.</span>
+      </a>
+
+      <a class="social-card yelp"
+         href="https://www.yelp.com/search?find_desc=Arizona+Sunrise+Cafecito+%26+Catering&find_loc=Royse+City%2C+TX"
+         target="_blank"
+         rel="noopener"
+         onclick="gtag('event','yelp_click',{event_category:'Reviews',event_label:'Yelp Feedback'});">
+        <i class="fa-brands fa-yelp" aria-hidden="true"></i>
+        <strong>Find us on Yelp</strong>
+        <span>Share feedback so more local food lovers can discover us.</span>
+      </a>
+
+      <a class="social-card doordash"
+         href="https://www.doordash.com/store/arizona-sunrise-cafecito-&-catering-royse-city-41398559/99996355/?pickup=false"
+         target="_blank"
+         rel="noopener"
+         onclick="gtag('event','doordash_click',{event_category:'Order',event_label:'DoorDash'});">
+        <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+        <strong>Order on DoorDash</strong>
+        <span>Brunch cravings delivered when available.</span>
+      </a>
+
     </div>
 
-    <!-- FOLLOW / REVIEW / ORDER -->
-    <section class="social-hub" aria-label="Follow, review, and order Arizona Sunrise Cafecito">
-      <div class="social-hub-inner">
-        <h2>Come for the biscuits. Stay for the chaos.</h2>
-        <p class="hub-subtitle">
-          Follow Arizona Sunrise Cafecito &amp; Catering for specials, menu drops, event updates,
-          and the occasional food trailer shenanigan. If we made your day better, a Google review or Yelp feedback
-          helps our small family business more than you know.
-        </p>
+    <div class="social-note">
+      <strong>Small business truth:</strong> every follow, like, share, Google review, Yelp mention, and tag helps more local families find us.
+      Thank you for supporting our little food trailer with big brunch energy.
+    </div>
+  </div>
+</section>
 
-        <div class="social-cards">
+<div class="content">
 
-          <a class="social-card facebook"
-             href="https://www.facebook.com/azsunrisecafecito"
-             target="_blank"
-             rel="noopener"
-             onclick="gtag('event','facebook_click',{event_category:'Social',event_label:'Facebook'});">
-            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
-            <strong>Like us on Facebook</strong>
-            <span>Daily specials, event posts, and local updates.</span>
-          </a>
+  <!-- WHY US -->
+  <div class="why-us">
+    <h2>Why Arizona Sunrise Cafecito &amp; Catering?</h2>
+    <ul>
+      <li>🌅 Comfort food with Southwest flair</li>
+      <li>🧡 Locally owned &amp; community-driven</li>
+      <li>🚚 Freshly prepared from our food trailer</li>
+      <li>✅ Fully permitted, fire inspected, and food safety certified</li>
+      <li>🇺🇸 10% military discount for active military and veterans with valid ID on regular-priced items</li>
+      <li>🚗 Available on DoorDash when delivery is active</li>
+    </ul>
+  </div>
 
-          <a class="social-card instagram"
-   href="https://www.instagram.com/az_sunrise_cafecito_catering?igsh=b2i0nmw2ctfvzwvp"
-   target="_blank"
-   rel="noopener"
-   onclick="gtag('event','instagram_click',{event_category:'Social',event_label:'Instagram'});">
-  <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-  <strong>Follow us on Instagram</strong>
-  <span>Food pics, specials, events, and behind-the-scenes trailer life.</span>
-</a>
+  <!-- NOW OPEN -->
+  <h2 class="now-open">Now Open</h2>
 
-          <a class="social-card review"
-             href="https://www.google.com/maps/search/?api=1&query=Arizona%20Sunrise%20Cafecito%20%26%20Catering%20151%20Sabine%20Creek%20Rd%20Royse%20City%20TX"
-             target="_blank"
-             rel="noopener"
-             onclick="gtag('event','google_review_click',{event_category:'Reviews',event_label:'Google Maps Review'});">
-            <i class="fa-solid fa-star" aria-hidden="true"></i>
-            <strong>Review us on Google</strong>
-            <span>Love your meal? A quick Google review helps local families find us.</span>
-          </a>
+  <!-- Dynamic Open Today indicator -->
+  <div id="openIndicator" class="open-indicator" aria-live="polite">
+    <span class="open-dot" aria-hidden="true"></span>
+    <span id="openText">Checking hours…</span>
+  </div>
 
-          <a class="social-card yelp"
-             href="https://www.yelp.com/search?find_desc=Arizona+Sunrise+Cafecito+%26+Catering&find_loc=Royse+City%2C+TX"
-             target="_blank"
-             rel="noopener"
-             onclick="gtag('event','yelp_click',{event_category:'Reviews',event_label:'Yelp Feedback'});">
-            <i class="fa-brands fa-yelp" aria-hidden="true"></i>
-            <strong>Find us on Yelp</strong>
-            <span>Share feedback so more local food lovers can discover us.</span>
-          </a>
+  <p>
+    <strong>Wednesday – Sunday</strong><br>
+    10:00 AM – 2:00 PM
+  </p>
 
-          <a class="social-card doordash"
-             href="https://www.doordash.com/store/arizona-sunrise-cafecito-&-catering-royse-city-41398559/99996355/?pickup=false"
-             target="_blank"
-             rel="noopener"
-             onclick="gtag('event','doordash_click',{event_category:'Order',event_label:'DoorDash'});">
-            <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
-            <strong>Order on DoorDash</strong>
-            <span>Brunch cravings delivered when available.</span>
-          </a>
+  <!-- Location -->
+  <h2>Location</h2>
+  <p>
+    <strong>151 Sabine Creek Road</strong><br>
+    Royse City, Texas
+  </p>
 
-        </div>
+  <div class="map-wrap">
+    <iframe loading="lazy"
+      src="https://www.google.com/maps?q=151+Sabine+Creek+Road,+Royse+City,+TX&output=embed">
+    </iframe>
+  </div>
 
-        <div class="social-note">
-          <strong>Small business truth:</strong> every follow, like, share, Google review, Yelp mention, and tag helps more local families find us.
-          Thank you for supporting our little food trailer with big brunch energy.
-        </div>
-      </div>
-    </section>
+  <!-- Contact -->
+  <h2>Contact</h2>
+  <p>
+    📞 <a href="tel:9455460808"
+       onclick="gtag('event','call_click',{event_category:'Contact',event_label:'Phone Call'});">
+       945-546-0808
+    </a><br><br>
 
-    <div class="content">
+    📧 <a href="mailto:hello@azsunrisecafecito.com"
+       onclick="gtag('event','email_click',{event_category:'Contact',event_label:'Email'});">
+       hello@azsunrisecafecito.com
+    </a>
+  </p>
 
-      <!-- WHY US -->
-      <div class="why-us">
-        <h2>Why Arizona Sunrise Cafecito &amp; Catering?</h2>
-        <ul>
-          <li>🌅 Comfort food with Southwest flair</li>
-          <li>🧡 Locally owned &amp; community-driven</li>
-          <li>🚚 Freshly prepared from our food trailer</li>
-          <li>✅ Fully permitted, fire inspected, and food safety certified</li>
-          <li>🇺🇸 10% military discount for active military and veterans with valid ID on regular-priced items</li>
-          <li>🚗 Available on DoorDash when delivery is active</li>
-        </ul>
-      </div>
-
-      <!-- NOW OPEN -->
-      <h2 class="now-open">Now Open</h2>
-
-      <!-- Dynamic Open Today indicator -->
-      <div id="openIndicator" class="open-indicator" aria-live="polite">
-        <span class="open-dot" aria-hidden="true"></span>
-        <span id="openText">Checking hours…</span>
-      </div>
-
-      <p>
-        <strong>Wednesday – Sunday</strong><br>
-        10:00 AM – 2:00 PM
-      </p>
-
-      <!-- Location -->
-      <h2>Location</h2>
-      <p>
-        <strong>151 Sabine Creek Road</strong><br>
-        Royse City, Texas
-      </p>
-
-      <div class="map-wrap">
-        <iframe loading="lazy"
-          src="https://www.google.com/maps?q=151+Sabine+Creek+Road,+Royse+City,+TX&output=embed">
-        </iframe>
-      </div>
-
-      <!-- Contact -->
-      <h2>Contact</h2>
-      <p>
-        📞 <a href="tel:9455460808"
-           onclick="gtag('event','call_click',{event_category:'Contact',event_label:'Phone Call'});">
-           945-546-0808
-        </a><br><br>
-
-        📧 <a href="mailto:hello@azsunrisecafecito.com"
-           onclick="gtag('event','email_click',{event_category:'Contact',event_label:'Email'});">
-           hello@azsunrisecafecito.com
-        </a>
-      </p>
-
-    </div><!-- /content -->
+</div><!-- /content -->
+```
 
   </div><!-- /main -->
 
 </div><!-- /layout -->
 
 <!-- SLIDESHOW SCRIPT -->
+
 <script>
   const images = ["gccs.jpg", "cc.jpg", "r.jpeg"];
   let current = 0;
@@ -929,6 +971,7 @@ nav.side-nav a.active::before{
 </script>
 
 <!-- OPEN TODAY INDICATOR (Closed Mon/Tue • Open Wed–Sun 10am–2pm • Family vacation closure June 15–July 7, 2026) -->
+
 <script>
   (function(){
     const indicator = document.getElementById("openIndicator");
@@ -1001,6 +1044,7 @@ nav.side-nav a.active::before{
 </script>
 
 <!-- AUTO ACTIVE NAV LINK -->
+
 <script>
   const path = window.location.pathname;
   const currentPage = (path.endsWith("/") ? "index.html" : path.split("/").pop()).split("?")[0];
