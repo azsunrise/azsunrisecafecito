@@ -203,6 +203,10 @@
       box-shadow: 0 12px 26px rgba(31, 41, 51, 0.06);
     }
 
+    .watch-section {
+      background: rgba(255, 248, 236, 0.95);
+    }
+
     .section h2 {
       margin: 0 0 10px;
       font-size: clamp(2rem, 4vw, 3rem);
@@ -242,6 +246,8 @@
     .event-card.campout { border-top-color: var(--purple); }
     .event-card.football { border-top-color: var(--brown); }
     .event-card.campfire { border-top-color: var(--orange); }
+    .event-card.juneteenth { border-top-color: var(--red); }
+    .event-card.fathers { border-top-color: var(--brown); }
 
     .event-card h3 {
       margin: 0 0 10px;
@@ -450,6 +456,7 @@
 
     <div class="buttons">
       <a class="btn btn-primary" href="#upcoming-events">See Upcoming Events</a>
+      <a class="btn btn-secondary" href="#watch-this-space">Watch This Space</a>
       <a class="btn btn-secondary" href="#subscribe">Subscribe for Updates</a>
     </div>
   </div>
@@ -492,7 +499,7 @@
 
         <div class="mini-item">
           <strong>✨ Watch This Space</strong>
-          <span>More community ideas may be added if dates and details are approved.</span>
+          <span>Community ideas we’re exploring — not scheduled or confirmed yet.</span>
         </div>
       </div>
     </div>
@@ -641,26 +648,6 @@
       </div>
     </div>
 
-    <div class="event-card watch">
-      <h3>✨ Watch This Space: Community Ideas</h3>
-      <div class="event-date watch-note">Ideas only — not scheduled or confirmed</div>
-      <p>
-        We love dreaming up fun ways to bring families, neighbors, vendors, and food lovers together at the Yard.
-      </p>
-      <p>
-        Some ideas we may explore in the future include additional movie nights, special community days, family campouts, holiday weekends, and seasonal gatherings.
-      </p>
-      <p>
-        These are simply ideas for now and are not scheduled or confirmed events. If dates and details are approved, they will be added to this page as official upcoming events.
-      </p>
-      <div class="tag-row">
-        <span class="tag">Watch this space</span>
-        <span class="tag">Ideas only</span>
-        <span class="tag">Not scheduled</span>
-        <span class="tag">Community input welcome</span>
-      </div>
-    </div>
-
     <div class="event-card market">
       <h3>🛍️ More Markets, Pop-Ups & Local Fun</h3>
       <div class="event-date watch-note">More dates may be added</div>
@@ -684,6 +671,92 @@
     <p>
       This page is meant to help guests, vendors, and neighbors stay connected with community happenings at Holy Grounds Food Yard & Mercantile. Event details may be updated as plans, weather, vendors, menus, and times are finalized.
     </p>
+  </div>
+</section>
+
+<section class="section watch-section" id="watch-this-space">
+  <h2>Watch This Space</h2>
+
+  <p class="section-intro">
+    These are community ideas we’re exploring, but they are not scheduled or confirmed events yet. If dates, details, and approvals come together, we’ll move them into the official Upcoming Events section.
+  </p>
+
+  <div class="event-grid">
+
+    <div class="event-card juneteenth">
+      <h3>❤️💛💚 Juneteenth at the Yard</h3>
+      <div class="event-date watch-note">Idea only — not scheduled or confirmed</div>
+      <p>
+        Juneteenth is a day to honor freedom, resilience, family, and community.
+      </p>
+      <p>
+        We may explore a relaxed community day with local food, family-friendly outdoor games, and a place for families and friends to gather at the Yard.
+      </p>
+      <p>
+        If this idea is approved and details are finalized, we’ll add it here as an official upcoming event.
+      </p>
+      <div class="tag-row">
+        <span class="tag">Watch this space</span>
+        <span class="tag">Idea only</span>
+        <span class="tag">Community</span>
+        <span class="tag">Not scheduled</span>
+      </div>
+    </div>
+
+    <div class="event-card fathers">
+      <h3>☀️ Father’s Day Weekend at the Yard</h3>
+      <div class="event-date watch-note">Idea only — not scheduled or confirmed</div>
+      <p>
+        We may explore a Father’s Day weekend community day with food, fresh air, family games, and an easy place to bring Dad for a relaxed outing.
+      </p>
+      <p>
+        Nothing is scheduled yet, but this is one of the ideas we’d love to explore for the Yard.
+      </p>
+      <p>
+        If this idea is approved and details are finalized, we’ll add it here as an official upcoming event.
+      </p>
+      <div class="tag-row">
+        <span class="tag">Watch this space</span>
+        <span class="tag">Idea only</span>
+        <span class="tag">Family-friendly</span>
+        <span class="tag">Not scheduled</span>
+      </div>
+    </div>
+
+    <div class="event-card movie">
+      <h3>🎬 Summer Movie Night Under the Stars</h3>
+      <div class="event-date watch-note">Idea only — not scheduled or confirmed</div>
+      <p>
+        We may explore another family movie night at the Yard with dinner, drinks, and an outdoor movie once the sun goes down.
+      </p>
+      <p>
+        This is not scheduled yet. If a date, movie, and event details are approved, we’ll add it here as an official upcoming event.
+      </p>
+      <div class="tag-row">
+        <span class="tag">Watch this space</span>
+        <span class="tag">Idea only</span>
+        <span class="tag">Outdoor movie</span>
+        <span class="tag">Not scheduled</span>
+      </div>
+    </div>
+
+    <div class="event-card campout">
+      <h3>🏕️ The Slightly Haunted Yard Campout 👻</h3>
+      <div class="event-date watch-note">Idea only — not scheduled or confirmed</div>
+      <p>
+        We may explore a family-friendly campout with decorated tents, costumes, trick-or-treating around the campsites, s’mores, and spooky-ish fun.
+      </p>
+      <p>
+        This is currently just an idea. If dates, overnight details, pricing, food, and approvals are finalized, we’ll add it here as an official upcoming event.
+      </p>
+      <div class="tag-row">
+        <span class="tag">Watch this space</span>
+        <span class="tag">Idea only</span>
+        <span class="tag">Family campout</span>
+        <span class="tag">Not scheduled</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
