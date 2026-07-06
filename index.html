@@ -144,19 +144,6 @@ nav.side-nav a.active::before{
   background: linear-gradient(to right, #e36f47, #f6c177);
 }
 
-.promo-bar.special {
-  background: linear-gradient(to right, #d97706, #f6c177);
-  box-shadow: 0 10px 22px rgba(217,119,6,0.18);
-  font-size: 1.02rem;
-}
-
-.promo-bar.vacation {
-  background: linear-gradient(to right, #7a1f1f, #c2410c);
-  box-shadow: 0 12px 26px rgba(122,31,31,0.20);
-  font-size: 1.04rem;
-  border: 2px solid rgba(255,255,255,0.45);
-}
-
 .promo-bar.military {
   background: linear-gradient(to right, #7a3b2e, #a65b4a);
   box-shadow: 0 8px 18px rgba(122,59,46,0.14);
@@ -341,17 +328,6 @@ nav.side-nav a.active::before{
   color: #5b4b45;
   font-weight: 700;
   font-size: 0.95rem;
-}
-
-.vacation-note{
-  margin-top: 10px;
-  padding: 12px 14px;
-  border-radius: 12px;
-  background: linear-gradient(to right, rgba(122,31,31,0.10), rgba(194,65,12,0.10));
-  border: 2px solid rgba(194,65,12,0.25);
-  color: #7a1f1f;
-  font-weight: 900;
-  font-size: 0.98rem;
 }
 
 .event-page-link{
@@ -712,7 +688,6 @@ nav.side-nav a.active::before{
 
   <div class="main">
 
-```
 <div class="logo-wrap">
   <img src="trailer.jpeg" alt="Arizona Sunrise Cafecito & Catering trailer">
 </div>
@@ -724,14 +699,6 @@ nav.side-nav a.active::before{
     Scratch-made favorites, warm flavors, and bold bites —
     served fresh from our food trailer.
   </p>
-</div>
-
-<div class="promo-bar special">
-  🎉 Special Event Hours Tomorrow: Saturday, June 13 • Open 8:00 AM – 5:00 PM
-</div>
-
-<div class="promo-bar vacation">
-  🌵 Heads up: We will be closed for family vacation June 15 – July 7. Reopening Wednesday, July 8 at 10:00 AM.
 </div>
 
 <div class="promo-bar hours">
@@ -770,30 +737,6 @@ nav.side-nav a.active::before{
       Upcoming Events
     </div>
 
-    <div class="event-item featured">
-      <div class="event-icon pancakes">
-        <i class="fa-solid fa-mug-saucer" aria-hidden="true"></i>
-      </div>
-      <div>
-        <strong>Pajamas &amp; Pancakes + Once Upon a Magical Market ☀️🥞</strong>
-        <div class="event-date">Saturday, June 13th, 2026 • 8:00 AM – 5:00 PM</div>
-        <div class="event-date">Holy Grounds Food Yard &amp; Mercantile</div>
-        <div class="event-detail">
-          Special event hours: Arizona Sunrise will be open 8:00 AM – 5:00 PM for pancakes, brunch, and market day fun.
-        </div>
-      </div>
-    </div>
-
-    <div class="event-item">
-      <div class="event-icon magic">
-        <i class="fa-solid fa-star" aria-hidden="true"></i>
-      </div>
-      <div>
-        <strong>Once Upon a Magical Market</strong>
-        <div class="event-date">Saturday, June 13th, 2026 • 9:00 AM – 5:00 PM</div>
-      </div>
-    </div>
-
     <div class="event-item">
       <div class="event-icon lonestar">
         <i class="fa-solid fa-flag-usa" aria-hidden="true"></i>
@@ -817,15 +760,6 @@ nav.side-nav a.active::before{
           Classic cars, Jeeps, trucks, motorcycles, and family minivans welcome.
         </div>
       </div>
-    </div>
-
-    <div class="event-note">
-      🌅 Regular Hours: Wednesday – Sunday • 10:00 AM – 2:00 PM<br>
-      🎉 Special Event Hours: Saturday, June 13 • 8:00 AM – 5:00 PM
-    </div>
-
-    <div class="vacation-note">
-      🌵 Vacation Closure Reminder: Arizona Sunrise will be closed June 15 – July 7 and will reopen Wednesday, July 8 at 10:00 AM.
     </div>
 
     <a class="event-page-link" href="community-events.html" target="_blank" rel="noopener"
@@ -945,19 +879,8 @@ nav.side-nav a.active::before{
   </div>
 
   <p>
-    <strong>Special Event Hours: Saturday, June 13</strong><br>
-    8:00 AM – 5:00 PM
-  </p>
-
-  <p>
     <strong>Regular Hours</strong><br>
     Wednesday – Sunday • 10:00 AM – 2:00 PM
-  </p>
-
-  <p>
-    <strong>Vacation Closure</strong><br>
-    Closed June 15 – July 7<br>
-    Reopening Wednesday, July 8 at 10:00 AM
   </p>
 
   <!-- Location -->
@@ -988,7 +911,6 @@ nav.side-nav a.active::before{
   </p>
 
 </div><!-- /content -->
-```
 
   </div><!-- /main -->
 
@@ -1009,7 +931,7 @@ nav.side-nav a.active::before{
   setInterval(nextImage, 3000);
 </script>
 
-<!-- OPEN TODAY INDICATOR (Special event June 13 • Regular Wed–Sun 10am–2pm • Family vacation closure June 15–July 7, 2026) -->
+<!-- OPEN TODAY INDICATOR (Regular Wed–Sun 10am–2pm) -->
 
 <script>
   (function(){
@@ -1017,23 +939,8 @@ nav.side-nav a.active::before{
     const textEl = document.getElementById("openText");
 
     const now = new Date();
-
-    // Use local browser date
-    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-
-    // Special event hours: Saturday, June 13, 2026 • 8:00 AM – 5:00 PM
-    const specialEventDay = new Date(2026, 5, 13); // June 13
-
-    // Family vacation closure: June 15, 2026 through July 7, 2026
-    // Reopening Wednesday, July 8, 2026 at 10:00 AM
-    const vacationStart = new Date(2026, 5, 15); // June 15
-    const vacationEnd = new Date(2026, 6, 7);   // July 7
-
-    function sameDate(a, b){
-      return a.getFullYear() === b.getFullYear() &&
-             a.getMonth() === b.getMonth() &&
-             a.getDate() === b.getDate();
-    }
+    const day = now.getDay(); // 0 Sun ... 6 Sat
+    const minutes = now.getHours() * 60 + now.getMinutes();
 
     function setOpen(msg){
       textEl.textContent = msg || "Open Today";
@@ -1045,41 +952,6 @@ nav.side-nav a.active::before{
       indicator.classList.add("closed");
     }
 
-    const minutes = now.getHours() * 60 + now.getMinutes();
-
-    // Day before special event
-    if (sameDate(today, new Date(2026, 5, 12))){
-      setClosed("Special event tomorrow • Open Saturday 8:00 AM – 5:00 PM");
-      return;
-    }
-
-    // Special event hours override regular hours
-    if (sameDate(today, specialEventDay)){
-      const specialOpen = 8 * 60;
-      const specialClose = 17 * 60;
-
-      if (minutes >= specialOpen && minutes < specialClose){
-        setOpen("Special Event Hours Today • Open until 5:00 PM");
-        return;
-      }
-
-      if (minutes < specialOpen){
-        setClosed("Special Event Hours Today • Opens at 8:00 AM");
-        return;
-      }
-
-      setClosed("Closed now • Closed for family vacation June 15 – July 7");
-      return;
-    }
-
-    // Vacation closure overrides normal weekly hours
-    if (today >= vacationStart && today <= vacationEnd){
-      setClosed("Closed for family vacation • Reopening Wednesday, July 8 at 10:00 AM");
-      return;
-    }
-
-    const day = now.getDay(); // 0 Sun ... 6 Sat
-
     // Open days: Wed(3) Thu(4) Fri(5) Sat(6) Sun(0)
     const isOpenDay = (day === 0) || (day >= 3 && day <= 6);
     const isClosedAllDay = (day === 1 || day === 2); // Mon/Tue
@@ -1090,7 +962,7 @@ nav.side-nav a.active::before{
     const isOpenNow = isOpenDay && (minutes >= openMinutes) && (minutes < closeMinutes);
 
     if (isOpenNow){
-      setOpen();
+      setOpen("Open today until 2:00 PM");
       return;
     }
 
@@ -1106,7 +978,7 @@ nav.side-nav a.active::before{
       }
 
       if (day === 0){
-        setClosed("Closed now • Closed for family vacation June 15 – July 7");
+        setClosed("Closed now • Opens Wednesday at 10:00 AM");
       } else {
         setClosed("Closed now • Opens tomorrow at 10:00 AM");
       }
