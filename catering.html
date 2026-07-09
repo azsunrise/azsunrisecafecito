@@ -36,7 +36,6 @@
 
     .main{
       flex:1;
-      min-width:0;
     }
 
     nav.side-nav{
@@ -53,7 +52,6 @@
       height: 100vh;
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
-      flex:0 0 220px;
     }
 
     nav.side-nav a{
@@ -106,11 +104,6 @@
       color: #7a3b2e;
     }
 
-    h2 {
-      color:#7a3b2e;
-      margin:0 0 10px;
-    }
-
     .divider {
       width: 140px;
       height: 3px;
@@ -154,79 +147,6 @@
       width: 18px;
       text-align: center;
       flex: 0 0 18px;
-    }
-
-    .availability-section{
-      max-width:740px;
-      margin:0 auto 26px;
-      padding:22px;
-      border-radius:16px;
-      background:#ffffff;
-      border:1px solid rgba(122,59,46,0.14);
-      box-shadow:0 8px 20px rgba(0,0,0,0.06);
-      text-align:left;
-    }
-
-    .availability-heading{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      color:#7a3b2e;
-      text-align:center;
-      margin-bottom:8px;
-    }
-
-    .availability-heading i{
-      color:#e36f47;
-    }
-
-    .availability-intro{
-      text-align:center;
-      margin:0 auto 14px;
-      font-size:1rem;
-      color:#5b4b45;
-    }
-
-    .availability-note{
-      background:#fff3e8;
-      border:1px solid rgba(227,111,71,0.20);
-      border-radius:12px;
-      padding:12px 14px;
-      margin:0 0 16px;
-      color:#5b4b45;
-      line-height:1.45;
-      font-size:0.95rem;
-    }
-
-    .availability-note strong{
-      color:#7a3b2e;
-    }
-
-    .calendar-wrap{
-      width:100%;
-      overflow:hidden;
-      border-radius:12px;
-      border:1px solid rgba(122,59,46,0.12);
-      background:#fff;
-    }
-
-    .calendar-wrap iframe{
-      width:100%;
-      height:600px;
-      display:block;
-      border:0;
-    }
-
-    .calendar-legend{
-      margin-top:12px;
-      padding:10px 12px;
-      border-radius:12px;
-      background:rgba(122,59,46,0.05);
-      color:#5b4b45;
-      font-size:0.92rem;
-      line-height:1.4;
-      text-align:center;
     }
 
     form {
@@ -369,42 +289,24 @@
     }
 
     @media (max-width: 720px) {
-      .row {
-        grid-template-columns: 1fr;
-      }
-
-      .container {
-        padding-top: 30px;
-      }
-
-      .availability-section{
-        padding:16px 12px;
-      }
-
-      .calendar-wrap iframe{
-        height:520px;
-      }
+      .row { grid-template-columns: 1fr; }
+      .container { padding-top: 30px; }
     }
 
     @media (max-width: 768px) {
-      .layout {
-        flex-direction: column;
-      }
+      .layout { flex-direction: column; }
 
       nav.side-nav{
         width:100%;
         height:auto;
-        flex:0 0 auto;
         flex-direction:row;
-        justify-content:flex-start;
+        justify-content:center;
         gap:8px;
         padding:10px;
         border-right:none;
         border-bottom: 1px solid rgba(122,59,46,0.12);
         z-index:60;
         overflow-x:auto;
-        overflow-y:hidden;
-        -webkit-overflow-scrolling:touch;
       }
 
       nav.side-nav a{
@@ -413,27 +315,9 @@
         transform:none;
         font-size:0.95rem;
         white-space:nowrap;
-        flex:0 0 auto;
       }
 
-      nav.side-nav a.active::before{
-        display:none;
-      }
-    }
-
-    @media (max-width: 480px){
-      .container{
-        padding-left:12px;
-        padding-right:12px;
-      }
-
-      form{
-        padding:22px 16px 26px;
-      }
-
-      .calendar-wrap iframe{
-        height:460px;
-      }
+      nav.side-nav a.active::before{ display:none; }
     }
   </style>
 
@@ -467,7 +351,7 @@
   </p>
 
   <div class="notice">
-    <strong>Catering &amp; Food Trailer Event Minimums</strong>
+    <strong>Catering & Food Trailer Event Minimums</strong>
 
     <div class="line">
       <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
@@ -528,38 +412,6 @@
       </div>
     </div>
   </div>
-
-  <!-- CATERING AVAILABILITY CALENDAR -->
-  <section class="availability-section" aria-labelledby="availability-title">
-    <div class="availability-heading">
-      <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
-      <h2 id="availability-title">Check Our Availability</h2>
-    </div>
-
-    <p class="availability-intro">
-      Use the calendar below as a quick guide before submitting your catering or food trailer event request.
-    </p>
-
-    <div class="availability-note">
-      <strong>How to read the calendar:</strong> Busy blocks mean we may already be booked or unavailable.
-      Open dates may still be available, but availability can change. A date is not officially reserved until
-      we confirm your booking and receive the required deposit.
-    </div>
-
-    <div class="calendar-wrap">
-      <iframe
-        src="https://calendar.google.com/calendar/embed?src=hello%40azsunrisecafecito.com&amp;ctz=America%2FChicago"
-        frameborder="0"
-        scrolling="no"
-        title="Arizona Sunrise Catering Availability Calendar"
-        loading="lazy">
-      </iframe>
-    </div>
-
-    <div class="calendar-legend">
-      For privacy, customer names and event details are hidden. The calendar only shows when time may already be busy or unavailable.
-    </div>
-  </section>
 
   <!-- Mailto form -->
   <form action="mailto:hello@azsunrisecafecito.com" method="POST" enctype="text/plain"
