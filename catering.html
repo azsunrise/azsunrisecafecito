@@ -1,5 +1,5 @@
-html
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
@@ -16,6 +16,7 @@ html
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ICONS -->
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
@@ -35,6 +36,7 @@ html
 
     .main{
       flex:1;
+      min-width:0;
     }
 
     nav.side-nav{
@@ -51,6 +53,7 @@ html
       height: 100vh;
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
+      flex:0 0 220px;
     }
 
     nav.side-nav a{
@@ -103,6 +106,11 @@ html
       color: #7a3b2e;
     }
 
+    h2 {
+      color:#7a3b2e;
+      margin:0 0 10px;
+    }
+
     .divider {
       width: 140px;
       height: 3px;
@@ -146,6 +154,79 @@ html
       width: 18px;
       text-align: center;
       flex: 0 0 18px;
+    }
+
+    .availability-section{
+      max-width:740px;
+      margin:0 auto 26px;
+      padding:22px;
+      border-radius:16px;
+      background:#ffffff;
+      border:1px solid rgba(122,59,46,0.14);
+      box-shadow:0 8px 20px rgba(0,0,0,0.06);
+      text-align:left;
+    }
+
+    .availability-heading{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      color:#7a3b2e;
+      text-align:center;
+      margin-bottom:8px;
+    }
+
+    .availability-heading i{
+      color:#e36f47;
+    }
+
+    .availability-intro{
+      text-align:center;
+      margin:0 auto 14px;
+      font-size:1rem;
+      color:#5b4b45;
+    }
+
+    .availability-note{
+      background:#fff3e8;
+      border:1px solid rgba(227,111,71,0.20);
+      border-radius:12px;
+      padding:12px 14px;
+      margin:0 0 16px;
+      color:#5b4b45;
+      line-height:1.45;
+      font-size:0.95rem;
+    }
+
+    .availability-note strong{
+      color:#7a3b2e;
+    }
+
+    .calendar-wrap{
+      width:100%;
+      overflow:hidden;
+      border-radius:12px;
+      border:1px solid rgba(122,59,46,0.12);
+      background:#fff;
+    }
+
+    .calendar-wrap iframe{
+      width:100%;
+      height:600px;
+      display:block;
+      border:0;
+    }
+
+    .calendar-legend{
+      margin-top:12px;
+      padding:10px 12px;
+      border-radius:12px;
+      background:rgba(122,59,46,0.05);
+      color:#5b4b45;
+      font-size:0.92rem;
+      line-height:1.4;
+      text-align:center;
     }
 
     form {
@@ -288,24 +369,42 @@ html
     }
 
     @media (max-width: 720px) {
-      .row { grid-template-columns: 1fr; }
-      .container { padding-top: 30px; }
+      .row {
+        grid-template-columns: 1fr;
+      }
+
+      .container {
+        padding-top: 30px;
+      }
+
+      .availability-section{
+        padding:16px 12px;
+      }
+
+      .calendar-wrap iframe{
+        height:520px;
+      }
     }
 
     @media (max-width: 768px) {
-      .layout { flex-direction: column; }
+      .layout {
+        flex-direction: column;
+      }
 
       nav.side-nav{
         width:100%;
         height:auto;
+        flex:0 0 auto;
         flex-direction:row;
-        justify-content:center;
+        justify-content:flex-start;
         gap:8px;
         padding:10px;
         border-right:none;
         border-bottom: 1px solid rgba(122,59,46,0.12);
         z-index:60;
         overflow-x:auto;
+        overflow-y:hidden;
+        -webkit-overflow-scrolling:touch;
       }
 
       nav.side-nav a{
@@ -314,17 +413,37 @@ html
         transform:none;
         font-size:0.95rem;
         white-space:nowrap;
+        flex:0 0 auto;
       }
 
-      nav.side-nav a.active::before{ display:none; }
+      nav.side-nav a.active::before{
+        display:none;
+      }
+    }
+
+    @media (max-width: 480px){
+      .container{
+        padding-left:12px;
+        padding-right:12px;
+      }
+
+      form{
+        padding:22px 16px 26px;
+      }
+
+      .calendar-wrap iframe{
+        height:460px;
+      }
     }
   </style>
+
 </head>
 
 <body>
 <div class="layout">
 
   <!-- NAV -->
+
   <nav class="side-nav" aria-label="Primary navigation">
     <a href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a>
     <a href="about.html"><i class="fa-solid fa-user-chef" aria-hidden="true"></i> About Us</a>
@@ -334,190 +453,234 @@ html
   </nav>
 
   <!-- MAIN -->
+
   <main class="main">
     <div class="container">
 
-      <h1>Catering</h1>
-      <div class="divider"></div>
+```
+  <h1>Catering</h1>
+  <div class="divider"></div>
 
-      <p>
-        We love catering smaller, intimate gatherings — dinner parties, family celebrations, showers, community events,
-        pop-ups, and meaningful moments where food truly matters.
-      </p>
+  <p>
+    We love catering smaller, intimate gatherings — dinner parties, family celebrations, showers, community events,
+    pop-ups, and meaningful moments where food truly matters.
+  </p>
 
-      <div class="notice">
-        <strong>Catering & Food Trailer Event Minimums</strong>
+  <div class="notice">
+    <strong>Catering &amp; Food Trailer Event Minimums</strong>
 
-        <div class="line">
-          <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
-          <div>
-            <strong>Pickup or drop-off catering orders:</strong> $150 minimum before tax.
-          </div>
-        </div>
+    <div class="line">
+      <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+      <div>
+        <strong>Pickup or drop-off catering orders:</strong> $150 minimum before tax.
+      </div>
+    </div>
 
-        <div class="line">
-          <i class="fa-solid fa-truck" aria-hidden="true"></i>
-          <div>
-            <strong>Food trailer events:</strong> $350 minimum.
-          </div>
-        </div>
+    <div class="line">
+      <i class="fa-solid fa-truck" aria-hidden="true"></i>
+      <div>
+        <strong>Food trailer events:</strong> $350 minimum.
+      </div>
+    </div>
 
-        <div class="line">
-          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
-          <div>
-            Food trailer event minimums do not include park fees, venue fees, vendor fees, permit fees, electricity fees,
-            or other event/location fees required by the venue, park, city, or organizer.
-          </div>
-        </div>
+    <div class="line">
+      <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+      <div>
+        Food trailer event minimums do not include park fees, venue fees, vendor fees, permit fees, electricity fees,
+        or other event/location fees required by the venue, park, city, or organizer.
+      </div>
+    </div>
 
-        <div class="line">
-          <i class="fa-solid fa-certificate" aria-hidden="true"></i>
-          <div>
-            <strong>Permitted &amp; inspected:</strong> Arizona Sunrise Cafecito &amp; Catering is up to date on required food safety certifications,
-            fire inspection requirements, and our mobile food permit to operate across Texas.
-          </div>
-        </div>
+    <div class="line">
+      <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+      <div>
+        <strong>Permitted &amp; inspected:</strong> Arizona Sunrise Cafecito &amp; Catering is up to date on required food safety certifications,
+        fire inspection requirements, and our mobile food permit to operate across Texas.
+      </div>
+    </div>
 
-        <div class="line">
-          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-          <div>
-            <strong>Based out of:</strong> Royse City, TX.
-          </div>
-        </div>
+    <div class="line">
+      <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+      <div>
+        <strong>Based out of:</strong> Royse City, TX.
+      </div>
+    </div>
 
-        <div class="line">
-          <i class="fa-solid fa-gas-pump" aria-hidden="true"></i>
-          <div>
-            <strong>Travel note:</strong> Events 20+ miles from Royse City may require an added travel fee to help cover fuel,
-            drive time, and trailer transport costs.
-          </div>
-        </div>
+    <div class="line">
+      <i class="fa-solid fa-gas-pump" aria-hidden="true"></i>
+      <div>
+        <strong>Travel note:</strong> Events 20+ miles from Royse City may require an added travel fee to help cover fuel,
+        drive time, and trailer transport costs.
+      </div>
+    </div>
 
-        <div class="line">
-          <i class="fa-solid fa-tag" aria-hidden="true"></i>
-          <div>
-            <strong>10% off</strong> catering orders paid in <strong>cash</strong>.
-          </div>
-        </div>
+    <div class="line">
+      <i class="fa-solid fa-tag" aria-hidden="true"></i>
+      <div>
+        <strong>10% off</strong> catering orders paid in <strong>cash</strong>.
+      </div>
+    </div>
 
-        <div class="line">
-          <i class="fa-solid fa-motorcycle" aria-hidden="true"></i>
-          <div>
-            Need delivery for a pickup-style order? You’re welcome to use <strong>DoorDash</strong> when available, or send a courier.
+    <div class="line">
+      <i class="fa-solid fa-motorcycle" aria-hidden="true"></i>
+      <div>
+        Need delivery for a pickup-style order? You’re welcome to use <strong>DoorDash</strong> when available, or send a courier.
+      </div>
+    </div>
+  </div>
+
+  <!-- CATERING AVAILABILITY CALENDAR -->
+  <section class="availability-section" aria-labelledby="availability-title">
+    <div class="availability-heading">
+      <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+      <h2 id="availability-title">Check Our Availability</h2>
+    </div>
+
+    <p class="availability-intro">
+      Use the calendar below as a quick guide before submitting your catering or food trailer event request.
+    </p>
+
+    <div class="availability-note">
+      <strong>How to read the calendar:</strong> Busy blocks mean we may already be booked or unavailable.
+      Open dates may still be available, but availability can change. A date is not officially reserved until
+      we confirm your booking and receive the required deposit.
+    </div>
+
+    <div class="calendar-wrap">
+      <iframe
+        src="https://calendar.google.com/calendar/embed?src=hello%40azsunrisecafecito.com&amp;ctz=America%2FChicago"
+        frameborder="0"
+        scrolling="no"
+        title="Arizona Sunrise Catering Availability Calendar"
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <div class="calendar-legend">
+      For privacy, customer names and event details are hidden. The calendar only shows when time may already be busy or unavailable.
+    </div>
+  </section>
+
+  <!-- Mailto form -->
+  <form action="mailto:hello@azsunrisecafecito.com" method="POST" enctype="text/plain"
+        onsubmit="gtag('event','catering_form_submit',{event_category:'Lead',event_label:'Catering Form'});">
+
+    <label for="name">Name</label>
+    <input type="text" id="name" name="Name" required>
+
+    <div class="row">
+      <div>
+        <label for="phone">Phone (required)</label>
+        <input type="tel" id="phone" name="Phone" required placeholder="###-###-####">
+        <div class="help">So we can confirm details quickly.</div>
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="Email" required>
+      </div>
+    </div>
+
+    <label for="request_type">What type of request is this?</label>
+    <select id="request_type" name="Request Type">
+      <option value="Pickup catering order">Pickup catering order</option>
+      <option value="Drop-off catering order">Drop-off catering order</option>
+      <option value="Food trailer event">Food trailer event</option>
+      <option value="Not sure yet">Not sure yet</option>
+    </select>
+
+    <div class="row">
+      <div>
+        <label for="event_date">Preferred Date</label>
+        <input type="date" id="event_date" name="Preferred Date">
+        <div class="help">We’ll confirm availability after you submit.</div>
+      </div>
+
+      <div>
+        <label for="event_time">Preferred Time</label>
+        <input type="time" id="event_time" name="Preferred Time">
+        <div class="help">Example: 10:30 AM</div>
+      </div>
+    </div>
+
+    <label for="event_location">Event Location or Pickup Notes</label>
+    <input type="text" id="event_location" name="Event Location or Pickup Notes"
+           placeholder="Example: pickup-style order, school event, park, office, private home, city/event location...">
+
+    <label for="estimated_total">Estimated Budget (optional)</label>
+    <input type="text" id="estimated_total" name="Estimated Budget"
+           placeholder="Example: $150+ pickup order or $350+ trailer event">
+
+    <label for="guest_count">Estimated Headcount</label>
+    <input type="number" id="guest_count" name="Estimated Headcount" min="1" placeholder="Example: 25">
+
+    <label for="heat_level">Heat Preference</label>
+    <select id="heat_level" name="Heat Preference">
+      <option value="Mild / no heat">Mild / no heat</option>
+      <option value="Medium">Medium</option>
+      <option value="Spicy">Spicy</option>
+      <option value="Mix (some mild, some spicy)">Mix (some mild, some spicy)</option>
+    </select>
+
+    <label for="menu_interest">What are you thinking?</label>
+    <textarea id="menu_interest" name="Order Details / Menu Interest"
+      placeholder="Example: breakfast burritos, burgers, tacos, chicken tenders, event sample menu, brunch setup, family event, school event..."></textarea>
+
+    <label for="dietary">Dietary Notes (optional)</label>
+    <textarea id="dietary" name="Dietary Notes"
+      placeholder="Example: no pork, vegetarian options, allergies, etc."></textarea>
+
+    <div class="policy">
+      <strong>Deposit + Cancellation Policy</strong><br>
+      To protect your date, pickup time, and event preparation, we require a deposit once your order or event is confirmed.
+
+      <ul>
+        <li><strong>Pickup/drop-off catering minimum:</strong> $150 before tax</li>
+        <li><strong>Food trailer event minimum:</strong> $350</li>
+        <li>Food trailer event minimums do not include park, venue, vendor, permit, electricity, or other event/location fees.</li>
+        <li>Events 20+ miles from Royse City may require an added travel fee for fuel, drive time, and trailer transport.</li>
+        <li>Arizona Sunrise Cafecito &amp; Catering is up to date on required food safety certifications, fire inspection requirements, and our mobile food permit to operate across Texas.</li>
+        <li><strong>Deposit:</strong> 50% required to confirm your order or event.</li>
+        <li>Your order or event is <strong>not confirmed</strong> until the deposit is received.</li>
+        <li><strong>Cancellation window:</strong> Cancel 48+ hours before pickup or event service for a refund of your deposit, minus any non-recoverable ingredient costs or event-related costs, if applicable.</li>
+        <li>Cancellations within 48 hours are <strong>non-refundable</strong> because ingredients and prep are already in motion.</li>
+        <li><strong>Cash discount:</strong> 10% off when your catering order is paid in cash.</li>
+      </ul>
+
+      <div class="checkline">
+        <input type="checkbox" id="deposit_ack" name="Policy Acknowledgement"
+               value="I understand the catering/event minimums, possible travel fees, 50% deposit requirement, and the 48-hour cancellation policy." required>
+
+        <div>
+          <label for="deposit_ack">I agree to the minimums, possible travel fees, deposit, and cancellation policy.</label>
+          <div class="small">
+            Submitting this request does not guarantee availability until we confirm and receive your deposit.
           </div>
         </div>
       </div>
-
-      <!-- Mailto form -->
-      <form action="mailto:hello@azsunrisecafecito.com" method="POST" enctype="text/plain"
-            onsubmit="gtag('event','catering_form_submit',{event_category:'Lead',event_label:'Catering Form'});">
-
-        <label for="name">Name</label>
-        <input type="text" id="name" name="Name" required>
-
-        <div class="row">
-          <div>
-            <label for="phone">Phone (required)</label>
-            <input type="tel" id="phone" name="Phone" required placeholder="###-###-####">
-            <div class="help">So we can confirm details quickly.</div>
-          </div>
-          <div>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="Email" required>
-          </div>
-        </div>
-
-        <label for="request_type">What type of request is this?</label>
-        <select id="request_type" name="Request Type">
-          <option value="Pickup catering order">Pickup catering order</option>
-          <option value="Drop-off catering order">Drop-off catering order</option>
-          <option value="Food trailer event">Food trailer event</option>
-          <option value="Not sure yet">Not sure yet</option>
-        </select>
-
-        <div class="row">
-          <div>
-            <label for="event_date">Preferred Date</label>
-            <input type="date" id="event_date" name="Preferred Date">
-            <div class="help">We’ll confirm availability after you submit.</div>
-          </div>
-
-          <div>
-            <label for="event_time">Preferred Time</label>
-            <input type="time" id="event_time" name="Preferred Time">
-            <div class="help">Example: 10:30 AM</div>
-          </div>
-        </div>
-
-        <label for="event_location">Event Location or Pickup Notes</label>
-        <input type="text" id="event_location" name="Event Location or Pickup Notes" placeholder="Example: pickup-style order, school event, park, office, private home, city/event location...">
-
-        <label for="estimated_total">Estimated Budget (optional)</label>
-        <input type="text" id="estimated_total" name="Estimated Budget" placeholder="Example: $150+ pickup order or $350+ trailer event">
-
-        <label for="guest_count">Estimated Headcount</label>
-        <input type="number" id="guest_count" name="Estimated Headcount" min="1" placeholder="Example: 25">
-
-        <label for="heat_level">Heat Preference</label>
-        <select id="heat_level" name="Heat Preference">
-          <option value="Mild / no heat">Mild / no heat</option>
-          <option value="Medium">Medium</option>
-          <option value="Spicy">Spicy</option>
-          <option value="Mix (some mild, some spicy)">Mix (some mild, some spicy)</option>
-        </select>
-
-        <label for="menu_interest">What are you thinking?</label>
-        <textarea id="menu_interest" name="Order Details / Menu Interest"
-          placeholder="Example: breakfast burritos, burgers, tacos, chicken tenders, event sample menu, brunch setup, family event, school event..."></textarea>
-
-        <label for="dietary">Dietary Notes (optional)</label>
-        <textarea id="dietary" name="Dietary Notes"
-          placeholder="Example: no pork, vegetarian options, allergies, etc."></textarea>
-
-        <div class="policy">
-          <strong>Deposit + Cancellation Policy</strong><br>
-          To protect your date, pickup time, and event preparation, we require a deposit once your order or event is confirmed.
-          <ul>
-            <li><strong>Pickup/drop-off catering minimum:</strong> $150 before tax</li>
-            <li><strong>Food trailer event minimum:</strong> $350</li>
-            <li>Food trailer event minimums do not include park, venue, vendor, permit, electricity, or other event/location fees.</li>
-            <li>Events 20+ miles from Royse City may require an added travel fee for fuel, drive time, and trailer transport.</li>
-            <li>Arizona Sunrise Cafecito &amp; Catering is up to date on required food safety certifications, fire inspection requirements, and our mobile food permit to operate across Texas.</li>
-            <li><strong>Deposit:</strong> 50% required to confirm your order or event.</li>
-            <li>Your order or event is <strong>not confirmed</strong> until the deposit is received.</li>
-            <li><strong>Cancellation window:</strong> Cancel 48+ hours before pickup or event service for a refund of your deposit, minus any non-recoverable ingredient costs or event-related costs, if applicable.</li>
-            <li>Cancellations within 48 hours are <strong>non-refundable</strong> because ingredients and prep are already in motion.</li>
-            <li><strong>Cash discount:</strong> 10% off when your catering order is paid in cash.</li>
-          </ul>
-
-          <div class="checkline">
-            <input type="checkbox" id="deposit_ack" name="Policy Acknowledgement"
-                   value="I understand the catering/event minimums, possible travel fees, 50% deposit requirement, and the 48-hour cancellation policy." required>
-            <div>
-              <label for="deposit_ack">I agree to the minimums, possible travel fees, deposit, and cancellation policy.</label>
-              <div class="small">Submitting this request does not guarantee availability until we confirm and receive your deposit.</div>
-            </div>
-          </div>
-        </div>
-
-        <button type="submit">Request Catering or Food Trailer Event</button>
-
-        <div class="tiny">
-          <strong>Quick note:</strong> This form sends an email request and may open your email app to send.
-          If your device doesn’t support mailto, email us at <strong>hello@azsunrisecafecito.com</strong>.
-        </div>
-      </form>
-
-      <a class="button-back" href="index.html"
-         onclick="gtag('event', 'catering_back_home', { event_category: 'Navigation', event_label: 'Catering → Home' });">
-        ← Back to Home
-      </a>
-
     </div>
+
+    <button type="submit">Request Catering or Food Trailer Event</button>
+
+    <div class="tiny">
+      <strong>Quick note:</strong> This form sends an email request and may open your email app to send.
+      If your device doesn’t support mailto, email us at <strong>hello@azsunrisecafecito.com</strong>.
+    </div>
+  </form>
+
+  <a class="button-back" href="index.html"
+     onclick="gtag('event', 'catering_back_home', { event_category: 'Navigation', event_label: 'Catering → Home' });">
+    ← Back to Home
+  </a>
+
+</div>
+```
+
   </main>
 </div>
 
 <!-- AUTO ACTIVE NAV LINK -->
+
 <script>
   const path = window.location.pathname;
   const currentPage = (path.endsWith("/") ? "index.html" : path.split("/").pop()).split("?")[0];
@@ -530,4 +693,3 @@ html
 
 </body>
 </html>
-```
