@@ -36,49 +36,51 @@
 
     .main{
       flex:1;
+      min-width:0;
     }
 
     nav.side-nav{
-      width: 220px;
-      background: rgba(247,239,230,0.78);
-      border-right: 1px solid rgba(122,59,46,0.12);
-      padding: 16px 12px;
+      width:220px;
+      background:rgba(247,239,230,0.78);
+      border-right:1px solid rgba(122,59,46,0.12);
+      padding:16px 12px;
       display:flex;
       flex-direction:column;
       gap:10px;
-      position: sticky;
-      top: 0;
-      align-self: flex-start;
-      height: 100vh;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      position:sticky;
+      top:0;
+      align-self:flex-start;
+      height:100vh;
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+      flex:0 0 220px;
     }
 
     nav.side-nav a{
       text-decoration:none;
       color:#7a3b2e;
       font-weight:700;
-      padding: 10px 12px;
-      border-radius: 12px;
+      padding:10px 12px;
+      border-radius:12px;
       display:flex;
       align-items:center;
       gap:10px;
-      background: rgba(255,255,255,0.55);
-      border: 1px solid rgba(122,59,46,0.08);
-      transition: background .15s ease, transform .15s ease, box-shadow .15s ease;
+      background:rgba(255,255,255,0.55);
+      border:1px solid rgba(122,59,46,0.08);
+      transition:background .15s ease, transform .15s ease, box-shadow .15s ease;
     }
 
     nav.side-nav a:hover{
-      background: rgba(230,195,165,0.45);
-      box-shadow: 0 6px 16px rgba(122,59,46,0.10);
-      transform: translateX(2px);
+      background:rgba(230,195,165,0.45);
+      box-shadow:0 6px 16px rgba(122,59,46,0.10);
+      transform:translateX(2px);
     }
 
     nav.side-nav a.active{
-      background: linear-gradient(to right, rgba(227,111,71,0.18), rgba(246,193,119,0.22));
-      border: 1px solid rgba(227,111,71,0.28);
-      box-shadow: 0 10px 22px rgba(227,111,71,0.12);
-      position: relative;
+      background:linear-gradient(to right, rgba(227,111,71,0.18), rgba(246,193,119,0.22));
+      border:1px solid rgba(227,111,71,0.28);
+      box-shadow:0 10px 22px rgba(227,111,71,0.12);
+      position:relative;
     }
 
     nav.side-nav a.active::before{
@@ -89,224 +91,321 @@
       bottom:10px;
       width:4px;
       border-radius:10px;
-      background: linear-gradient(to bottom, #e36f47, #f6c177);
+      background:linear-gradient(to bottom, #e36f47, #f6c177);
     }
 
     .container {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 40px 20px 60px;
-      text-align: center;
+      max-width:860px;
+      margin:0 auto;
+      padding:40px 20px 60px;
+      text-align:center;
     }
 
     h1 {
-      margin: 0 0 10px;
-      color: #7a3b2e;
+      margin:0 0 10px;
+      color:#7a3b2e;
+    }
+
+    h2 {
+      margin:0;
+      color:#7a3b2e;
     }
 
     .divider {
-      width: 140px;
-      height: 3px;
-      margin: 0 auto 18px;
-      background: linear-gradient(to right, #f6c177, #e36f47, #f6c177);
-      border-radius: 999px;
+      width:140px;
+      height:3px;
+      margin:0 auto 18px;
+      background:linear-gradient(to right, #f6c177, #e36f47, #f6c177);
+      border-radius:999px;
     }
 
     p {
-      font-size: 1.05rem;
-      margin: 10px auto 18px;
-      max-width: 740px;
-      line-height: 1.55;
-      color: #5b4b45;
+      font-size:1.05rem;
+      margin:10px auto 18px;
+      max-width:740px;
+      line-height:1.55;
+      color:#5b4b45;
     }
 
     .notice {
-      max-width: 740px;
-      margin: 0 auto 22px;
-      text-align: left;
-      background: #fff3e8;
-      border: 1px solid rgba(227,111,71,0.20);
-      border-radius: 14px;
-      padding: 14px 14px;
-      color: #5b4b45;
-      line-height: 1.5;
+      max-width:740px;
+      margin:0 auto 22px;
+      text-align:left;
+      background:#fff3e8;
+      border:1px solid rgba(227,111,71,0.20);
+      border-radius:14px;
+      padding:14px;
+      color:#5b4b45;
+      line-height:1.5;
     }
 
-    .notice strong { color: #7a3b2e; }
+    .notice strong {
+      color:#7a3b2e;
+    }
 
     .notice .line {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      margin-top: 10px;
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      margin-top:10px;
     }
 
     .notice .line i{
-      margin-top: 2px;
-      color: #e36f47;
-      width: 18px;
-      text-align: center;
-      flex: 0 0 18px;
+      margin-top:2px;
+      color:#e36f47;
+      width:18px;
+      text-align:center;
+      flex:0 0 18px;
+    }
+
+    .availability-section{
+      max-width:740px;
+      margin:0 auto 26px;
+      padding:22px;
+      border-radius:16px;
+      background:#ffffff;
+      border:1px solid rgba(122,59,46,0.14);
+      box-shadow:0 8px 20px rgba(0,0,0,0.06);
+      text-align:left;
+    }
+
+    .availability-heading{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:10px;
+      margin-bottom:8px;
+      text-align:center;
+    }
+
+    .availability-heading i{
+      color:#e36f47;
+      font-size:1.2rem;
+    }
+
+    .availability-intro{
+      text-align:center;
+      margin:0 auto 14px;
+      font-size:1rem;
+    }
+
+    .availability-note{
+      background:#fff3e8;
+      border:1px solid rgba(227,111,71,0.20);
+      border-radius:12px;
+      padding:12px 14px;
+      margin:0 0 16px;
+      color:#5b4b45;
+      line-height:1.45;
+      font-size:0.95rem;
+    }
+
+    .availability-note strong{
+      color:#7a3b2e;
+    }
+
+    .calendar-wrap{
+      width:100%;
+      overflow:hidden;
+      border-radius:12px;
+      border:1px solid rgba(122,59,46,0.12);
+      background:#ffffff;
+    }
+
+    .calendar-wrap iframe{
+      width:100%;
+      height:600px;
+      display:block;
+      border:0;
+    }
+
+    .calendar-legend{
+      margin-top:12px;
+      padding:10px 12px;
+      border-radius:12px;
+      background:rgba(122,59,46,0.05);
+      color:#5b4b45;
+      font-size:0.92rem;
+      line-height:1.4;
+      text-align:center;
     }
 
     form {
-      background: #ffffff;
-      padding: 28px 24px 32px;
-      border-radius: 14px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-      text-align: left;
-      max-width: 740px;
-      margin: 0 auto;
+      background:#ffffff;
+      padding:28px 24px 32px;
+      border-radius:14px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.06);
+      text-align:left;
+      max-width:740px;
+      margin:0 auto;
     }
 
     label {
-      display: block;
-      margin-top: 16px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: #533f3a;
+      display:block;
+      margin-top:16px;
+      font-weight:700;
+      font-size:0.95rem;
+      color:#533f3a;
     }
 
     input, textarea, select {
-      width: 100%;
-      padding: 10px 12px;
-      margin-top: 6px;
-      font-size: 1rem;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      font-family: inherit;
+      width:100%;
+      padding:10px 12px;
+      margin-top:6px;
+      font-size:1rem;
+      border-radius:10px;
+      border:1px solid #ccc;
+      font-family:inherit;
     }
 
     textarea {
-      resize: vertical;
-      min-height: 110px;
+      resize:vertical;
+      min-height:110px;
     }
 
     .row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
     }
 
     .help {
-      margin-top: 6px;
-      font-size: 0.92rem;
-      color: #6b5a53;
-      line-height: 1.35;
+      margin-top:6px;
+      font-size:0.92rem;
+      color:#6b5a53;
+      line-height:1.35;
     }
 
     .policy {
-      margin-top: 18px;
-      padding: 14px 14px;
-      border-radius: 14px;
-      background: rgba(122,59,46,0.06);
-      border: 1px dashed rgba(122,59,46,0.22);
-      color: #5b4b45;
-      font-size: 0.95rem;
-      line-height: 1.45;
+      margin-top:18px;
+      padding:14px;
+      border-radius:14px;
+      background:rgba(122,59,46,0.06);
+      border:1px dashed rgba(122,59,46,0.22);
+      color:#5b4b45;
+      font-size:0.95rem;
+      line-height:1.45;
     }
 
     .policy ul {
-      margin: 10px 0 0 18px;
-      padding: 0;
+      margin:10px 0 0 18px;
+      padding:0;
     }
 
     .checkline {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      margin-top: 12px;
-      padding: 10px 12px;
-      border: 1px solid rgba(122,59,46,0.14);
-      border-radius: 12px;
-      background: #fff;
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      margin-top:12px;
+      padding:10px 12px;
+      border:1px solid rgba(122,59,46,0.14);
+      border-radius:12px;
+      background:#fff;
     }
 
     .checkline input[type="checkbox"]{
-      width: 18px;
-      height: 18px;
-      margin-top: 2px;
-      flex: 0 0 18px;
+      width:18px;
+      height:18px;
+      margin-top:2px;
+      flex:0 0 18px;
     }
 
     .checkline label{
-      margin: 0;
-      font-weight: 800;
-      font-size: 0.95rem;
-      color: #533f3a;
+      margin:0;
+      font-weight:800;
+      font-size:0.95rem;
+      color:#533f3a;
     }
 
     .checkline .small{
-      font-weight: 400;
-      color: #6b5a53;
-      margin-top: 4px;
-      font-size: 0.92rem;
-      line-height: 1.35;
+      font-weight:400;
+      color:#6b5a53;
+      margin-top:4px;
+      font-size:0.92rem;
+      line-height:1.35;
     }
 
     button {
-      margin-top: 22px;
-      width: 100%;
-      padding: 14px;
-      font-size: 1.05rem;
-      font-weight: 800;
-      background: linear-gradient(to right, #f6c177, #e36f47);
-      border: none;
-      border-radius: 12px;
-      color: #fff;
-      cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      margin-top:22px;
+      width:100%;
+      padding:14px;
+      font-size:1.05rem;
+      font-weight:800;
+      background:linear-gradient(to right, #f6c177, #e36f47);
+      border:none;
+      border-radius:12px;
+      color:#fff;
+      cursor:pointer;
+      transition:transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     button:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+      transform:translateY(-1px);
+      box-shadow:0 6px 14px rgba(0,0,0,0.12);
     }
 
     .tiny {
-      text-align: center;
-      margin-top: 10px;
-      font-size: 0.92rem;
-      color: #6b5a53;
-      line-height: 1.35;
+      text-align:center;
+      margin-top:10px;
+      font-size:0.92rem;
+      color:#6b5a53;
+      line-height:1.35;
     }
 
     .button-back {
-      display: inline-block;
-      margin-top: 26px;
-      padding: 14px 28px;
-      border-radius: 30px;
-      font-weight: 700;
-      text-decoration: none;
-      color: #fff;
-      background: linear-gradient(to right, #e36f47, #f6c177);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display:inline-block;
+      margin-top:26px;
+      padding:14px 28px;
+      border-radius:30px;
+      font-weight:700;
+      text-decoration:none;
+      color:#fff;
+      background:linear-gradient(to right, #e36f47, #f6c177);
+      transition:transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .button-back:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+      transform:translateY(-2px);
+      box-shadow:0 6px 14px rgba(0,0,0,0.15);
     }
 
-    @media (max-width: 720px) {
-      .row { grid-template-columns: 1fr; }
-      .container { padding-top: 30px; }
+    @media (max-width:720px) {
+      .row {
+        grid-template-columns:1fr;
+      }
+
+      .container {
+        padding-top:30px;
+      }
+
+      .availability-section{
+        padding:16px 12px;
+      }
+
+      .calendar-wrap iframe{
+        height:520px;
+      }
     }
 
-    @media (max-width: 768px) {
-      .layout { flex-direction: column; }
+    @media (max-width:768px) {
+      .layout {
+        flex-direction:column;
+      }
 
       nav.side-nav{
         width:100%;
         height:auto;
+        flex:0 0 auto;
         flex-direction:row;
-        justify-content:center;
+        justify-content:flex-start;
         gap:8px;
         padding:10px;
         border-right:none;
-        border-bottom: 1px solid rgba(122,59,46,0.12);
+        border-bottom:1px solid rgba(122,59,46,0.12);
         z-index:60;
         overflow-x:auto;
+        overflow-y:hidden;
+        -webkit-overflow-scrolling:touch;
       }
 
       nav.side-nav a{
@@ -315,9 +414,27 @@
         transform:none;
         font-size:0.95rem;
         white-space:nowrap;
+        flex:0 0 auto;
       }
 
-      nav.side-nav a.active::before{ display:none; }
+      nav.side-nav a.active::before{
+        display:none;
+      }
+    }
+
+    @media (max-width:480px){
+      .container{
+        padding-left:12px;
+        padding-right:12px;
+      }
+
+      form{
+        padding:22px 16px 26px;
+      }
+
+      .calendar-wrap iframe{
+        height:460px;
+      }
     }
   </style>
 
@@ -351,7 +468,7 @@
   </p>
 
   <div class="notice">
-    <strong>Catering & Food Trailer Event Minimums</strong>
+    <strong>Catering &amp; Food Trailer Event Minimums</strong>
 
     <div class="line">
       <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
@@ -412,6 +529,41 @@
       </div>
     </div>
   </div>
+
+  <!-- PUBLIC CATERING AVAILABILITY CALENDAR -->
+  <section class="availability-section" aria-labelledby="availability-title">
+
+    <div class="availability-heading">
+      <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+      <h2 id="availability-title">Check Our Availability</h2>
+    </div>
+
+    <p class="availability-intro">
+      Use the calendar below as a quick guide before submitting your catering or food trailer event request.
+    </p>
+
+    <div class="availability-note">
+      <strong>How to read the calendar:</strong> Dates marked <strong>Booked</strong> or
+      <strong>Unavailable</strong> may no longer be open. Dates marked
+      <strong>Limited Availability</strong> may still have select times available.
+      Open dates are not guaranteed until we confirm your request and receive the required deposit.
+    </div>
+
+    <div class="calendar-wrap">
+      <iframe
+        src="https://calendar.google.com/calendar/embed?src=c_89a9df792a9b069f849f8f276635dd2a1ed43ce6b0be7d87a3775c47c2f2d1ef%40group.calendar.google.com&amp;ctz=America%2FChicago"
+        frameborder="0"
+        scrolling="no"
+        title="Arizona Sunrise Catering Availability Calendar"
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <div class="calendar-legend">
+      This public calendar should contain only general availability labels. Customer names, addresses, and private event details are not displayed.
+    </div>
+
+  </section>
 
   <!-- Mailto form -->
   <form action="mailto:hello@azsunrisecafecito.com" method="POST" enctype="text/plain"
