@@ -197,14 +197,14 @@ nav.side-nav a.active::before{
   color: #e36f47;
 }
 
-/* ===== Upcoming Events ===== */
+/* ===== Events We've Served ===== */
 .events-box{
   margin-top: 14px;
   text-align: left;
   background: rgba(255,255,255,0.78);
   border: 1px solid rgba(122,59,46,0.12);
   border-radius: 14px;
-  padding: 12px 14px;
+  padding: 16px;
 }
 
 .events-title{
@@ -223,17 +223,34 @@ nav.side-nav a.active::before{
   text-align:center;
 }
 
+.events-intro{
+  margin: 0 0 14px;
+  color: #6b5a53;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.events-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
 .event-item{
   display:flex;
   gap:10px;
   align-items:flex-start;
   line-height:1.3;
   color:#5b4b45;
-  padding: 7px 0;
+  padding: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(122,59,46,0.10);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(122,59,46,0.05);
 }
 
 .event-item + .event-item{
-  border-top: 1px dashed rgba(122,59,46,0.10);
+  border-top: 1px solid rgba(122,59,46,0.10);
 }
 
 .event-item.featured{
@@ -301,6 +318,31 @@ nav.side-nav a.active::before{
 .event-icon.community{
   background: rgba(227,111,71,0.18);
   color: #c2410c;
+}
+
+.event-icon.school{
+  background: rgba(244,114,182,0.16);
+  color: #be185d;
+}
+
+.event-icon.residents{
+  background: rgba(147,197,253,0.22);
+  color: #2563eb;
+}
+
+.event-icon.private-event{
+  background: rgba(255,214,102,0.24);
+  color: #b45309;
+}
+
+.event-icon.fundraiser{
+  background: rgba(134,239,172,0.22);
+  color: #15803d;
+}
+
+.event-icon.corporate{
+  background: rgba(196,181,253,0.26);
+  color: #7c3aed;
 }
 
 .event-item strong{
@@ -622,6 +664,10 @@ nav.side-nav a.active::before{
 @media (max-width: 768px) {
   .layout { flex-direction: column; }
 
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+
   nav.side-nav{
     width:100%;
     height:auto;
@@ -734,69 +780,87 @@ nav.side-nav a.active::before{
 
   <p>More than brunch — it’s an experience for the whole family.</p>
 
-  <!-- UPCOMING EVENTS -->
+  <!-- EVENTS WE'VE SERVED -->
 
-  <div class="events-box" aria-label="Upcoming events">
+  <div class="events-box" aria-label="Events served by Arizona Sunrise Cafecito and Catering">
     <div class="events-title">
-      <i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
-      Upcoming Events
+      <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+      Events We’ve Served
     </div>
 
-```
-<div class="event-item featured">
-  <div class="event-icon lonestar">
-    <i class="fa-solid fa-futbol" aria-hidden="true"></i>
-  </div>
+    <p class="events-intro">
+      From nonprofit fundraisers and neighborhood gatherings to school, corporate,
+      and private celebrations, we’re proud to serve the people and organizations
+      that make our community special.
+    </p>
 
-  <div>
-    <strong>Lone Star Shop &amp; Stroll + Free Norway vs. England Watch Party ⚽🛍️</strong>
+    <div class="events-grid">
+      <div class="event-item">
+        <div class="event-icon school">
+          <i class="fa-solid fa-ice-cream" aria-hidden="true"></i>
+        </div>
+        <div>
+          <strong>Founding Family Ice Cream Social</strong>
+          <div class="event-date">Celebree School of Fate</div>
+          <div class="event-detail">August 9, 2026 • Fate Community Center</div>
+        </div>
+      </div>
 
-    <div class="event-date">
-      Saturday, July 11th, 2026
+      <div class="event-item">
+        <div class="event-icon residents">
+          <i class="fa-solid fa-house" aria-hidden="true"></i>
+        </div>
+        <div>
+          <strong>Private Resident Event</strong>
+          <div class="event-date">Rockwall Commons</div>
+          <div class="event-detail">Rockwall, Texas</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-icon private-event">
+          <i class="fa-solid fa-flag-usa" aria-hidden="true"></i>
+        </div>
+        <div>
+          <strong>Private Fourth of July Celebration</strong>
+          <div class="event-date">Buffalo Creek Country Club</div>
+          <div class="event-detail">July 4, 2026 • Heath, Texas</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-icon fundraiser">
+          <i class="fa-solid fa-person-walking" aria-hidden="true"></i>
+        </div>
+        <div>
+          <strong>Pregnancy Resource Center Walk for Life</strong>
+          <div class="event-date">Harry Myers Park</div>
+          <div class="event-detail">May 8, 2026 • Rockwall, Texas</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-icon corporate">
+          <i class="fa-solid fa-building" aria-hidden="true"></i>
+        </div>
+        <div>
+          <strong>Lowe’s Cinco de Mayo Celebration</strong>
+          <div class="event-date">Lowe’s of Rockwall</div>
+          <div class="event-detail">May 5, 2026 • Rockwall, Texas</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-icon cars">
+          <i class="fa-solid fa-car-side" aria-hidden="true"></i>
+        </div>
+        <div>
+          <strong>Cruise-In for Cancer</strong>
+          <div class="event-date">Benefiting the 9474 Foundation</div>
+          <div class="event-detail">March 28, 2026 • Royse City High School</div>
+        </div>
+      </div>
     </div>
-
-    <div class="event-date">
-      Shopping and brunch begin at 9:00 AM • Game begins at 4:00 PM
-    </div>
-
-    <div class="event-detail">
-      Start the day with the Local Vendor Market, shop local, let the kids play, and grab brunch from Arizona Sunrise Cafecito &amp; Catering.
-    </div>
-
-    <div class="event-detail">
-      Enjoy specialty coffee from Artiszn Coffee, protein drinks from Holy Grounds, lunch and dinner from The Perfect Bite, and Hawaiian shave ice from The Blue Tropics.
-    </div>
-
-    <div class="event-detail">
-      Grab your seat early for the free Norway vs. England watch party at 4:00 PM Central Time. Free admission and free watch party.
-    </div>
-  </div>
-</div>
-
-<div class="event-item">
-  <div class="event-icon cars">
-    <i class="fa-solid fa-car-side" aria-hidden="true"></i>
-  </div>
-
-  <div>
-    <strong>Coffee, Cars &amp; Cafecito ☕🚗🌵</strong>
-    <div class="event-date">Sunday, July 19th, 2026 • Cruise-in: 8:30 AM – 11:00 AM</div>
-    <div class="event-date">Arizona Sunrise open early: 8:00 AM – 2:00 PM</div>
-
-    <div class="event-detail">
-      Casual Sunday test run at Holy Grounds with coffee, breakfast, brunch, and cool rides.
-      Classic cars, Jeeps, trucks, motorcycles, and family minivans welcome.
-    </div>
-  </div>
-</div>
-
-<a class="event-page-link" href="community-events.html" target="_blank" rel="noopener"
-   onclick="gtag('event','community_events_click',{event_category:'Navigation',event_label:'Upcoming Events Box'});">
-  <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
-  See all Community Events at the Yard
-</a>
-```
-
   </div>
 </div>
 
@@ -821,7 +885,6 @@ nav.side-nav a.active::before{
   <div class="social-hub-inner">
     <h2>Come for the biscuits. Stay for the chaos.</h2>
 
-```
 <p class="hub-subtitle">
   Follow Arizona Sunrise Cafecito &amp; Catering for specials, menu drops, event updates,
   and the occasional food trailer shenanigan. If we made your day better, a Google review or Yelp feedback
@@ -886,7 +949,6 @@ nav.side-nav a.active::before{
   <strong>Small business truth:</strong> every follow, like, share, Google review, Yelp mention, and tag helps more local families find us.
   Thank you for supporting our little food trailer with big brunch energy.
 </div>
-```
 
   </div>
 </section>
@@ -898,7 +960,6 @@ nav.side-nav a.active::before{
   <div class="why-us">
     <h2>Why Arizona Sunrise Cafecito &amp; Catering?</h2>
 
-```
 <ul>
   <li>🌅 Comfort food with Southwest flair</li>
   <li>🧡 Locally owned &amp; community-driven</li>
@@ -907,7 +968,6 @@ nav.side-nav a.active::before{
   <li>🇺🇸 10% military discount for active military and veterans with valid ID on regular-priced items</li>
   <li>🚗 Available on DoorDash when delivery is active</li>
 </ul>
-```
 
   </div>
 
@@ -952,12 +1012,10 @@ nav.side-nav a.active::before{
        945-546-0808
     </a><br><br>
 
-```
 📧 <a href="mailto:hello@azsunrisecafecito.com"
    onclick="gtag('event','email_click',{event_category:'Contact',event_label:'Email'});">
    hello@azsunrisecafecito.com
 </a>
-```
 
   </p>
 
