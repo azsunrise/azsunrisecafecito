@@ -151,6 +151,20 @@ nav.side-nav a.active::before{
   box-shadow: 0 8px 18px rgba(122,59,46,0.14);
 }
 
+.hours-note {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.hours-review {
+  display: block;
+  margin-top: 6px;
+  color: #6b5a53;
+  font-size: 0.92rem;
+}
+
 /* ===== Holy Grounds Experience Preview ===== */
 .experience-preview {
   max-width: 720px;
@@ -831,7 +845,8 @@ nav.side-nav a.active::before{
 </div>
 
 <div class="promo-bar hours">
-  🌅 Regular Hours: Wednesday – Sunday • 10:00 AM – 2:00 PM
+  ☀️ Heat-Adjusted Hours: Wednesday – Sunday • 8:00 AM – 12:00 PM
+  <span class="hours-note">Through Sunday, September 6 • Schedule reevaluated Friday, September 4</span>
 </div>
 
 <div class="promo-bar military">
@@ -1144,7 +1159,7 @@ nav.side-nav a.active::before{
 
   <!-- NOW OPEN -->
 
-  <h2 class="now-open">Now Open</h2>
+  <h2 class="now-open">Today’s Hours</h2>
 
   <!-- Dynamic Open Today indicator -->
 
@@ -1154,8 +1169,9 @@ nav.side-nav a.active::before{
   </div>
 
   <p>
-    <strong>Regular Hours</strong><br>
-    Wednesday – Sunday • 10:00 AM – 2:00 PM
+    <strong>Temporary Heat-Adjusted Hours</strong><br>
+    Wednesday – Sunday • 8:00 AM – 12:00 PM
+    <span class="hours-review">In effect through Sunday, September 6. We’ll reevaluate the schedule Friday, September 4.</span>
   </p>
 
   <!-- Location -->
@@ -1211,7 +1227,7 @@ nav.side-nav a.active::before{
   setInterval(nextImage, 3000);
 </script>
 
-<!-- OPEN TODAY INDICATOR (Regular Wed–Sun 10am–2pm) -->
+<!-- OPEN TODAY INDICATOR (Temporary heat-adjusted Wed–Sun 8am–12pm) -->
 
 <script>
   (function(){
@@ -1236,31 +1252,31 @@ nav.side-nav a.active::before{
     const isOpenDay = (day === 0) || (day >= 3 && day <= 6);
     const isClosedAllDay = (day === 1 || day === 2); // Mon/Tue
 
-    const openMinutes = 10 * 60;
-    const closeMinutes = 14 * 60;
+    const openMinutes = 8 * 60;
+    const closeMinutes = 12 * 60;
 
     const isOpenNow = isOpenDay && (minutes >= openMinutes) && (minutes < closeMinutes);
 
     if (isOpenNow){
-      setOpen("Open today until 2:00 PM");
+      setOpen("Open today until 12:00 PM");
       return;
     }
 
     if (isClosedAllDay){
-      setClosed("Closed today • Opens Wednesday at 10:00 AM");
+      setClosed("Closed today • Opens Wednesday at 8:00 AM");
       return;
     }
 
     if (isOpenDay){
       if (minutes < openMinutes){
-        setClosed("Closed now • Opens at 10:00 AM");
+        setClosed("Closed now • Opens at 8:00 AM");
         return;
       }
 
       if (day === 0){
-        setClosed("Closed now • Opens Wednesday at 10:00 AM");
+        setClosed("Closed now • Opens Wednesday at 8:00 AM");
       } else {
-        setClosed("Closed now • Opens tomorrow at 10:00 AM");
+        setClosed("Closed now • Opens tomorrow at 8:00 AM");
       }
 
       return;
