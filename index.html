@@ -107,8 +107,9 @@ nav.side-nav a.active::before{
 }
 
 .logo-wrap img {
-  width: 100%;
-  max-width: 900px;
+  display: block;
+  width: calc(100% - 32px);
+  max-width: 720px;
   margin: 0 auto;
   border-radius: 14px;
 }
@@ -371,6 +372,73 @@ nav.side-nav a.active::before{
   color: #5b4b45;
   font-weight: 700;
   font-size: 0.95rem;
+}
+
+/* ===== Upcoming Off-Site Events ===== */
+.upcoming-events{
+  margin-top: 14px;
+  text-align: left;
+  background: linear-gradient(to right, rgba(227,111,71,0.10), rgba(246,193,119,0.14));
+  border: 1px solid rgba(227,111,71,0.22);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.upcoming-events .event-item:last-child{
+  grid-column: 1 / -1;
+}
+
+.upcoming-events .event-item a{
+  color: #7a3b2e;
+  text-decoration: none;
+}
+
+.upcoming-events .event-item a:hover{
+  text-decoration: underline;
+}
+
+.event-icon.pool{
+  background: rgba(125,211,252,0.24);
+  color: #0369a1;
+}
+
+.event-icon.picnic{
+  background: rgba(134,239,172,0.24);
+  color: #15803d;
+}
+
+.event-icon.brews{
+  background: rgba(251,191,36,0.24);
+  color: #b45309;
+}
+
+.event-icon.halloween{
+  background: rgba(196,181,253,0.28);
+  color: #7c3aed;
+}
+
+.event-icon.race{
+  background: rgba(244,114,182,0.18);
+  color: #be185d;
+}
+
+.event-access{
+  margin-top: 5px;
+  color: #7a3b2e;
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.schedule-note{
+  margin: 12px 0 0;
+  color: #5b4b45;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.schedule-note a{
+  color: #7a3b2e;
+  font-weight: 800;
 }
 
 .event-page-link{
@@ -668,6 +736,18 @@ nav.side-nav a.active::before{
     grid-template-columns: 1fr;
   }
 
+  .upcoming-events .event-item:last-child{
+    grid-column: auto;
+  }
+
+  .logo-wrap{
+    padding: 8px 0 0;
+  }
+
+  .logo-wrap img{
+    width: calc(100% - 24px);
+  }
+
   nav.side-nav{
     width:100%;
     height:auto;
@@ -861,6 +941,97 @@ nav.side-nav a.active::before{
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- UPCOMING OFF-SITE EVENTS -->
+
+  <div class="upcoming-events" id="find-us" aria-label="Upcoming Arizona Sunrise off-site events">
+    <div class="events-title">
+      <i class="fa-solid fa-truck" aria-hidden="true"></i>
+      Find Us Around Town
+    </div>
+
+    <p class="events-intro">
+      Follow Arizona Sunrise Cafecito &amp; Catering as we pop up at special events
+      away from Holy Grounds. Neighborhood appearances may be limited to residents
+      and their guests.
+    </p>
+
+    <div class="events-grid">
+      <div class="event-item">
+        <div class="event-icon pool">
+          <i class="fa-solid fa-water-ladder" aria-hidden="true"></i>
+        </div>
+        <div>
+          <strong>Buffalo Creek Labor Day Poolside Pop-Up</strong>
+          <div class="event-date">September 7, 2026 &bull; 11:00 AM&ndash;2:00 PM</div>
+          <div class="event-detail">Buffalo Creek Pool &bull; Heath</div>
+          <div class="event-access">Buffalo Creek community event</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-icon picnic">
+          <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
+        </div>
+        <div>
+          <strong>Creekside Blankets &amp; Bites</strong>
+          <div class="event-date">September 19, 2026 &bull; 5:30&ndash;7:30 PM</div>
+          <div class="event-detail">Creekside HOA &bull; Royse City</div>
+          <div class="event-access">For Creekside residents and their guests</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-icon brews">
+          <i class="fa-solid fa-beer-mug-empty" aria-hidden="true"></i>
+        </div>
+        <div>
+          <strong>Brews on Bois D&rsquo;Arc</strong>
+          <div class="event-date">September 26, 2026 &bull; 5:00&ndash;10:00 PM</div>
+          <div class="event-detail">
+            Bois D&rsquo;Arc Street in Downtown Forney &bull; Between Rhythm Vault Dance Company and the City Hall Annex
+          </div>
+          <div class="event-access">Open to the public</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-icon halloween">
+          <i class="fa-solid fa-ghost" aria-hidden="true"></i>
+        </div>
+        <div>
+          <a href="https://www.rockwall.com/event_ScareOnTheSquare.asp" target="_blank" rel="noopener">
+            <strong>Scare on the Square</strong>
+          </a>
+          <div class="event-date">October 24, 2026 &bull; 2:00&ndash;5:00 PM</div>
+          <div class="event-detail">Downtown Rockwall</div>
+          <div class="event-access">Open to the public</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-icon race">
+          <i class="fa-solid fa-person-running" aria-hidden="true"></i>
+        </div>
+        <div>
+          <strong>Heath Golf &amp; Yacht Club Turkey Dash</strong>
+          <div class="event-date">Thursday, November 26, 2026</div>
+          <div class="event-detail">
+            1500 Clubhouse Drive &bull; Heath<br>
+            Kids&rsquo; 1K begins at 8:00 AM &bull; Chip-timed 5K begins at 8:30 AM
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="schedule-note">
+      Our December event schedule will be published in October. Follow us on
+      <a href="https://www.facebook.com/azsunrisecafecito" target="_blank" rel="noopener">Facebook</a>
+      and
+      <a href="https://www.instagram.com/az_sunrise_cafecito_catering?igsh=b2i0nmw2ctfvzwvp" target="_blank" rel="noopener">Instagram</a>
+      for serving times, featured menus, weather notices, and event updates.
+    </p>
   </div>
 </div>
 
