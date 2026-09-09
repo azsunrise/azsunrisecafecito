@@ -845,8 +845,7 @@ nav.side-nav a.active::before{
 </div>
 
 <div class="promo-bar hours">
-  ☀️ Heat-Adjusted Hours: Wednesday – Sunday • 8:00 AM – 12:00 PM
-  <span class="hours-note">Through Sunday, September 6 • Schedule reevaluated Friday, September 4</span>
+  ☀️ Hours: Friday – Sunday • 8:00 AM – 12:00 PM
 </div>
 
 <div class="promo-bar military">
@@ -1169,9 +1168,8 @@ nav.side-nav a.active::before{
   </div>
 
   <p>
-    <strong>Temporary Heat-Adjusted Hours</strong><br>
-    Wednesday – Sunday • 8:00 AM – 12:00 PM
-    <span class="hours-review">In effect through Sunday, September 6. We’ll reevaluate the schedule Friday, September 4.</span>
+    <strong>Current Hours</strong><br>
+    Friday – Sunday • 8:00 AM – 12:00 PM
   </p>
 
   <!-- Location -->
@@ -1227,7 +1225,7 @@ nav.side-nav a.active::before{
   setInterval(nextImage, 3000);
 </script>
 
-<!-- OPEN TODAY INDICATOR (Temporary heat-adjusted Wed–Sun 8am–12pm) -->
+<!-- OPEN TODAY INDICATOR (Friday–Sunday, 8am–12pm) -->
 
 <script>
   (function(){
@@ -1248,9 +1246,9 @@ nav.side-nav a.active::before{
       indicator.classList.add("closed");
     }
 
-    // Open days: Wed(3) Thu(4) Fri(5) Sat(6) Sun(0)
-    const isOpenDay = (day === 0) || (day >= 3 && day <= 6);
-    const isClosedAllDay = (day === 1 || day === 2); // Mon/Tue
+    // Open days: Fri(5) Sat(6) Sun(0)
+    const isOpenDay = (day === 0) || (day >= 5 && day <= 6);
+    const isClosedAllDay = (day >= 1 && day <= 4); // Mon–Thu
 
     const openMinutes = 8 * 60;
     const closeMinutes = 12 * 60;
@@ -1263,7 +1261,7 @@ nav.side-nav a.active::before{
     }
 
     if (isClosedAllDay){
-      setClosed("Closed today • Opens Wednesday at 8:00 AM");
+      setClosed("Closed today • Opens Friday at 8:00 AM");
       return;
     }
 
@@ -1274,7 +1272,7 @@ nav.side-nav a.active::before{
       }
 
       if (day === 0){
-        setClosed("Closed now • Opens Wednesday at 8:00 AM");
+        setClosed("Closed now • Opens Friday at 8:00 AM");
       } else {
         setClosed("Closed now • Opens tomorrow at 8:00 AM");
       }
