@@ -219,7 +219,7 @@
 
     .details{
       display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
       gap:14px;
       padding:24px 28px;
       background:var(--soft);
@@ -247,16 +247,6 @@
       font-size:1rem;
       color:var(--ink);
       font-weight:600;
-    }
-
-    .detail-value a{
-      color:var(--ink);
-      text-decoration:none;
-      font-weight:600;
-    }
-
-    .detail-value a:hover{
-      text-decoration:underline;
     }
 
     .content{
@@ -307,7 +297,7 @@
 
     .highlight-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
       gap:18px;
       margin-bottom:24px;
     }
@@ -552,10 +542,6 @@
         padding-right:18px;
       }
 
-      .pill-row{
-        justify-content:center;
-      }
-
       .footer-note{
         padding:18px 16px;
       }
@@ -568,23 +554,19 @@
 
     <nav class="side-nav" aria-label="Primary navigation">
       <a href="index.html">
-        <i class="fa-solid fa-house" aria-hidden="true"></i>
-        Home
+        <i class="fa-solid fa-house" aria-hidden="true"></i> Home
       </a>
 
       <a href="about.html">
-        <i class="fa-solid fa-user-chef" aria-hidden="true"></i>
-        About Us
+        <i class="fa-solid fa-user-chef" aria-hidden="true"></i> About Us
       </a>
 
       <a href="menu.html">
-        <i class="fa-solid fa-utensils" aria-hidden="true"></i>
-        Menu
+        <i class="fa-solid fa-utensils" aria-hidden="true"></i> Menu
       </a>
 
       <a href="catering.html">
-        <i class="fa-solid fa-truck" aria-hidden="true"></i>
-        Catering
+        <i class="fa-solid fa-truck" aria-hidden="true"></i> Catering
       </a>
 
       <a href="event-sample-menu.html">
@@ -682,9 +664,8 @@
                 event?
               </strong>
               We can help you select the service style and menu that best fit
-              your guest count, schedule, location, and budget. Menu
-              selections, availability, and pricing may vary by order or
-              event.
+              your guest count, schedule, location, and budget. Menu selections,
+              availability, and pricing may vary by order or event.
             </div>
 
             <div class="highlight-grid">
@@ -803,20 +784,38 @@
                 </h2>
 
                 <ul class="menu-list">
-                  <li>$100 minimum order for scheduled delivery</li>
+                  <li>
+                    <strong>Pickup or drop-off catering orders:</strong>
+                    $150 minimum before tax
+                  </li>
+
+                  <li>
+                    <strong>Food-trailer events:</strong>
+                    $350 minimum on weekdays and $500 on weekends
+                  </li>
+
+                  <li>
+                    Food-trailer minimums do not include venue, vendor, permit,
+                    electricity, or other required event fees
+                  </li>
+
                   <li>At least 48 hours’ notice is preferred</li>
+
                   <li>
                     Shorter-notice orders may be accommodated based on
                     availability
                   </li>
+
                   <li>
                     Disposable napkins, utensils, and serving supplies can be
                     included
                   </li>
+
                   <li>
                     On-site service is based on suitable parking, access, and
                     event requirements
                   </li>
+
                   <li>
                     Guest-paid, host-paid, or guaranteed-minimum arrangements
                     may be available
@@ -901,6 +900,7 @@
 
   <script>
     const path = window.location.pathname;
+
     const currentPage = (
       path.endsWith("/")
         ? "index.html"
