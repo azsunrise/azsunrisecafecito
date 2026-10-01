@@ -840,7 +840,7 @@ nav.side-nav a.active::before{
 </div>
 
 <div class="promo-bar hours">
-  ☀️ Hours: Friday – Sunday • 8:00 AM – 12:00 PM
+  ☀️ Hours: Friday – Sunday • 10:00 AM – 2:00 PM
 </div>
 
 <div class="promo-bar military">
@@ -1197,7 +1197,7 @@ nav.side-nav a.active::before{
 
   <p>
     <strong>Current Hours</strong><br>
-    Friday – Sunday • 8:00 AM – 12:00 PM
+    Friday – Sunday • 10:00 AM – 2:00 PM
   </p>
 
   <!-- Location -->
@@ -1252,7 +1252,7 @@ nav.side-nav a.active::before{
   setInterval(nextImage, 3000);
 </script>
 
-<!-- OPEN TODAY INDICATOR (Friday–Sunday, 8am–12pm) -->
+<!-- OPEN TODAY INDICATOR (Friday–Sunday, 10am–2pm) -->
 
 <script>
   (function(){
@@ -1277,31 +1277,31 @@ nav.side-nav a.active::before{
     const isOpenDay = (day === 0) || (day >= 5 && day <= 6);
     const isClosedAllDay = (day >= 1 && day <= 4); // Mon–Thu
 
-    const openMinutes = 8 * 60;
-    const closeMinutes = 12 * 60;
+    const openMinutes = 10 * 60;
+    const closeMinutes = 14 * 60;
 
     const isOpenNow = isOpenDay && (minutes >= openMinutes) && (minutes < closeMinutes);
 
     if (isOpenNow){
-      setOpen("Open today until 12:00 PM");
+      setOpen("Open today until 2:00 PM");
       return;
     }
 
     if (isClosedAllDay){
-      setClosed("Closed today • Opens Friday at 8:00 AM");
+      setClosed("Closed today • Opens Friday at 10:00 AM");
       return;
     }
 
     if (isOpenDay){
       if (minutes < openMinutes){
-        setClosed("Closed now • Opens at 8:00 AM");
+        setClosed("Closed now • Opens at 10:00 AM");
         return;
       }
 
       if (day === 0){
-        setClosed("Closed now • Opens Friday at 8:00 AM");
+        setClosed("Closed now • Opens Friday at 10:00 AM");
       } else {
-        setClosed("Closed now • Opens tomorrow at 8:00 AM");
+        setClosed("Closed now • Opens tomorrow at 10:00 AM");
       }
 
       return;
