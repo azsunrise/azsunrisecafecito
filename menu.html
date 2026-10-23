@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Menu Ideas &amp; Catering Favorites | Arizona Sunrise</title>
+  <meta name="description" content="Explore Arizona Sunrise’s festival, western, Halloween, and brunch menu ideas. Book catering or a food trailer for events in Rockwall and surrounding communities." />
+  <link rel="canonical" href="https://azsunrisecafecito.com/menu.html" />
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XFY3V13DJN"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -10,1448 +16,966 @@
     gtag('config', 'G-XFY3V13DJN');
   </script>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Menu | Arizona Sunrise Cafecito &amp; Catering</title>
-
-  <!-- ICONS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <style>
-    :root{
-      --ink:#2d1b12;
-      --brown:#7a3b2e;
-      --orange:#e36f47;
-      --sun:#f6c177;
-      --bgTop:#fff7f0;
-      --bgBottom:#ffffff;
-      --board:rgba(255,255,255,.78);
-      --boardBorder:rgba(45,27,18,.14);
-      --line:rgba(45,27,18,.14);
-      --shadow:0 12px 30px rgba(0,0,0,.12);
+    :root {
+      --ink: #2d1b12;
+      --brown: #7a3b2e;
+      --orange: #e36f47;
+      --sun: #f6c177;
+      --line: rgba(122,59,46,.16);
     }
 
-    *{
-      box-sizing:border-box;
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #fff7f0, #fff);
+      line-height: 1.65;
     }
 
-    html{
-      scroll-behavior:smooth;
-      max-width:100%;
-      overflow-x:hidden;
+    a { color: var(--brown); }
+
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid var(--brown);
+      outline-offset: 4px;
     }
 
-    body{
-      margin:0;
-      font-family:Arial,Helvetica,sans-serif;
-      color:var(--ink);
-      text-align:center;
-      max-width:100%;
-      overflow-x:hidden;
-      background:
-        radial-gradient(
-          1000px 520px at 50% 0%,
-          rgba(246,193,119,.28),
-          transparent 60%
-        ),
-        radial-gradient(
-          900px 420px at 15% 40%,
-          rgba(227,111,71,.12),
-          transparent 60%
-        ),
-        radial-gradient(
-          900px 420px at 85% 60%,
-          rgba(122,59,46,.10),
-          transparent 60%
-        ),
-        linear-gradient(
-          to bottom,
-          var(--bgTop),
-          var(--bgBottom)
-        );
+    .layout {
+      display: flex;
+      min-height: 100vh;
     }
 
-    .layout{
-      display:flex;
-      min-height:100vh;
-      max-width:100%;
+    .side-nav {
+      width: 220px;
+      flex: 0 0 220px;
+      padding: 16px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      align-self: flex-start;
+      background: #f7efe6;
+      border-right: 1px solid var(--line);
     }
 
-    .main{
-      flex:1;
-      padding-bottom:60px;
-      display:flex;
-      justify-content:center;
-      min-width:0;
-      max-width:100%;
+    .side-nav a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      background: rgba(255,255,255,.65);
+      border: 1px solid var(--line);
     }
 
-    .container{
-      width:100%;
-      max-width:980px;
-      margin:0 auto;
-      padding:26px 20px 52px;
-      text-align:center;
+    .side-nav i {
+      width: 18px;
+      text-align: center;
     }
 
-    nav.side-nav{
-      width:220px;
-      background:rgba(247,239,230,0.78);
-      border-right:1px solid rgba(122,59,46,0.12);
-      padding:16px 12px;
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-      position:sticky;
-      top:0;
-      align-self:flex-start;
-      height:100vh;
-      backdrop-filter:blur(10px);
-      -webkit-backdrop-filter:blur(10px);
-      flex:0 0 220px;
+    .side-nav a:hover,
+    .side-nav a.active {
+      background: #f9dfc7;
     }
 
-    nav.side-nav a{
-      text-decoration:none;
-      color:#7a3b2e;
-      font-weight:700;
-      padding:10px 12px;
-      border-radius:12px;
-      display:flex;
-      align-items:center;
-      gap:10px;
-      background:rgba(255,255,255,0.55);
-      border:1px solid rgba(122,59,46,0.08);
-      transition:
-        background .15s ease,
-        transform .15s ease,
-        box-shadow .15s ease;
+    main {
+      flex: 1;
+      min-width: 0;
     }
 
-    nav.side-nav a:hover{
-      background:rgba(230,195,165,0.45);
-      box-shadow:0 6px 16px rgba(122,59,46,0.10);
-      transform:translateX(2px);
+    .container {
+      max-width: 1180px;
+      margin: auto;
+      padding: 36px 24px 56px;
     }
 
-    nav.side-nav a.active{
-      background:linear-gradient(
-        to right,
-        rgba(227,111,71,0.18),
-        rgba(246,193,119,0.22)
-      );
-      border:1px solid rgba(227,111,71,0.28);
-      box-shadow:0 10px 22px rgba(227,111,71,0.12);
-      position:relative;
+    .skip-link {
+      position: absolute;
+      left: -9999px;
     }
 
-    nav.side-nav a.active::before{
-      content:"";
-      position:absolute;
-      left:6px;
-      top:10px;
-      bottom:10px;
-      width:4px;
-      border-radius:10px;
-      background:linear-gradient(
-        to bottom,
-        #e36f47,
-        #f6c177
-      );
+    .skip-link:focus {
+      left: 12px;
+      top: 12px;
+      background: white;
+      padding: 12px;
+      z-index: 100;
     }
 
-    nav.side-nav i{
-      width:18px;
-      text-align:center;
-      flex:0 0 18px;
-      color:#7a3b2e;
+    h1, h2, h3, h4 {
+      color: var(--brown);
+      line-height: 1.25;
     }
 
-    .skip-link{
-      position:absolute;
-      left:-999px;
-      top:auto;
-      width:1px;
-      height:1px;
-      overflow:hidden;
+    h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin: 8px 0 16px;
     }
 
-    .skip-link:focus{
-      left:12px;
-      top:12px;
-      width:auto;
-      height:auto;
-      padding:10px 12px;
-      background:#fff;
-      border:2px solid rgba(227,111,71,.55);
-      border-radius:12px;
-      z-index:9999;
-      outline:none;
-      font-weight:900;
+    h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      margin: 0 0 12px;
     }
 
-    h1,
-    h2{
-      color:var(--brown);
-      margin:0;
+    h3 {
+      font-size: 1.3rem;
+      margin: 8px 0 12px;
     }
 
-    h1{
-      font-size:clamp(1.7rem,3.2vw,2.35rem);
+    p { margin: 0 0 14px; }
+
+    .hero {
+      text-align: center;
+      max-width: 850px;
+      margin: 0 auto 36px;
     }
 
-    h2{
-      font-size:clamp(1.25rem,2.6vw,1.55rem);
-      margin-top:16px;
+    .eyebrow {
+      color: var(--brown);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: .8rem;
     }
 
-    .badge{
-      display:inline-block;
-      margin:12px 0 14px;
-      padding:8px 18px;
-      border-radius:999px;
-      background:linear-gradient(
-        to right,
-        var(--orange),
-        var(--sun)
-      );
-      color:#fff;
-      font-weight:900;
-      letter-spacing:.2px;
-      box-shadow:0 10px 20px rgba(227,111,71,.16);
+    .lead {
+      font-size: 1.1rem;
+      color: #5b4b45;
     }
 
-    .menu-grid{
-      display:grid;
-      grid-template-columns:repeat(
-        auto-fit,
-        minmax(260px,1fr)
-      );
-      gap:20px;
-      margin-top:14px;
-      max-width:100%;
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin: 22px 0;
     }
 
-    .menu-card{
-      background:#fff;
-      border-radius:16px;
-      box-shadow:0 8px 20px rgba(0,0,0,0.06);
-      overflow:hidden;
-      text-align:left;
-      transition:
-        transform 0.2s,
-        box-shadow 0.2s;
-      max-width:100%;
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 999px;
+      background: var(--brown);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      text-align: center;
     }
 
-    .menu-card:hover{
-      transform:translateY(-2px);
-      box-shadow:0 12px 24px rgba(0,0,0,0.12);
+    .button:hover { background: #5d2d23; }
+
+    .button.secondary {
+      background: #fbe4cb;
+      color: var(--brown);
+      border: 1px solid var(--line);
     }
 
-    .menu-card img{
-      width:100%;
-      height:180px;
-      object-fit:cover;
-      display:block;
+    .notice {
+      background: #fff0dd;
+      border: 1px solid #e6c49e;
+      border-radius: 14px;
+      padding: 16px 20px;
+      font-size: .95rem;
     }
 
-    .menu-card .content{
-      padding:16px;
+    .section {
+      margin-top: 46px;
+      scroll-margin-top: 24px;
     }
 
-    .menu-card h3{
-      margin:0 0 6px;
-      color:var(--brown);
+    .section-intro {
+      max-width: 800px;
+      color: #5b4b45;
     }
 
-    .menu-card p{
-      margin:0;
-      color:#4b3328;
-      line-height:1.35;
+    .event-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 24px;
     }
 
-    .board{
-      margin:18px auto 0;
-      width:min(940px,100%);
-      max-width:100%;
-      background:var(--board);
-      border:1px solid var(--boardBorder);
-      border-radius:24px;
-      box-shadow:var(--shadow);
-      overflow:hidden;
-      text-align:left;
+    .event-card {
+      min-width: 0;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 8px 24px rgba(45,27,18,.06);
+      display: flex;
+      flex-direction: column;
     }
 
-    .board-head{
-      padding:14px 14px 10px;
-      background:rgba(246,193,119,.18);
-      border-bottom:1px solid rgba(45,27,18,.10);
-      text-align:center;
+    .event-banner {
+      padding: 24px 20px;
+      background: #f7dfbc;
+      border-bottom: 1px solid var(--line);
     }
 
-    .board-head p{
-      margin:6px 0 0;
-      color:#5b3a2e;
-      font-style:italic;
+    .western .event-banner { background: #eee0c7; }
+
+    .halloween .event-banner {
+      background: #34243a;
+      color: #fff3df;
     }
 
-    .cards-only{
-      margin-top:10px;
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:8px;
+    .halloween .event-banner h3,
+    .halloween .event-banner .eyebrow {
+      color: #ffcd8c;
     }
 
-    .mini-pill{
-      display:inline-block;
-      padding:8px 12px;
-      border-radius:999px;
-      font-weight:900;
-      font-size:.92rem;
-      background:rgba(255,255,255,.82);
-      border:1px solid rgba(45,27,18,.12);
+    .event-banner p {
+      margin-bottom: 0;
+      font-size: .92rem;
     }
 
-    .jump-wrap{
-      position:sticky;
-      top:0;
-      z-index:50;
-      padding:10px 10px 12px;
-      background:rgba(255,247,240,.92);
-      border-bottom:1px solid rgba(45,27,18,.10);
-      backdrop-filter:blur(6px);
-      max-width:100%;
+    .event-body {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
 
-    .jump{
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-      justify-content:center;
-      margin:0;
-      padding:0;
-      max-width:100%;
+    .menu-label {
+      font-weight: 800;
+      font-size: .75rem;
+      letter-spacing: .7px;
+      text-transform: uppercase;
+      color: var(--brown);
     }
 
-    .jump a{
-      text-decoration:none;
-      font-weight:900;
-      font-size:.86rem;
-      color:var(--ink);
-      padding:8px 10px;
-      border-radius:999px;
-      background:rgba(255,255,255,.82);
-      border:1px solid rgba(45,27,18,.10);
-      white-space:nowrap;
+    .sample-list {
+      list-style: none;
+      margin: 6px 0 18px;
+      padding: 0;
     }
 
-    @media (min-width:900px){
-      .jump-wrap{
-        position:static;
-        background:transparent;
-        border:0;
-        padding:12px 0 0;
-      }
+    .sample-list li {
+      padding: 9px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: .95rem;
     }
 
-    .board-body{
-      padding:14px;
+    .sample-list strong {
+      display: block;
+      color: var(--brown);
     }
 
-    .columns{
-      display:grid;
-      grid-template-columns:1.55fr .95fr;
-      gap:14px;
-      align-items:start;
-      max-width:100%;
+    .event-body .button { margin-top: auto; }
+
+    .small {
+      font-size: .88rem;
+      color: #655149;
     }
 
-    .panel{
-      background:rgba(255,255,255,.82);
-      border:1px solid rgba(45,27,18,.12);
-      border-radius:18px;
-      padding:14px 14px 10px;
-      max-width:100%;
-      min-width:0;
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 24px;
     }
 
-    .section-title{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:10px;
-      margin:0 0 10px;
-      max-width:100%;
+    figure {
+      margin: 0;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
     }
 
-    .section-title .plank{
-      display:inline-block;
-      padding:10px 14px;
-      border-radius:14px;
-      color:#fff;
-      font-weight:900;
-      letter-spacing:1px;
-      text-transform:uppercase;
-      background:linear-gradient(
-        to bottom,
-        #7a4a2b,
-        #5a351f
-      );
-      box-shadow:0 10px 18px rgba(0,0,0,.16);
-      border:1px solid rgba(255,255,255,.18);
-      max-width:100%;
-      overflow-wrap:anywhere;
+    figure img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
     }
 
-    .toplink{
-      text-decoration:none;
-      font-weight:900;
-      font-size:.86rem;
-      color:var(--ink);
-      padding:7px 10px;
-      border-radius:999px;
-      background:rgba(255,255,255,.82);
-      border:1px solid rgba(45,27,18,.10);
-      white-space:nowrap;
-      flex:0 0 auto;
+    figcaption { padding: 16px; }
+
+    figcaption h3 {
+      font-size: 1.1rem;
+      margin-top: 0;
     }
 
-    .toplink:hover{
-      background:rgba(246,193,119,.45);
+    figcaption p {
+      margin-bottom: 0;
+      font-size: .93rem;
     }
 
-    .section-subnote{
-      margin:-2px 0 10px;
-      color:#5b3a2e;
-      font-style:italic;
-      font-size:.92rem;
+    .menu-category {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      margin-top: 14px;
+      overflow: hidden;
     }
 
-    .menu-list{
-      list-style:none;
-      margin:0;
-      padding:0;
-      max-width:100%;
+    summary {
+      cursor: pointer;
+      padding: 18px 20px;
+      font-weight: 800;
+      color: var(--brown);
+      font-size: 1.1rem;
     }
 
-    .row{
-      padding:10px 2px;
-      border-top:1px solid var(--line);
-      max-width:100%;
+    details[open] summary {
+      background: #fff0dd;
+      border-bottom: 1px solid var(--line);
     }
 
-    .row:first-child{
-      border-top:0;
+    .dish-list {
+      list-style: none;
+      padding: 0 20px;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 28px;
     }
 
-    .line{
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap:12px;
-      max-width:100%;
+    .dish-list li {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line);
     }
 
-    .name{
-      font-weight:900;
-      color:var(--ink);
-      line-height:1.2;
-      min-width:0;
-      overflow-wrap:anywhere;
+    .dish-list h4 {
+      margin: 0 0 6px;
+      font-size: 1rem;
     }
 
-    .price{
-      font-weight:900;
-      white-space:nowrap;
-      color:var(--ink);
-      flex:0 0 auto;
-      text-align:right;
+    .dish-list p {
+      margin: 0;
+      font-size: .94rem;
+      color: #5b4b45;
     }
 
-    .menu-description{
-      display:block;
-      margin:6px 0 0;
-      font-size:.92rem;
-      line-height:1.35;
-      color:#4b3328;
-      opacity:.92;
-      overflow-wrap:anywhere;
+    .booking {
+      margin-top: 46px;
+      padding: 28px;
+      border-radius: 20px;
+      text-align: center;
+      background: #fff0dd;
+      border: 1px solid var(--line);
     }
 
-    .tags{
-      margin-top:6px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:6px;
-      max-width:100%;
+    .booking a:not(.button) {
+      font-weight: 700;
+      overflow-wrap: anywhere;
     }
 
-    .tag{
-      font-size:.72rem;
-      background:rgba(246,193,119,.55);
-      padding:3px 8px;
-      border-radius:999px;
-      border:1px solid rgba(45,27,18,.10);
-      font-weight:800;
-      color:#3d281f;
-      white-space:normal;
-      overflow-wrap:anywhere;
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: .9rem;
+      color: #655149;
     }
 
-    .tag-star{
-      background:linear-gradient(
-        to right,
-        var(--orange),
-        var(--sun)
-      );
-      color:#fff;
-      border:0;
+    @media (max-width: 1100px) {
+      .event-grid { grid-template-columns: 1fr; }
+      .event-body .button { align-self: flex-start; }
     }
 
-    .tag-note{
-      background:rgba(156,163,175,.18);
-      border:1px solid rgba(156,163,175,.35);
-      color:#4b5563;
-      font-weight:900;
-    }
+    @media (max-width: 768px) {
+      .layout { flex-direction: column; }
 
-    .button-back{
-      display:inline-block;
-      margin-top:18px;
-      padding:12px 22px;
-      border-radius:999px;
-      font-weight:900;
-      text-decoration:none;
-      color:#fff;
-      background:linear-gradient(
-        to right,
-        var(--orange),
-        var(--sun)
-      );
-      box-shadow:0 12px 22px rgba(227,111,71,.18);
-    }
-
-    @media (max-width:860px){
-      .columns{
-        grid-template-columns:1fr;
-      }
-    }
-
-    @media (max-width:768px){
-      .layout{
-        flex-direction:column;
-        width:100%;
-        overflow-x:hidden;
+      .side-nav {
+        position: static;
+        width: 100%;
+        flex: 0 0 auto;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
       }
 
-      .main{
-        width:100%;
-        max-width:100%;
-        overflow-x:hidden;
+      .side-nav a {
+        font-size: .9rem;
+        padding: 8px 10px;
       }
 
-      .container{
-        width:100%;
-        max-width:100%;
-        padding-left:12px;
-        padding-right:12px;
+      .container { padding: 28px 16px 40px; }
+
+      .photo-grid,
+      .dish-list {
+        grid-template-columns: 1fr;
       }
 
-      nav.side-nav{
-        width:100%;
-        max-width:100%;
-        height:auto;
-        flex:0 0 auto;
-        flex-direction:row;
-        justify-content:flex-start;
-        gap:8px;
-        padding:10px;
-        border-right:none;
-        border-bottom:1px solid rgba(122,59,46,0.12);
-        z-index:60;
-        overflow-x:auto;
-        overflow-y:hidden;
-        -webkit-overflow-scrolling:touch;
-      }
-
-      nav.side-nav a{
-        border-radius:999px;
-        padding:10px 12px;
-        transform:none;
-        font-size:.95rem;
-        white-space:nowrap;
-        flex:0 0 auto;
-      }
-
-      nav.side-nav a.active::before{
-        display:none;
-      }
-
-      .board{
-        width:100%;
-        max-width:100%;
-        overflow:hidden;
-      }
-
-      .board-body{
-        padding:10px;
-      }
-
-      .panel{
-        padding:12px 10px 10px;
-        max-width:100%;
-        overflow:hidden;
-      }
-
-      .section-title{
-        flex-wrap:wrap;
-        align-items:flex-start;
-      }
-
-      .section-title .plank{
-        font-size:.86rem;
-        line-height:1.15;
-        max-width:100%;
-      }
-
-      .toplink{
-        font-size:.78rem;
-      }
-
-      .line{
-        gap:8px;
-      }
-
-      .name{
-        min-width:0;
-        overflow-wrap:anywhere;
-      }
-
-      .price{
-        flex:0 0 auto;
-      }
+      figure img { height: 220px; }
+      .booking { padding: 24px 16px; }
     }
 
-    @media (max-width:600px){
-      .menu-grid{
-        grid-template-columns:1fr;
-        gap:14px;
-      }
-
-      .menu-card img{
-        height:150px;
-      }
-
-      .menu-card .content{
-        padding:12px;
-      }
-
-      .jump-wrap{
-        width:100%;
-        max-width:100%;
-        overflow-x:hidden;
-      }
-
-      .jump{
-        gap:6px;
-      }
-
-      .jump a{
-        font-size:.76rem;
-        padding:7px 8px;
-      }
-
-      .row{
-        padding:9px 0;
-      }
-
-      .menu-description{
-        font-size:.9rem;
-      }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
     }
 
-    @media print{
-      body{
-        background:#fff !important;
+    @media print {
+      body { background: #fff; }
+
+      .side-nav,
+      .actions,
+      .button,
+      .skip-link {
+        display: none;
       }
 
-      nav.side-nav,
-      .jump-wrap,
-      .button-back{
-        display:none !important;
+      .container {
+        max-width: none;
+        padding: 0;
       }
 
-      .board,
-      .menu-card{
-        box-shadow:none !important;
+      .event-grid { grid-template-columns: 1fr; }
+
+      .event-card,
+      figure {
+        box-shadow: none;
+        break-inside: avoid;
       }
 
-      .board,
-      .panel{
-        background:#fff !important;
+      .event-banner,
+      .halloween .event-banner {
+        background: #fff;
+        color: #000;
       }
 
-      .badge{
-        color:#000 !important;
-        background:#fff !important;
-        border:2px solid #000 !important;
-        box-shadow:none !important;
+      .halloween .event-banner h3,
+      .halloween .event-banner .eyebrow {
+        color: #000;
       }
 
-      a{
-        color:#000 !important;
-        text-decoration:none !important;
-      }
+      details { overflow: visible; }
+      details > .dish-list { display: grid !important; }
+      a { color: #000; }
     }
   </style>
 </head>
+
 <body>
-<a class="skip-link" href="#menuTop">Skip to menu</a>
+  <a class="skip-link" href="#menuTop">Skip to menu</a>
 
-<div class="layout">
+  <div class="layout">
 
-  <!-- NAV -->
+    <nav class="side-nav" aria-label="Primary navigation">
+      <a href="index.html">
+        <i class="fa-solid fa-house" aria-hidden="true"></i> Home
+      </a>
+      <a href="index.html#find-us">
+        <i class="fa-solid fa-calendar-days" aria-hidden="true"></i> Upcoming Events
+      </a>
+      <a href="about.html">
+        <i class="fa-solid fa-users" aria-hidden="true"></i> About Us
+      </a>
+      <a href="menu.html" class="active" aria-current="page">
+        <i class="fa-solid fa-utensils" aria-hidden="true"></i> Menu
+      </a>
+      <a href="catering.html">
+        <i class="fa-solid fa-truck" aria-hidden="true"></i> Catering
+      </a>
+      <a href="#event-menus">
+        <i class="fa-solid fa-clipboard-list" aria-hidden="true"></i> Event Menu Ideas
+      </a>
+    </nav>
 
-  <nav class="side-nav" aria-label="Primary navigation">
-    <a href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a>
-    <a href="community-events.html" target="_blank" rel="noopener"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> Community Events</a>
-    <a href="about.html"><i class="fa-solid fa-user-chef" aria-hidden="true"></i> About Us</a>
-    <a href="menu.html"><i class="fa-solid fa-utensils" aria-hidden="true"></i> Menu</a>
-    <a href="catering.html"><i class="fa-solid fa-truck" aria-hidden="true"></i> Catering</a>
-    <a href="celebree-family-night.html"><i class="fa-solid fa-clipboard-list" aria-hidden="true"></i> Event Sample Menu</a>
-  </nav>
+    <main id="menuTop">
+      <div class="container">
 
-  <!-- MAIN -->
+        <header class="hero">
+          <div class="eyebrow">Arizona Sunrise Cafecito &amp; Catering</div>
+          <h1>Menu Favorites &amp; Event Ideas</h1>
 
-  <main class="main">
-    <div class="container">
+          <p class="lead">
+            From Sonoran-inspired brunch to hearty festival meals, Chef Jack brings
+            scratch-made comfort food, Arizona spice, and Texas soul to your gathering.
+          </p>
 
-      <h1>Menu</h1>
-      <div class="badge">Featured Favorites</div>
+          <p>
+            Explore examples from our event menus, then browse favorites for your own
+            celebration, school lunch, employee appreciation meal, or community event.
+          </p>
 
-      <div class="menu-grid" aria-label="Featured food photos">
-
-        <div class="menu-card">
-          <img src="r.jpeg" alt="Golden Reuben Croquettes">
-          <div class="content">
-            <h3>Golden Reuben Croquettes</h3>
-            <p>Crispy croquettes filled with corned beef, Swiss, and sauerkraut.</p>
+          <div class="actions">
+            <a class="button" href="catering.html">Plan Your Event Menu</a>
+            <a class="button secondary" href="index.html#find-us">Find Upcoming Public Events</a>
           </div>
-        </div>
 
-        <div class="menu-card">
-          <img src="cc.jpg" alt="Crab Cakes">
-          <div class="content">
-            <h3>Crab Cakes</h3>
-            <p>Three lump crab cakes served with roasted garlic caper aioli.</p>
+          <div class="notice">
+            <strong>Menus are planned for each event.</strong>
+            These are sample selections, not a daily ordering menu.
+            Availability, portions, sides, and pricing are confirmed for your booking.
+            For a public event, check that event’s menu for the items and prices offered.
           </div>
-        </div>
+        </header>
 
-        <div class="menu-card">
-          <img src="gccs.jpg" alt="Green Chile Chicken Soup">
-          <div class="content">
-            <h3>Green Chile Chicken Soup</h3>
-            <p>Slow-simmered chicken soup with roasted green chiles.</p>
+        <!-- EVENT MENU EXAMPLES -->
+
+        <section class="section" id="event-menus" aria-labelledby="events-heading">
+          <h2 id="events-heading">A Menu to Match Your Gathering</h2>
+
+          <p class="section-intro">
+            A community festival, a western celebration, a Halloween gathering —
+            each calls for its own menu. These selected dishes show how we bring
+            the food and theme together.
+          </p>
+
+          <div class="event-grid">
+
+            <article class="event-card festival">
+              <header class="event-banner">
+                <div class="eyebrow">Festival &amp; Community Favorites</div>
+                <h3>Brews on Bois D’Arc</h3>
+                <p>Hearty handhelds and meal combos for a community gathering.</p>
+              </header>
+
+              <div class="event-body">
+                <div class="menu-label">Selected menu highlights</div>
+
+                <ul class="sample-list">
+                  <li>
+                    <strong>Beef Brisket Sausage Meal</strong>
+                    A satisfying sausage meal for festival appetites.
+                  </li>
+                  <li>
+                    <strong>Beef Meatball Sandwich Meal</strong>
+                    A hearty sandwich option.
+                  </li>
+                  <li>
+                    <strong>Chicken Tender Meal</strong>
+                    A crowd-pleasing comfort-food choice.
+                  </li>
+                  <li>
+                    <strong>Kids’ Tenders &amp; Hot Dogs</strong>
+                    Familiar favorites for younger guests.
+                  </li>
+                </ul>
+
+                <p class="small">
+                  An example of a focused menu for a public festival or neighborhood event.
+                </p>
+
+                <a class="button" href="catering.html">Plan a Community Event Menu</a>
+              </div>
+            </article>
+
+            <article class="event-card western">
+              <header class="event-banner">
+                <div class="eyebrow">Western-Themed Gatherings</div>
+                <h3>Saddle Up, Sonoma!</h3>
+                <p>Western-inspired names and hearty meals for Sonoma Verde’s Fall Festival.</p>
+              </header>
+
+              <div class="event-body">
+                <div class="menu-label">Selected menu highlights</div>
+
+                <ul class="sample-list">
+                  <li>
+                    <strong>Rattlesnake Eggs</strong>
+                    Cheddar-stuffed jalapeño poppers with prickly pear BBQ sauce.
+                  </li>
+                  <li>
+                    <strong>Chuck Wagon Smoked Sausage Hoagie</strong>
+                    Smoked sausage on a soft hoagie roll.
+                  </li>
+                  <li>
+                    <strong>Ranch Hand Tender Basket</strong>
+                    Chicken tenders with a choice of dipping sauce.
+                  </li>
+                  <li>
+                    <strong>Gold Rush Crab Cakes</strong>
+                    Lump crab cakes with roasted garlic caper aioli.
+                  </li>
+                  <li>
+                    <strong>Little Wrangler Meals</strong>
+                    Kids’ tender baskets and Little Buckaroo Burgers.
+                  </li>
+                </ul>
+
+                <p class="small">
+                  An example of a themed menu for an HOA gathering or private celebration.
+                </p>
+
+                <a class="button" href="catering.html">Plan a Themed Event Menu</a>
+              </div>
+            </article>
+
+            <article class="event-card halloween">
+              <header class="event-banner">
+                <div class="eyebrow">Seasonal &amp; Holiday Events</div>
+                <h3>Scare on the Square</h3>
+                <p>A Halloween menu built around family-friendly festival favorites.</p>
+              </header>
+
+              <div class="event-body">
+                <div class="menu-label">Selected menu highlights</div>
+
+                <ul class="sample-list">
+                  <li>
+                    <strong>Spooky Starters</strong>
+                    Jalapeño poppers and chicken wings.
+                  </li>
+                  <li>
+                    <strong>Monster Meal Combos</strong>
+                    Chicken tender baskets and smoked sausage hoagies.
+                  </li>
+                  <li>
+                    <strong>Little Monster Meals</strong>
+                    Kids’ tenders and burgers.
+                  </li>
+                  <li>
+                    <strong>Witch’s Brew &amp; Sips</strong>
+                    Bottled water and sodas, including orange soda.
+                  </li>
+                </ul>
+
+                <p class="small">
+                  A seasonal menu example showing how familiar favorites can take on a festive theme.
+                </p>
+
+                <a class="button" href="catering.html">Plan a Seasonal Event Menu</a>
+              </div>
+            </article>
+
           </div>
-        </div>
+
+          <p class="small" style="margin-top:16px">
+            Examples show selected dishes rather than complete event menus.
+            Your menu and quote will be confirmed for your date, guest count, and service style.
+          </p>
+        </section>
+
+        <!-- ORIGINAL FOOD PHOTOS -->
+
+        <section class="section" aria-labelledby="featured-heading">
+          <h2 id="featured-heading">A Taste of Chef Jack’s Kitchen</h2>
+
+          <p class="section-intro">
+            Comfort-food classics with a little Arizona Sunrise personality.
+          </p>
+
+          <div class="photo-grid">
+            <figure>
+              <img src="r.jpeg" alt="Golden Reuben Croquettes" loading="lazy" />
+              <figcaption>
+                <h3>Golden Reuben Croquettes</h3>
+                <p>Crispy croquettes filled with corned beef, Swiss, and sauerkraut.</p>
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img src="cc.jpg" alt="Lump crab cakes" loading="lazy" />
+              <figcaption>
+                <h3>Crab Cakes</h3>
+                <p>Lump crab cakes with roasted garlic caper aioli.</p>
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img src="gccs.jpg" alt="Green Chile Chicken Soup" loading="lazy" />
+              <figcaption>
+                <h3>Green Chile Chicken Soup</h3>
+                <p>Slow-simmered chicken soup with roasted green chiles.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- EXPANDABLE MENU FAVORITES -->
+
+        <section class="section" id="favorites" aria-labelledby="favorites-heading">
+          <h2 id="favorites-heading">Explore More Menu Favorites</h2>
+
+          <p class="section-intro">
+            Select a category to browse dishes we can discuss for your booking.
+            Brunch, lunch, and festival menus are planned separately; not every item
+            is available at every event. Sides, drinks, and specialty coffee are
+            arranged with your menu.
+          </p>
+
+          <details class="menu-category" id="brunch">
+            <summary>Brunch &amp; Breakfast</summary>
+
+            <ul class="dish-list">
+              <li>
+                <h4>Bacon, Egg &amp; Cheese Taco</h4>
+                <p>Crispy bacon, eggs, and melted cheese on a warm flour tortilla.</p>
+              </li>
+              <li>
+                <h4>Sonoran Chorizo Taco</h4>
+                <p>Bold chorizo, eggs, melted cheese, and salsa on a warm flour tortilla.</p>
+              </li>
+              <li>
+                <h4>Sonoran Steak Breakfast Taco</h4>
+                <p>Carne asada, eggs, cheese, and pico on a warm flour tortilla.</p>
+              </li>
+              <li>
+                <h4>Sonoran Burrito</h4>
+                <p>Chorizo, eggs, grilled onions, and cheese wrapped in a flour tortilla.</p>
+              </li>
+              <li>
+                <h4>Borracho Special 🌶🌶</h4>
+                <p>Sonoran burrito with fresh jalapeños for a little extra kick.</p>
+              </li>
+              <li>
+                <h4>Breakfast Bowl</h4>
+                <p>Cottage potatoes, eggs, chorizo, cheese, and pico.</p>
+              </li>
+              <li>
+                <h4>Egg &amp; Cheese Biscuit</h4>
+                <p>Fresh baked biscuit with egg and melted cheese.</p>
+              </li>
+              <li>
+                <h4>Bacon, Egg &amp; Cheese Biscuit</h4>
+                <p>Fresh baked biscuit with bacon, egg, and melted cheese.</p>
+              </li>
+              <li>
+                <h4>Sausage, Egg &amp; Cheese Biscuit</h4>
+                <p>Fresh baked biscuit with sausage, egg, and melted cheese.</p>
+              </li>
+              <li>
+                <h4>Sweet Heat Chicken &amp; Waffles</h4>
+                <p>
+                  Two individual Belgian waffles topped with golden, crispy chicken
+                  breast filets, all cooked fresh to order and finished with hot honey,
+                  smoky bacon pieces, and fresh green onions.
+                </p>
+              </li>
+              <li>
+                <h4>Texan Benedict</h4>
+                <p>Two biscuits topped with eggs and house-made sausage gravy.</p>
+              </li>
+              <li>
+                <h4>Biscuits &amp; Gravy</h4>
+                <p>Buttery biscuits topped with house-made sausage gravy.</p>
+              </li>
+              <li>
+                <h4>French Toast</h4>
+                <p>Texas toast French toast with powdered sugar and syrup.</p>
+              </li>
+              <li>
+                <h4>Pancakes</h4>
+                <p>Homemade pancakes served warm with syrup.</p>
+              </li>
+            </ul>
+          </details>
+
+          <details class="menu-category" id="comfort">
+            <summary>Burgers, Sandwiches &amp; Comfort Food</summary>
+
+            <ul class="dish-list">
+              <li>
+                <h4>Arizona Sunrise Burger</h4>
+                <p>
+                  Grilled Angus burger topped with bacon, green chiles, melted cheese,
+                  and Chef Jack’s house-made Boom Boom Sauce.
+                </p>
+              </li>
+              <li>
+                <h4>Lone Star Burger</h4>
+                <p>
+                  Grilled Angus burger topped with melted Swiss cheese, crispy bacon,
+                  a beer-battered onion ring, pickles, and Chef Jack’s house-made
+                  Dr Pepper BBQ sauce. Served with fries or vinaigrette coleslaw.
+                </p>
+              </li>
+              <li>
+                <h4>Chicken Tender Basket</h4>
+                <p>Chicken tenders served with fries and your choice of BBQ or ranch.</p>
+              </li>
+              <li>
+                <h4>Golden Reuben Croquettes</h4>
+                <p>
+                  Three croquettes filled with corned beef, Swiss, and sauerkraut.
+                  Finished with creamy Russian sauce.
+                </p>
+              </li>
+              <li>
+                <h4>Crab Cakes</h4>
+                <p>Three lump crab cakes served with roasted garlic caper aioli.</p>
+              </li>
+              <li>
+                <h4>Monte Cristo</h4>
+                <p>
+                  Griddled ham, turkey, and Swiss on Texas toast, lightly dusted with
+                  powdered sugar. Served with strawberry jam.
+                </p>
+              </li>
+              <li>
+                <h4>Green Chile Chicken Soup</h4>
+                <p>Slow-simmered chicken soup with roasted green chiles.</p>
+              </li>
+            </ul>
+          </details>
+
+          <details class="menu-category" id="sonoran">
+            <summary>Sonoran Favorites</summary>
+
+            <ul class="dish-list">
+              <li>
+                <h4>Carne Asada Taco</h4>
+                <p>Citrus-marinated grilled steak served street-style with fresh pico or salsa.</p>
+              </li>
+              <li>
+                <h4>Carne Asada Taco Plate</h4>
+                <p>
+                  Two warm flour tortillas filled with citrus-marinated grilled steak
+                  and fresh pico or salsa. Served with fries or vinaigrette coleslaw.
+                </p>
+              </li>
+              <li>
+                <h4>Sonoran Hot Dog</h4>
+                <p>
+                  Bacon-wrapped Angus hot dog topped with borracho beans, grilled onions,
+                  jalapeño sauce, mayo, mustard, and a hint of lime on a soft roll.
+                </p>
+              </li>
+            </ul>
+          </details>
+
+          <details class="menu-category" id="kids">
+            <summary>Kids’ Meals</summary>
+
+            <ul class="dish-list">
+              <li>
+                <h4>Kids Chicken Tender Fritters</h4>
+                <p>Kid-sized chicken tender fritters served with fries.</p>
+              </li>
+              <li>
+                <h4>Kids Grilled Cheese</h4>
+                <p>Texas toast grilled cheese served with fries.</p>
+              </li>
+              <li>
+                <h4>Kids Chocolate Chip Pancakes</h4>
+                <p>Kid-sized chocolate chip pancakes.</p>
+              </li>
+              <li>
+                <h4>Kids French Toast</h4>
+                <p>Kid-sized French toast.</p>
+              </li>
+              <li>
+                <h4>Kids Burrito</h4>
+                <p>Egg and cheese.</p>
+              </li>
+            </ul>
+          </details>
+
+          <details class="menu-category" id="sidesdrinks">
+            <summary>Sides &amp; Drinks</summary>
+
+            <ul class="dish-list">
+              <li>
+                <h4>French Fries</h4>
+                <p>A classic side for event meals.</p>
+              </li>
+              <li>
+                <h4>Beer-Battered Steak-Cut Onion Rings</h4>
+                <p>Thick-cut onion rings in a crispy beer batter, cooked fresh to order.</p>
+              </li>
+              <li>
+                <h4>Cottage Potatoes</h4>
+                <p>A hearty breakfast side.</p>
+              </li>
+              <li>
+                <h4>Side Belgian Waffle</h4>
+                <p>One Belgian waffle made fresh to order and served with syrup.</p>
+              </li>
+              <li>
+                <h4>Buttermilk Biscuit</h4>
+                <p>A comforting addition to a brunch menu.</p>
+              </li>
+              <li>
+                <h4>Bacon or Sausage</h4>
+                <p>Breakfast sides to complement your menu.</p>
+              </li>
+              <li>
+                <h4>☕ AZ Cafecito Bold</h4>
+                <p>
+                  A rich, freshly pulled double espresso made with Lifeboost dark
+                  roast beans and finished with a touch of cinnamon.
+                </p>
+              </li>
+              <li>
+                <h4>☁️ AZ Cafecito Vanilla Crema</h4>
+                <p>
+                  A freshly pulled Lifeboost dark roast double-espresso mini cappuccino
+                  with vanilla bean syrup, steamed milk, foam, and cinnamon.
+                </p>
+              </li>
+              <li>
+                <h4>Iced Tea</h4>
+                <p>Sweet or unsweet.</p>
+              </li>
+              <li>
+                <h4>Bottled Water</h4>
+                <p>Bottled water.</p>
+              </li>
+              <li>
+                <h4>Mexican Coca-Cola</h4>
+                <p>Served in a glass bottle.</p>
+              </li>
+              <li>
+                <h4>Canned Sodas</h4>
+                <p>Selections may include A&amp;W Root Beer and Dr Pepper.</p>
+              </li>
+              <li>
+                <h4>Bottled Sodas</h4>
+                <p>Selections may include Orange Fanta and Sprite.</p>
+              </li>
+              <li>
+                <h4>Seasonal Juices</h4>
+                <p>Ask about available flavors.</p>
+              </li>
+            </ul>
+          </details>
+
+        </section>
+
+        <!-- BOOKING -->
+
+        <section class="booking" aria-labelledby="booking-heading">
+          <h2 id="booking-heading">Let’s Plan Something Delicious</h2>
+
+          <p>
+            Tell us your event date, location, guest count, and the kind of food you
+            have in mind. We’ll discuss menu options, availability, and a quote for
+            pickup catering, drop-off catering, or on-site food trailer service.
+          </p>
+
+          <p>
+            Serving Rockwall, Heath, Fate, Royse City, Forney, Rowlett, and Terrell.
+          </p>
+
+          <div class="actions">
+            <a class="button" href="catering.html">Request Catering or a Trailer Quote</a>
+            <a class="button secondary" href="tel:+19455460808">Call 945-546-0808</a>
+          </div>
+
+          <p>
+            Email
+            <a href="mailto:hello@azsunrisecafecito.com">hello@azsunrisecafecito.com</a>.
+          </p>
+
+          <p class="small">
+            Service is scheduled by booking.
+            Pickup locations and times are confirmed with each order.
+          </p>
+        </section>
+
+        <footer>
+          <a href="index.html">Back to Home</a>
+          · The secret ingredient is made with love.
+        </footer>
 
       </div>
-
-      <!-- FULL MENU -->
-
-      <section class="board" aria-label="Full Menu" id="menuTop">
-
-        <div class="board-head">
-          <h2>🌅 Full Menu</h2>
-          <p><em>Menu rotates based on season, events, and Chef Jack’s specials. Some items may sell out.</em></p>
-
-          <div class="cards-only" aria-label="Quick info">
-            <span class="mini-pill">💳 Credit cards accepted</span>
-            <span class="mini-pill">🌶 mild • 🌶🌶 spicy</span>
-          </div>
-        </div>
-
-        <div class="jump-wrap" id="topNav">
-          <nav class="jump" aria-label="Jump to section">
-            <a href="#favorites">Favorites</a>
-            <a href="#sonoran">Sonoran Breakfast</a>
-            <a href="#biscuit">Biscuit Sandwiches</a>
-            <a href="#tacos">Tacos</a>
-            <a href="#breakfastplates">Breakfast Plates</a>
-            <a href="#kids">Kids</a>
-            <a href="#sidesdrinks">Sides &amp; Drinks</a>
-            <a href="#specials">Limited Specials</a>
-          </nav>
-        </div>
-
-        <div class="board-body">
-          <div class="columns">
-
-            <!-- LEFT COLUMN -->
-
-            <div class="panel">
-
-              <div class="section-title" id="favorites">
-                <span class="plank">All-Day Favorites</span>
-              </div>
-
-              <div class="section-subnote">
-                Served with fries or vinaigrette coleslaw unless noted.
-                Substitute beer-battered onion rings for fries +$2.00.
-              </div>
-
-              <ul class="menu-list">
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">
-                      Arizona Sunrise Burger
-                      <span class="tag tag-star">Signature</span>
-                    </div>
-                    <div class="price">$15.00</div>
-                  </div>
-                  <div class="menu-description">
-                    Grilled Angus burger topped with bacon, green chiles, melted cheese, and Chef Jack’s house-made Boom Boom Sauce.
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">
-                      Lone Star Burger
-                      <span class="tag tag-star">NEW</span>
-                    </div>
-                    <div class="price">$16.00</div>
-                  </div>
-                  <div class="menu-description">
-                    Grilled Angus burger topped with melted Swiss cheese, crispy bacon, a beer-battered onion ring, pickles, and Chef Jack’s house-made Dr Pepper BBQ sauce. Served with fries or vinaigrette coleslaw.
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Adult Chicken Tenders</div>
-                    <div class="price">$14.00</div>
-                  </div>
-                  <div class="menu-description">
-                    Chicken tenders served with fries and your choice of BBQ or ranch.
-                  </div>
-                  <div class="tags">
-                    <span class="tag tag-note">served with fries</span>
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Golden Reuben Croquettes</div>
-                    <div class="price">$15.00</div>
-                  </div>
-                  <div class="menu-description">
-                    Three croquettes filled with corned beef, Swiss, and sauerkraut. Finished with creamy Russian sauce.
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Crab Cakes</div>
-                    <div class="price">$17.50</div>
-                  </div>
-                  <div class="menu-description">
-                    Three lump crab cakes served with roasted garlic caper aioli.
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Monte Cristo</div>
-                    <div class="price">$12.00</div>
-                  </div>
-                  <div class="menu-description">
-                    Griddled ham, turkey, and Swiss on Texas toast, lightly dusted with powdered sugar. Served with strawberry jam.
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Green Chile Chicken Soup</div>
-                    <div class="price">Cup $6.00 / Bowl $10.00</div>
-                  </div>
-                  <div class="menu-description">
-                    Slow-simmered chicken soup with roasted green chiles.
-                  </div>
-                  <div class="tags">
-                    <span class="tag tag-note">no side</span>
-                  </div>
-                </li>
-
-              </ul>
-
-              <div style="height:10px"></div>
-
-              <div class="section-title" id="sonoran">
-                <span class="plank">Sonoran Breakfast</span>
-                <a class="toplink" href="#topNav">Return to Top ↑</a>
-              </div>
-
-              <div class="section-subnote">
-                Egg items are served with cottage potatoes.
-              </div>
-
-              <ul class="menu-list">
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Bacon, Egg &amp; Cheese Taco</div>
-                    <div class="price">$5.00</div>
-                  </div>
-                  <div class="menu-description">
-                    Crispy bacon, eggs, and melted cheese on a warm flour tortilla.
-                  </div>
-                  <div class="tags">
-                    <span class="tag">Served with cottage potatoes</span>
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Sonoran Chorizo Taco</div>
-                    <div class="price">$5.50</div>
-                  </div>
-                  <div class="menu-description">
-                    Bold chorizo, eggs, melted cheese, and salsa on a warm flour tortilla.
-                  </div>
-                  <div class="tags">
-                    <span class="tag">Served with cottage potatoes</span>
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">
-                      Sonoran Steak Breakfast Taco
-                      <span class="tag tag-star">Favorite</span>
-                    </div>
-                    <div class="price">$5.95</div>
-                  </div>
-                  <div class="menu-description">
-                    Carne asada, eggs, cheese, and pico on a warm flour tortilla.
-                  </div>
-                  <div class="tags">
-                    <span class="tag">Served with cottage potatoes</span>
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Sonoran Burrito</div>
-                    <div class="price">$10.95</div>
-                  </div>
-                  <div class="menu-description">
-                    Chorizo, eggs, grilled onions, and cheese wrapped in a flour tortilla.
-                  </div>
-                  <div class="tags">
-                    <span class="tag">Served with cottage potatoes</span>
-                    <span class="tag">Includes salsa or pico</span>
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Borracho Special 🌶🌶</div>
-                    <div class="price">$11.50</div>
-                  </div>
-                  <div class="menu-description">
-                    Sonoran burrito with fresh jalapeños for a little extra kick.
-                  </div>
-                  <div class="tags">
-                    <span class="tag">Served with cottage potatoes</span>
-                    <span class="tag">Includes salsa or pico</span>
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Breakfast Bowl</div>
-                    <div class="price">$10.50</div>
-                  </div>
-                  <div class="menu-description">
-                    Cottage potatoes, eggs, chorizo, cheese, and pico.
-                  </div>
-                </li>
-
-              </ul>
-
-              <div style="height:10px"></div>
-
-              <div class="section-title" id="biscuit">
-                <span class="plank">Biscuit Sandwiches</span>
-                <a class="toplink" href="#topNav">Return to Top ↑</a>
-              </div>
-
-              <div class="section-subnote">
-                Served with cottage potatoes.
-              </div>
-
-              <ul class="menu-list">
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Egg &amp; Cheese Biscuit</div>
-                    <div class="price">$6.00</div>
-                  </div>
-                  <div class="menu-description">
-                    Fresh baked biscuit with egg and melted cheese.
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Bacon, Egg &amp; Cheese Biscuit</div>
-                    <div class="price">$8.50</div>
-                  </div>
-                  <div class="menu-description">
-                    Fresh baked biscuit with bacon, egg, and melted cheese.
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Sausage, Egg &amp; Cheese Biscuit</div>
-                    <div class="price">$8.50</div>
-                  </div>
-                  <div class="menu-description">
-                    Fresh baked biscuit with sausage, egg, and melted cheese.
-                  </div>
-                </li>
-
-              </ul>
-
-              <div style="height:10px"></div>
-
-              <div class="section-title" id="tacos">
-                <span class="plank">Tacos</span>
-                <a class="toplink" href="#topNav">Return to Top ↑</a>
-              </div>
-
-              <div class="section-subnote">
-                Street-style tacos served on warm flour tortillas. No egg unless noted.
-              </div>
-
-              <ul class="menu-list">
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">
-                      Carne Asada Taco
-                      <span class="tag tag-star">Featured</span>
-                    </div>
-                    <div class="price">$5.95</div>
-                  </div>
-                  <div class="menu-description">
-                    Citrus-marinated grilled steak served street-style with fresh pico or salsa.
-                  </div>
-                  <div class="tags">
-                    <span class="tag tag-note">no egg</span>
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">
-                      Carne Asada Taco Plate
-                      <span class="tag tag-star">Featured</span>
-                    </div>
-                    <div class="price">$15.00</div>
-                  </div>
-                  <div class="menu-description">
-                    Two warm flour tortillas filled with citrus-marinated grilled steak and fresh pico or salsa. Served with fries or vinaigrette coleslaw.
-                  </div>
-                </li>
-
-              </ul>
-
-              <div style="height:10px"></div>
-
-              <div class="section-title" id="breakfastplates">
-                <span class="plank">Breakfast Plates</span>
-                <a class="toplink" href="#topNav">Return to Top ↑</a>
-              </div>
-
-              <div class="section-subnote">
-                Egg plates are served with cottage potatoes.
-              </div>
-
-              <ul class="menu-list">
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">
-                      Sweet Heat Chicken &amp; Waffles
-                      <span class="tag tag-star">NEW</span>
-                    </div>
-                    <div class="price">$12.00</div>
-                  </div>
-                  <div class="menu-description">
-                    Two individual Belgian waffles topped with golden, crispy chicken breast filets, all cooked fresh to order and finished with hot honey, smoky bacon pieces, and fresh green onions.
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">
-                      Texan Benedict
-                      <span class="tag tag-star">Signature</span>
-                    </div>
-                    <div class="price">$13.00</div>
-                  </div>
-                  <div class="menu-description">
-                    Two biscuits topped with eggs and house-made sausage gravy.
-                  </div>
-                  <div class="tags">
-                    <span class="tag">Served with cottage potatoes</span>
-                    <span class="tag">Gravy packed on the side for delivery</span>
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Biscuits &amp; Gravy</div>
-                    <div class="price">$8.00</div>
-                  </div>
-                  <div class="menu-description">
-                    Buttery biscuits topped with house-made sausage gravy.
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">French Toast</div>
-                    <div class="price">$9.50</div>
-                  </div>
-                  <div class="menu-description">
-                    Texas toast French toast with powdered sugar and syrup.
-                  </div>
-                  <div class="tags">
-                    <span class="tag">Add bacon or sausage +$2.50</span>
-                    <span class="tag">Add cottage potatoes +$1.50</span>
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Pancakes</div>
-                    <div class="price">$9.50</div>
-                  </div>
-                  <div class="menu-description">
-                    Homemade pancakes served warm with syrup.
-                  </div>
-                  <div class="tags">
-                    <span class="tag">Add bacon or sausage +$2.50</span>
-                    <span class="tag">Add cottage potatoes +$1.50</span>
-                  </div>
-                </li>
-
-              </ul>
-
-            </div>
-
-            <!-- RIGHT COLUMN -->
-
-            <div class="panel">
-
-              <div class="section-title" id="kids">
-                <span class="plank">Kids Menu</span>
-              </div>
-
-              <ul class="menu-list">
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Kids Chicken Tender Fritters</div>
-                    <div class="price">$9.00</div>
-                  </div>
-                  <div class="menu-description">
-                    Kid-sized chicken tender fritters served with fries.
-                  </div>
-                  <div class="tags">
-                    <span class="tag">Comes with BBQ or ranch</span>
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Kids Grilled Cheese</div>
-                    <div class="price">$6.00</div>
-                  </div>
-                  <div class="menu-description">
-                    Texas toast grilled cheese served with fries.
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Kids Chocolate Chip Pancakes</div>
-                    <div class="price">$5.00</div>
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Kids French Toast</div>
-                    <div class="price">$5.50</div>
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Kids Burrito</div>
-                    <div class="price">$5.00</div>
-                  </div>
-                  <div class="menu-description">
-                    Egg and cheese.
-                  </div>
-                  <div class="tags">
-                    <span class="tag">Served with cottage potatoes</span>
-                  </div>
-                </li>
-
-              </ul>
-
-              <div style="height:10px"></div>
-
-              <div class="section-title" id="sidesdrinks">
-                <span class="plank">Sides &amp; Drinks</span>
-                <a class="toplink" href="#topNav">Return to Top ↑</a>
-              </div>
-
-              <ul class="menu-list">
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">French Fries</div>
-                    <div class="price">$3.00</div>
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Beer-Battered Steak-Cut Onion Rings</div>
-                    <div class="price">$4.50</div>
-                  </div>
-                  <div class="menu-description">
-                    Thick-cut onion rings in a crispy beer batter, cooked fresh to order.
-                  </div>
-                  <div class="tags">
-                    <span class="tag">Substitute for fries +$2.00</span>
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Cottage Potatoes</div>
-                    <div class="price">$1.50</div>
-                  </div>
-                  <div class="tags">
-                    <span class="tag">add-on for pancakes or French toast</span>
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Side Belgian Waffle</div>
-                    <div class="price">$3.50</div>
-                  </div>
-                  <div class="menu-description">
-                    One Belgian waffle made fresh to order and served with syrup.
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Buttermilk Biscuit</div>
-                    <div class="price">$2.50</div>
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Bacon or Sausage</div>
-                    <div class="price">$2.50</div>
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">☕ AZ Cafecito Bold</div>
-                    <div class="price">$4.00</div>
-                  </div>
-                  <div class="menu-description">
-                    A rich, freshly pulled double espresso made with Lifeboost dark roast beans and finished with a touch of cinnamon.
-                  </div>
-                  <div class="tags">
-                    <span class="tag">4 oz</span>
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">☁️ AZ Cafecito Vanilla Crema</div>
-                    <div class="price">$4.50</div>
-                  </div>
-                  <div class="menu-description">
-                    A freshly pulled Lifeboost dark roast double-espresso mini cappuccino with vanilla bean syrup, steamed milk, foam, and cinnamon.
-                  </div>
-                  <div class="tags">
-                    <span class="tag">4 oz</span>
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Iced Tea</div>
-                    <div class="price">$3.50</div>
-                  </div>
-                  <div class="tags">
-                    <span class="tag">sweet or unsweet</span>
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Bottled Water</div>
-                    <div class="price">$2.00</div>
-                  </div>
-                  <div class="tags">
-                    <span class="tag">16.9 oz</span>
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Mexican Coca-Cola</div>
-                    <div class="price">$3.00</div>
-                  </div>
-                  <div class="tags">
-                    <span class="tag">glass bottle</span>
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Canned Sodas</div>
-                    <div class="price">$2.00</div>
-                  </div>
-                  <div class="tags">
-                    <span class="tag">A&amp;W Root Beer</span>
-                    <span class="tag">Dr Pepper</span>
-                    <span class="tag">selection may vary</span>
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Bottled Sodas</div>
-                    <div class="price">$3.00</div>
-                  </div>
-                  <div class="tags">
-                    <span class="tag">Orange Fanta</span>
-                    <span class="tag">Sprite</span>
-                    <span class="tag">selection may vary</span>
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Seasonal Juices</div>
-                    <div class="price">$3.00</div>
-                  </div>
-                  <div class="tags">
-                    <span class="tag">assorted flavors</span>
-                    <span class="tag">selection may vary</span>
-                  </div>
-                </li>
-
-              </ul>
-
-              <div style="height:10px"></div>
-
-              <div class="section-title" id="specials">
-                <span class="plank">Limited Specials</span>
-                <a class="toplink" href="#topNav">Return to Top ↑</a>
-              </div>
-
-              <div class="section-subnote">
-                Available select days only. Follow us on Facebook or Instagram for this week’s specials.
-              </div>
-
-              <ul class="menu-list">
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Sonoran Hot Dog</div>
-                    <div class="price">$14.00</div>
-                  </div>
-                  <div class="menu-description">
-                    Bacon-wrapped Angus hot dog topped with borracho beans, grilled onions, jalapeño sauce, mayo, mustard, and a hint of lime on a soft roll.
-                  </div>
-                  <div class="tags">
-                    <span class="tag tag-note">select days only</span>
-                    <span class="tag">served with fries</span>
-                  </div>
-                </li>
-
-                <li class="row">
-                  <div class="line">
-                    <div class="name">Ask About Today’s Extras</div>
-                    <div class="price"></div>
-                  </div>
-                  <div class="menu-description">
-                    Desserts, sodas, soups, and event-only favorites may rotate.
-                  </div>
-                </li>
-
-              </ul>
-
-              <a
-                class="button-back"
-                href="index.html"
-                onclick="gtag('event','menu_back_home',{event_category:'Navigation',event_label:'Menu → Home'});"
-              >
-                ← Back to Home
-              </a>
-
-            </div>
-
-          </div>
-        </div>
-
-      </section>
-
-    </div>
-  </main>
-
-</div>
-
-<!-- AUTO ACTIVE NAV LINK -->
-
-<script>
-  const path = window.location.pathname;
-  const currentPage = (
-    path.endsWith("/")
-      ? "index.html"
-      : path.split("/").pop()
-  ).split("?")[0];
-
-  document.querySelectorAll("nav.side-nav a").forEach(a => {
-    const href = (a.getAttribute("href") || "").split("?")[0];
-
-    if (href === currentPage) {
-      a.classList.add("active");
-    }
-  });
-</script>
-
+    </main>
+  </div>
 </body>
 </html>
