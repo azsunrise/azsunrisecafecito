@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>About Us | Arizona Sunrise Cafecito &amp; Catering</title>
+  <meta name="description" content="Meet Jack and Wendy, the family behind Arizona Sunrise Cafecito &amp; Catering. Scratch-made catering and food trailer events in Rockwall and surrounding communities." />
+  <link rel="canonical" href="https://azsunrisecafecito.com/about.html" />
+
+  <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XFY3V13DJN"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -10,15 +17,13 @@
     gtag('config', 'G-XFY3V13DJN');
   </script>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Arizona Sunrise Cafecito & Catering</title>
-
-  <!-- ICONS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -27,73 +32,70 @@
       color: #333;
     }
 
-    /* ===== LAYOUT ===== */
     .layout {
       display: flex;
       min-height: 100vh;
     }
 
-    /* ===== NAV UPGRADE (modern, subtle) ===== */
-    nav.side-nav{
+    /* Navigation */
+    nav.side-nav {
       width: 220px;
       background: rgba(247,239,230,0.78);
       border-right: 1px solid rgba(122,59,46,0.12);
       padding: 16px 12px;
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
       position: sticky;
       top: 0;
       align-self: flex-start;
       height: 100vh;
-
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
     }
 
-    nav.side-nav a{
-      text-decoration:none;
-      color:#7a3b2e;
-      font-weight:700;
+    nav.side-nav a {
+      text-decoration: none;
+      color: #7a3b2e;
+      font-weight: 700;
       padding: 10px 12px;
       border-radius: 12px;
-      display:flex;
-      align-items:center;
-      gap:10px;
-
+      display: flex;
+      align-items: center;
+      gap: 10px;
       background: rgba(255,255,255,0.55);
       border: 1px solid rgba(122,59,46,0.08);
       transition: background .15s ease, transform .15s ease, box-shadow .15s ease;
     }
 
-    nav.side-nav a:hover{
+    nav.side-nav a:hover {
       background: rgba(230,195,165,0.45);
       box-shadow: 0 6px 16px rgba(122,59,46,0.10);
       transform: translateX(2px);
     }
 
-    /* Active page highlight */
-    nav.side-nav a.active{
+    nav.side-nav a.active {
       background: linear-gradient(to right, rgba(227,111,71,0.18), rgba(246,193,119,0.22));
       border: 1px solid rgba(227,111,71,0.28);
       box-shadow: 0 10px 22px rgba(227,111,71,0.12);
       position: relative;
     }
-    nav.side-nav a.active::before{
-      content:"";
-      position:absolute;
-      left:6px;
-      top:10px;
-      bottom:10px;
-      width:4px;
-      border-radius:10px;
+
+    nav.side-nav a.active::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 10px;
+      bottom: 10px;
+      width: 4px;
+      border-radius: 10px;
       background: linear-gradient(to bottom, #e36f47, #f6c177);
     }
 
-    /* ===== MAIN ===== */
+    /* Main layout */
     .main {
       flex: 1;
+      min-width: 0;
       padding-bottom: 60px;
     }
 
@@ -115,7 +117,6 @@
       border-radius: 999px;
     }
 
-    /* TIGHTER SUBHEAD */
     .subhead {
       max-width: 860px;
       margin: 0 auto 18px;
@@ -125,16 +126,15 @@
       font-size: 1.08rem;
     }
 
-    /* ELEVATED BRAND HIGHLIGHT */
+    /* Brand statement */
     .brand-highlight {
       max-width: 900px;
       margin: 22px auto 0;
-      padding: 22px 22px;
+      padding: 22px;
       border-radius: 20px;
       text-align: left;
       line-height: 1.65;
       color: #4f3f39;
-
       background: radial-gradient(circle at top left, rgba(246,193,119,0.45), rgba(227,111,71,0.18) 45%, rgba(255,243,232,1) 80%);
       border: 1px solid rgba(227,111,71,0.22);
       box-shadow: 0 10px 24px rgba(0,0,0,0.06);
@@ -142,7 +142,7 @@
       overflow: hidden;
     }
 
-    .brand-highlight::before{
+    .brand-highlight::before {
       content: "🌅";
       position: absolute;
       top: 14px;
@@ -172,14 +172,14 @@
       font-weight: 800;
     }
 
-    .brand-highlight h2{
+    .brand-highlight h2 {
       margin: 0 0 10px;
       color: #7a3b2e;
       font-size: 1.45rem;
       line-height: 1.25;
     }
 
-    .brand-highlight p{
+    .brand-highlight p {
       margin: 10px 0 0;
     }
 
@@ -193,7 +193,7 @@
       color: #7a3b2e;
     }
 
-    .brand-bullets{
+    .brand-bullets {
       margin: 14px 0 0;
       padding: 0;
       list-style: none;
@@ -202,7 +202,7 @@
       gap: 10px 14px;
     }
 
-    .brand-bullets li{
+    .brand-bullets li {
       display: flex;
       align-items: flex-start;
       gap: 10px;
@@ -212,7 +212,7 @@
       border-radius: 14px;
     }
 
-    .brand-bullets i{
+    .brand-bullets i {
       color: #e36f47;
       margin-top: 2px;
       width: 18px;
@@ -220,6 +220,7 @@
       flex: 0 0 18px;
     }
 
+    /* Personal stories */
     .content {
       max-width: 1100px;
       margin: 0 auto;
@@ -227,14 +228,14 @@
       line-height: 1.7;
     }
 
-    .story-grid{
+    .story-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 24px;
       margin-top: 32px;
     }
 
-    .card{
+    .card {
       background: #fff;
       border: 1px solid rgba(122,59,46,0.12);
       border-radius: 18px;
@@ -243,12 +244,12 @@
       transition: transform .18s ease, box-shadow .18s ease;
     }
 
-    .card:hover{
+    .card:hover {
       transform: translateY(-3px);
       box-shadow: 0 10px 24px rgba(0,0,0,0.08);
     }
 
-    .card h2{
+    .card h2 {
       margin-top: 0;
       color: #7a3b2e;
       display: flex;
@@ -256,11 +257,11 @@
       gap: 10px;
     }
 
-    .card h2 i{
+    .card h2 i {
       color: #e36f47;
     }
 
-    .story-quote{
+    .story-quote {
       background: #fff3e8;
       border-left: 6px solid #e36f47;
       border-radius: 12px;
@@ -271,7 +272,7 @@
       color: #5b4b45;
     }
 
-    /* ===== EXPERIENCE SECTION ===== */
+    /* Events and service areas */
     .experience-section {
       max-width: 950px;
       margin: 54px auto 0;
@@ -294,7 +295,9 @@
       text-decoration: none;
     }
 
-    .experience-section a:hover { text-decoration: underline; }
+    .experience-section a:hover {
+      text-decoration: underline;
+    }
 
     .experience-icons {
       display: flex;
@@ -317,9 +320,11 @@
       font-size: 0.95rem;
     }
 
-    .experience-icons i { color: #e36f47; }
+    .experience-icons i {
+      color: #e36f47;
+    }
 
-    /* ===== CATERING SECTION ===== */
+    /* Catering */
     .catering-section {
       margin-top: 50px;
       background: #fff;
@@ -333,7 +338,13 @@
       margin-right: auto;
     }
 
-    /* ===== CTA ===== */
+    .catering-section a {
+      color: #7a3b2e;
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    /* Buttons */
     .cta {
       margin-top: 30px;
       text-align: center;
@@ -342,6 +353,7 @@
     .cta a {
       display: inline-block;
       margin: 10px;
+      max-width: calc(100% - 20px);
       padding: 14px 28px;
       border-radius: 30px;
       font-weight: 700;
@@ -360,189 +372,255 @@
       box-shadow: 0 6px 14px rgba(0,0,0,0.15);
     }
 
-    @media (max-width: 950px){
-      .story-grid{ grid-template-columns: 1fr; }
-      .brand-bullets{ grid-template-columns: 1fr; }
-    }
-
-    /* Mobile */
-    @media (max-width: 768px){
-      .layout { flex-direction: column; }
-
-      nav.side-nav{
-        width:100%;
-        height:auto;
-        flex-direction:row;
-        justify-content:center;
-        gap:8px;
-        padding:10px;
-        border-right:none;
-        border-bottom: 1px solid rgba(122,59,46,0.12);
-        z-index:20;
+    @media (max-width: 950px) {
+      .story-grid {
+        grid-template-columns: 1fr;
       }
 
-      nav.side-nav a{
-        border-radius:999px;
-        padding:10px 12px;
-        transform:none;
+      .brand-bullets {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      nav.side-nav {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        padding: 10px;
+        border-right: none;
+        border-bottom: 1px solid rgba(122,59,46,0.12);
+        z-index: 20;
+      }
+
+      nav.side-nav a {
+        border-radius: 999px;
+        padding: 10px 12px;
+        transform: none;
         font-size: 0.95rem;
       }
 
-      nav.side-nav a.active::before{ display:none; }
+      nav.side-nav a.active::before {
+        display: none;
+      }
 
-      .brand-highlight{ padding: 18px; }
+      .brand-highlight {
+        padding: 18px;
+      }
     }
   </style>
 </head>
 
 <body>
-<div class="layout">
+  <div class="layout">
 
-  <!-- ===== NAV ===== -->
-  <nav class="side-nav" aria-label="Primary navigation">
-    <a href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a>
-    <a href="about.html"><i class="fa-solid fa-user-chef" aria-hidden="true"></i> About Us</a>
-    <a href="menu.html"><i class="fa-solid fa-utensils" aria-hidden="true"></i> Menu</a>
-    <a href="catering.html"><i class="fa-solid fa-truck" aria-hidden="true"></i> Catering</a>
-  </nav>
+    <nav class="side-nav" aria-label="Primary navigation">
+      <a href="index.html">
+        <i class="fa-solid fa-house" aria-hidden="true"></i> Home
+      </a>
+      <a href="about.html">
+        <i class="fa-solid fa-users" aria-hidden="true"></i> About Us
+      </a>
+      <a href="menu.html">
+        <i class="fa-solid fa-utensils" aria-hidden="true"></i> Menu
+      </a>
+      <a href="catering.html">
+        <i class="fa-solid fa-truck" aria-hidden="true"></i> Catering
+      </a>
+    </nav>
 
-  <!-- ===== MAIN ===== -->
-  <main class="main">
+    <main class="main">
 
-    <div class="header">
-      <h1>Our Story</h1>
-      <div class="divider"></div>
+      <div class="header">
+        <h1>Our Story</h1>
+        <div class="divider"></div>
 
-      <p class="subhead">
-        We’re a family-run food trailer bringing scratch-made brunch to Royse City —
-        Sonoran-inspired flavor, Texas hospitality, and the kind of care you can taste.
-      </p>
-
-      <section class="brand-highlight" aria-label="Brand statement">
-        <div class="brand-kicker">
-          <span class="pill">Our vibe</span>
-          <span>Warm • Fresh • Family</span>
-        </div>
-
-        <h2>Where <strong>Arizona spice</strong> meets <strong>Texas soul</strong></h2>
-
-        <p>
-          We grew up close to the Sonoran border, so a few bold favorites naturally made their way into our menu —
-          always balanced with comfort-food classics and genuine Texas welcome.
+        <p class="subhead">
+          We’re a family-run catering and food trailer business serving Rockwall and surrounding communities —
+          bringing scratch-made brunch, comfort food, Sonoran-inspired flavor, and Texas hospitality to your gatherings.
         </p>
 
-        <ul class="brand-bullets">
-          <li><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i> We can keep it mild or turn up the heat</li>
-          <li><i class="fa-solid fa-bowl-food" aria-hidden="true"></i> Scratch-made (not store-bought)</li>
-          <li><i class="fa-solid fa-heart" aria-hidden="true"></i> The secret ingredient is made with love</li>
-          <li><i class="fa-solid fa-mug-hot" aria-hidden="true"></i> Brunch + coffee, made with intention</li>
-        </ul>
-      </section>
-    </div>
+        <section class="brand-highlight" aria-label="Brand statement">
+          <div class="brand-kicker">
+            <span class="pill">Our vibe</span>
+            <span>Warm • Fresh • Family</span>
+          </div>
 
-    <div class="content">
-
-      <div class="story-grid">
-
-        <section class="card" aria-label="Meet Jack">
-          <h2><i class="fa-solid fa-utensils" aria-hidden="true"></i> Meet Jack</h2>
+          <h2>Where <strong>Arizona spice</strong> meets <strong>Texas soul</strong></h2>
 
           <p>
-            Jack has spent decades in professional kitchens — from Arizona resorts to restaurant ownership and catering.
+            We grew up close to the Sonoran border, so a few bold favorites naturally made their way into our menu —
+            always balanced with comfort-food classics and genuine Texas welcome.
           </p>
 
-          <div class="story-quote">
-            Jack has a gift in the kitchen — everything he touches just tastes better.
-            The first time he cooked Wendy a burger in his backyard, it tasted like steak.
-            That was the moment she thought, “Well… I’m going to marry this man.”
-            <br><br>
-            He’ll tell you it’s just good ingredients and technique.
-            We’ll tell you it’s talent.
+          <ul class="brand-bullets">
+            <li>
+              <i class="fa-solid fa-pepper-hot" aria-hidden="true"></i>
+              We can keep it mild or turn up the heat
+            </li>
+            <li>
+              <i class="fa-solid fa-bowl-food" aria-hidden="true"></i>
+              Scratch-made (not store-bought)
+            </li>
+            <li>
+              <i class="fa-solid fa-heart" aria-hidden="true"></i>
+              The secret ingredient is made with love
+            </li>
+            <li>
+              <i class="fa-solid fa-mug-hot" aria-hidden="true"></i>
+              Brunch + coffee, made with intention
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="content">
+
+        <div class="story-grid">
+
+          <section class="card" aria-label="Meet Jack">
+            <h2>
+              <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+              Meet Jack
+            </h2>
+
+            <p>
+              Jack has spent decades in professional kitchens — from Arizona resorts to restaurant ownership and catering.
+            </p>
+
+            <div class="story-quote">
+              Jack has a gift in the kitchen — everything he touches just tastes better.
+              The first time he cooked Wendy a burger in his backyard, it tasted like steak.
+              That was the moment she thought, “Well… I’m going to marry this man.”
+              <br><br>
+              He’ll tell you it’s just good ingredients and technique.
+              We’ll tell you it’s talent.
+            </div>
+
+            <p>
+              After stepping away to raise their twins, Jack returned to the kitchen with renewed purpose —
+              bringing experience, instinct, and heart into every dish.
+            </p>
+          </section>
+
+          <section class="card" aria-label="Meet Wendy">
+            <h2>
+              <i class="fa-solid fa-sun" aria-hidden="true"></i>
+              Meet Wendy
+            </h2>
+
+            <p>
+              While Jack leads the kitchen, Wendy leads the business side — overseeing operations,
+              planning, and customer communication. She’s a natural mentor and team-builder
+              who brings clarity and steady leadership to every moving part.
+            </p>
+
+            <div class="story-quote">
+              Wendy has always led by serving others — consistently, and with a high bar for doing things the right way.
+              She connects the dots quickly — between people, ideas, and details — creating alignment and momentum wherever she’s needed.
+              You’ll feel it in how smoothly everything runs.
+            </div>
+
+            <p>
+              You’ll also find her working alongside Jack in the kitchen,
+              supporting prep and ensuring each service runs with care and consistency.
+            </p>
+          </section>
+
+        </div>
+
+        <section class="experience-section" aria-label="Food trailer events and service areas">
+          <h2>More Than a Meal</h2>
+
+          <p>
+            Great food brings people together. We bring Arizona Sunrise to school events,
+            employee appreciation meals, HOA gatherings, festivals, and private celebrations —
+            with the same care and personal attention we put into every dish.
+          </p>
+
+          <div class="experience-icons" aria-label="Events we serve">
+            <span>
+              <i class="fa-solid fa-school" aria-hidden="true"></i>
+              School events
+            </span>
+            <span>
+              <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+              Employee appreciation
+            </span>
+            <span>
+              <i class="fa-solid fa-house" aria-hidden="true"></i>
+              HOA gatherings
+            </span>
+            <span>
+              <i class="fa-solid fa-champagne-glasses" aria-hidden="true"></i>
+              Private celebrations
+            </span>
+            <span>
+              <i class="fa-solid fa-truck" aria-hidden="true"></i>
+              Food trailer events
+            </span>
           </div>
 
           <p>
-            After stepping away to raise their twins, Jack returned to the kitchen with renewed purpose —
-            bringing experience, instinct, and heart into every dish.
+            We serve <strong>Rockwall, Heath, Fate, Royse City, Forney, Rowlett, and Terrell</strong>.
+            Find us at <a href="index.html#find-us">upcoming public events</a>,
+            or <a href="catering.html">ask about booking our trailer</a> for your next gathering.
+            Locations and serving hours vary by event.
           </p>
         </section>
 
-        <section class="card" aria-label="Meet Wendy">
-          <h2><i class="fa-solid fa-sun" aria-hidden="true"></i> Meet Wendy</h2>
+        <section class="catering-section" aria-label="Catering and food trailer bookings">
+          <h2>Catering &amp; Food Trailer Bookings</h2>
 
           <p>
-            While Jack leads the kitchen, Wendy leads the business side — overseeing operations,
-            planning, and customer communication. She’s a natural mentor and team-builder
-            who brings clarity and steady leadership to every moving part.
+            From smaller gatherings to workplace meals and community events,
+            we offer pickup and drop-off catering, along with on-site food trailer service by arrangement.
+            As a hands-on, two-person team, we work with you to plan a menu and service
+            that fit your event, with quality, freshness, and personal attention at the center.
           </p>
 
-          <div class="story-quote">
-            Wendy has always led by serving others — consistently, and with a high bar for doing things the right way.
-            She connects the dots quickly — between people, ideas, and details — creating alignment and momentum wherever she’s needed.
-            You’ll feel it in how smoothly everything runs.
-          </div>
+          <p>
+            Service is scheduled by booking. Pickup locations and times are confirmed with each order.
+            Share your event date, location, guest count, and menu ideas so we can discuss availability and a quote.
+          </p>
 
           <p>
-            You’ll also find her working alongside Jack in the kitchen,
-            supporting prep and ensuring each service runs with care and consistency.
+            Call <a href="tel:+19455460808">945-546-0808</a> or email
+            <a href="mailto:hello@azsunrisecafecito.com">hello@azsunrisecafecito.com</a>.
           </p>
         </section>
 
-      </div>
-
-      <section class="experience-section" aria-label="Holy Grounds Food Yard experience">
-        <h2>More Than a Meal</h2>
-
-        <p>
-          We’re grateful to partner with
-          <a href="https://www.holygroundsfoodyard.com" target="_blank" rel="noopener"
-             onclick="gtag('event','holygrounds_click',{event_category:'Outbound',event_label:'Holy Grounds Food Yard Website'});">
-            Holy Grounds Food Yard
-          </a>
-          in Royse City and be part of a space that reflects what we’re about.
-        </p>
-
-        <div class="experience-icons" aria-label="Experience highlights">
-          <span><i class="fa-solid fa-basketball" aria-hidden="true"></i> Kids play &amp; hoops</span>
-          <span><i class="fa-solid fa-people-roof" aria-hidden="true"></i> Safe fenced-in area</span>
-          <span><i class="fa-solid fa-fire" aria-hidden="true"></i> Fire pits</span>
-          <span><i class="fa-solid fa-music" aria-hidden="true"></i> Live music (select Saturdays)</span>
+        <div class="cta" aria-label="Next steps">
+          <a href="menu.html">View Our Menu</a>
+          <a href="catering.html" class="secondary">Request Catering or a Trailer Quote</a>
         </div>
 
-        <p>
-          Kids can run, play tag, and even play hide-and-seek in a safe, fenced-in area while parents relax nearby.
-          Arizona Sunrise is about great food — and the kind of space that makes you want to stay awhile.
-        </p>
-      </section>
-
-      <section class="catering-section" aria-label="Catering">
-        <h2>Catering</h2>
-        <p>
-          We specialize in pickup catering for smaller, intimate gatherings.
-          As a hands-on, two-person team, this allows us to focus on quality,
-          freshness, and personal attention with every order.
-        </p>
-      </section>
-
-      <div class="cta" aria-label="Next steps">
-        <a href="menu.html">View Our Menu</a>
-        <a href="catering.html" class="secondary">Catering Info</a>
       </div>
+    </main>
+  </div>
 
-    </div>
+  <!-- Highlight the current navigation page -->
+  <script>
+    const path = window.location.pathname;
+    const currentPage = (
+      path.endsWith("/") ? "index.html" : path.split("/").pop()
+    ).split("?")[0];
 
-  </main>
-</div>
+    document.querySelectorAll("nav.side-nav a").forEach(a => {
+      const href = (a.getAttribute("href") || "").split("?")[0];
 
-<!-- AUTO ACTIVE NAV LINK -->
-<script>
-  const path = window.location.pathname;
-  const currentPage = (path.endsWith("/") ? "index.html" : path.split("/").pop()).split("?")[0];
-
-  document.querySelectorAll("nav.side-nav a").forEach(a => {
-    const href = (a.getAttribute("href") || "").split("?")[0];
-    if (href === currentPage) a.classList.add("active");
-  });
-</script>
-
+      if (href === currentPage) {
+        a.classList.add("active");
+        a.setAttribute("aria-current", "page");
+      }
+    });
+  </script>
 </body>
 </html>
