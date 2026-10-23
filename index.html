@@ -1,12 +1,25 @@
-<!DOCTYPE html>
+Copy this entire code box and replace everything in GitHub’s **`index.html`**, then click **Commit changes**.
 
+```html
+<!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rockwall Catering &amp; Food Truck Events | Arizona Sunrise</title>
+  <meta name="description" content="Book Arizona Sunrise for catering and food trailer events in Rockwall, Heath, Fate, Royse City, Forney, Rowlett and Terrell. Request a custom menu and event quote.">
+  <link rel="canonical" href="https://azsunrisecafecito.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rockwall Catering &amp; Food Truck Events | Arizona Sunrise">
+  <meta property="og:description" content="Scratch-made catering and food trailer service for school events, employee appreciation meals, HOA gatherings and private celebrations.">
+  <meta property="og:url" content="https://azsunrisecafecito.com/">
+  <meta property="og:image" content="https://azsunrisecafecito.com/trailer.jpeg">
+  <meta property="og:site_name" content="Arizona Sunrise Cafecito &amp; Catering">
 
   <!-- Google Analytics -->
-
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XFY3V13DJN"></script>
-
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -14,1332 +27,1715 @@
     gtag('config', 'G-XFY3V13DJN');
   </script>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arizona Sunrise Cafecito & Catering</title>
+  <!-- Business and service information -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://azsunrisecafecito.com/#business",
+        "name": "Arizona Sunrise Cafecito & Catering",
+        "url": "https://azsunrisecafecito.com/",
+        "description": "Family-owned catering and mobile food trailer service for school events, employee appreciation meals, HOA gatherings, festivals and private celebrations.",
+        "telephone": "+1-945-546-0808",
+        "email": "hello@azsunrisecafecito.com",
+        "image": "https://azsunrisecafecito.com/trailer.jpeg",
+        "sameAs": [
+          "https://www.facebook.com/azsunrisecafecito/",
+          "https://www.instagram.com/az_sunrise_cafecito_catering/"
+        ],
+        "areaServed": [
+          {"@type": "City", "name": "Rockwall, Texas"},
+          {"@type": "City", "name": "Heath, Texas"},
+          {"@type": "City", "name": "Fate, Texas"},
+          {"@type": "City", "name": "Royse City, Texas"},
+          {"@type": "City", "name": "Forney, Texas"},
+          {"@type": "City", "name": "Rowlett, Texas"},
+          {"@type": "City", "name": "Terrell, Texas"}
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://azsunrisecafecito.com/#catering-service",
+        "name": "Catering and Food Trailer Event Service",
+        "serviceType": [
+          "Pickup and drop-off catering",
+          "On-site food trailer service"
+        ],
+        "provider": {
+          "@id": "https://azsunrisecafecito.com/#business"
+        },
+        "areaServed": [
+          {"@type": "City", "name": "Rockwall, Texas"},
+          {"@type": "City", "name": "Heath, Texas"},
+          {"@type": "City", "name": "Fate, Texas"},
+          {"@type": "City", "name": "Royse City, Texas"},
+          {"@type": "City", "name": "Forney, Texas"},
+          {"@type": "City", "name": "Rowlett, Texas"},
+          {"@type": "City", "name": "Terrell, Texas"}
+        ],
+        "url": "https://azsunrisecafecito.com/catering.html"
+      }
+    ]
+  }
+  </script>
 
-  <!-- ICONS -->
-
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<style>
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(to bottom, #fff7f0 0%, #ffffff 45%);
-  color: #333;
-}
-
-/* Layout */
-.layout {
-  display: flex;
-  min-height: 100vh;
-}
-
-/* ===== NAV UPGRADE (modern, subtle) ===== */
-nav.side-nav{
-  width: 220px;
-  background: rgba(247,239,230,0.78);
-  border-right: 1px solid rgba(122,59,46,0.12);
-  padding: 16px 12px;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-  position: sticky;
-  top: 0;
-  align-self: flex-start;
-  height: 100vh;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-nav.side-nav a{
-  text-decoration:none;
-  color:#7a3b2e;
-  font-weight:700;
-  padding: 10px 12px;
-  border-radius: 12px;
-  display:flex;
-  align-items:center;
-  gap:10px;
-  background: rgba(255,255,255,0.55);
-  border: 1px solid rgba(122,59,46,0.08);
-  transition: background .15s ease, box-shadow .15s ease;
-}
-
-nav.side-nav a:hover{
-  background: rgba(230,195,165,0.45);
-  box-shadow: 0 6px 16px rgba(122,59,46,0.10);
-}
-
-/* Active page highlight */
-nav.side-nav a.active{
-  background: linear-gradient(to right, rgba(227,111,71,0.18), rgba(246,193,119,0.22));
-  border: 1px solid rgba(227,111,71,0.28);
-  box-shadow: 0 10px 22px rgba(227,111,71,0.12);
-  position: relative;
-}
-
-nav.side-nav a.active::before{
-  content:"";
-  position:absolute;
-  left:6px;
-  top:10px;
-  bottom:10px;
-  width:4px;
-  border-radius:10px;
-  background: linear-gradient(to bottom, #e36f47, #f6c177);
-}
-
-/* Main */
-.main {
-  flex: 1;
-  text-align: center;
-}
-
-.logo-wrap {
-  padding: 10px 16px 0;
-}
-
-.logo-wrap img {
-  display: block;
-  width: calc(100% - 32px);
-  max-width: 720px;
-  margin: 0 auto;
-  border-radius: 14px;
-}
-
-/* HERO */
-.hero {
-  max-width: 700px;
-  margin: 0 auto 20px;
-  padding: 0 20px;
-}
-
-.hero h1 {
-  color: #7a3b2e;
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 1.1rem;
-}
-
-/* Promo bars */
-.promo-bar {
-  color: white;
-  padding: 12px 18px;
-  border-radius: 12px;
-  font-weight: 800;
-  margin: 10px auto 20px;
-  max-width: 650px;
-  text-align: center;
-}
-
-.promo-bar.hours {
-  background: linear-gradient(to right, #e36f47, #f6c177);
-}
-
-.promo-bar.military {
-  background: linear-gradient(to right, #7a3b2e, #a65b4a);
-  box-shadow: 0 8px 18px rgba(122,59,46,0.14);
-}
-
-.hours-note {
-  display: block;
-  margin-top: 5px;
-  font-size: 0.86rem;
-  font-weight: 700;
-}
-
-.hours-review {
-  display: block;
-  margin-top: 6px;
-  color: #6b5a53;
-  font-size: 0.92rem;
-}
-
-/* ===== Holy Grounds Experience Preview ===== */
-.experience-preview {
-  max-width: 720px;
-  margin: 0 auto 10px;
-  padding: 18px 20px;
-  background: #fff3e8;
-  border-radius: 16px;
-  border: 1px solid rgba(227,111,71,0.2);
-  line-height: 1.6;
-  color: #5b4b45;
-}
-
-.experience-preview a {
-  color: #7a3b2e;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.experience-preview a:hover {
-  text-decoration: underline;
-}
-
-.experience-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 14px;
-  margin: 14px 0;
-  font-weight: 600;
-  color: #533f3a;
-}
-
-.experience-icons span {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: #ffffff;
-  padding: 8px 14px;
-  border-radius: 20px;
-  border: 1px solid rgba(122,59,46,0.12);
-  font-size: 0.95rem;
-}
-
-.experience-icons i {
-  color: #e36f47;
-}
-
-/* ===== Events We've Served ===== */
-.events-box{
-  margin-top: 14px;
-  text-align: left;
-  background: rgba(255,255,255,0.78);
-  border: 1px solid rgba(122,59,46,0.12);
-  border-radius: 14px;
-  padding: 16px;
-}
-
-.events-title{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-weight: 900;
-  color:#7a3b2e;
-  margin: 0 0 10px;
-  font-size: 1rem;
-}
-
-.events-title i{
-  color:#e36f47;
-  width:18px;
-  text-align:center;
-}
-
-.events-intro{
-  margin: 0 0 14px;
-  color: #6b5a53;
-  font-size: 0.95rem;
-  line-height: 1.45;
-}
-
-.events-grid{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-}
-
-.event-item{
-  display:flex;
-  gap:10px;
-  align-items:flex-start;
-  line-height:1.3;
-  color:#5b4b45;
-  padding: 12px;
-  background: #ffffff;
-  border: 1px solid rgba(122,59,46,0.10);
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(122,59,46,0.05);
-}
-
-.event-item + .event-item{
-  border-top: 1px solid rgba(122,59,46,0.10);
-}
-
-.event-item.featured{
-  background: linear-gradient(to right, rgba(255,214,102,0.14), rgba(246,193,119,0.08));
-  border: 1px solid rgba(217,119,6,0.16);
-  border-radius: 12px;
-  padding: 10px;
-  margin-bottom: 2px;
-}
-
-.event-icon{
-  width: 26px;
-  height: 26px;
-  min-width: 26px;
-  border-radius: 999px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-top: 1px;
-  font-size: 0.8rem;
-  border: 1px solid rgba(122,59,46,0.08);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
-
-.event-icon.easter{
-  background: rgba(255,214,102,0.26);
-  color: #d97706;
-}
-
-.event-icon.earth{
-  background: rgba(134,239,172,0.24);
-  color: #15803d;
-}
-
-.event-icon.makers{
-  background: rgba(196,181,253,0.28);
-  color: #7c3aed;
-}
-
-.event-icon.magic{
-  background: rgba(253,186,116,0.22);
-  color: #ea580c;
-}
-
-.event-icon.lonestar{
-  background: rgba(147,197,253,0.24);
-  color: #2563eb;
-}
-
-.event-icon.movie{
-  background: rgba(244,114,182,0.18);
-  color: #be185d;
-}
-
-.event-icon.pancakes{
-  background: rgba(255,214,102,0.24);
-  color: #b45309;
-}
-
-.event-icon.cars{
-  background: rgba(44,141,136,0.18);
-  color: #0f766e;
-}
-
-.event-icon.community{
-  background: rgba(227,111,71,0.18);
-  color: #c2410c;
-}
-
-.event-icon.school{
-  background: rgba(244,114,182,0.16);
-  color: #be185d;
-}
-
-.event-icon.residents{
-  background: rgba(147,197,253,0.22);
-  color: #2563eb;
-}
-
-.event-icon.private-event{
-  background: rgba(255,214,102,0.24);
-  color: #b45309;
-}
-
-.event-icon.fundraiser{
-  background: rgba(134,239,172,0.22);
-  color: #15803d;
-}
-
-.event-icon.corporate{
-  background: rgba(196,181,253,0.26);
-  color: #7c3aed;
-}
-
-.event-item strong{
-  color:#7a3b2e;
-  display:block;
-  margin-bottom: 1px;
-}
-
-.event-date{
-  font-size: 0.95rem;
-}
-
-.event-detail{
-  font-size: 0.9rem;
-  margin-top: 4px;
-  color: #6b5a53;
-  line-height: 1.35;
-}
-
-.event-note{
-  margin-top: 10px;
-  padding: 9px 12px;
-  border-radius: 12px;
-  background: rgba(246,193,119,0.16);
-  border: 1px solid rgba(227,111,71,0.16);
-  color: #5b4b45;
-  font-weight: 700;
-  font-size: 0.95rem;
-}
-
-/* ===== Upcoming Off-Site Events ===== */
-.upcoming-events{
-  margin-top: 14px;
-  text-align: left;
-  background: linear-gradient(to right, rgba(227,111,71,0.10), rgba(246,193,119,0.14));
-  border: 1px solid rgba(227,111,71,0.22);
-  border-radius: 14px;
-  padding: 16px;
-}
-
-.upcoming-events .event-item:last-child{
-  grid-column: 1 / -1;
-}
-
-.upcoming-events .event-item a{
-  color: #7a3b2e;
-  text-decoration: none;
-}
-
-.upcoming-events .event-item a:hover{
-  text-decoration: underline;
-}
-
-.event-icon.pool{
-  background: rgba(125,211,252,0.24);
-  color: #0369a1;
-}
-
-.event-icon.picnic{
-  background: rgba(134,239,172,0.24);
-  color: #15803d;
-}
-
-.event-icon.brews{
-  background: rgba(251,191,36,0.24);
-  color: #b45309;
-}
-
-.event-icon.halloween{
-  background: rgba(196,181,253,0.28);
-  color: #7c3aed;
-}
-
-.event-icon.race{
-  background: rgba(244,114,182,0.18);
-  color: #be185d;
-}
-
-.event-access{
-  margin-top: 5px;
-  color: #7a3b2e;
-  font-size: 0.84rem;
-  font-weight: 800;
-}
-
-.schedule-note{
-  margin: 12px 0 0;
-  color: #5b4b45;
-  font-size: 0.9rem;
-  line-height: 1.45;
-}
-
-.schedule-note a{
-  color: #7a3b2e;
-  font-weight: 800;
-}
-
-.event-page-link{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 10px;
-  padding: 10px 14px;
-  border-radius: 999px;
-  background: linear-gradient(to right, #7a3b2e, #a65b4a);
-  color: #ffffff !important;
-  font-weight: 900;
-  text-decoration: none;
-  box-shadow: 0 8px 18px rgba(122,59,46,0.14);
-}
-
-.event-page-link:hover{
-  text-decoration: none !important;
-  filter: brightness(1.04);
-}
-
-/* FEATURED IMAGE / SLIDESHOW */
-.feature-image {
-  width: 100%;
-  max-width: 650px;
-  aspect-ratio: 16 / 10;
-  margin: 20px auto 0;
-  border-radius: 14px;
-  overflow: hidden;
-  background: #fff3e8;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-}
-
-.feature-image img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  border-radius: 0;
-}
-
-/* CTA Buttons */
-.home-cta {
-  margin: 25px 0 30px;
-}
-
-.home-cta a {
-  display: inline-block;
-  margin: 8px;
-  padding: 14px 28px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #fff;
-  background: linear-gradient(to right, #e36f47, #f6c177);
-  transition: box-shadow 0.2s ease, filter 0.2s ease;
-}
-
-.home-cta a.secondary {
-  background: linear-gradient(to right, #7a3b2e, #a65b4a);
-}
-
-.home-cta a:hover {
-  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-  filter: brightness(1.03);
-}
-
-/* ===== Follow / Review / Order Section ===== */
-.social-hub {
-  max-width: 900px;
-  margin: 0 auto 34px;
-  padding: 0 20px;
-}
-
-.social-hub-inner {
-  background:
-    radial-gradient(circle at top left, rgba(246,193,119,0.38), transparent 32%),
-    linear-gradient(135deg, #fff8ef 0%, #ffffff 58%, #fff3e8 100%);
-  border: 1px solid rgba(122,59,46,0.14);
-  border-radius: 22px;
-  padding: 22px;
-  box-shadow: 0 12px 30px rgba(122,59,46,0.10);
-}
-
-.social-hub h2 {
-  color: #7a3b2e;
-  margin: 0 0 8px;
-  font-size: 1.7rem;
-}
-
-.social-hub .hub-subtitle {
-  color: #5b4b45;
-  margin: 0 auto 18px;
-  max-width: 650px;
-  line-height: 1.5;
-  font-size: 1.02rem;
-}
-
-.social-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 14px;
-  margin-top: 18px;
-}
-
-.social-card {
-  text-decoration: none;
-  color: #4a332d;
-  background: rgba(255,255,255,0.88);
-  border: 1px solid rgba(122,59,46,0.12);
-  border-radius: 18px;
-  padding: 18px 14px;
-  min-height: 170px;
-  min-width: 0;
-  word-break: normal;
-  overflow-wrap: break-word;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: box-shadow .18s ease, border-color .18s ease, background .18s ease;
-}
-
-.social-card:hover {
-  background: #ffffff;
-  box-shadow: 0 12px 24px rgba(122,59,46,0.14);
-  border-color: rgba(227,111,71,0.35);
-}
-
-.social-card i {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.35rem;
-  margin-bottom: 12px;
-}
-
-.social-card strong {
-  color: #7a3b2e;
-  display: block;
-  font-size: 1.03rem;
-  margin-bottom: 6px;
-}
-
-.social-card span {
-  font-size: 0.92rem;
-  line-height: 1.35;
-  color: #5b4b45;
-}
-
-.social-card.facebook i {
-  background: linear-gradient(135deg, #1877f2, #0b4ea2);
-}
-
-.social-card.instagram i {
-  background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af);
-}
-
-.social-card.review i {
-  background: linear-gradient(135deg, #e36f47, #f6c177);
-}
-
-.social-card.yelp i {
-  background: linear-gradient(135deg, #d32323, #f15c4f);
-}
-
-.social-card.doordash i {
-  background: linear-gradient(135deg, #d91414, #ff6b35);
-}
-
-.social-note {
-  margin: 18px auto 0;
-  padding: 12px 14px;
-  max-width: 660px;
-  background: rgba(122,59,46,0.06);
-  border: 1px dashed rgba(122,59,46,0.20);
-  border-radius: 14px;
-  color: #5b4b45;
-  line-height: 1.45;
-  font-size: 0.96rem;
-}
-
-.social-note strong {
-  color: #7a3b2e;
-}
-
-/* Content Section */
-.content {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px 40px;
-}
-
-/* Why Us */
-.why-us {
-  margin: 40px auto 0;
-  max-width: 600px;
-  text-align: left;
-}
-
-.why-us h2 {
-  text-align: center;
-  margin-bottom: 18px;
-}
-
-.why-us ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.why-us li {
-  margin: 12px 0;
-  font-size: 1.05rem;
-}
-
-/* Map */
-.map-wrap iframe {
-  width: 100%;
-  height: 300px;
-  border: 0;
-  border-radius: 12px;
-}
-
-/* NOW OPEN */
-.now-open {
-  font-size: 2.2rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-align: center;
-  margin: 40px 0 10px;
-  background: linear-gradient(90deg, #e36f47, #f6c177);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 2px 10px rgba(227,111,71,0.25);
-}
-
-/* Open Today indicator */
-.open-indicator{
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 9px 14px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.80);
-  border: 1px solid rgba(122,59,46,0.14);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
-  margin: 2px 0 10px;
-  color: #533f3a;
-  font-weight: 800;
-  font-size: 0.98rem;
-}
-
-.open-dot{
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: #22c55e;
-  box-shadow: 0 0 0 4px rgba(34,197,94,0.18);
-}
-
-.open-indicator.closed{
-  opacity: .92;
-}
-
-.open-indicator.closed .open-dot{
-  background: #9ca3af;
-  box-shadow: 0 0 0 4px rgba(156,163,175,0.18);
-}
-
-/* Mobile */
-@media (max-width: 1100px) {
-  .social-cards {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
-}
-
-@media (max-width: 900px) {
-  .social-cards {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
-}
-
-@media (max-width: 768px) {
-  .layout { flex-direction: column; }
-
-  .events-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .upcoming-events .event-item:last-child{
-    grid-column: auto;
-  }
-
-  .logo-wrap{
-    padding: 8px 0 0;
-  }
-
-  .logo-wrap img{
-    width: calc(100% - 24px);
-  }
-
-  nav.side-nav{
-    width:100%;
-    height:auto;
-    flex-direction:row;
-    justify-content:flex-start;
-    gap:8px;
-    padding:10px;
-    border-right:none;
-    border-bottom: 1px solid rgba(122,59,46,0.12);
-    z-index:20;
-    overflow-x:auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  nav.side-nav a{
-    border-radius:999px;
-    padding:10px 12px;
-    white-space:nowrap;
-    flex: 0 0 auto;
-  }
-
-  nav.side-nav a.active::before{ display:none; }
-
-  .hero h1 {
-    font-size: 1.7rem;
-  }
-
-  .feature-image {
-    max-width: calc(100% - 32px);
-    aspect-ratio: 4 / 3;
-  }
-
-  .social-hub-inner {
-    padding: 18px 14px;
-  }
-
-  .social-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .social-card {
-    min-height: auto;
-    padding: 16px 14px;
-  }
-}
-</style>
-
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(to bottom, #fff7f0 0%, #ffffff 45%);
+      color: #333;
+    }
+
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Navigation */
+    nav.side-nav {
+      width: 220px;
+      background: rgba(247,239,230,0.78);
+      border-right: 1px solid rgba(122,59,46,0.12);
+      padding: 16px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: sticky;
+      top: 0;
+      align-self: flex-start;
+      height: 100vh;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    nav.side-nav a {
+      text-decoration: none;
+      color: #7a3b2e;
+      font-weight: 700;
+      padding: 10px 12px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.55);
+      border: 1px solid rgba(122,59,46,0.08);
+      transition: background .15s ease, box-shadow .15s ease;
+    }
+
+    nav.side-nav a:hover {
+      background: rgba(230,195,165,0.45);
+      box-shadow: 0 6px 16px rgba(122,59,46,0.10);
+    }
+
+    nav.side-nav a.active {
+      background: linear-gradient(
+        to right,
+        rgba(227,111,71,0.18),
+        rgba(246,193,119,0.22)
+      );
+      border: 1px solid rgba(227,111,71,0.28);
+      box-shadow: 0 10px 22px rgba(227,111,71,0.12);
+      position: relative;
+    }
+
+    nav.side-nav a.active::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 10px;
+      bottom: 10px;
+      width: 4px;
+      border-radius: 10px;
+      background: linear-gradient(to bottom, #e36f47, #f6c177);
+    }
+
+    /* Main content */
+    .main {
+      flex: 1;
+      min-width: 0;
+      text-align: center;
+    }
+
+    .logo-wrap {
+      padding: 10px 16px 0;
+    }
+
+    .logo-wrap img {
+      display: block;
+      width: calc(100% - 32px);
+      max-width: 720px;
+      margin: 0 auto;
+      border-radius: 14px;
+    }
+
+    /* Hero */
+    .hero {
+      max-width: 700px;
+      margin: 0 auto 20px;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      color: #7a3b2e;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    /* Promo bars */
+    .promo-bar {
+      color: white;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: 800;
+      margin: 10px auto 20px;
+      max-width: 650px;
+      text-align: center;
+    }
+
+    .promo-bar.hours {
+      background: linear-gradient(to right, #e36f47, #f6c177);
+      color: #533f3a;
+    }
+
+    .promo-bar.hours a {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    .promo-bar.military {
+      background: linear-gradient(to right, #7a3b2e, #a65b4a);
+      box-shadow: 0 8px 18px rgba(122,59,46,0.14);
+    }
+
+    .hours-note {
+      display: block;
+      margin-top: 5px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .hours-review {
+      display: block;
+      margin-top: 6px;
+      color: #6b5a53;
+      font-size: 0.92rem;
+    }
+
+    /* Catering and event service preview */
+    .experience-preview {
+      max-width: 720px;
+      margin: 0 auto 10px;
+      padding: 18px 20px;
+      background: #fff3e8;
+      border-radius: 16px;
+      border: 1px solid rgba(227,111,71,0.2);
+      line-height: 1.6;
+      color: #5b4b45;
+    }
+
+    .experience-preview h2 {
+      color: #7a3b2e;
+    }
+
+    .experience-preview a {
+      color: #7a3b2e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .experience-preview a:hover {
+      text-decoration: underline;
+    }
+
+    .experience-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin: 14px 0;
+      font-weight: 600;
+      color: #533f3a;
+    }
+
+    .experience-icons span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #ffffff;
+      padding: 8px 14px;
+      border-radius: 20px;
+      border: 1px solid rgba(122,59,46,0.12);
+      font-size: 0.95rem;
+    }
+
+    .experience-icons i {
+      color: #e36f47;
+    }
+
+    /* Events we have served */
+    .events-box {
+      margin-top: 14px;
+      text-align: left;
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(122,59,46,0.12);
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .events-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      color: #7a3b2e;
+      margin: 0 0 10px;
+      font-size: 1rem;
+    }
+
+    .events-title i {
+      color: #e36f47;
+      width: 18px;
+      text-align: center;
+    }
+
+    .events-intro {
+      margin: 0 0 14px;
+      color: #6b5a53;
+      font-size: 0.95rem;
+      line-height: 1.45;
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .event-item {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      line-height: 1.3;
+      color: #5b4b45;
+      padding: 12px;
+      background: #ffffff;
+      border: 1px solid rgba(122,59,46,0.10);
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(122,59,46,0.05);
+    }
+
+    .event-item + .event-item {
+      border-top: 1px solid rgba(122,59,46,0.10);
+    }
+
+    .event-item.featured {
+      background: linear-gradient(
+        to right,
+        rgba(255,214,102,0.14),
+        rgba(246,193,119,0.08)
+      );
+      border: 1px solid rgba(217,119,6,0.16);
+      border-radius: 12px;
+      padding: 10px;
+      margin-bottom: 2px;
+    }
+
+    .event-icon {
+      width: 26px;
+      height: 26px;
+      min-width: 26px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+      font-size: 0.8rem;
+      border: 1px solid rgba(122,59,46,0.08);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .event-icon.easter {
+      background: rgba(255,214,102,0.26);
+      color: #d97706;
+    }
+
+    .event-icon.earth {
+      background: rgba(134,239,172,0.24);
+      color: #15803d;
+    }
+
+    .event-icon.makers {
+      background: rgba(196,181,253,0.28);
+      color: #7c3aed;
+    }
+
+    .event-icon.magic {
+      background: rgba(253,186,116,0.22);
+      color: #ea580c;
+    }
+
+    .event-icon.lonestar {
+      background: rgba(147,197,253,0.24);
+      color: #2563eb;
+    }
+
+    .event-icon.movie {
+      background: rgba(244,114,182,0.18);
+      color: #be185d;
+    }
+
+    .event-icon.pancakes {
+      background: rgba(255,214,102,0.24);
+      color: #b45309;
+    }
+
+    .event-icon.cars {
+      background: rgba(44,141,136,0.18);
+      color: #0f766e;
+    }
+
+    .event-icon.community {
+      background: rgba(227,111,71,0.18);
+      color: #c2410c;
+    }
+
+    .event-icon.school {
+      background: rgba(244,114,182,0.16);
+      color: #be185d;
+    }
+
+    .event-icon.residents {
+      background: rgba(147,197,253,0.22);
+      color: #2563eb;
+    }
+
+    .event-icon.private-event {
+      background: rgba(255,214,102,0.24);
+      color: #b45309;
+    }
+
+    .event-icon.fundraiser {
+      background: rgba(134,239,172,0.22);
+      color: #15803d;
+    }
+
+    .event-icon.corporate {
+      background: rgba(196,181,253,0.26);
+      color: #7c3aed;
+    }
+
+    .event-item strong {
+      color: #7a3b2e;
+      display: block;
+      margin-bottom: 1px;
+    }
+
+    .event-date {
+      font-size: 0.95rem;
+    }
+
+    .event-detail {
+      font-size: 0.9rem;
+      margin-top: 4px;
+      color: #6b5a53;
+      line-height: 1.35;
+    }
+
+    .event-note {
+      margin-top: 10px;
+      padding: 9px 12px;
+      border-radius: 12px;
+      background: rgba(246,193,119,0.16);
+      border: 1px solid rgba(227,111,71,0.16);
+      color: #5b4b45;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    /* Upcoming events */
+    .upcoming-events {
+      margin-top: 14px;
+      text-align: left;
+      background: linear-gradient(
+        to right,
+        rgba(227,111,71,0.10),
+        rgba(246,193,119,0.14)
+      );
+      border: 1px solid rgba(227,111,71,0.22);
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .upcoming-events .event-item:last-child {
+      grid-column: 1 / -1;
+    }
+
+    .upcoming-events .event-item a {
+      color: #7a3b2e;
+      text-decoration: none;
+    }
+
+    .upcoming-events .event-item a:hover {
+      text-decoration: underline;
+    }
+
+    .event-icon.pool {
+      background: rgba(125,211,252,0.24);
+      color: #0369a1;
+    }
+
+    .event-icon.picnic {
+      background: rgba(134,239,172,0.24);
+      color: #15803d;
+    }
+
+    .event-icon.brews {
+      background: rgba(251,191,36,0.24);
+      color: #b45309;
+    }
+
+    .event-icon.halloween {
+      background: rgba(196,181,253,0.28);
+      color: #7c3aed;
+    }
+
+    .event-icon.race {
+      background: rgba(244,114,182,0.18);
+      color: #be185d;
+    }
+
+    .event-access {
+      margin-top: 5px;
+      color: #7a3b2e;
+      font-size: 0.84rem;
+      font-weight: 800;
+    }
+
+    .schedule-note {
+      margin: 12px 0 0;
+      color: #5b4b45;
+      font-size: 0.9rem;
+      line-height: 1.45;
+    }
+
+    .schedule-note a {
+      color: #7a3b2e;
+      font-weight: 800;
+    }
+
+    .event-page-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: linear-gradient(to right, #7a3b2e, #a65b4a);
+      color: #ffffff !important;
+      font-weight: 900;
+      text-decoration: none;
+      box-shadow: 0 8px 18px rgba(122,59,46,0.14);
+    }
+
+    .event-page-link:hover {
+      text-decoration: none !important;
+      filter: brightness(1.04);
+    }
+
+    /* Featured image and slideshow */
+    .feature-image {
+      width: 100%;
+      max-width: 650px;
+      aspect-ratio: 16 / 10;
+      margin: 20px auto 0;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #fff3e8;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    .feature-image img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      border-radius: 0;
+    }
+
+    /* Call-to-action buttons */
+    .home-cta {
+      margin: 25px 0 30px;
+    }
+
+    .home-cta a {
+      display: inline-block;
+      margin: 8px;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #fff;
+      background: #7a3b2e;
+      max-width: calc(100% - 16px);
+      white-space: normal;
+      overflow-wrap: anywhere;
+      line-height: 1.4;
+      transition: box-shadow 0.2s ease, filter 0.2s ease;
+    }
+
+    .home-cta a.secondary {
+      background: #fff3e8;
+      color: #7a3b2e;
+      border: 1px solid rgba(122,59,46,0.22);
+    }
+
+    .home-cta a:hover {
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+      filter: brightness(1.03);
+    }
+
+    .hero-cta {
+      margin: 16px 0;
+    }
+
+    /* Follow, review, and book */
+    .social-hub {
+      max-width: 900px;
+      margin: 0 auto 34px;
+      padding: 0 20px;
+    }
+
+    .social-hub-inner {
+      background:
+        radial-gradient(
+          circle at top left,
+          rgba(246,193,119,0.38),
+          transparent 32%
+        ),
+        linear-gradient(
+          135deg,
+          #fff8ef 0%,
+          #ffffff 58%,
+          #fff3e8 100%
+        );
+      border: 1px solid rgba(122,59,46,0.14);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: 0 12px 30px rgba(122,59,46,0.10);
+    }
+
+    .social-hub h2 {
+      color: #7a3b2e;
+      margin: 0 0 8px;
+      font-size: 1.7rem;
+    }
+
+    .social-hub .hub-subtitle {
+      color: #5b4b45;
+      margin: 0 auto 18px;
+      max-width: 650px;
+      line-height: 1.5;
+      font-size: 1.02rem;
+    }
+
+    .social-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .social-card {
+      text-decoration: none;
+      color: #4a332d;
+      background: rgba(255,255,255,0.88);
+      border: 1px solid rgba(122,59,46,0.12);
+      border-radius: 18px;
+      padding: 18px 14px;
+      min-height: 170px;
+      min-width: 0;
+      word-break: normal;
+      overflow-wrap: break-word;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition:
+        box-shadow .18s ease,
+        border-color .18s ease,
+        background .18s ease;
+    }
+
+    .social-card:hover {
+      background: #ffffff;
+      box-shadow: 0 12px 24px rgba(122,59,46,0.14);
+      border-color: rgba(227,111,71,0.35);
+    }
+
+    .social-card i {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+    }
+
+    .social-card strong {
+      color: #7a3b2e;
+      display: block;
+      font-size: 1.03rem;
+      margin-bottom: 6px;
+    }
+
+    .social-card span {
+      font-size: 0.92rem;
+      line-height: 1.35;
+      color: #5b4b45;
+    }
+
+    .social-card.facebook i {
+      background: linear-gradient(135deg, #1877f2, #0b4ea2);
+    }
+
+    .social-card.instagram i {
+      background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af);
+    }
+
+    .social-card.review i {
+      background: linear-gradient(135deg, #e36f47, #f6c177);
+    }
+
+    .social-card.yelp i {
+      background: linear-gradient(135deg, #d32323, #f15c4f);
+    }
+
+    .social-card.catering i {
+      background: linear-gradient(135deg, #7a3b2e, #a65b4a);
+    }
+
+    .social-note {
+      margin: 18px auto 0;
+      padding: 12px 14px;
+      max-width: 660px;
+      background: rgba(122,59,46,0.06);
+      border: 1px dashed rgba(122,59,46,0.20);
+      border-radius: 14px;
+      color: #5b4b45;
+      line-height: 1.45;
+      font-size: 0.96rem;
+    }
+
+    .social-note strong {
+      color: #7a3b2e;
+    }
+
+    /* Lower content */
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px 40px;
+    }
+
+    .content > p {
+      line-height: 1.65;
+    }
+
+    .content > p a {
+      color: #7a3b2e;
+    }
+
+    .why-us {
+      margin: 40px auto 0;
+      max-width: 600px;
+      text-align: left;
+    }
+
+    .why-us h2 {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .why-us ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .why-us li {
+      margin: 12px 0;
+      font-size: 1.05rem;
+    }
+
+    /* Service-area map */
+    .map-wrap iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 12px;
+    }
+
+    .map-caption {
+      font-size: 0.9rem;
+      color: #5b4b45;
+      line-height: 1.5;
+    }
+
+    /* Hours and booking status */
+    .now-open {
+      font-size: 2.2rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+      margin: 40px 0 10px;
+      background: linear-gradient(90deg, #e36f47, #f6c177);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 2px 10px rgba(227,111,71,0.25);
+    }
+
+    .booking-status {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 16px;
+      background: #fff3e8;
+      border: 1px solid rgba(122,59,46,0.18);
+      color: #533f3a;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .booking-status i {
+      color: #a65b4a;
+    }
+
+    /* Booking questions */
+    .booking-faq {
+      margin: 32px 0;
+      text-align: left;
+    }
+
+    .booking-faq h2 {
+      text-align: center;
+      color: #7a3b2e;
+    }
+
+    .booking-faq details {
+      padding: 16px;
+      margin: 10px 0;
+      border: 1px solid rgba(122,59,46,0.15);
+      border-radius: 12px;
+      background: #fffaf5;
+    }
+
+    .booking-faq summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: #7a3b2e;
+      line-height: 1.5;
+    }
+
+    .booking-faq p {
+      line-height: 1.65;
+    }
+
+    .booking-faq a {
+      color: #7a3b2e;
+    }
+
+    /* Mobile */
+    @media (max-width: 1100px) {
+      .social-cards {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+    }
+
+    @media (max-width: 900px) {
+      .social-cards {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+    }
+
+    @media (max-width: 768px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .events-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .upcoming-events .event-item:last-child {
+        grid-column: auto;
+      }
+
+      .logo-wrap {
+        padding: 8px 0 0;
+      }
+
+      .logo-wrap img {
+        width: calc(100% - 24px);
+      }
+
+      nav.side-nav {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 8px;
+        padding: 10px;
+        border-right: none;
+        border-bottom: 1px solid rgba(122,59,46,0.12);
+        z-index: 20;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      nav.side-nav a {
+        border-radius: 999px;
+        padding: 10px 12px;
+        white-space: nowrap;
+        flex: 0 0 auto;
+      }
+
+      nav.side-nav a.active::before {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+
+      .feature-image {
+        max-width: calc(100% - 32px);
+        aspect-ratio: 4 / 3;
+      }
+
+      .social-hub-inner {
+        padding: 18px 14px;
+      }
+
+      .social-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .social-card {
+        min-height: auto;
+        padding: 16px 14px;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="layout">
 
-<div class="layout">
+    <!-- Navigation -->
+    <nav class="side-nav" aria-label="Primary navigation">
+      <a href="index.html">
+        <i class="fa-solid fa-house" aria-hidden="true"></i>
+        Home
+      </a>
 
-  <!-- NAV -->
+      <a href="#find-us">
+        <i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
+        Upcoming Events
+      </a>
 
-  <nav class="side-nav" aria-label="Primary navigation">
-    <a href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a>
-    <a href="community-events.html" target="_blank" rel="noopener"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> Community Events</a>
-    <a href="about.html"><i class="fa-solid fa-user-chef" aria-hidden="true"></i> About Us</a>
-    <a href="menu.html"><i class="fa-solid fa-utensils" aria-hidden="true"></i> Menu</a>
-    <a href="catering.html"><i class="fa-solid fa-truck" aria-hidden="true"></i> Catering</a>
-    <a href="celebree-family-night.html"><i class="fa-solid fa-clipboard-list" aria-hidden="true"></i> Event Sample Menu</a>
-  </nav>
+      <a href="about.html">
+        <i class="fa-solid fa-user-chef" aria-hidden="true"></i>
+        About Us
+      </a>
 
-  <!-- MAIN -->
+      <a href="menu.html">
+        <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+        Menu
+      </a>
 
-  <div class="main">
+      <a href="catering.html">
+        <i class="fa-solid fa-truck" aria-hidden="true"></i>
+        Catering
+      </a>
 
-<div class="logo-wrap">
-  <img src="trailer.jpeg" alt="Arizona Sunrise Cafecito & Catering trailer">
-</div>
+      <a href="celebree-family-night.html">
+        <i class="fa-solid fa-clipboard-list" aria-hidden="true"></i>
+        Event Sample Menu
+      </a>
+    </nav>
 
-<!-- HERO -->
+    <div class="main">
 
-<div class="hero">
-  <h1>Comfort food with Southwest soul</h1>
-  <p>
-    Scratch-made favorites, warm flavors, and bold bites —
-    served fresh from our food trailer.
-  </p>
-</div>
-
-<div class="promo-bar hours">
-  ☀️ Hours: Friday – Sunday • 10:00 AM – 2:00 PM
-</div>
-
-<div class="promo-bar military">
-  🇺🇸 Military Discount: 10% off every day for active military and veterans with valid ID on regular-priced items
-</div>
-
-<!-- HOLY GROUNDS EXPERIENCE PREVIEW -->
-
-<div class="experience-preview">
-  <p>
-    You’ll find us at
-    <a href="https://www.holygroundsfoodyard.com" target="_blank" rel="noopener"
-       onclick="gtag('event','holygrounds_click',{event_category:'Outbound',event_label:'Holy Grounds Website'});">
-      Holy Grounds Food Yard in Royse City
-    </a>
-    — a space built for gathering.
-  </p>
-
-  <div class="experience-icons" aria-label="Experience highlights">
-    <span><i class="fa-solid fa-basketball" aria-hidden="true"></i> Open play space</span>
-    <span><i class="fa-solid fa-people-roof" aria-hidden="true"></i> Safe fenced-in area</span>
-    <span><i class="fa-solid fa-paw" aria-hidden="true"></i> Fur babies are welcome</span>
-    <span><i class="fa-solid fa-fire" aria-hidden="true"></i> Fire pits</span>
-    <span><i class="fa-solid fa-music" aria-hidden="true"></i> Live music (select Saturdays)</span>
-  </div>
-
-  <p>More than brunch — it’s an experience for the whole family.</p>
-
-  <!-- EVENTS WE'VE SERVED -->
-
-  <div class="events-box" aria-label="Events served by Arizona Sunrise Cafecito and Catering">
-    <div class="events-title">
-      <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
-      Events We’ve Served
-    </div>
-
-    <p class="events-intro">
-      From nonprofit fundraisers and neighborhood gatherings to school, corporate,
-      and private celebrations, we’re proud to serve the people and organizations
-      that make our community special.
-    </p>
-
-    <div class="events-grid">
-      <div class="event-item">
-        <div class="event-icon residents">
-          <i class="fa-solid fa-hat-cowboy" aria-hidden="true"></i>
-        </div>
-        <div>
-          <strong>Saddle Up, Sonoma Annual Meeting &amp; Fall Festival</strong>
-          <div class="event-date">October 17, 2026 &bull; 5:30&ndash;9:00 PM</div>
-          <div class="event-detail">Sonoma Verde Amenity Center &bull; 1506 Bertino Way, Rockwall</div>
-        </div>
+      <div class="logo-wrap">
+        <img
+          src="trailer.jpeg"
+          alt="Arizona Sunrise Cafecito &amp; Catering trailer"
+        >
       </div>
 
-      <div class="event-item">
-        <div class="event-icon school">
-          <i class="fa-solid fa-school" aria-hidden="true"></i>
-        </div>
-        <div>
-          <strong>Rockwall ISD Food Truck Lunch</strong>
-          <div class="event-date">Tuesday, October 6, 2026 &bull; Lunch</div>
-          <div class="event-detail">Rockwall-Heath High School &amp; Dr. Gene Burton College &amp; Career Academy</div>
-        </div>
-      </div>
+      <!-- Hero -->
+      <div class="hero">
+        <h1>Catering &amp; Food Truck Events in Rockwall, TX</h1>
 
-      <div class="event-item">
-        <div class="event-icon brews">
-          <i class="fa-solid fa-beer-mug-empty" aria-hidden="true"></i>
-        </div>
-        <div>
-          <strong>Brews on Bois D&rsquo;Arc</strong>
-          <div class="event-date">Saturday, September 26, 2026 &bull; 4:30&ndash;10:00 PM</div>
-          <div class="event-detail">
-            Bois D&rsquo;Arc Street in Downtown Forney &bull; Between Rhythm Vault Dance Company and the City Hall Annex
-          </div>
-                  </div>
-      </div>
+        <p>
+          Arizona Sunrise Cafecito &amp; Catering brings scratch-made brunch
+          favorites and comfort food to your gathering — with Arizona spice
+          and Texas soul. Hire our food trailer for your event or arrange
+          pickup and drop-off catering.
+        </p>
 
-      <div class="event-item">
-        <div class="event-icon picnic">
-          <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
-        </div>
-        <div>
-          <strong>Creekside Blankets &amp; Bites</strong>
-          <div class="event-date">Saturday, September 19, 2026 &bull; 5:30&ndash;7:30 PM</div>
-          <div class="event-detail">Creekside HOA &bull; Royse City, Texas</div>
-        </div>
-      </div>
-
-      <div class="event-item">
-        <div class="event-icon residents">
-          <i class="fa-solid fa-people-group" aria-hidden="true"></i>
-        </div>
-        <div>
-          <strong>Sonoma Verde Community Event</strong>
-          <div class="event-date">Friday, September 18, 2026</div>
-          <div class="event-detail">Sonoma Verde &bull; Rockwall, Texas</div>
-        </div>
-      </div>
-
-      <div class="event-item">
-        <div class="event-icon school">
-          <i class="fa-solid fa-ice-cream" aria-hidden="true"></i>
-        </div>
-        <div>
-          <strong>Founding Family Ice Cream Social</strong>
-          <div class="event-date">Celebree School of Fate</div>
-          <div class="event-detail">August 9, 2026 • Fate Community Center</div>
-        </div>
-      </div>
-
-      <div class="event-item">
-        <div class="event-icon residents">
-          <i class="fa-solid fa-house" aria-hidden="true"></i>
-        </div>
-        <div>
-          <strong>Private Resident Event</strong>
-          <div class="event-date">Rockwall Commons</div>
-          <div class="event-detail">Rockwall, Texas</div>
-        </div>
-      </div>
-
-      <div class="event-item">
-        <div class="event-icon private-event">
-          <i class="fa-solid fa-flag-usa" aria-hidden="true"></i>
-        </div>
-        <div>
-          <strong>Private Fourth of July Celebration</strong>
-          <div class="event-date">Buffalo Creek Country Club</div>
-          <div class="event-detail">July 4, 2026 • Heath, Texas</div>
-        </div>
-      </div>
-
-      <div class="event-item">
-        <div class="event-icon fundraiser">
-          <i class="fa-solid fa-person-walking" aria-hidden="true"></i>
-        </div>
-        <div>
-          <strong>Pregnancy Resource Center Walk for Life</strong>
-          <div class="event-date">Harry Myers Park</div>
-          <div class="event-detail">May 8, 2026 • Rockwall, Texas</div>
-        </div>
-      </div>
-
-      <div class="event-item">
-        <div class="event-icon corporate">
-          <i class="fa-solid fa-building" aria-hidden="true"></i>
-        </div>
-        <div>
-          <strong>Lowe’s Cinco de Mayo Celebration</strong>
-          <div class="event-date">Lowe’s of Rockwall</div>
-          <div class="event-detail">May 5, 2026 • Rockwall, Texas</div>
-        </div>
-      </div>
-
-      <div class="event-item">
-        <div class="event-icon cars">
-          <i class="fa-solid fa-car-side" aria-hidden="true"></i>
-        </div>
-        <div>
-          <strong>Cruise-In for Cancer</strong>
-          <div class="event-date">Benefiting the 9474 Foundation</div>
-          <div class="event-detail">March 28, 2026 • Royse City High School</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- UPCOMING OFF-SITE EVENTS -->
-
-  <div class="upcoming-events" id="find-us" aria-label="Upcoming Arizona Sunrise off-site events">
-    <div class="events-title">
-      <i class="fa-solid fa-truck" aria-hidden="true"></i>
-      Find Us Around Town
-    </div>
-
-    <p class="events-intro">
-      Follow Arizona Sunrise Cafecito &amp; Catering as we pop up at special events
-      away from Holy Grounds. Neighborhood appearances may be limited to residents
-      and their guests.
-    </p>
-
-    <div class="events-grid">
-      <div class="event-item">
-        <div class="event-icon halloween">
-          <i class="fa-solid fa-ghost" aria-hidden="true"></i>
-        </div>
-        <div>
-          <a href="https://www.rockwall.com/event_ScareOnTheSquare.asp" target="_blank" rel="noopener">
-            <strong>Scare on the Square</strong>
+        <div class="home-cta hero-cta">
+          <a href="catering.html">
+            Request Catering or a Food Trailer Quote
           </a>
-          <div class="event-date">October 24, 2026 &bull; 2:00&ndash;5:00 PM</div>
-          <div class="event-detail">Downtown Rockwall</div>
-          <div class="event-access">Open to the public</div>
-        </div>
-      </div>
 
-      <div class="event-item">
-        <div class="event-icon school">
-          <i class="fa-solid fa-robot" aria-hidden="true"></i>
-        </div>
-        <div>
-          <a href="https://www.facebook.com/groups/738191942541920/posts/1034608486233596/" target="_blank" rel="noopener">
-            <strong>Terrell Robotics &ldquo;VEXorcism&rdquo; High School Tournament &amp; Car Show Fundraiser</strong>
+          <a href="#find-us" class="secondary">
+            Find Our Upcoming Events
           </a>
-          <div class="event-date">Saturday, October 31, 2026 &bull; Serving 11:00 AM&ndash;3:00 PM</div>
-          <div class="event-detail">
-            Terrell ISD ExCEL Center<br>
-            1251 Colquitt Rd &bull; Terrell, TX 75160<br>
-            Food trucks, car show, and Halloween Trunk-or-Treat.
-          </div>
-          <div class="event-detail">
-            The VEX V5 Robotics Competition Open Tournament runs throughout the day inside the facility.
-          </div>
+
+          <a
+            href="tel:9455460808"
+            class="secondary"
+            onclick="gtag('event','call_click',{event_category:'Contact',event_label:'Hero Phone Call'});"
+          >
+            Call 945-546-0808
+          </a>
         </div>
       </div>
 
-      <div class="event-item">
-        <div class="event-icon private-event">
-          <i class="fa-solid fa-flag-usa" aria-hidden="true"></i>
-        </div>
-        <div>
-          <strong>Waterscape HOA Veterans Event</strong>
-          <div class="event-date">November 7, 2026 &bull; 11:00&ndash;1:00 PM</div>
-          <div class="event-detail">Waterscape HOA &bull; Royse City</div>
-          <div class="event-access">For Waterscape residents and their guests</div>
-        </div>
+      <!-- Hours: service is scheduled per event or booking -->
+      <div class="promo-bar hours">
+        ☀️ Catering &amp; food trailer service by arrangement
+
+        <span class="hours-note">
+          Serving times vary by event.
+          <a href="#find-us">See our event schedule</a>
+          or
+          <a href="catering.html">request a booking</a>.
+        </span>
       </div>
 
-      <div class="event-item">
-        <div class="event-icon race">
-          <i class="fa-solid fa-person-running" aria-hidden="true"></i>
+      <div class="promo-bar military">
+        🇺🇸 Military Discount: 10% off every day for active military and
+        veterans with valid ID on regular-priced items
+      </div>
+
+      <!-- Catering and event service preview -->
+      <div class="experience-preview">
+        <h2>Bring Arizona Sunrise to Your Next Gathering</h2>
+
+        <p>
+          We’re a family-owned catering and mobile food trailer business serving
+          <strong>
+            Rockwall, Heath, Fate, Royse City, Forney, Rowlett, Terrell,
+            and nearby communities.
+          </strong>
+          From staff lunches to neighborhood celebrations, we’ll help you
+          plan a menu for your occasion.
+        </p>
+
+        <div class="experience-icons" aria-label="Catering and event services">
+          <span>
+            <i class="fa-solid fa-school" aria-hidden="true"></i>
+            School events
+          </span>
+
+          <span>
+            <i class="fa-solid fa-building" aria-hidden="true"></i>
+            Employee appreciation
+          </span>
+
+          <span>
+            <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+            HOA gatherings
+          </span>
+
+          <span>
+            <i class="fa-solid fa-cake-candles" aria-hidden="true"></i>
+            Private celebrations
+          </span>
+
+          <span>
+            <i class="fa-solid fa-truck" aria-hidden="true"></i>
+            Food trailer events
+          </span>
         </div>
-        <div>
-          <strong>Heath Golf &amp; Yacht Club Turkey Dash</strong>
-          <div class="event-date">Thursday, November 26, 2026</div>
-          <div class="event-detail">
-            1500 Clubhouse Drive &bull; Heath<br>
-            Kids&rsquo; 1K begins at 8:00 AM &bull; Chip-timed 5K begins at 8:30 AM
+
+        <p>
+          <strong>Where to find us:</strong>
+          Visit us at the public events listed below, or book us to serve your
+          guests. Our service locations and hours vary by booking; catering
+          pickup details are confirmed with each order.
+        </p>
+
+        <!-- Events we have served -->
+        <div
+          class="events-box"
+          aria-label="Events served by Arizona Sunrise Cafecito and Catering"
+        >
+          <div class="events-title">
+            <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+            Events We’ve Served
+          </div>
+
+          <p class="events-intro">
+            From nonprofit fundraisers and neighborhood gatherings to school,
+            corporate, and private celebrations, we’re proud to serve the people
+            and organizations that make our community special.
+          </p>
+
+          <div class="events-grid">
+
+            <div class="event-item">
+              <div class="event-icon residents">
+                <i class="fa-solid fa-hat-cowboy" aria-hidden="true"></i>
+              </div>
+
+              <div>
+                <strong>
+                  Saddle Up, Sonoma Annual Meeting &amp; Fall Festival
+                </strong>
+                <div class="event-date">
+                  October 17, 2026 &bull; 5:30&ndash;9:00 PM
+                </div>
+                <div class="event-detail">
+                  Sonoma Verde Amenity Center &bull;
+                  1506 Bertino Way, Rockwall
+                </div>
+              </div>
+            </div>
+
+            <div class="event-item">
+              <div class="event-icon school">
+                <i class="fa-solid fa-school" aria-hidden="true"></i>
+              </div>
+
+              <div>
+                <strong>Rockwall ISD Food Truck Lunch</strong>
+                <div class="event-date">
+                  Tuesday, October 6, 2026 &bull; Lunch
+                </div>
+                <div class="event-detail">
+                  Rockwall-Heath High School &amp;
+                  Dr. Gene Burton College &amp; Career Academy
+                </div>
+              </div>
+            </div>
+
+            <div class="event-item">
+              <div class="event-icon brews">
+                <i class="fa-solid fa-beer-mug-empty" aria-hidden="true"></i>
+              </div>
+
+              <div>
+                <strong>Brews on Bois D&rsquo;Arc</strong>
+                <div class="event-date">
+                  Saturday, September 26, 2026 &bull; 4:30&ndash;10:00 PM
+                </div>
+                <div class="event-detail">
+                  Bois D&rsquo;Arc Street in Downtown Forney &bull;
+                  Between Rhythm Vault Dance Company and the City Hall Annex
+                </div>
+              </div>
+            </div>
+
+            <div class="event-item">
+              <div class="event-icon picnic">
+                <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
+              </div>
+
+              <div>
+                <strong>Creekside Blankets &amp; Bites</strong>
+                <div class="event-date">
+                  Saturday, September 19, 2026 &bull; 5:30&ndash;7:30 PM
+                </div>
+                <div class="event-detail">
+                  Creekside HOA &bull; Royse City, Texas
+                </div>
+              </div>
+            </div>
+
+            <div class="event-item">
+              <div class="event-icon residents">
+                <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+              </div>
+
+              <div>
+                <strong>Sonoma Verde Community Event</strong>
+                <div class="event-date">
+                  Friday, September 18, 2026
+                </div>
+                <div class="event-detail">
+                  Sonoma Verde &bull; Rockwall, Texas
+                </div>
+              </div>
+            </div>
+
+            <div class="event-item">
+              <div class="event-icon school">
+                <i class="fa-solid fa-ice-cream" aria-hidden="true"></i>
+              </div>
+
+              <div>
+                <strong>Founding Family Ice Cream Social</strong>
+                <div class="event-date">
+                  Celebree School of Fate
+                </div>
+                <div class="event-detail">
+                  August 9, 2026 &bull; Fate Community Center
+                </div>
+              </div>
+            </div>
+
+            <div class="event-item">
+              <div class="event-icon residents">
+                <i class="fa-solid fa-house" aria-hidden="true"></i>
+              </div>
+
+              <div>
+                <strong>Private Resident Event</strong>
+                <div class="event-date">
+                  Rockwall Commons
+                </div>
+                <div class="event-detail">
+                  Rockwall, Texas
+                </div>
+              </div>
+            </div>
+
+            <div class="event-item">
+              <div class="event-icon private-event">
+                <i class="fa-solid fa-flag-usa" aria-hidden="true"></i>
+              </div>
+
+              <div>
+                <strong>Private Fourth of July Celebration</strong>
+                <div class="event-date">
+                  Buffalo Creek Country Club
+                </div>
+                <div class="event-detail">
+                  July 4, 2026 &bull; Heath, Texas
+                </div>
+              </div>
+            </div>
+
+            <div class="event-item">
+              <div class="event-icon fundraiser">
+                <i class="fa-solid fa-person-walking" aria-hidden="true"></i>
+              </div>
+
+              <div>
+                <strong>Pregnancy Resource Center Walk for Life</strong>
+                <div class="event-date">
+                  Harry Myers Park
+                </div>
+                <div class="event-detail">
+                  May 8, 2026 &bull; Rockwall, Texas
+                </div>
+              </div>
+            </div>
+
+            <div class="event-item">
+              <div class="event-icon corporate">
+                <i class="fa-solid fa-building" aria-hidden="true"></i>
+              </div>
+
+              <div>
+                <strong>Lowe’s Cinco de Mayo Celebration</strong>
+                <div class="event-date">
+                  Lowe’s of Rockwall
+                </div>
+                <div class="event-detail">
+                  May 5, 2026 &bull; Rockwall, Texas
+                </div>
+              </div>
+            </div>
+
+            <div class="event-item">
+              <div class="event-icon cars">
+                <i class="fa-solid fa-car-side" aria-hidden="true"></i>
+              </div>
+
+              <div>
+                <strong>Cruise-In for Cancer</strong>
+                <div class="event-date">
+                  Benefiting the 9474 Foundation
+                </div>
+                <div class="event-detail">
+                  March 28, 2026 &bull; Royse City High School
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
+
+        <!-- Upcoming food trailer events -->
+        <div
+          class="upcoming-events"
+          id="find-us"
+          aria-label="Upcoming Arizona Sunrise food trailer events"
+        >
+          <div class="events-title">
+            <i class="fa-solid fa-truck" aria-hidden="true"></i>
+            Find Us Around Town
+          </div>
+
+          <p class="events-intro">
+            Find Arizona Sunrise Cafecito &amp; Catering at community events
+            and public pop-ups, or
+            <a href="catering.html">
+              hire our food trailer for your own gathering
+            </a>.
+            Each listing has its own location and serving time. Neighborhood
+            and private appearances may be limited to residents and invited guests.
+          </p>
+
+          <div class="events-grid">
+
+            <div class="event-item">
+              <div class="event-icon halloween">
+                <i class="fa-solid fa-ghost" aria-hidden="true"></i>
+              </div>
+
+              <div>
+                <a
+                  href="https://www.rockwall.com/event_ScareOnTheSquare.asp"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <strong>Scare on the Square</strong>
+                </a>
+
+                <div class="event-date">
+                  October 24, 2026 &bull; 2:00&ndash;5:00 PM
+                </div>
+
+                <div class="event-detail">
+                  Downtown Rockwall
+                </div>
+
+                <div class="event-access">
+                  Open to the public
+                </div>
+              </div>
+            </div>
+
+            <div class="event-item">
+              <div class="event-icon school">
+                <i class="fa-solid fa-robot" aria-hidden="true"></i>
+              </div>
+
+              <div>
+                <a
+                  href="https://www.facebook.com/groups/738191942541920/posts/1034608486233596/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <strong>
+                    Terrell Robotics &ldquo;VEXorcism&rdquo;
+                    High School Tournament &amp; Car Show Fundraiser
+                  </strong>
+                </a>
+
+                <div class="event-date">
+                  Saturday, October 31, 2026 &bull;
+                  Serving 11:00 AM&ndash;3:00 PM
+                </div>
+
+                <div class="event-detail">
+                  Terrell ISD ExCEL Center<br>
+                  1251 Colquitt Rd &bull; Terrell, TX 75160<br>
+                  Food trucks, car show, and Halloween Trunk-or-Treat.
+                </div>
+
+                <div class="event-detail">
+                  The VEX V5 Robotics Competition Open Tournament runs
+                  throughout the day inside the facility.
+                </div>
+              </div>
+            </div>
+
+            <div class="event-item">
+              <div class="event-icon private-event">
+                <i class="fa-solid fa-flag-usa" aria-hidden="true"></i>
+              </div>
+
+              <div>
+                <strong>Waterscape HOA Veterans Event</strong>
+
+                <div class="event-date">
+                  November 7, 2026 &bull; 11:00&ndash;1:00 PM
+                </div>
+
+                <div class="event-detail">
+                  Waterscape HOA &bull; Royse City
+                </div>
+
+                <div class="event-access">
+                  For Waterscape residents and their guests
+                </div>
+              </div>
+            </div>
+
+            <div class="event-item">
+              <div class="event-icon race">
+                <i class="fa-solid fa-person-running" aria-hidden="true"></i>
+              </div>
+
+              <div>
+                <strong>Heath Golf &amp; Yacht Club Turkey Dash</strong>
+
+                <div class="event-date">
+                  Thursday, November 26, 2026
+                </div>
+
+                <div class="event-detail">
+                  1500 Clubhouse Drive &bull; Heath<br>
+                  Kids&rsquo; 1K begins at 8:00 AM &bull;
+                  Chip-timed 5K begins at 8:30 AM
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <p class="schedule-note">
+            Check back for additional dates and confirmed serving times.
+            Follow us on
+            <a
+              href="https://www.facebook.com/azsunrisecafecito"
+              target="_blank"
+              rel="noopener"
+            >Facebook</a>
+            and
+            <a
+              href="https://www.instagram.com/az_sunrise_cafecito_catering?igsh=b2i0nmw2ctfvzwvp"
+              target="_blank"
+              rel="noopener"
+            >Instagram</a>
+            for serving times, featured menus, weather notices, and event updates.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- Featured image and slideshow -->
+      <div class="feature-image">
+        <img
+          id="slideshow"
+          src="gccs.jpg"
+          alt="Featured Arizona Sunrise food"
+        >
+      </div>
+
+      <!-- Booking and menu links -->
+      <div class="home-cta">
+        <a href="menu.html">View Menu</a>
+
+        <a href="#find-us" class="secondary">
+          Find Our Upcoming Events
+        </a>
+
+        <a href="catering.html" class="secondary">
+          Book Catering or Our Food Trailer
+        </a>
+
+        <a href="celebree-family-night.html" class="secondary">
+          Event Sample Menu
+        </a>
+      </div>
+
+      <!-- Follow, review, and book -->
+      <section
+        class="social-hub"
+        aria-label="Follow, review, and book Arizona Sunrise Cafecito"
+      >
+        <div class="social-hub-inner">
+          <h2>Come for the biscuits. Stay for the chaos.</h2>
+
+          <p class="hub-subtitle">
+            Follow Arizona Sunrise Cafecito &amp; Catering for specials,
+            menu drops, event updates, and the occasional food trailer
+            shenanigan. If we made your day better, a Google review or
+            Yelp feedback helps our small family business more than you know.
+          </p>
+
+          <div class="social-cards">
+
+            <a
+              class="social-card facebook"
+              href="https://www.facebook.com/azsunrisecafecito"
+              target="_blank"
+              rel="noopener"
+              onclick="gtag('event','facebook_click',{event_category:'Social',event_label:'Facebook'});"
+            >
+              <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+              <strong>Like us on Facebook</strong>
+              <span>
+                Event appearances, featured menus, and local updates.
+              </span>
+            </a>
+
+            <a
+              class="social-card instagram"
+              href="https://www.instagram.com/az_sunrise_cafecito_catering?igsh=b2i0nmw2ctfvzwvp"
+              target="_blank"
+              rel="noopener"
+              onclick="gtag('event','instagram_click',{event_category:'Social',event_label:'Instagram'});"
+            >
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              <strong>Follow us on Instagram</strong>
+              <span>
+                Food pics, specials, events, and behind-the-scenes trailer life.
+              </span>
+            </a>
+
+            <a
+              class="social-card review"
+              href="https://www.google.com/maps/search/?api=1&amp;query=Arizona%20Sunrise%20Cafecito%20%26%20Catering%20Royse%20City%20TX"
+              target="_blank"
+              rel="noopener"
+              onclick="gtag('event','google_review_click',{event_category:'Reviews',event_label:'Google Maps Review'});"
+            >
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <strong>Review us on Google</strong>
+              <span>
+                Love your meal? A quick Google review helps local families find us.
+              </span>
+            </a>
+
+            <a
+              class="social-card yelp"
+              href="https://www.yelp.com/search?find_desc=Arizona+Sunrise+Cafecito+%26+Catering&amp;find_loc=Royse+City%2C+TX"
+              target="_blank"
+              rel="noopener"
+              onclick="gtag('event','yelp_click',{event_category:'Reviews',event_label:'Yelp Feedback'});"
+            >
+              <i class="fa-brands fa-yelp" aria-hidden="true"></i>
+              <strong>Find us on Yelp</strong>
+              <span>
+                Share feedback so more local food lovers can discover us.
+              </span>
+            </a>
+
+            <a
+              class="social-card catering"
+              href="catering.html"
+              onclick="gtag('event','catering_inquiry_click',{event_category:'Contact',event_label:'Catering Inquiry'});"
+            >
+              <i class="fa-solid fa-truck" aria-hidden="true"></i>
+              <strong>Book Catering or Our Trailer</strong>
+              <span>
+                Tell us your event date, location, guest count, and menu ideas.
+              </span>
+            </a>
+
+          </div>
+
+          <div class="social-note">
+            <strong>Small business truth:</strong>
+            every follow, like, share, Google review, Yelp mention, and tag
+            helps more local families find us. Thank you for supporting
+            our little food trailer with big brunch energy.
+          </div>
+        </div>
+      </section>
+
+      <div class="content">
+
+        <!-- Why choose Arizona Sunrise -->
+        <div class="why-us">
+          <h2>Why Arizona Sunrise Cafecito &amp; Catering?</h2>
+
+          <ul>
+            <li>🌅 Comfort food with Southwest flair</li>
+            <li>🧡 Locally owned &amp; community-driven</li>
+            <li>🚚 Freshly prepared from our food trailer</li>
+            <li>✅ Fully permitted, fire inspected, and food safety certified</li>
+            <li>
+              🇺🇸 10% military discount for active military and veterans
+              with valid ID on regular-priced items
+            </li>
+            <li>
+              🍽️ Pickup and drop-off catering, plus on-site food trailer service
+            </li>
+          </ul>
+        </div>
+
+        <!-- Hours and event schedule -->
+        <h2 class="now-open">Hours &amp; Event Schedule</h2>
+
+        <div class="booking-status">
+          <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+          Service scheduled by event and catering booking
+        </div>
+
+        <p>
+          <strong>Serving hours vary by event.</strong><br>
+          Visit our
+          <a href="#find-us">upcoming event schedule</a>
+          for public appearances, locations, and serving times.
+          Catering orders and food trailer events are arranged in advance;
+          we’ll confirm availability, timing, and pickup details with you.
+        </p>
+
+        <!-- Service area -->
+        <h2>Where We Serve</h2>
+
+        <p>
+          <strong>
+            Rockwall, Heath, Fate, Royse City, Forney, Rowlett,
+            and Terrell, Texas
+          </strong><br>
+          Catering and mobile food trailer service for nearby communities.<br>
+          We travel to booked events. Pickup arrangements are confirmed
+          with each catering order.
+        </p>
+
+        <div class="map-wrap">
+          <iframe
+            loading="lazy"
+            title="Rockwall, Texas area map — event locations vary"
+            src="https://www.google.com/maps?q=Rockwall,+TX&amp;z=10&amp;output=embed"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+
+          <p class="map-caption">
+            This map shows the Rockwall area for reference.
+            It is not a pickup location. See each event listing or your
+            booking confirmation for the exact address.
+          </p>
+        </div>
+
+        <!-- Booking questions -->
+        <section class="booking-faq" aria-labelledby="booking-questions">
+          <h2 id="booking-questions">
+            Catering &amp; Food Trailer Booking Questions
+          </h2>
+
+          <details>
+            <summary>
+              Can we hire your food trailer for an event?
+            </summary>
+
+            <p>
+              Yes. Arizona Sunrise offers on-site food trailer service for
+              school events, employee appreciation meals, HOA gatherings,
+              festivals, and private celebrations. Send us your date,
+              location, and estimated guest count to discuss availability
+              and a menu.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Do you offer catering without the trailer?
+            </summary>
+
+            <p>
+              Yes. We offer pickup and drop-off catering for meetings,
+              parties, and family gatherings. Service details, timing,
+              and pickup arrangements are confirmed with your order.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              How do I request a catering or food trailer quote?
+            </summary>
+
+            <p>
+              Use our
+              <a href="catering.html">catering inquiry page</a>,
+              call
+              <a href="tel:9455460808">945-546-0808</a>,
+              or email
+              <a href="mailto:hello@azsunrisecafecito.com">
+                hello@azsunrisecafecito.com
+              </a>.
+              Include your date, event location, guest count, and any menu
+              or dietary preferences. We’ll confirm availability and
+              discuss your options.
+            </p>
+          </details>
+        </section>
+
+        <!-- Contact -->
+        <h2>Contact</h2>
+
+        <p>
+          📞
+          <a
+            href="tel:9455460808"
+            onclick="gtag('event','call_click',{event_category:'Contact',event_label:'Phone Call'});"
+          >945-546-0808</a>
+
+          <br><br>
+
+          📧
+          <a
+            href="mailto:hello@azsunrisecafecito.com"
+            onclick="gtag('event','email_click',{event_category:'Contact',event_label:'Email'});"
+          >hello@azsunrisecafecito.com</a>
+        </p>
+
       </div>
     </div>
-
-    <p class="schedule-note">
-      Our December event schedule will be published in October. Follow us on
-      <a href="https://www.facebook.com/azsunrisecafecito" target="_blank" rel="noopener">Facebook</a>
-      and
-      <a href="https://www.instagram.com/az_sunrise_cafecito_catering?igsh=b2i0nmw2ctfvzwvp" target="_blank" rel="noopener">Instagram</a>
-      for serving times, featured menus, weather notices, and event updates.
-    </p>
-  </div>
-</div>
-
-<!-- FEATURED IMAGE / SLIDESHOW -->
-
-<div class="feature-image">
-  <img id="slideshow" src="gccs.jpg" alt="Featured food item">
-</div>
-
-<!-- CTA -->
-
-<div class="home-cta">
-  <a href="menu.html">View Menu</a>
-  <a href="community-events.html" class="secondary" target="_blank" rel="noopener">Community Events at the Yard</a>
-  <a href="catering.html" class="secondary">Book Catering / Learn More</a>
-  <a href="celebree-family-night.html" class="secondary">Event Sample Menu</a>
-</div>
-
-<!-- FOLLOW / REVIEW / ORDER -->
-
-<section class="social-hub" aria-label="Follow, review, and order Arizona Sunrise Cafecito">
-  <div class="social-hub-inner">
-    <h2>Come for the biscuits. Stay for the chaos.</h2>
-
-    <p class="hub-subtitle">
-      Follow Arizona Sunrise Cafecito &amp; Catering for specials, menu drops, event updates,
-      and the occasional food trailer shenanigan. If we made your day better, a Google review or Yelp feedback
-      helps our small family business more than you know.
-    </p>
-
-    <div class="social-cards">
-
-      <a class="social-card facebook"
-         href="https://www.facebook.com/azsunrisecafecito"
-         target="_blank"
-         rel="noopener"
-         onclick="gtag('event','facebook_click',{event_category:'Social',event_label:'Facebook'});">
-        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
-        <strong>Like us on Facebook</strong>
-        <span>Daily specials, event posts, and local updates.</span>
-      </a>
-
-      <a class="social-card instagram"
-         href="https://www.instagram.com/az_sunrise_cafecito_catering?igsh=b2i0nmw2ctfvzwvp"
-         target="_blank"
-         rel="noopener"
-         onclick="gtag('event','instagram_click',{event_category:'Social',event_label:'Instagram'});">
-        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-        <strong>Follow us on Instagram</strong>
-        <span>Food pics, specials, events, and behind-the-scenes trailer life.</span>
-      </a>
-
-      <a class="social-card review"
-         href="https://www.google.com/maps/search/?api=1&query=Arizona%20Sunrise%20Cafecito%20%26%20Catering%20151%20Sabine%20Creek%20Rd%20Royse%20City%20TX"
-         target="_blank"
-         rel="noopener"
-         onclick="gtag('event','google_review_click',{event_category:'Reviews',event_label:'Google Maps Review'});">
-        <i class="fa-solid fa-star" aria-hidden="true"></i>
-        <strong>Review us on Google</strong>
-        <span>Love your meal? A quick Google review helps local families find us.</span>
-      </a>
-
-      <a class="social-card yelp"
-         href="https://www.yelp.com/search?find_desc=Arizona+Sunrise+Cafecito+%26+Catering&find_loc=Royse+City%2C+TX"
-         target="_blank"
-         rel="noopener"
-         onclick="gtag('event','yelp_click',{event_category:'Reviews',event_label:'Yelp Feedback'});">
-        <i class="fa-brands fa-yelp" aria-hidden="true"></i>
-        <strong>Find us on Yelp</strong>
-        <span>Share feedback so more local food lovers can discover us.</span>
-      </a>
-
-      <a class="social-card doordash"
-         href="https://www.doordash.com/store/arizona-sunrise-cafecito-&-catering-royse-city-41398559/99996355/?pickup=false"
-         target="_blank"
-         rel="noopener"
-         onclick="gtag('event','doordash_click',{event_category:'Order',event_label:'DoorDash'});">
-        <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
-        <strong>Order on DoorDash</strong>
-        <span>Brunch cravings delivered when available.</span>
-      </a>
-
-    </div>
-
-    <div class="social-note">
-      <strong>Small business truth:</strong> every follow, like, share, Google review, Yelp mention, and tag helps more local families find us.
-      Thank you for supporting our little food trailer with big brunch energy.
-    </div>
-
-  </div>
-</section>
-
-<div class="content">
-
-  <!-- WHY US -->
-
-  <div class="why-us">
-    <h2>Why Arizona Sunrise Cafecito &amp; Catering?</h2>
-
-    <ul>
-      <li>🌅 Comfort food with Southwest flair</li>
-      <li>🧡 Locally owned &amp; community-driven</li>
-      <li>🚚 Freshly prepared from our food trailer</li>
-      <li>✅ Fully permitted, fire inspected, and food safety certified</li>
-      <li>🇺🇸 10% military discount for active military and veterans with valid ID on regular-priced items</li>
-      <li>🚗 Available on DoorDash when delivery is active</li>
-    </ul>
-
   </div>
 
-  <!-- NOW OPEN -->
+  <!-- Slideshow -->
+  <script>
+    const images = ["gccs.jpg", "cc.jpg", "r.jpeg"];
+    let current = 0;
+    const slideshow = document.getElementById("slideshow");
 
-  <h2 class="now-open">Today’s Hours</h2>
-
-  <!-- Dynamic Open Today indicator -->
-
-  <div id="openIndicator" class="open-indicator" aria-live="polite">
-    <span class="open-dot" aria-hidden="true"></span>
-    <span id="openText">Checking hours…</span>
-  </div>
-
-  <p>
-    <strong>Current Hours</strong><br>
-    Friday – Sunday • 10:00 AM – 2:00 PM
-  </p>
-
-  <!-- Location -->
-
-  <h2>Location</h2>
-
-  <p>
-    <strong>151 Sabine Creek Road</strong><br>
-    Royse City, Texas
-  </p>
-
-  <div class="map-wrap">
-    <iframe loading="lazy"
-      src="https://www.google.com/maps?q=151+Sabine+Creek+Road,+Royse+City,+TX&output=embed">
-    </iframe>
-  </div>
-
-  <!-- Contact -->
-
-  <h2>Contact</h2>
-
-  <p>
-    📞 <a href="tel:9455460808"
-       onclick="gtag('event','call_click',{event_category:'Contact',event_label:'Phone Call'});">
-       945-546-0808
-    </a><br><br>
-
-    📧 <a href="mailto:hello@azsunrisecafecito.com"
-       onclick="gtag('event','email_click',{event_category:'Contact',event_label:'Email'});">
-       hello@azsunrisecafecito.com
-    </a>
-  </p>
-
-</div><!-- /content -->
-
-  </div><!-- /main -->
-
-</div><!-- /layout -->
-
-<!-- SLIDESHOW SCRIPT -->
-
-<script>
-  const images = ["gccs.jpg", "cc.jpg", "r.jpeg"];
-  let current = 0;
-  const slideshow = document.getElementById("slideshow");
-
-  function nextImage() {
-    current = (current + 1) % images.length;
-    slideshow.src = images[current];
-  }
-
-  setInterval(nextImage, 3000);
-</script>
-
-<!-- OPEN TODAY INDICATOR (Friday–Sunday, 10am–2pm) -->
-
-<script>
-  (function(){
-    const indicator = document.getElementById("openIndicator");
-    const textEl = document.getElementById("openText");
-
-    const now = new Date();
-    const day = now.getDay(); // 0 Sun ... 6 Sat
-    const minutes = now.getHours() * 60 + now.getMinutes();
-
-    function setOpen(msg){
-      textEl.textContent = msg || "Open Today";
-      indicator.classList.remove("closed");
+    function nextImage() {
+      current = (current + 1) % images.length;
+      slideshow.src = images[current];
     }
 
-    function setClosed(msg){
-      textEl.textContent = msg;
-      indicator.classList.add("closed");
-    }
+    setInterval(nextImage, 3000);
+  </script>
 
-    // Open days: Fri(5) Sat(6) Sun(0)
-    const isOpenDay = (day === 0) || (day >= 5 && day <= 6);
-    const isClosedAllDay = (day >= 1 && day <= 4); // Mon–Thu
+  <!-- Highlight the active navigation page -->
+  <script>
+    const path = window.location.pathname;
+    const currentPage = (
+      path.endsWith("/") ? "index.html" : path.split("/").pop()
+    ).split("?")[0];
 
-    const openMinutes = 10 * 60;
-    const closeMinutes = 14 * 60;
+    document.querySelectorAll("nav.side-nav a").forEach(a => {
+      const href = (a.getAttribute("href") || "").split("?")[0];
 
-    const isOpenNow = isOpenDay && (minutes >= openMinutes) && (minutes < closeMinutes);
-
-    if (isOpenNow){
-      setOpen("Open today until 2:00 PM");
-      return;
-    }
-
-    if (isClosedAllDay){
-      setClosed("Closed today • Opens Friday at 10:00 AM");
-      return;
-    }
-
-    if (isOpenDay){
-      if (minutes < openMinutes){
-        setClosed("Closed now • Opens at 10:00 AM");
-        return;
+      if (href === currentPage) {
+        a.classList.add("active");
       }
-
-      if (day === 0){
-        setClosed("Closed now • Opens Friday at 10:00 AM");
-      } else {
-        setClosed("Closed now • Opens tomorrow at 10:00 AM");
-      }
-
-      return;
-    }
-
-    setClosed("Closed now");
-  })();
-</script>
-
-<!-- AUTO ACTIVE NAV LINK -->
-
-<script>
-  const path = window.location.pathname;
-  const currentPage = (path.endsWith("/") ? "index.html" : path.split("/").pop()).split("?")[0];
-
-  document.querySelectorAll("nav.side-nav a").forEach(a => {
-    const href = (a.getAttribute("href") || "").split("?")[0];
-    if (href === currentPage) a.classList.add("active");
-  });
-</script>
-
+    });
+  </script>
 </body>
 </html>
+```
