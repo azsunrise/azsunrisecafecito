@@ -479,15 +479,17 @@
       padding: 16px;
     }
 
-    .upcoming-events .event-item:last-child {
+    .upcoming-events .event-item:nth-child(odd):last-child {
       grid-column: 1 / -1;
     }
 
+    .events-box .event-item a,
     .upcoming-events .event-item a {
       color: #7a3b2e;
       text-decoration: none;
     }
 
+    .events-box .event-item a:hover,
     .upcoming-events .event-item a:hover {
       text-decoration: underline;
     }
@@ -886,7 +888,7 @@
         grid-template-columns: 1fr;
       }
 
-      .upcoming-events .event-item:last-child {
+      .upcoming-events .event-item:nth-child(odd):last-child {
         grid-column: auto;
       }
 
@@ -950,7 +952,6 @@
 
 <body>
   <div class="layout">
-
     <!-- Navigation -->
     <nav class="side-nav" aria-label="Primary navigation">
       <a href="index.html">
@@ -987,12 +988,8 @@
     </nav>
 
     <div class="main">
-
       <div class="logo-wrap">
-        <img
-          src="trailer.jpeg"
-          alt="Arizona Sunrise Cafecito &amp; Catering trailer"
-        >
+        <img src="trailer.jpeg" alt="Arizona Sunrise Cafecito &amp; Catering trailer">
       </div>
 
       <!-- Hero -->
@@ -1007,14 +1004,8 @@
         </p>
 
         <div class="home-cta hero-cta">
-          <a href="catering.html">
-            Request Catering or a Food Trailer Quote
-          </a>
-
-          <a href="#find-us" class="secondary">
-            Find Our Upcoming Events
-          </a>
-
+          <a href="catering.html">Request Catering or a Food Trailer Quote</a>
+          <a href="#find-us" class="secondary">Find Our Upcoming Events</a>
           <a
             href="tel:9455460808"
             class="secondary"
@@ -1090,14 +1081,11 @@
           pickup details are confirmed with each order.
         </p>
 
-        <!-- Events we have served -->
-        <div
-          class="events-box"
-          aria-label="Events served by Arizona Sunrise Cafecito and Catering"
-        >
+        <!-- Past events -->
+        <div class="events-box" aria-label="Past Arizona Sunrise Cafecito and Catering events">
           <div class="events-title">
             <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
-            Events We’ve Served
+            Past Events
           </div>
 
           <p class="events-intro">
@@ -1107,6 +1095,74 @@
           </p>
 
           <div class="events-grid">
+            <div class="event-item">
+              <div class="event-icon private-event">
+                <i class="fa-solid fa-flag-usa" aria-hidden="true"></i>
+              </div>
+
+              <div>
+                <strong>Waterscape HOA Veterans Event</strong>
+                <div class="event-date">November 7, 2026 &bull; 11:00&ndash;1:00 PM</div>
+                <div class="event-detail">Waterscape HOA &bull; Royse City</div>
+                <div class="event-access">For Waterscape residents and their guests</div>
+              </div>
+            </div>
+
+            <div class="event-item">
+              <div class="event-icon school">
+                <i class="fa-solid fa-robot" aria-hidden="true"></i>
+              </div>
+
+              <div>
+                <a
+                  href="https://www.facebook.com/groups/738191942541920/posts/1034608486233596/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <strong>
+                    Terrell Robotics &ldquo;VEXorcism&rdquo;
+                    High School Tournament &amp; Car Show Fundraiser
+                  </strong>
+                </a>
+
+                <div class="event-date">Saturday, October 31, 2026</div>
+
+                <div class="event-detail">
+                  Terrell ISD ExCEL Center<br>
+                  1251 Colquitt Rd &bull; Terrell, TX 75160<br>
+                  Food trucks, car show, and Halloween Trunk-or-Treat.
+                </div>
+
+                <div class="event-detail">
+                  The event schedule included the VEX V5 Robotics
+                  Competition Open Tournament inside the facility.
+                </div>
+
+                <div class="event-access">
+                  Arizona Sunrise&rsquo;s appearance was canceled.
+                </div>
+              </div>
+            </div>
+
+            <div class="event-item">
+              <div class="event-icon halloween">
+                <i class="fa-solid fa-ghost" aria-hidden="true"></i>
+              </div>
+
+              <div>
+                <a
+                  href="https://www.rockwall.com/event_ScareOnTheSquare.asp"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <strong>Scare on the Square</strong>
+                </a>
+
+                <div class="event-date">October 24, 2026 &bull; 2:00&ndash;5:00 PM</div>
+                <div class="event-detail">Downtown Rockwall</div>
+                <div class="event-access">Open to the public</div>
+              </div>
+            </div>
 
             <div class="event-item">
               <div class="event-icon residents">
@@ -1114,15 +1170,10 @@
               </div>
 
               <div>
-                <strong>
-                  Saddle Up, Sonoma Annual Meeting &amp; Fall Festival
-                </strong>
-                <div class="event-date">
-                  October 17, 2026 &bull; 5:30&ndash;9:00 PM
-                </div>
+                <strong>Saddle Up, Sonoma Annual Meeting &amp; Fall Festival</strong>
+                <div class="event-date">October 17, 2026 &bull; 5:30&ndash;9:00 PM</div>
                 <div class="event-detail">
-                  Sonoma Verde Amenity Center &bull;
-                  1506 Bertino Way, Rockwall
+                  Sonoma Verde Amenity Center &bull; 1506 Bertino Way, Rockwall
                 </div>
               </div>
             </div>
@@ -1134,9 +1185,7 @@
 
               <div>
                 <strong>Rockwall ISD Food Truck Lunch</strong>
-                <div class="event-date">
-                  Tuesday, October 6, 2026 &bull; Lunch
-                </div>
+                <div class="event-date">Tuesday, October 6, 2026 &bull; Lunch</div>
                 <div class="event-detail">
                   Rockwall-Heath High School &amp;
                   Dr. Gene Burton College &amp; Career Academy
@@ -1171,9 +1220,7 @@
                 <div class="event-date">
                   Saturday, September 19, 2026 &bull; 5:30&ndash;7:30 PM
                 </div>
-                <div class="event-detail">
-                  Creekside HOA &bull; Royse City, Texas
-                </div>
+                <div class="event-detail">Creekside HOA &bull; Royse City, Texas</div>
               </div>
             </div>
 
@@ -1184,12 +1231,8 @@
 
               <div>
                 <strong>Sonoma Verde Community Event</strong>
-                <div class="event-date">
-                  Friday, September 18, 2026
-                </div>
-                <div class="event-detail">
-                  Sonoma Verde &bull; Rockwall, Texas
-                </div>
+                <div class="event-date">Friday, September 18, 2026</div>
+                <div class="event-detail">Sonoma Verde &bull; Rockwall, Texas</div>
               </div>
             </div>
 
@@ -1200,12 +1243,8 @@
 
               <div>
                 <strong>Founding Family Ice Cream Social</strong>
-                <div class="event-date">
-                  Celebree School of Fate
-                </div>
-                <div class="event-detail">
-                  August 9, 2026 &bull; Fate Community Center
-                </div>
+                <div class="event-date">Celebree School of Fate</div>
+                <div class="event-detail">August 9, 2026 &bull; Fate Community Center</div>
               </div>
             </div>
 
@@ -1216,12 +1255,8 @@
 
               <div>
                 <strong>Private Resident Event</strong>
-                <div class="event-date">
-                  Rockwall Commons
-                </div>
-                <div class="event-detail">
-                  Rockwall, Texas
-                </div>
+                <div class="event-date">Rockwall Commons</div>
+                <div class="event-detail">Rockwall, Texas</div>
               </div>
             </div>
 
@@ -1232,12 +1267,8 @@
 
               <div>
                 <strong>Private Fourth of July Celebration</strong>
-                <div class="event-date">
-                  Buffalo Creek Country Club
-                </div>
-                <div class="event-detail">
-                  July 4, 2026 &bull; Heath, Texas
-                </div>
+                <div class="event-date">Buffalo Creek Country Club</div>
+                <div class="event-detail">July 4, 2026 &bull; Heath, Texas</div>
               </div>
             </div>
 
@@ -1248,12 +1279,8 @@
 
               <div>
                 <strong>Pregnancy Resource Center Walk for Life</strong>
-                <div class="event-date">
-                  Harry Myers Park
-                </div>
-                <div class="event-detail">
-                  May 8, 2026 &bull; Rockwall, Texas
-                </div>
+                <div class="event-date">Harry Myers Park</div>
+                <div class="event-detail">May 8, 2026 &bull; Rockwall, Texas</div>
               </div>
             </div>
 
@@ -1264,12 +1291,8 @@
 
               <div>
                 <strong>Lowe’s Cinco de Mayo Celebration</strong>
-                <div class="event-date">
-                  Lowe’s of Rockwall
-                </div>
-                <div class="event-detail">
-                  May 5, 2026 &bull; Rockwall, Texas
-                </div>
+                <div class="event-date">Lowe’s of Rockwall</div>
+                <div class="event-detail">May 5, 2026 &bull; Rockwall, Texas</div>
               </div>
             </div>
 
@@ -1280,15 +1303,10 @@
 
               <div>
                 <strong>Cruise-In for Cancer</strong>
-                <div class="event-date">
-                  Benefiting the 9474 Foundation
-                </div>
-                <div class="event-detail">
-                  March 28, 2026 &bull; Royse City High School
-                </div>
+                <div class="event-date">Benefiting the 9474 Foundation</div>
+                <div class="event-detail">March 28, 2026 &bull; Royse City High School</div>
               </div>
             </div>
-
           </div>
         </div>
 
@@ -1314,92 +1332,6 @@
           </p>
 
           <div class="events-grid">
-
-            <div class="event-item">
-              <div class="event-icon halloween">
-                <i class="fa-solid fa-ghost" aria-hidden="true"></i>
-              </div>
-
-              <div>
-                <a
-                  href="https://www.rockwall.com/event_ScareOnTheSquare.asp"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <strong>Scare on the Square</strong>
-                </a>
-
-                <div class="event-date">
-                  October 24, 2026 &bull; 2:00&ndash;5:00 PM
-                </div>
-
-                <div class="event-detail">
-                  Downtown Rockwall
-                </div>
-
-                <div class="event-access">
-                  Open to the public
-                </div>
-              </div>
-            </div>
-
-            <div class="event-item">
-              <div class="event-icon school">
-                <i class="fa-solid fa-robot" aria-hidden="true"></i>
-              </div>
-
-              <div>
-                <a
-                  href="https://www.facebook.com/groups/738191942541920/posts/1034608486233596/"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <strong>
-                    Terrell Robotics &ldquo;VEXorcism&rdquo;
-                    High School Tournament &amp; Car Show Fundraiser
-                  </strong>
-                </a>
-
-                <div class="event-date">
-                  Saturday, October 31, 2026 &bull;
-                  Serving 11:00 AM&ndash;3:00 PM
-                </div>
-
-                <div class="event-detail">
-                  Terrell ISD ExCEL Center<br>
-                  1251 Colquitt Rd &bull; Terrell, TX 75160<br>
-                  Food trucks, car show, and Halloween Trunk-or-Treat.
-                </div>
-
-                <div class="event-detail">
-                  The VEX V5 Robotics Competition Open Tournament runs
-                  throughout the day inside the facility.
-                </div>
-              </div>
-            </div>
-
-            <div class="event-item">
-              <div class="event-icon private-event">
-                <i class="fa-solid fa-flag-usa" aria-hidden="true"></i>
-              </div>
-
-              <div>
-                <strong>Waterscape HOA Veterans Event</strong>
-
-                <div class="event-date">
-                  November 7, 2026 &bull; 11:00&ndash;1:00 PM
-                </div>
-
-                <div class="event-detail">
-                  Waterscape HOA &bull; Royse City
-                </div>
-
-                <div class="event-access">
-                  For Waterscape residents and their guests
-                </div>
-              </div>
-            </div>
-
             <div class="event-item">
               <div class="event-icon race">
                 <i class="fa-solid fa-person-running" aria-hidden="true"></i>
@@ -1407,11 +1339,7 @@
 
               <div>
                 <strong>Heath Golf &amp; Yacht Club Turkey Dash</strong>
-
-                <div class="event-date">
-                  Thursday, November 26, 2026
-                </div>
-
+                <div class="event-date">Thursday, November 26, 2026</div>
                 <div class="event-detail">
                   1500 Clubhouse Drive &bull; Heath<br>
                   Kids&rsquo; 1K begins at 8:00 AM &bull;
@@ -1420,6 +1348,41 @@
               </div>
             </div>
 
+            <div class="event-item">
+              <div class="event-icon community">
+                <i class="fa-solid fa-tree" aria-hidden="true"></i>
+              </div>
+
+              <div>
+                <strong>Hometown Christmas Festival</strong>
+
+                <div class="event-date">
+                  Saturday, December 5, 2026 &bull; Festival hours 10:00 AM&ndash;5:00 PM
+                </div>
+
+                <div class="event-detail">
+                  Downtown Rockwall Square &bull; Rockwall, Texas
+                </div>
+
+                <div class="event-detail">
+                  Shop the holiday market for artisan chocolates, pecans,
+                  pound cakes, jams, and more. Take family photos with Santa
+                  and the Grinch at their sleigh in San Jacinto Plaza.
+                  Kids can enjoy bounce houses, games, crafts, giveaways,
+                  snow play, slides, photo ops, and train rides on the square.
+                </div>
+
+                <div class="event-access">Open to the public</div>
+
+                <div class="event-detail">
+                  <a
+                    href="https://www.rockwall.com/mainstreet_directory.asp"
+                    target="_blank"
+                    rel="noopener"
+                  >Downtown Shopping &amp; Dining</a>
+                </div>
+              </div>
+            </div>
           </div>
 
           <p class="schedule-note">
@@ -1438,41 +1401,24 @@
             >Instagram</a>
             for serving times, featured menus, weather notices, and event updates.
           </p>
-
         </div>
       </div>
 
       <!-- Featured image and slideshow -->
       <div class="feature-image">
-        <img
-          id="slideshow"
-          src="gccs.jpg"
-          alt="Featured Arizona Sunrise food"
-        >
+        <img id="slideshow" src="gccs.jpg" alt="Featured Arizona Sunrise food">
       </div>
 
       <!-- Booking and menu links -->
       <div class="home-cta">
         <a href="menu.html">View Menu</a>
-
-        <a href="#find-us" class="secondary">
-          Find Our Upcoming Events
-        </a>
-
-        <a href="catering.html" class="secondary">
-          Book Catering or Our Food Trailer
-        </a>
-
-        <a href="celebree-family-night.html" class="secondary">
-          Event Sample Menu
-        </a>
+        <a href="#find-us" class="secondary">Find Our Upcoming Events</a>
+        <a href="catering.html" class="secondary">Book Catering or Our Food Trailer</a>
+        <a href="celebree-family-night.html" class="secondary">Event Sample Menu</a>
       </div>
 
       <!-- Follow, review, and book -->
-      <section
-        class="social-hub"
-        aria-label="Follow, review, and book Arizona Sunrise Cafecito"
-      >
+      <section class="social-hub" aria-label="Follow, review, and book Arizona Sunrise Cafecito">
         <div class="social-hub-inner">
           <h2>Come for the biscuits. Stay for the chaos.</h2>
 
@@ -1484,7 +1430,6 @@
           </p>
 
           <div class="social-cards">
-
             <a
               class="social-card facebook"
               href="https://www.facebook.com/azsunrisecafecito"
@@ -1494,9 +1439,7 @@
             >
               <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
               <strong>Like us on Facebook</strong>
-              <span>
-                Event appearances, featured menus, and local updates.
-              </span>
+              <span>Event appearances, featured menus, and local updates.</span>
             </a>
 
             <a
@@ -1508,9 +1451,7 @@
             >
               <i class="fa-brands fa-instagram" aria-hidden="true"></i>
               <strong>Follow us on Instagram</strong>
-              <span>
-                Food pics, specials, events, and behind-the-scenes trailer life.
-              </span>
+              <span>Food pics, specials, events, and behind-the-scenes trailer life.</span>
             </a>
 
             <a
@@ -1522,9 +1463,7 @@
             >
               <i class="fa-solid fa-star" aria-hidden="true"></i>
               <strong>Review us on Google</strong>
-              <span>
-                Love your meal? A quick Google review helps local families find us.
-              </span>
+              <span>Love your meal? A quick Google review helps local families find us.</span>
             </a>
 
             <a
@@ -1536,9 +1475,7 @@
             >
               <i class="fa-brands fa-yelp" aria-hidden="true"></i>
               <strong>Find us on Yelp</strong>
-              <span>
-                Share feedback so more local food lovers can discover us.
-              </span>
+              <span>Share feedback so more local food lovers can discover us.</span>
             </a>
 
             <a
@@ -1548,11 +1485,8 @@
             >
               <i class="fa-solid fa-truck" aria-hidden="true"></i>
               <strong>Book Catering or Our Trailer</strong>
-              <span>
-                Tell us your event date, location, guest count, and menu ideas.
-              </span>
+              <span>Tell us your event date, location, guest count, and menu ideas.</span>
             </a>
-
           </div>
 
           <div class="social-note">
@@ -1565,7 +1499,6 @@
       </section>
 
       <div class="content">
-
         <!-- Why choose Arizona Sunrise -->
         <div class="why-us">
           <h2>Why Arizona Sunrise Cafecito &amp; Catering?</h2>
@@ -1579,9 +1512,7 @@
               🇺🇸 10% military discount for active military and veterans
               with valid ID on regular-priced items
             </li>
-            <li>
-              🍽️ Pickup and drop-off catering, plus on-site food trailer service
-            </li>
+            <li>🍽️ Pickup and drop-off catering, plus on-site food trailer service</li>
           </ul>
         </div>
 
@@ -1632,14 +1563,10 @@
 
         <!-- Booking questions -->
         <section class="booking-faq" aria-labelledby="booking-questions">
-          <h2 id="booking-questions">
-            Catering &amp; Food Trailer Booking Questions
-          </h2>
+          <h2 id="booking-questions">Catering &amp; Food Trailer Booking Questions</h2>
 
           <details>
-            <summary>
-              Can we hire your food trailer for an event?
-            </summary>
+            <summary>Can we hire your food trailer for an event?</summary>
 
             <p>
               Yes. Arizona Sunrise offers on-site food trailer service for
@@ -1651,9 +1578,7 @@
           </details>
 
           <details>
-            <summary>
-              Do you offer catering without the trailer?
-            </summary>
+            <summary>Do you offer catering without the trailer?</summary>
 
             <p>
               Yes. We offer pickup and drop-off catering for meetings,
@@ -1663,9 +1588,7 @@
           </details>
 
           <details>
-            <summary>
-              How do I request a catering or food trailer quote?
-            </summary>
+            <summary>How do I request a catering or food trailer quote?</summary>
 
             <p>
               Use our
@@ -1673,9 +1596,7 @@
               call
               <a href="tel:9455460808">945-546-0808</a>,
               or email
-              <a href="mailto:hello@azsunrisecafecito.com">
-                hello@azsunrisecafecito.com
-              </a>.
+              <a href="mailto:hello@azsunrisecafecito.com">hello@azsunrisecafecito.com</a>.
               Include your date, event location, guest count, and any menu
               or dietary preferences. We’ll confirm availability and
               discuss your options.
@@ -1701,7 +1622,6 @@
             onclick="gtag('event','email_click',{event_category:'Contact',event_label:'Email'});"
           >hello@azsunrisecafecito.com</a>
         </p>
-
       </div>
     </div>
   </div>
